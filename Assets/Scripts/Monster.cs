@@ -16,6 +16,7 @@ public class Monster : MonoBehaviour
     }
     private void Update()
     {
+        LookAt();
         MonsterMovement();
     }
     private void MonsterMovement()
@@ -27,6 +28,17 @@ public class Monster : MonoBehaviour
         else //플레이어가 레이더를 벗어나면 원래 위치(스폰 위치)로 돌아감
         {
             transform.position = Vector2.MoveTowards(transform.position, spawnPoint, Time.deltaTime * moveSpeed);
+        }
+    }
+    private void LookAt()
+    {
+        if (player.transform.position.x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }

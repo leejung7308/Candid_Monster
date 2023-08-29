@@ -41,8 +41,14 @@ public class Player : MonoBehaviour
     void LookAt()
     {
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 dirVec = mousePos - (Vector2)transform.position;
-        transform.right = dirVec.normalized;
+        if (mousePos.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
     void WeaponSwap()
     {
@@ -106,9 +112,9 @@ public class Player : MonoBehaviour
     {
         for (int i = 90; i >= -90; i--)
         {
-            angle.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z+i);
+            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
             yield return new WaitForSeconds(0.002f);
         }
-        angle.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 }
