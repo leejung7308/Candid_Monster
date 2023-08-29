@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4110655315832862341}
   - component: {fileID: 9159825621501671420}
   - component: {fileID: -1160668164774514604}
-  - component: {fileID: 9016068850861083609}
   m_Layer: 0
   m_Name: Coffee
-  m_TagString: Weapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1426898323791162227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.739, y: -0.3299, z: 0}
+  m_LocalPosition: {x: -4.74, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1156624541
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c6d711c58237f224a895ac7f598fc23d, type: 3}
   m_Color: {r: 0.3301887, g: 0.12224668, b: 0, a: 1}
@@ -113,54 +112,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &9016068850861083609
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426898323791162227}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.18192989, y: -0.3227341}
-  - {x: -0.24355125, y: 0.18019257}
-  - {x: -0.24351406, y: 0.26250055}
-  - {x: -0.21359158, y: 0.2624558}
-  - {x: -0.17918015, y: 0.32165277}
-  - {x: 0.18148565, y: 0.32159403}
-  - {x: 0.21643257, y: 0.26632953}
-  - {x: 0.24580526, y: 0.26633593}
-  - {x: 0.24432278, y: 0.1793007}
-  - {x: 0.2398777, y: 0.14564785}
-  - {x: 0.18018293, y: -0.32242388}
-  - {x: -0.18191117, y: -0.32259476}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
