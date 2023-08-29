@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 4146491829
+    locked: 0
+  - name: Player&Monster
+    uniqueID: 112474025
     locked: 0
   - name: Weapon
     uniqueID: 3138342755
