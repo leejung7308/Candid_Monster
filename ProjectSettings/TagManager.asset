@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Melee Weapon
-  - Ranged Weapon
   - Weapon
+  - Melee Weapon(Player)
+  - Ranged Weapon(Player)
+  - Melee Weapon(Monster)
+  - Ranged Weapon(Monster)
   layers:
   - Default
   - TransparentFX
