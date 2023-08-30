@@ -119,14 +119,14 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Ranged Weapon")
+        if(col.tag == "Ranged Weapon(Monster)")
         {
-            Debug.Log("원거리 무기");
+            Debug.Log("플레이어 피격(원거리)");
             Destroy(col.gameObject);
         }
-        else if(col.tag == "Melee Weapon")
+        else if(col.tag == "Melee Weapon(Monster)")
         {
-            Debug.Log("근거리 무기");
+            Debug.Log("플레이어 피격(근거리)");
         }
     }
 }
