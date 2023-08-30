@@ -89,5 +89,16 @@ public class Monster : MonoBehaviour
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
-    
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Ranged Weapon(Player)")
+        {
+            Debug.Log("몬스터 피격(원거리)");
+            Destroy(col.gameObject);
+        }
+        else if (col.tag == "Melee Weapon(Player)")
+        {
+            Debug.Log("몬스터 피격(근거리)");
+        }
+    }
 }
