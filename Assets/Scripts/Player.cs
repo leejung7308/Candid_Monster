@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("π´±‚1π¯");
+            Debug.Log("Î¨¥Í∏∞1Î≤à");
             weapons[0].gameObject.SetActive(true);
             weapons[1].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("π´±‚2π¯");
+            Debug.Log("Î¨¥Í∏∞2Î≤à");
             weapons[1].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("π´±‚3π¯");
+            Debug.Log("Î¨¥Í∏∞3Î≤à");
             weapons[2].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Debug.Log("π´±‚4π¯");
+            Debug.Log("Î¨¥Í∏∞4Î≤à");
             weapons[3].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -116,5 +116,17 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.002f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Ranged Weapon")
+        {
+            Debug.Log("ÏõêÍ±∞Î¶¨ Î¨¥Í∏∞");
+            Destroy(col.gameObject);
+        }
+        else if(col.tag == "Melee Weapon")
+        {
+            Debug.Log("Í∑ºÍ±∞Î¶¨ Î¨¥Í∏∞");
+        }
     }
 }
