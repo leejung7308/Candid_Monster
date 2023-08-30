@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 180152027}
   - component: {fileID: 180152029}
   - component: {fileID: 180152028}
+  - component: {fileID: 180152030}
   m_Layer: 0
   m_Name: Radar
   m_TagString: Untagged
@@ -362,6 +363,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 10
+--- !u!50 &180152030
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180152026}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &186590576
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +849,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1426898323791162227, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
+      propertyPath: m_TagString
+      value: Ranged Weapon(Monster)
+      objectReference: {fileID: 0}
     - target: {fileID: 4110655315832862341, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.739
@@ -968,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
       propertyPath: m_TagString
-      value: Melee Weapon
+      value: Melee Weapon(Monster)
       objectReference: {fileID: 0}
     - target: {fileID: 7456163345470235896, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1223,6 +1255,10 @@ PrefabInstance:
     - target: {fileID: 1426898323791162227, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426898323791162227, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
+      propertyPath: m_TagString
+      value: Ranged Weapon(Monster)
       objectReference: {fileID: 0}
     - target: {fileID: 4110655315832862341, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1538,6 +1574,7 @@ GameObject:
   - component: {fileID: 862663888}
   - component: {fileID: 862663887}
   - component: {fileID: 862663886}
+  - component: {fileID: 862663889}
   m_Layer: 0
   m_Name: Radar
   m_TagString: Untagged
@@ -1608,6 +1645,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 834206347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &862663889
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862663885}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1080582506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7456163345470235896, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
@@ -1789,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
       propertyPath: m_TagString
-      value: Melee Weapon
+      value: Melee Weapon(Monster)
       objectReference: {fileID: 0}
     - target: {fileID: 7456163345470235896, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2420,6 +2484,7 @@ GameObject:
   - component: {fileID: 1865216627}
   - component: {fileID: 1865216628}
   - component: {fileID: 1865216629}
+  - component: {fileID: 1865216630}
   m_Layer: 0
   m_Name: Attack Range
   m_TagString: Untagged
@@ -2490,6 +2555,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
+--- !u!50 &1865216630
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865216626}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1919572951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
@@ -2595,6 +2687,7 @@ GameObject:
   - component: {fileID: 2111500283}
   - component: {fileID: 2111500282}
   - component: {fileID: 2111500281}
+  - component: {fileID: 2111500284}
   m_Layer: 0
   m_Name: Attack Range
   m_TagString: Untagged
@@ -2665,6 +2758,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 834206347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2111500284
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111500280}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2126162543
 GameObject:
   m_ObjectHideFlags: 0
