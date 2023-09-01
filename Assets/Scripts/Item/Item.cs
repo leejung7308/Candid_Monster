@@ -45,7 +45,7 @@ namespace Item
     /**
      * 아이템의 기본 클래스입니다. 인터페이스는 객체 멤버를 가질 수 없어, 클래스로 구현되었습니다.
      */
-    public class Item: MonoBehaviour
+    public class Item : MonoBehaviour
     {
         public ElementalStatus Stat;
 

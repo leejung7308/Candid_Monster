@@ -5,17 +5,30 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public GameObject radarObject;
+    public GameObject attackRangeObject;
+    public GameObject angle;
+    public GameObject weapon;
+    public GameObject weaponSpawnPos;
     public float moveSpeed = 5f;
+    public float weaponSpeed = 5f;
+    public float attackCoolDown = 0.5f;
     public Vector2 spawnPoint;
+    public bool isMelee = true;
     Radar radar;
+    Radar attackRange;
     GameObject player;
+    float nextAttack;
     private void Start()
     {
         radar = radarObject.GetComponent<Radar>();
+        attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
     private void Update()
     {
+        SetWeapon();
+        Attack();
+        LookAt();
         MonsterMovement();
     }
     private void MonsterMovement()
@@ -29,4 +42,52 @@ public class Monster : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, spawnPoint, Time.deltaTime * moveSpeed);
         }
     }
+    private void LookAt()
+    {
+        if (player.transform.position.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+    private void Attack()
+    {
+        if (attackRange.isDetected && Time.time > nextAttack)
+        {
+            nextAttack = Time.time + attackCoolDown;
+            StartCoroutine(Swing());
+        }
+    }
+    private void Shoot()
+    {
+        if (!isMelee)
+        {
+            Vector2 shootingDir = (Vector2)player.transform.position - (Vector2)weaponSpawnPos.transform.position;
+            shootingDir.Normalize();
+            GameObject shootingObject = Instantiate(weapon);
+            shootingObject.transform.position = weaponSpawnPos.transform.position;
+            shootingObject.transform.up = shootingDir;
+            shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * weaponSpeed;
+        }
+    }
+    private void SetWeapon()
+    {
+        weapon.gameObject.SetActive(true);
+        weapon.transform.position = weaponSpawnPos.transform.position;
+        weapon.transform.rotation = weaponSpawnPos.transform.rotation;
+    }
+    private IEnumerator Swing()
+    {
+        for (int i = 90; i >= -90; i--)
+        {
+            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
+            if (i == 0) Shoot();
+            yield return new WaitForSeconds(0.002f);
+        }
+        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+    
 }

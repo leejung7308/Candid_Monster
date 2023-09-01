@@ -41,14 +41,20 @@ public class Player : MonoBehaviour
     void LookAt()
     {
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 dirVec = mousePos - (Vector2)transform.position;
-        transform.right = dirVec.normalized;
+        if (mousePos.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
     void WeaponSwap()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Î¨¥Í∏∞1Î≤à");
+            Debug.Log("π´±‚1π¯");
             weapons[0].gameObject.SetActive(true);
             weapons[1].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -57,7 +63,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("Î¨¥Í∏∞2Î≤à");
+            Debug.Log("π´±‚2π¯");
             weapons[1].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -66,7 +72,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("Î¨¥Í∏∞3Î≤à");
+            Debug.Log("π´±‚3π¯");
             weapons[2].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -75,7 +81,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Debug.Log("Î¨¥Í∏∞4Î≤à");
+            Debug.Log("π´±‚4π¯");
             weapons[3].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -106,10 +112,10 @@ public class Player : MonoBehaviour
     {
         for (int i = 90; i >= -90; i--)
         {
-            angle.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z+i);
+            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
             yield return new WaitForSeconds(0.002f);
         }
-        angle.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
     [SerializeField]
@@ -123,7 +129,7 @@ public class Player : MonoBehaviour
 
             if (hitObject != null)
             {
-                //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " ÌöçÎìù ÌñàÏäµÎãàÎã§.");
+                //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " »πµÊ «ﬂΩ¿¥œ¥Ÿ.");
                 theInventory.AcquireItem(hitObject.transform.GetComponent<Consumable>().item);
                 collision.gameObject.SetActive(false);
             }

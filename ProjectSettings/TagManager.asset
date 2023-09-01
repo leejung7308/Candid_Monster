@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CanBePickedUp
+  - Melee Weapon
+  - Ranged Weapon
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -41,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wall
+    uniqueID: 4146491829
+    locked: 0
+  - name: Player&Monster
+    uniqueID: 112474025
+    locked: 0
+  - name: Weapon
+    uniqueID: 3138342755
     locked: 0

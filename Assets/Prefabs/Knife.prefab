@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7456163345470235896}
   - component: {fileID: 388198385748816934}
   - component: {fileID: -3079251468905652356}
+  - component: {fileID: 7039786901740709865}
   m_Layer: 0
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593603576000265972}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 0.082, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: -0.9630939, y: 5.9316263, z: -0.0000000786805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1156624541
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 70e3e5240f0d50f43a000a319e8a4854, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -112,3 +113,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!68 &7039786901740709865
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593603576000265972}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.37740004, y: 0.39192292}
+  - {x: 0.37740007, y: 0.39192292}
+  - {x: 0.37627444, y: 0.369018}
+  - {x: 0.36199728, y: 0.3160699}
+  - {x: 0.34493575, y: 0.26811725}
+  - {x: 0.31659773, y: 0.20832737}
+  - {x: 0.28911313, y: 0.1653286}
+  - {x: 0.25699034, y: 0.12376037}
+  - {x: -0.2607441, y: -0.41785377}
+  - {x: -0.4021818, y: -0.27502334}
+  - {x: -0.1374293, y: -0.009558603}
+  - {x: 0.161944, y: 0.27489984}
+  - {x: 0.26267156, y: 0.33046645}
+  - {x: 0.35821697, y: 0.400121}
+  - {x: 0.37187, y: 0.39785156}
+  - {x: 0.37744704, y: 0.39263362}
+  - {x: 0.377447, y: 0.39263362}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
