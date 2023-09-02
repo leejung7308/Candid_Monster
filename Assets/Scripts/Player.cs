@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("¹«±â1¹ø");
+            Debug.Log("ë¬´ê¸°1ë²ˆ");
             weapons[0].gameObject.SetActive(true);
             weapons[1].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("¹«±â2¹ø");
+            Debug.Log("ë¬´ê¸°2ë²ˆ");
             weapons[1].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("¹«±â3¹ø");
+            Debug.Log("ë¬´ê¸°3ë²ˆ");
             weapons[2].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Debug.Log("¹«±â4¹ø");
+            Debug.Log("ë¬´ê¸°4ë²ˆ");
             weapons[3].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
