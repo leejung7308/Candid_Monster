@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour
+public class Slot : MonoBehaviour, IPointerClickHandler
 {
+    private bool isDoubleClick = false;
+    private float doubleClickTimeThreshold = 0.3f; // 더블클릭 감지 시간 임계값
+
     public Item.Item item; // 획득한 아이템
     public int itemCount; // 획득한 아이템의 개수
     public Image itemImage;  // 아이템의 이미지
@@ -13,6 +17,13 @@ public class Slot : MonoBehaviour
     private Text text_Count;
     [SerializeField]
     private GameObject go_CountImage; //item count background image
+
+    private Player thePlayer;
+
+    void Start()
+    {
+        thePlayer = FindObjectOfType<Player>();
+    }
 
     // 아이템 이미지의 투명도 조절
     private void SetColor(float _alpha)
@@ -63,5 +74,41 @@ public class Slot : MonoBehaviour
 
         text_Count.text = "0";
         go_CountImage.SetActive(false);
+    }
+    
+    private IEnumerator ResetDoubleClickFlag()
+    {
+        yield return new WaitForSeconds(doubleClickTimeThreshold);
+        isDoubleClick = false;
+    }
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        
+        if (eventData.clickCount == 2) // 더블클릭 감지
+        {
+            isDoubleClick = true;
+            StartCoroutine(ResetDoubleClickFlag());
+        }
+       
+        if (isDoubleClick)
+        {
+            if(item != null)
+            {
+                if (item.itemType == Item.ItemType.Equipment)
+                {
+                    if (thePlayer != null)
+                    {
+                        thePlayer.EquipItem(item.itemName);
+                        
+                    }
+                }
+                else
+                {
+                    //Debug.Log(item.itemName + "을 사용했습니다.");
+                    SetSlotCount(-1);
+                }
+            }
+        }
     }
 }

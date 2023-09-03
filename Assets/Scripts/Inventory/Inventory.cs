@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public static bool invectoryActivated = false;  // 인벤토리 활성화 여부. true가 되면 카메라 움직임과 다른 입력을 막을 것이다.
+    public static bool inventoryActivated = false;  // 인벤토리 활성화 여부. true가 되면 카메라 움직임과 다른 입력을 막을 것이다.
 
     [SerializeField]
     private GameObject go_InventoryBase; // Inventory_Base 이미지
@@ -27,9 +27,9 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            invectoryActivated = !invectoryActivated;
+            inventoryActivated = !inventoryActivated;
 
-            if (invectoryActivated)
+            if (inventoryActivated)
                 OpenInventory();
             else
                 CloseInventory();
@@ -53,7 +53,7 @@ public class Inventory : MonoBehaviour
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                if (slots[i].item != null)  // null 이라면 slots[i].item.itemName 할 때 런타임 에러 나서
+                if (slots[i].item != null)  // null 이라면 slots[i].item.itemName 할 때 런타임 에러
                 {
                     if (slots[i].item.itemName == _item.itemName)
                     {
