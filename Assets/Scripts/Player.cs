@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("¹«±â1¹ø");
+            Debug.Log("ë¬´ê¸°1ë²ˆ");
             weapons[0].gameObject.SetActive(true);
             weapons[1].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("¹«±â2¹ø");
+            Debug.Log("ë¬´ê¸°2ë²ˆ");
             weapons[1].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("¹«±â3¹ø");
+            Debug.Log("ë¬´ê¸°3ë²ˆ");
             weapons[2].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Debug.Log("¹«±â4¹ø");
+            Debug.Log("ë¬´ê¸°4ë²ˆ");
             weapons[3].gameObject.SetActive(true);
             weapons[0].gameObject.SetActive(false);
             weapons[1].gameObject.SetActive(false);
@@ -116,6 +116,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.002f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+
     }
 
     [SerializeField]
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour
 
             if (hitObject != null)
             {
-                //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " È¹µæ Çß½À´Ï´Ù.");
+                //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " È¹ï¿½ï¿½ ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
                 theInventory.AcquireItem(hitObject.transform.GetComponent<Consumable>().item);
                 collision.gameObject.SetActive(false);
             }
