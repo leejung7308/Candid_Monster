@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -116,5 +116,17 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.002f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Ranged Weapon")
+        {
+            Debug.Log("원거리 무기");
+            Destroy(col.gameObject);
+        }
+        else if(col.tag == "Melee Weapon")
+        {
+            Debug.Log("근거리 무기");
+        }
     }
 }
