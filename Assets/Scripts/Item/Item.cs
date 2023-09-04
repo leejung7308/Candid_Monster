@@ -53,6 +53,9 @@ namespace Item
         public ItemType itemType; // 
         public Sprite itemImage; // 
 
+        [TextArea]  // 여러 줄 가능해짐
+        public string itemDesc; // 아이템의 설명
+
         public Item(ElementalStatus s)
         {
             Stat = s;

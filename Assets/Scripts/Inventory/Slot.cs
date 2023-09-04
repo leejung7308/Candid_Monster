@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
-public class Slot : MonoBehaviour, IPointerClickHandler
+public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private bool isDoubleClick = false;
     private float doubleClickTimeThreshold = 0.3f; // 더블클릭 감지 시간 임계값
@@ -14,15 +15,21 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public Image itemImage;  // 아이템의 이미지
 
     [SerializeField]
-    private Text text_Count;
+    private TextMeshProUGUI text_Count;
+
     [SerializeField]
     private GameObject go_CountImage; //item count background image
 
     private Player thePlayer;
+    private ItemInfo theItemInfo;
+
+    // 마우스 드래그가 끝났을 때 발생하는 이벤트
+    private Rect baseRect;  // Inventory_Base 이미지의 Rect 정보 받아 옴.
 
     void Start()
     {
         thePlayer = FindObjectOfType<Player>();
+        theItemInfo = FindObjectOfType<ItemInfo>();
     }
 
     // 아이템 이미지의 투명도 조절
@@ -110,5 +117,30 @@ public class Slot : MonoBehaviour, IPointerClickHandler
                 }
             }
         }
+    }
+
+    public void ShowToolTip(Item.Item _item, Vector3 _pos)
+    {
+        theItemInfo.ShowToolTip(_item, _pos);
+    }
+
+    public void HideToolTip()
+    {
+        theItemInfo.HideToolTip();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            //Debug.Log(item);
+            ShowToolTip(item, transform.position);
+        }
+    }
+
+    // 마우스 커서가 슬롯에서 나올 때 발동
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        HideToolTip();
     }
 }

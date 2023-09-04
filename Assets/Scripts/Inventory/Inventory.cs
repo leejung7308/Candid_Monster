@@ -13,9 +13,13 @@ public class Inventory : MonoBehaviour
 
     private Slot[] slots;  // ½½·Ôµé ¹è¿­
 
+    private ItemInfo theItemInfo;
+
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+        theItemInfo = FindObjectOfType<ItemInfo>();
+
     }
 
     void Update()
@@ -45,6 +49,7 @@ public class Inventory : MonoBehaviour
     private void CloseInventory()
     {
         go_InventoryBase.SetActive(false);
+        theItemInfo.HideToolTip();
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)
