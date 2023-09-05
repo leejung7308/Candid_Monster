@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Inventory : MonoBehaviour
 {
-    public static bool invectoryActivated = false;  // 인벤토리 활성화 여부. true가 되면 카메라 움직임과 다른 입력을 막을 것이다.
+    public static bool inventoryActivated = false;  // 인벤토리 활성화 여부. true가 되면 카메라 움직임과 다른 입력을 막을 것이다.
 
     [SerializeField]
     private GameObject go_InventoryBase; // Inventory_Base 이미지
@@ -13,9 +14,13 @@ public class Inventory : MonoBehaviour
 
     private Slot[] slots;  // 슬롯들 배열
 
+    private ItemInfo theItemInfo;
+
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+        theItemInfo = FindObjectOfType<ItemInfo>();
+
     }
 
     void Update()
@@ -27,9 +32,9 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            invectoryActivated = !invectoryActivated;
+            inventoryActivated = !inventoryActivated;
 
-            if (invectoryActivated)
+            if (inventoryActivated)
                 OpenInventory();
             else
                 CloseInventory();
@@ -45,6 +50,7 @@ public class Inventory : MonoBehaviour
     private void CloseInventory()
     {
         go_InventoryBase.SetActive(false);
+        theItemInfo.HideToolTip();
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)
@@ -53,7 +59,7 @@ public class Inventory : MonoBehaviour
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                if (slots[i].item != null)  // null 이라면 slots[i].item.itemName 할 때 런타임 에러 나서
+                if (slots[i].item != null)  // null 이라면 slots[i].item.itemName 할 때 런타임 에러
                 {
                     if (slots[i].item.itemName == _item.itemName)
                     {
