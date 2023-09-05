@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
     private bool isDoubleClick = false;
     private float doubleClickTimeThreshold = 0.3f; // 더블클릭 감지 시간 임계값
@@ -23,13 +23,13 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     private Player thePlayer;
     private ItemInfo theItemInfo;
 
-    // 마우스 드래그가 끝났을 때 발생하는 이벤트
     private Rect baseRect;  // Inventory_Base 이미지의 Rect 정보 받아 옴.
 
     void Start()
     {
         thePlayer = FindObjectOfType<Player>();
         theItemInfo = FindObjectOfType<ItemInfo>();
+        baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
     // 아이템 이미지의 투명도 조절
@@ -142,5 +142,64 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     public void OnPointerExit(PointerEventData eventData)
     {
         HideToolTip();
+    }
+
+    //마우스 드래그가 시작됐을 때 발생하는 이벤트
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            DragSlot.instance.dragSlot = this;
+            DragSlot.instance.DragSetImage(itemImage);
+            DragSlot.instance.transform.position = eventData.position;
+        }
+    }
+
+    //마우스 드래그 중일 때 발생하는 이벤트
+    public void OnDrag(PointerEventData eventData)
+    {
+        HideToolTip();
+
+        if (item != null)
+            DragSlot.instance.transform.position = eventData.position;
+    }
+
+    // 마우스 드래그가 끝났을 때 발생하는 이벤트
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (DragSlot.instance.transform.localPosition.x < baseRect.xMin
+            || DragSlot.instance.transform.localPosition.x > baseRect.xMax
+            || DragSlot.instance.transform.localPosition.y < baseRect.yMin
+            || DragSlot.instance.transform.localPosition.y > baseRect.yMax)
+        {
+            Instantiate(DragSlot.instance.dragSlot.item,
+                thePlayer.transform.position + thePlayer.transform.forward,
+                Quaternion.identity);
+            DragSlot.instance.dragSlot.ClearSlot();
+
+        }
+
+        DragSlot.instance.SetColor(0);
+        DragSlot.instance.dragSlot = null;
+    }
+
+    // 해당 슬롯에 무언가가 마우스 드롭 됐을 때 발생하는 이벤트
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (DragSlot.instance.dragSlot != null)
+            ChangeSlot();
+    }
+
+    private void ChangeSlot()
+    {
+        Item.Item _tempItem = item;
+        int _tempItemCount = itemCount;
+
+        AddItem(DragSlot.instance.dragSlot.item, DragSlot.instance.dragSlot.itemCount);
+
+        if (_tempItem != null)
+            DragSlot.instance.dragSlot.AddItem(_tempItem, _tempItemCount);
+        else
+            DragSlot.instance.dragSlot.ClearSlot();
     }
 }

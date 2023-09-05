@@ -162,19 +162,19 @@ public class Player : MonoBehaviour
             }
             else if(_name == "coffee")
             {
-                weapons[1].gameObject.SetActive(true);
+                weapons[2].gameObject.SetActive(true);
                 weapons[0].gameObject.SetActive(false);
-                weapons[2].gameObject.SetActive(false);
+                weapons[1].gameObject.SetActive(false);
                 weapons[3].gameObject.SetActive(false);
-                weapon = weapons[1];
+                weapon = weapons[2];
             }
             else if(_name == "cigarette")
             {
-                weapons[1].gameObject.SetActive(true);
+                weapons[3].gameObject.SetActive(true);
                 weapons[0].gameObject.SetActive(false);
+                weapons[1].gameObject.SetActive(false);
                 weapons[2].gameObject.SetActive(false);
-                weapons[3].gameObject.SetActive(false);
-                weapon = weapons[1];
+                weapon = weapons[3];
             }
     }
 }
