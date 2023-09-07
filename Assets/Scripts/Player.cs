@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
             weapons[2].gameObject.SetActive(false);
             weapons[3].gameObject.SetActive(false);
             weapon = weapons[1];
+            weapon.GetComponent<Collider2D>().enabled = false;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour
             weapons[1].gameObject.SetActive(false);
             weapons[3].gameObject.SetActive(false);
             weapon = weapons[2];
+            weapon.GetComponent<Collider2D>().enabled = false;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
@@ -87,13 +89,14 @@ public class Player : MonoBehaviour
             weapons[1].gameObject.SetActive(false);
             weapons[2].gameObject.SetActive(false);
             weapon = weapons[3];
+            weapon.GetComponent<Collider2D>().enabled = false;
         }
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;
     }
     void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > nextAttack)
+        if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackCoolDown;
             StartCoroutine(Swing());
@@ -102,6 +105,7 @@ public class Player : MonoBehaviour
                 Vector2 shootingDir = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
                 shootingDir.Normalize();
                 GameObject shootingObject = Instantiate(weapon);
+                shootingObject.GetComponent<Collider2D>().enabled = true;
                 shootingObject.transform.position = weaponSpawnPos.transform.position;
                 shootingObject.transform.right = shootingDir;
                 shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * weaponSpeed;
@@ -113,7 +117,7 @@ public class Player : MonoBehaviour
         for (int i = 90; i >= -90; i--)
         {
             angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            yield return new WaitForSeconds(0.002f);
+            yield return new WaitForSeconds(0.001f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
@@ -123,6 +127,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("플레이어 피격(원거리)");
             Destroy(col.gameObject);
+
         }
         else if(col.tag == "Melee Weapon(Monster)")
         {
