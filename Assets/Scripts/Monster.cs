@@ -25,6 +25,7 @@ public class Monster : MonoBehaviour
         attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
         weapon = Instantiate(weaponPrefab);
+        weapon.transform.parent = transform;
         if (isMelee)
             weapon.tag = "Melee Weapon(Monster)";
         else
