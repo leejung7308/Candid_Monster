@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     private float nextAttack;
 
     Camera mainCamera;
+
+    [SerializeField]
+    private Inventory theInventory;
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -31,9 +35,14 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        LookAt();
-        WeaponSwap();
-        Attack();
+        if (!Inventory.inventoryActivated) {
+            LookAt();
+            WeaponSwap();
+            Attack();
+        }
+        //LookAt();
+        //WeaponSwap();
+        //Attack();
     }
     void FixedUpdate()
     {
@@ -127,6 +136,58 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.001f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("CanBePickedUp"))
+        {
+            Item.Item hitObject = collision.gameObject.GetComponent<Consumable>().item;
+
+            if (hitObject != null)
+            {
+                //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " ȹ�� �߽��ϴ�.");
+                theInventory.AcquireItem(hitObject.transform.GetComponent<Consumable>().item);
+                collision.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void EquipItem(string _name)
+    {
+            if (_name == "knife")
+            {
+                weapons[0].gameObject.SetActive(true);
+                weapons[1].gameObject.SetActive(false);
+                weapons[2].gameObject.SetActive(false);
+                weapons[3].gameObject.SetActive(false);
+                weapon = weapons[0];
+            }
+            else if(_name == "alcohol")
+            {
+                weapons[1].gameObject.SetActive(true);
+                weapons[0].gameObject.SetActive(false);
+                weapons[2].gameObject.SetActive(false);
+                weapons[3].gameObject.SetActive(false);
+                weapon = weapons[1];
+            }
+            else if(_name == "coffee")
+            {
+                weapons[2].gameObject.SetActive(true);
+                weapons[0].gameObject.SetActive(false);
+                weapons[1].gameObject.SetActive(false);
+                weapons[3].gameObject.SetActive(false);
+                weapon = weapons[2];
+            }
+            else if(_name == "cigarette")
+            {
+                weapons[3].gameObject.SetActive(true);
+                weapons[0].gameObject.SetActive(false);
+                weapons[1].gameObject.SetActive(false);
+                weapons[2].gameObject.SetActive(false);
+                weapon = weapons[3];
+            }
     }
     private void OnTriggerEnter2D(Collider2D col)
     {

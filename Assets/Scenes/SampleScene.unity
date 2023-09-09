@@ -697,6 +697,8 @@ MonoBehaviour:
   - {fileID: 1717584867156859975, guid: 5a419f3641e0f254fb84a077993a421e, type: 3}
   weapons: []
   weaponSpawnPos: {fileID: 1552663874}
+  attackCoolDown: 0.5
+  theInventory: {fileID: 0}
   isMelee: 1
 --- !u!70 &418332290
 CapsuleCollider2D:
