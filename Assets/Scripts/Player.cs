@@ -152,6 +152,16 @@ public class Player : MonoBehaviour
                 collision.gameObject.SetActive(false);
             }
         }
+        if (collision.tag == "Ranged Weapon(Monster)")
+        {
+            Debug.Log("플레이어 피격(원거리)");
+            Destroy(collision.gameObject);
+
+        }
+        else if (collision.tag == "Melee Weapon(Monster)")
+        {
+            Debug.Log("플레이어 피격(근거리)");
+        }
     }
 
     public void EquipItem(string _name)
@@ -188,18 +198,5 @@ public class Player : MonoBehaviour
                 weapons[2].gameObject.SetActive(false);
                 weapon = weapons[3];
             }
-    }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.tag == "Ranged Weapon(Monster)")
-        {
-            Debug.Log("플레이어 피격(원거리)");
-            Destroy(col.gameObject);
-
-        }
-        else if(col.tag == "Melee Weapon(Monster)")
-        {
-            Debug.Log("플레이어 피격(근거리)");
-        }
     }
 }
