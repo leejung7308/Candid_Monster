@@ -7,6 +7,7 @@ public class Monster : MonoBehaviour
     public GameObject radarObject;
     public GameObject attackRangeObject;
     public GameObject angle;
+    public GameObject weaponPrefab;
     public GameObject weapon;
     public GameObject weaponSpawnPos;
     public float moveSpeed = 5f;
@@ -23,6 +24,16 @@ public class Monster : MonoBehaviour
         radar = radarObject.GetComponent<Radar>();
         attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
+        weapon = Instantiate(weaponPrefab);
+        weapon.transform.parent = transform;
+        if (isMelee)
+            weapon.tag = "Melee Weapon(Monster)";
+        else
+        {
+            weapon.tag = "Ranged Weapon(Monster)";
+            weapon.GetComponent<Collider2D>().enabled = false;
+        }
+
     }
     private void Update()
     {
@@ -68,6 +79,7 @@ public class Monster : MonoBehaviour
             Vector2 shootingDir = (Vector2)player.transform.position - (Vector2)weaponSpawnPos.transform.position;
             shootingDir.Normalize();
             GameObject shootingObject = Instantiate(weapon);
+            shootingObject.GetComponent<Collider2D>().enabled = true;
             shootingObject.transform.position = weaponSpawnPos.transform.position;
             shootingObject.transform.up = shootingDir;
             shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * weaponSpeed;
@@ -75,7 +87,6 @@ public class Monster : MonoBehaviour
     }
     private void SetWeapon()
     {
-        weapon.gameObject.SetActive(true);
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;
     }
@@ -85,9 +96,20 @@ public class Monster : MonoBehaviour
         {
             angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
             if (i == 0) Shoot();
-            yield return new WaitForSeconds(0.002f);
+            yield return new WaitForSeconds(0.001f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
-    
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Ranged Weapon(Player)")
+        {
+            Debug.Log("몬스터 피격(원거리)");
+            Destroy(col.gameObject);
+        }
+        else if (col.tag == "Melee Weapon(Player)")
+        {
+            Debug.Log("몬스터 피격(근거리)");
+        }
+    }
 }
