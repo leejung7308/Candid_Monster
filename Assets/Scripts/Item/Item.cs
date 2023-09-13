@@ -42,6 +42,37 @@ namespace Item
             Nicotine = 0;
             Damage = damage;
         }
+        public static DamageHolder operator +(DamageHolder a)
+            => a;
+        public static DamageHolder operator -(DamageHolder a)
+            => new (-a.Caffeine, -a.Alcohol, -a.Nicotine, -a.Damage);
+        
+        public static DamageHolder operator +(DamageHolder a, DamageHolder b)
+        => new (
+            a.Caffeine + b.Caffeine,
+            a.Alcohol + b.Alcohol,
+            a.Nicotine + b.Nicotine,
+            a.Damage + b.Damage
+        );
+        
+        public static DamageHolder operator -(DamageHolder a, DamageHolder b)
+            => a + (-b);
+        
+        public static DamageHolder operator *(DamageHolder a, float ratio) 
+            => new (
+                a.Caffeine * ratio,
+                a.Alcohol * ratio,
+                a.Nicotine * ratio,
+                a.Damage * ratio
+            );
+        
+        public static DamageHolder operator *(DamageHolder a, DamageHolder b)
+            => new (
+                a.Caffeine * b.Caffeine,
+                a.Alcohol * b.Alcohol,
+                a.Nicotine * b.Nicotine,
+                a.Damage * b.Damage
+            );
     }
 
     public enum ItemType  // 아이템 유형
@@ -74,5 +105,13 @@ namespace Item
             this.alcohol = alcohol;
             this.nicotine = nicotine;
         }
+
+        public virtual DamageHolder GetDamageHolder()
+            => new DamageHolder(
+                this.caffeine,
+                this.alcohol,
+                this.nicotine,
+                0.0f
+            );
     }
 }

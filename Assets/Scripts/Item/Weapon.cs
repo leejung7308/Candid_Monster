@@ -7,5 +7,13 @@
         {
             damage = damage;
         }
+
+        public override DamageHolder GetDamageHolder()
+            => new DamageHolder(
+                this.caffeine,
+                this.alcohol,
+                this.nicotine,
+                this.damage
+            );
     }
 }
