@@ -3,7 +3,7 @@
     public class UsableItem : Item
     {
 
-        public UsableItem(ElementalStatus s) : base(s)
+        public UsableItem(float caffeine, float alcohol, float nicotine) : base(caffeine, alcohol, nicotine)
         {
         }
 
