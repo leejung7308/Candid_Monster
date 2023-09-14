@@ -6,10 +6,8 @@ TagManager:
   tags:
   - Weapon
   - CanBePickedUp
-  - Melee Weapon(Player)
-  - Ranged Weapon(Player)
-  - Melee Weapon(Monster)
-  - Ranged Weapon(Monster)
+  - Weapon(Player)
+  - Weapon(Monster)
   layers:
   - Default
   - TransparentFX
