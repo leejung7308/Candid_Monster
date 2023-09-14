@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2357533434980876242}
   - component: {fileID: -385254601836969344}
   - component: {fileID: 6823260596287068354}
+  - component: {fileID: 775397459117901850}
   m_Layer: 0
   m_Name: Alcohol
-  m_TagString: Ranged Weapon(Player)
+  m_TagString: Weapon(Player)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +149,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0019221008, y: 0}
   m_Size: {x: 0.318994, y: 0.85333335}
   m_Direction: 0
+--- !u!114 &775397459117901850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854303780617584345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caffeine: 0
+  alcohol: 0
+  nicotine: 0
+  itemName: 
+  itemType: 0
+  itemImage: {fileID: 0}
+  itemDesc: 
+  damage: 1
