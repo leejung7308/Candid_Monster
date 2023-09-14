@@ -20,18 +20,59 @@ namespace Item
      * 3. 모든 스킬을 반영해 계산된 최종 스탯 객체를 m의 damage 메소드로 전달합니다.
      * 4. 몬스터 객체의 damage 메소드에서 스텟에 따른 피해를 계산합니다.
      */
-    public class ElementalStatus
+    public class DamageHolder
     {
         public readonly float Caffeine;
         public readonly float Alcohol;
         public readonly float Nicotine;
+        public readonly float Damage;
 
-        public ElementalStatus(float caffeine, float alcohol, float nicotine)
+        public DamageHolder(float caffeine, float alcohol, float nicotine, float damage)
         {
             Caffeine = caffeine;
             Alcohol = alcohol;
             Nicotine = nicotine;
+            Damage = damage;
         }
+
+        public DamageHolder(float damage)
+        {
+            Caffeine = 0;
+            Alcohol = 0;
+            Nicotine = 0;
+            Damage = damage;
+        }
+        public static DamageHolder operator +(DamageHolder a)
+            => a;
+        public static DamageHolder operator -(DamageHolder a)
+            => new (-a.Caffeine, -a.Alcohol, -a.Nicotine, -a.Damage);
+        
+        public static DamageHolder operator +(DamageHolder a, DamageHolder b)
+        => new (
+            a.Caffeine + b.Caffeine,
+            a.Alcohol + b.Alcohol,
+            a.Nicotine + b.Nicotine,
+            a.Damage + b.Damage
+        );
+        
+        public static DamageHolder operator -(DamageHolder a, DamageHolder b)
+            => a + (-b);
+        
+        public static DamageHolder operator *(DamageHolder a, float ratio) 
+            => new (
+                a.Caffeine * ratio,
+                a.Alcohol * ratio,
+                a.Nicotine * ratio,
+                a.Damage * ratio
+            );
+        
+        public static DamageHolder operator *(DamageHolder a, DamageHolder b)
+            => new (
+                a.Caffeine * b.Caffeine,
+                a.Alcohol * b.Alcohol,
+                a.Nicotine * b.Nicotine,
+                a.Damage * b.Damage
+            );
     }
 
     public enum ItemType  // 아이템 유형
@@ -47,7 +88,9 @@ namespace Item
      */
     public class Item: MonoBehaviour
     {
-        public ElementalStatus Stat;
+        public float caffeine;
+        public float alcohol;
+        public float nicotine;
         
         public string itemName; // 
         public ItemType itemType; // 
@@ -56,14 +99,19 @@ namespace Item
         [TextArea]  // 여러 줄 가능해짐
         public string itemDesc; // 아이템의 설명
 
-        public Item(ElementalStatus s)
-        {
-            Stat = s;
-        }
-
         public Item(float caffeine, float alcohol, float nicotine)
         {
-            Stat = new ElementalStatus(caffeine, alcohol, nicotine);
+            this.caffeine = caffeine;
+            this.alcohol = alcohol;
+            this.nicotine = nicotine;
         }
+
+        public virtual DamageHolder GetDamageHolder()
+            => new DamageHolder(
+                this.caffeine,
+                this.alcohol,
+                this.nicotine,
+                0.0f
+            );
     }
 }
