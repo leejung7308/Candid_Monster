@@ -105,19 +105,6 @@ public class Player : EntityStatus
             isMelee = false;
         }
     }
-    void Shoot()
-    {
-        if (!isMelee)
-        {
-            Vector2 shootingDir = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-            shootingDir.Normalize();
-            GameObject shootingObject = Instantiate(weapon);
-            shootingObject.GetComponent<Collider2D>().enabled = true;
-            shootingObject.transform.position = weaponSpawnPos.transform.position;
-            shootingObject.transform.up = shootingDir;
-            shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * attackSpeed;
-        }
-    }
     void Attack()
     {
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
@@ -131,7 +118,6 @@ public class Player : EntityStatus
         for (int i = 90; i >= -90; i--)
         {
             angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            if (i == 0) Shoot();
             yield return new WaitForSeconds(0.001f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
