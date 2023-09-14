@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : EntityStatus
 {
+    public Monster(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
     public GameObject radarObject;
     public GameObject attackRangeObject;
     public GameObject angle;
     public GameObject weaponPrefab;
     public GameObject weapon;
     public GameObject weaponSpawnPos;
-    public float moveSpeed = 5f;
-    public float weaponSpeed = 5f;
-    public float attackCoolDown = 0.5f;
     public Vector2 spawnPoint;
     public bool isMelee = true;
     Radar radar;
@@ -68,21 +66,8 @@ public class Monster : MonoBehaviour
     {
         if (attackRange.isDetected && Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackCoolDown;
+            nextAttack = Time.time + attackSpeed;
             StartCoroutine(Swing());
-        }
-    }
-    private void Shoot()
-    {
-        if (!isMelee)
-        {
-            Vector2 shootingDir = (Vector2)player.transform.position - (Vector2)weaponSpawnPos.transform.position;
-            shootingDir.Normalize();
-            GameObject shootingObject = Instantiate(weapon);
-            shootingObject.GetComponent<Collider2D>().enabled = true;
-            shootingObject.transform.position = weaponSpawnPos.transform.position;
-            shootingObject.transform.up = shootingDir;
-            shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * weaponSpeed;
         }
     }
     private void SetWeapon()
@@ -95,7 +80,6 @@ public class Monster : MonoBehaviour
         for (int i = 90; i >= -90; i--)
         {
             angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            if (i == 0) Shoot();
             yield return new WaitForSeconds(0.001f);
         }
         angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
