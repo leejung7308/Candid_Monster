@@ -11,7 +11,6 @@ public class Monster : EntityStatus
     public GameObject weaponPrefab;
     public GameObject weapon;
     public GameObject weaponSpawnPos;
-    public float attackCoolDown = 0.5f;
     public Vector2 spawnPoint;
     public bool isMelee = true;
     Radar radar;
@@ -67,7 +66,7 @@ public class Monster : EntityStatus
     {
         if (attackRange.isDetected && Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackCoolDown;
+            nextAttack = Time.time + attackSpeed;
             StartCoroutine(Swing());
         }
     }

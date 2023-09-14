@@ -6,7 +6,6 @@ public class Player : EntityStatus
 {
     public Player(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
     public GameObject angle;
-    public float attackCoolDown = 0.5f;
     public List<GameObject> weaponPrefabs;
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
@@ -109,7 +108,7 @@ public class Player : EntityStatus
     {
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackCoolDown;
+            nextAttack = Time.time + attackSpeed;
             StartCoroutine(Swing());
         }
     }
