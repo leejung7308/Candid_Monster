@@ -2018,6 +2018,8 @@ MonoBehaviour:
   alcohol: 0
   caffeine: 0
   nicotine: 0
+  isInvincible: 0
+  invincibleTime: 2
   angle: {fileID: 1720518688}
   weaponPrefabs:
   - {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
@@ -4979,6 +4981,8 @@ MonoBehaviour:
   alcohol: 0
   caffeine: 0
   nicotine: 0
+  isInvincible: 0
+  invincibleTime: 2
   radarObject: {fileID: 862663885}
   attackRangeObject: {fileID: 2111500280}
   angle: {fileID: 2126162543}
@@ -9982,6 +9986,8 @@ MonoBehaviour:
   alcohol: 0
   caffeine: 0
   nicotine: 0
+  isInvincible: 0
+  invincibleTime: 2
   radarObject: {fileID: 180152026}
   attackRangeObject: {fileID: 1865216626}
   angle: {fileID: 1402499698}
@@ -13161,7 +13167,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 1.5
 --- !u!4 &2111500283
 Transform:
   m_ObjectHideFlags: 0

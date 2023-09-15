@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : EntityStatus
 {
     public Player(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
+    public float invincibleTime;
     public GameObject angle;
     public List<GameObject> weaponPrefabs;
     public List<GameObject> weapons;
@@ -37,6 +38,7 @@ public class Player : EntityStatus
             LookAt();
             WeaponSwap();
             Attack();
+            EntityDie();
         }
         //LookAt();
         //WeaponSwap();
@@ -98,31 +100,15 @@ public class Player : EntityStatus
             }
         }
         weapon = weapons[weaponNum];
-        if (weaponNum != 0)
-        {
-            weapon.GetComponent<Collider2D>().enabled = false;
-            isMelee = false;
-        }
     }
     void Attack()
     {
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            StartCoroutine(Swing());
+            StartCoroutine(Swing(angle));
         }
     }
-    private IEnumerator Swing()
-    {
-        for (int i = 90; i >= -90; i--)
-        {
-            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            yield return new WaitForSeconds(0.001f);
-        }
-        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("CanBePickedUp"))
@@ -136,15 +122,12 @@ public class Player : EntityStatus
                 collision.gameObject.SetActive(false);
             }
         }
-        if (collision.tag == "Ranged Weapon(Monster)")
+        if (collision.tag == "Weapon(Monster)" && !isInvincible)
         {
-            Debug.Log("플레이어 피격(원거리)");
-            Destroy(collision.gameObject);
-
-        }
-        else if (collision.tag == "Melee Weapon(Monster)")
-        {
-            Debug.Log("플레이어 피격(근거리)");
+            Debug.Log("플레이어 피격");
+            Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
+            EntityHit(currentDamageHolder);
+            StartCoroutine(InvincibleMode(invincibleTime));
         }
     }
 

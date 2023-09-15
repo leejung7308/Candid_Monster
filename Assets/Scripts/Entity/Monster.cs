@@ -5,6 +5,7 @@ using UnityEngine;
 public class Monster : EntityStatus
 {
     public Monster(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
+    public float invincibleTime;
     public GameObject radarObject;
     public GameObject attackRangeObject;
     public GameObject angle;
@@ -24,14 +25,7 @@ public class Monster : EntityStatus
         player = GameObject.FindGameObjectWithTag("Player");
         weapon = Instantiate(weaponPrefab);
         weapon.transform.parent = transform;
-        if (isMelee)
-            weapon.tag = "Melee Weapon(Monster)";
-        else
-        {
-            weapon.tag = "Ranged Weapon(Monster)";
-            weapon.GetComponent<Collider2D>().enabled = false;
-        }
-
+        weapon.tag = "Weapon(Monster)";
     }
     private void Update()
     {
@@ -39,6 +33,7 @@ public class Monster : EntityStatus
         Attack();
         LookAt();
         MonsterMovement();
+        EntityDie();
     }
     private void MonsterMovement()
     {
@@ -67,7 +62,7 @@ public class Monster : EntityStatus
         if (attackRange.isDetected && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            StartCoroutine(Swing());
+            StartCoroutine(Swing(angle));
         }
     }
     private void SetWeapon()
@@ -75,25 +70,14 @@ public class Monster : EntityStatus
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;
     }
-    private IEnumerator Swing()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        for (int i = 90; i >= -90; i--)
+        if (collision.tag == "Weapon(Player)" && !isInvincible)
         {
-            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            yield return new WaitForSeconds(0.001f);
-        }
-        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-    }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Ranged Weapon(Player)")
-        {
-            Debug.Log("몬스터 피격(원거리)");
-            Destroy(col.gameObject);
-        }
-        else if (col.tag == "Melee Weapon(Player)")
-        {
-            Debug.Log("몬스터 피격(근거리)");
+            Debug.Log("몬스터 피격"); 
+            Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
+            EntityHit(currentDamageHolder);
+            StartCoroutine(InvincibleMode(invincibleTime));
         }
     }
 }
