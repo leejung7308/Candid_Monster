@@ -15,13 +15,13 @@ public class InternetMarket : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI text_Coin;
 
-    private ItemInfo theItemInfo;
+    private IMItemInfo theIMItemInfo;
     private Inventory theInventory;
 
     // Start is called before the first frame update
     void Start()
     {
-        theItemInfo = FindObjectOfType<ItemInfo>();
+        theIMItemInfo = FindObjectOfType<IMItemInfo>();
         theInventory = FindObjectOfType<Inventory>();
     }
 
@@ -54,15 +54,14 @@ public class InternetMarket : MonoBehaviour
     private void CloseInternetMarket()
     {
         go_InternetMarketBase.SetActive(false);
-        theItemInfo.HideToolTip();
+        theIMItemInfo.HideToolTip();
     }
 
     private void Coin()
     {
         if (theInventory != null)
         {
-            string CoinText = theInventory.GetCoinText();
-            text_Coin.text = CoinText;
+            text_Coin.text = theInventory.GetCoinText();
         }
     }
 }

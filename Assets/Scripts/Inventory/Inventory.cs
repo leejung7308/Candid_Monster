@@ -74,7 +74,7 @@ public class Inventory : MonoBehaviour
             }
         }else if (Item.ItemType.ETC == _item.itemType)
         {
-            text_Coin.text = (_count * 1000000000).ToString();
+            text_Coin.text = (_count * _item.itemValue).ToString();
         }
         if(Item.ItemType.ETC != _item.itemType)
         {
@@ -92,5 +92,12 @@ public class Inventory : MonoBehaviour
     public string GetCoinText()
     {
         return text_Coin.text;
+    }
+
+    public void SetCoinText(int _text_Coin)
+    {
+        int CoinText = int.Parse(text_Coin.text);
+        CoinText -= _text_Coin;
+        text_Coin.text = CoinText.ToString();
     }
 }

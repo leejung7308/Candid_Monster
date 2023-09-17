@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ItemInfo : MonoBehaviour
+public class IMItemInfo : MonoBehaviour
 {
     [SerializeField]
     private GameObject go_Base;
@@ -25,7 +25,7 @@ public class ItemInfo : MonoBehaviour
 
         txt_ItemName.text = _item.itemName;
         txt_ItemDesc.text = _item.itemDesc;
-        txt_ItemValue.text = (_item.itemValue/2).ToString();
+        txt_ItemValue.text = _item.itemValue.ToString();
     }
 
     public void HideToolTip()

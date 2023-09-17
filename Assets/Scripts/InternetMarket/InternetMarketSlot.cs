@@ -5,12 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class InternetMarketSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InternetMarketSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public Item.Item item; // 획득한 아이템
+    private bool isDoubleClick = false;
+    private float doubleClickTimeThreshold = 0.3f;
+
+    public Item.Item item; //등록할 아이템
     public Image itemImage;  // 아이템의 이미지
 
-    private ItemInfo theItemInfo;
+    private IMItemInfo theIMItemInfo;
+    [SerializeField]
+    private Inventory theInventory;
 
     private Rect baseRect;
 
@@ -18,7 +23,7 @@ public class InternetMarketSlot : MonoBehaviour, IPointerEnterHandler, IPointerE
     void Start()
     {
         AddItem();
-        theItemInfo = FindObjectOfType<ItemInfo>();
+        theIMItemInfo = FindObjectOfType<IMItemInfo>();
         baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
@@ -39,12 +44,12 @@ public class InternetMarketSlot : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
     {
-        theItemInfo.ShowToolTip(_item, _pos);
+        theIMItemInfo.ShowToolTip(_item, _pos);
     }
 
     public void HideToolTip()
     {
-        theItemInfo.HideToolTip();
+        theIMItemInfo.HideToolTip();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -58,5 +63,30 @@ public class InternetMarketSlot : MonoBehaviour, IPointerEnterHandler, IPointerE
     public void OnPointerExit(PointerEventData eventData)
     {
         HideToolTip();
+    }
+
+    private IEnumerator ResetDoubleClickFlag()
+    {
+        yield return new WaitForSeconds(doubleClickTimeThreshold);
+        isDoubleClick = false;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+
+        if (eventData.clickCount == 2) // 더블클릭 감지
+        {
+            isDoubleClick = true;
+            StartCoroutine(ResetDoubleClickFlag());
+        }
+
+        if (isDoubleClick)
+        {
+            if (item != null)
+            {
+                //Debug.Log(item.itemName + "을 구매했습니다.");
+                theInventory.SetCoinText(item.itemValue);
+            }
+        }
     }
 }

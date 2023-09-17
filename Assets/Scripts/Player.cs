@@ -36,9 +36,12 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (!Inventory.inventoryActivated) {
-            LookAt();
-            WeaponSwap();
-            Attack();
+            if (!InternetMarket.internetmarketActivated)
+            {
+                LookAt();
+                WeaponSwap();
+                Attack();
+            }
         }
         //LookAt();
         //WeaponSwap();
