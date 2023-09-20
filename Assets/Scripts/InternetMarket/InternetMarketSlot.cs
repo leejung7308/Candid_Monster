@@ -11,53 +11,48 @@ public class InternetMarketSlot : MonoBehaviour, IPointerClickHandler
     public Image itemImage;  // 아이템의 이미지
 
     private IMItemInfo theIMItemInfo;
+
     [SerializeField]
     private Inventory theInventory;
 
-    private Rect baseRect;
-
-    // Start is called before the first frame update
     void Start()
     {
         AddItem();
         theIMItemInfo = FindObjectOfType<IMItemInfo>();
-        baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
     // 상점에 새로운 아이템 슬롯 추가
     public void AddItem()
     {
-        // itemImage의 sprite를 item의 이미지로 업데이트합니다.
         if (item != null)
         {
-            itemImage.sprite = item.itemImage; // itemImage를 item의 이미지로 설정
+            itemImage.sprite = item.itemImage;
         }
         else
         {
-            // item이 null이라면 이미지를 비워둘 수 있습니다.
             itemImage.sprite = null;
         }
     }
 
+    //상점 설명창
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.clickCount == 2) // 더블클릭 감지
+        if(eventData.clickCount == 1)
         {
             if (item != null)
             {
-                //Debug.Log(item.itemName + "을 구매했습니다.");
-                theInventory.SetCoinText(item.itemValue);
-            }
-        }
-        else if(eventData.clickCount == 1)
-        {
-            if (item != null)
-            {
-                if(item.itemName == theIMItemInfo.GetItem())
+                if(item.itemName != theIMItemInfo.GetItem())
                 {
-                    HideToolTip();
+                    ShowToolTip(item, transform.position);
                 }
-                ShowToolTip(item, transform.position);
+                else if (item.itemName == theIMItemInfo.GetItem())
+                {
+                    if (theIMItemInfo.GetToolTipActive() == false)
+                    {
+                        ShowToolTip(item, transform.position);
+                    }
+                    else HideToolTip();
+                }
             }
         }
     }
