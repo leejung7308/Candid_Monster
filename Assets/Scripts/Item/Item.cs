@@ -101,11 +101,6 @@ namespace Item
 
         public int itemValue;
 
-        public Item(ElementalStatus s)
-        {
-            Stat = s;
-        }
-
         public Item(float caffeine, float alcohol, float nicotine)
         {
             this.caffeine = caffeine;
