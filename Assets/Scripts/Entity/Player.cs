@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : EntityStatus
 {
+    public Player(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
+    public float invincibleTime;
     public GameObject angle;
-    public float moveSpeed;
-    public float weaponSpeed = 10f;
-    public float attackCoolDown = 0.5f;
     public List<GameObject> weaponPrefabs;
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
@@ -36,12 +35,10 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (!Inventory.inventoryActivated) {
-            if (!InternetMarket.internetmarketActivated)
-            {
-                LookAt();
-                WeaponSwap();
-                Attack();
-            }
+            LookAt();
+            WeaponSwap();
+            Attack();
+            EntityDie();
         }
         //LookAt();
         //WeaponSwap();
@@ -103,45 +100,15 @@ public class Player : MonoBehaviour
             }
         }
         weapon = weapons[weaponNum];
-        if (weaponNum != 0)
-        {
-            weapon.GetComponent<Collider2D>().enabled = false;
-            isMelee = false;
-        }
-    }
-    void Shoot()
-    {
-        if (!isMelee)
-        {
-            Vector2 shootingDir = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-            shootingDir.Normalize();
-            GameObject shootingObject = Instantiate(weapon);
-            shootingObject.GetComponent<Collider2D>().enabled = true;
-            shootingObject.transform.position = weaponSpawnPos.transform.position;
-            shootingObject.transform.up = shootingDir;
-            shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * weaponSpeed;
-        }
     }
     void Attack()
     {
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackCoolDown;
-            StartCoroutine(Swing());
+            nextAttack = Time.time + attackSpeed;
+            StartCoroutine(Swing(angle));
         }
     }
-    private IEnumerator Swing()
-    {
-        for (int i = 90; i >= -90; i--)
-        {
-            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            if (i == 0) Shoot();
-            yield return new WaitForSeconds(0.001f);
-        }
-        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("CanBePickedUp"))
@@ -155,15 +122,12 @@ public class Player : MonoBehaviour
                 collision.gameObject.SetActive(false);
             }
         }
-        if (collision.tag == "Ranged Weapon(Monster)")
+        if (collision.tag == "Weapon(Monster)" && !isInvincible)
         {
-            Debug.Log("플레이어 피격(원거리)");
-            Destroy(collision.gameObject);
-
-        }
-        else if (collision.tag == "Melee Weapon(Monster)")
-        {
-            Debug.Log("플레이어 피격(근거리)");
+            Debug.Log("플레이어 피격");
+            Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
+            EntityHit(currentDamageHolder);
+            StartCoroutine(InvincibleMode(invincibleTime));
         }
     }
 

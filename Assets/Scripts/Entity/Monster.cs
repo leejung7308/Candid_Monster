@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : EntityStatus
 {
+    public Monster(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
+    public float invincibleTime;
     public GameObject radarObject;
     public GameObject attackRangeObject;
     public GameObject angle;
     public GameObject weaponPrefab;
     public GameObject weapon;
     public GameObject weaponSpawnPos;
-    public float moveSpeed = 5f;
-    public float weaponSpeed = 5f;
-    public float attackCoolDown = 0.5f;
     public Vector2 spawnPoint;
     public bool isMelee = true;
     Radar radar;
@@ -26,14 +25,7 @@ public class Monster : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         weapon = Instantiate(weaponPrefab);
         weapon.transform.parent = transform;
-        if (isMelee)
-            weapon.tag = "Melee Weapon(Monster)";
-        else
-        {
-            weapon.tag = "Ranged Weapon(Monster)";
-            weapon.GetComponent<Collider2D>().enabled = false;
-        }
-
+        weapon.tag = "Weapon(Monster)";
     }
     private void Update()
     {
@@ -41,6 +33,7 @@ public class Monster : MonoBehaviour
         Attack();
         LookAt();
         MonsterMovement();
+        EntityDie();
     }
     private void MonsterMovement()
     {
@@ -68,21 +61,8 @@ public class Monster : MonoBehaviour
     {
         if (attackRange.isDetected && Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackCoolDown;
-            StartCoroutine(Swing());
-        }
-    }
-    private void Shoot()
-    {
-        if (!isMelee)
-        {
-            Vector2 shootingDir = (Vector2)player.transform.position - (Vector2)weaponSpawnPos.transform.position;
-            shootingDir.Normalize();
-            GameObject shootingObject = Instantiate(weapon);
-            shootingObject.GetComponent<Collider2D>().enabled = true;
-            shootingObject.transform.position = weaponSpawnPos.transform.position;
-            shootingObject.transform.up = shootingDir;
-            shootingObject.GetComponent<Rigidbody2D>().velocity = shootingDir * weaponSpeed;
+            nextAttack = Time.time + attackSpeed;
+            StartCoroutine(Swing(angle));
         }
     }
     private void SetWeapon()
@@ -90,26 +70,14 @@ public class Monster : MonoBehaviour
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;
     }
-    private IEnumerator Swing()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        for (int i = 90; i >= -90; i--)
+        if (collision.tag == "Weapon(Player)" && !isInvincible)
         {
-            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            if (i == 0) Shoot();
-            yield return new WaitForSeconds(0.001f);
-        }
-        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-    }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Ranged Weapon(Player)")
-        {
-            Debug.Log("몬스터 피격(원거리)");
-            Destroy(col.gameObject);
-        }
-        else if (col.tag == "Melee Weapon(Player)")
-        {
-            Debug.Log("몬스터 피격(근거리)");
+            Debug.Log("몬스터 피격"); 
+            Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
+            EntityHit(currentDamageHolder);
+            StartCoroutine(InvincibleMode(invincibleTime));
         }
     }
 }

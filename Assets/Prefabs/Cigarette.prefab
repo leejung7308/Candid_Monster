@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7578932338337641736}
   - component: {fileID: -3500097506522250148}
   - component: {fileID: 5030732104487839430}
+  - component: {fileID: 3377071193291869923}
   m_Layer: 0
   m_Name: Cigarette
-  m_TagString: Ranged Weapon(Player)
+  m_TagString: Weapon(Player)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +159,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43537456, y: 0.08923389}
   m_EdgeRadius: 0
+--- !u!114 &3377071193291869923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717584867156859975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caffeine: 0
+  alcohol: 0
+  nicotine: 0
+  itemName: 
+  itemType: 0
+  itemImage: {fileID: 0}
+  itemDesc: 
+  damage: 1
