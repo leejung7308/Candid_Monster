@@ -31,7 +31,6 @@ public class Collection : MonoBehaviour
                 OpenCollection();
             else
                 CloseCollection();
-
         }
     }
 
