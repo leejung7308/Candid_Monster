@@ -15,11 +15,13 @@ public class Inventory : MonoBehaviour
     private Slot[] slots;  // ½½·Ôµé ¹è¿­
 
     private ItemInfo theItemInfo;
+    private CollectionSlot theCollectionSlot;
 
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
+        theCollectionSlot = FindObjectOfType<CollectionSlot>();
 
     }
 
