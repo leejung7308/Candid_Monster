@@ -12,6 +12,7 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     public Image itemHideImage;
 
     public Image collectionImage;
+
     [SerializeField]
     private TextMeshProUGUI txt_ItemName;
     [SerializeField]
@@ -22,12 +23,12 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        
+        AddItem();
     }
 
     void Update()
     {
-        AddItem();
+  
     }
 
     // µµ°¨ È¹µæ
