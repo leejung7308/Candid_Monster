@@ -18,7 +18,7 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private TextMeshProUGUI txt_ItemDesc;
 
-    public static bool descActivated = true;
+    public bool descActive = true;
     public GameObject descHideImage;
 
     void Start()
@@ -42,7 +42,13 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
         {
             itemImage.sprite = null;
         }
-        //SetColor(0);
+        AcquireItem();
+    }
+
+    public void AcquireItem()
+    {
+        //도감 아이템 해금 조건 추가
+        SetColor(0);
     }
 
     private void SetColor(float _alpha)
@@ -50,6 +56,8 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
         Color color = itemHideImage.color;
         color.a = _alpha;
         itemHideImage.color = color;
+
+        descActive = false;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -58,10 +66,14 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
         {
             if (item != null)
             {
-                if (descActivated == true)
+                if (descActive == false)
                 {
                     descHideImage.SetActive(false);
                     ShowDesc(item);
+                }
+                else
+                {
+                    descHideImage.SetActive(true);
                 }
             }
         }

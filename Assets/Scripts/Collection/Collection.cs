@@ -10,6 +10,8 @@ public class Collection : MonoBehaviour
     [SerializeField]
     private GameObject go_CollectionBase;
 
+    public GameObject descHideImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,5 +44,6 @@ public class Collection : MonoBehaviour
     private void CloseCollection()
     {
         go_CollectionBase.SetActive(false);
+        descHideImage.SetActive(true);
     }
 }
