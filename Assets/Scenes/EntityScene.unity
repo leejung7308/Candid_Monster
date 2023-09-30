@@ -1896,7 +1896,7 @@ GameObject:
   - component: {fileID: 418332285}
   - component: {fileID: 418332288}
   - component: {fileID: 418332290}
-  - component: {fileID: 418332291}
+  - component: {fileID: 418332289}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2012,6 +2012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcf385c3d58c6b4881892ee2da9d100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theInventory: {fileID: 1695397564}
   hp: 10
   moveSpeed: 10
   attackSpeed: 0.5
@@ -2029,7 +2030,6 @@ MonoBehaviour:
   weapons: []
   weaponSpawnPos: {fileID: 1552663874}
   isMelee: 1
-  theInventory: {fileID: 1695397564}
 --- !u!70 &418332290
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2065,32 +2065,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &418332291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418332284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fcf385c3d58c6b4881892ee2da9d100, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theInventory: {fileID: 0}
-  hp: 0
-  moveSpeed: 0
-  attackSpeed: 0
-  alcohol: 0
-  caffeine: 0
-  nicotine: 0
-  isInvincible: 0
-  invincibleTime: 0
-  angle: {fileID: 0}
-  weaponPrefabs: []
-  weapons: []
-  weaponSpawnPos: {fileID: 0}
-  isMelee: 0
 --- !u!1001 &422142671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5038,6 +5012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theInventory: {fileID: 0}
   hp: 1
   moveSpeed: 5
   attackSpeed: 0.5
@@ -6378,6 +6353,7 @@ MonoBehaviour:
   itemDesc: 'just knife
 
     very cheap'
+  itemValue: 0
 --- !u!114 &917105268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10306,6 +10282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theInventory: {fileID: 0}
   hp: 1
   moveSpeed: 5
   attackSpeed: 0.5
