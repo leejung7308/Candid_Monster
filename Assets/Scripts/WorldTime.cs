@@ -31,7 +31,7 @@ public class WorldTime : MonoBehaviour
     }
     private void UpdateWorldTime()
     {
-        currentTime += Time.deltaTime*60;
+        currentTime += Time.deltaTime;
         float hour = currentTime / 60f;
         float minute = currentTime % 60f;
         timeText.text = string.Format("Time {0:D2} : {1:D2}", (int)hour, (int)minute);
