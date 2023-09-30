@@ -38,7 +38,7 @@ public class Player : EntityStatus
             LookAt();
             WeaponSwap();
             Attack();
-            EntityDie();
+            if(hp<=0) EntityDie();
         }
         //LookAt();
         //WeaponSwap();

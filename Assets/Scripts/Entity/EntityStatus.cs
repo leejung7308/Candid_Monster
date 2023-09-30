@@ -46,11 +46,8 @@ public class EntityStatus : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = originalColor;
         isInvincible = false;
     }
-    protected void EntityDie()
+    virtual protected void EntityDie()
     {
-        if (hp <= 0)
-        {
             Destroy(gameObject);
-        }
     }
 }

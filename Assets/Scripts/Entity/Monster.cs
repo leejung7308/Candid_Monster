@@ -33,7 +33,7 @@ public class Monster : EntityStatus
         Attack();
         LookAt();
         MonsterMovement();
-        EntityDie();
+        if(hp<=0) EntityDie();
     }
     private void MonsterMovement()
     {
@@ -69,6 +69,11 @@ public class Monster : EntityStatus
     {
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;
+    }
+    protected override void EntityDie()
+    {
+        gameObject.GetComponent<DropTable>().ItemDrop(transform.position);
+        base.EntityDie();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
