@@ -45,7 +45,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     {
         item = _item;
         itemCount = _count;
-        itemImage.sprite = item.itemImage; //acess item image
+        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite; //acess item image
+        itemImage.color = item.GetComponent<SpriteRenderer>().color;
 
         if (item.itemType != Item.ItemType.Equipment && item.itemType != Item.ItemType.ETC)
         {

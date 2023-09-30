@@ -11,6 +11,7 @@ public class Player : EntityStatus
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
     public bool isMelee = true;
+    public Inventory theInventory;
     private GameObject weapon;
     private float nextAttack;
 
@@ -110,12 +111,12 @@ public class Player : EntityStatus
     {
         if (collision.gameObject.CompareTag("CanBePickedUp"))
         {
-            Item.Item hitObject = collision.gameObject.GetComponent<Consumable>().item;
+            Item.Item hitObject = collision.gameObject.GetComponent<Item.Item>();
 
             if (hitObject != null)
             {
                 //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " ȹ�� �߽��ϴ�.");
-                theInventory.AcquireItem(hitObject.transform.GetComponent<Consumable>().item);
+                theInventory.AcquireItem(hitObject);
                 collision.gameObject.SetActive(false);
             }
         }
