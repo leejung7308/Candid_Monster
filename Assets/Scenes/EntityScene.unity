@@ -2000,6 +2000,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &418332289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418332284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fcf385c3d58c6b4881892ee2da9d100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  moveSpeed: 10
+  attackSpeed: 0.5
+  alcohol: 0
+  caffeine: 0
+  nicotine: 0
+  isInvincible: 1
+  invincibleTime: 2
+  angle: {fileID: 1720518688}
+  weaponPrefabs:
+  - {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
+  - {fileID: 1854303780617584345, guid: 564dd942ec7652843a4c37995893d82e, type: 3}
+  - {fileID: 1426898323791162227, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
+  - {fileID: 1717584867156859975, guid: 5a419f3641e0f254fb84a077993a421e, type: 3}
+  weapons: []
+  weaponSpawnPos: {fileID: 1552663874}
+  isMelee: 1
+  theInventory: {fileID: 1695397564}
 --- !u!70 &418332290
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4924,6 +4954,7 @@ GameObject:
   - component: {fileID: 834206347}
   - component: {fileID: 834206346}
   - component: {fileID: 834206345}
+  - component: {fileID: 834206348}
   - component: {fileID: 834206344}
   - component: {fileID: 834206343}
   m_Layer: 0
@@ -5007,6 +5038,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 1
+  moveSpeed: 5
+  attackSpeed: 0.5
+  alcohol: 0
+  caffeine: 0
+  nicotine: 0
+  isInvincible: 0
+  invincibleTime: 2
+  radarObject: {fileID: 862663885}
+  attackRangeObject: {fileID: 2111500280}
+  angle: {fileID: 2126162543}
+  weaponPrefab: {fileID: 1426898323791162227, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
+  weapon: {fileID: 0}
+  weaponSpawnPos: {fileID: 186590576}
+  spawnPoint: {x: -15, y: 0}
+  isMelee: 0
 --- !u!212 &834206346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5077,6 +5124,27 @@ Transform:
   - {fileID: 2126162544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &834206348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834206342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc424e3f758ad24b9123b5950ff0cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemTable:
+  - item: {fileID: 9108856288992730772, guid: a0fa4aeb1c62d954eb5b8809f1143a90, type: 3}
+    percentage: 100
+  - item: {fileID: 9108856288992730772, guid: 9d26710e5bc7ef543814f7f0efe0fc52, type: 3}
+    percentage: 100
+  - item: {fileID: 9108856288992730772, guid: 89e71ca8c4d5d824081417d1476afed4, type: 3}
+    percentage: 100
+  - item: {fileID: 9108856288992730772, guid: a521407343d8927468297970028a3518, type: 3}
+    percentage: 100
 --- !u!1001 &851944387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10084,6 +10152,7 @@ GameObject:
   - component: {fileID: 1683692133}
   - component: {fileID: 1683692132}
   - component: {fileID: 1683692134}
+  - component: {fileID: 1683692135}
   - component: {fileID: 1683692131}
   - component: {fileID: 1683692130}
   m_Layer: 0
@@ -10235,6 +10304,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  moveSpeed: 5
+  attackSpeed: 0.5
+  alcohol: 0
+  caffeine: 0
+  nicotine: 0
+  isInvincible: 0
+  invincibleTime: 2
+  radarObject: {fileID: 180152026}
+  attackRangeObject: {fileID: 1865216626}
+  angle: {fileID: 1402499698}
+  weaponPrefab: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
+  weapon: {fileID: 0}
+  weaponSpawnPos: {fileID: 558399166}
+  spawnPoint: {x: 15, y: 0}
+  isMelee: 1
+--- !u!114 &1683692135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683692129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc424e3f758ad24b9123b5950ff0cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemTable: []
+--- !u!114 &1695397564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7515501108831254717, guid: b6f1a85e5d145524b82e420fac18e232, type: 3}
+  m_PrefabInstance: {fileID: 862343958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4232c2084cbdb4c8505a758d3fb4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1708252168
