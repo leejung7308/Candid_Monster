@@ -2018,7 +2018,7 @@ MonoBehaviour:
   alcohol: 0
   caffeine: 0
   nicotine: 0
-  isInvincible: 0
+  isInvincible: 1
   invincibleTime: 2
   angle: {fileID: 1720518688}
   weaponPrefabs:
@@ -4892,6 +4892,7 @@ GameObject:
   - component: {fileID: 834206347}
   - component: {fileID: 834206346}
   - component: {fileID: 834206345}
+  - component: {fileID: 834206348}
   - component: {fileID: 834206344}
   - component: {fileID: 834206343}
   m_Layer: 0
@@ -4975,7 +4976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 1
   moveSpeed: 5
   attackSpeed: 0.5
   alcohol: 0
@@ -5061,6 +5062,27 @@ Transform:
   - {fileID: 2126162544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &834206348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834206342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc424e3f758ad24b9123b5950ff0cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemTable:
+  - item: {fileID: 9108856288992730772, guid: a0fa4aeb1c62d954eb5b8809f1143a90, type: 3}
+    percentage: 100
+  - item: {fileID: 9108856288992730772, guid: 9d26710e5bc7ef543814f7f0efe0fc52, type: 3}
+    percentage: 100
+  - item: {fileID: 9108856288992730772, guid: 89e71ca8c4d5d824081417d1476afed4, type: 3}
+    percentage: 100
+  - item: {fileID: 9108856288992730772, guid: a521407343d8927468297970028a3518, type: 3}
+    percentage: 100
 --- !u!1001 &851944387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9827,6 +9849,7 @@ GameObject:
   - component: {fileID: 1683692133}
   - component: {fileID: 1683692132}
   - component: {fileID: 1683692134}
+  - component: {fileID: 1683692135}
   - component: {fileID: 1683692131}
   - component: {fileID: 1683692130}
   m_Layer: 0
@@ -9980,7 +10003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 1
   moveSpeed: 5
   attackSpeed: 0.5
   alcohol: 0
@@ -9996,6 +10019,19 @@ MonoBehaviour:
   weaponSpawnPos: {fileID: 558399166}
   spawnPoint: {x: 15, y: 0}
   isMelee: 1
+--- !u!114 &1683692135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683692129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc424e3f758ad24b9123b5950ff0cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemTable: []
 --- !u!114 &1695397564 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7515501108831254717, guid: b6f1a85e5d145524b82e420fac18e232, type: 3}
