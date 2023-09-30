@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7604803209655224737}
   - component: {fileID: 2832053878536515744}
   m_Layer: 5
-  m_Name: StarObject
+  m_Name: StarObject 2
   m_TagString: CanBePickedUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   caffeine: 0
   alcohol: 0
   nicotine: 0
-  itemName: Star
+  itemName: Star(green)
   itemType: 1
   itemImage: {fileID: -660698133, guid: 07d1d364cc3af2047a70fd375fe247d4, type: 3}
   itemDesc: 'bling bling star
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -660698133, guid: 07d1d364cc3af2047a70fd375fe247d4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.24056602, g: 1, b: 0.34771195, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
