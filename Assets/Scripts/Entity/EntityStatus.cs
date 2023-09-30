@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EntityStatus : MonoBehaviour
 {
-    [SerializeField]
-    public Inventory theInventory;
-
     public float hp;
     public float moveSpeed;
     public float attackSpeed;
