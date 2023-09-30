@@ -16,9 +16,6 @@ public class Player : EntityStatus
 
     Camera mainCamera;
 
-    [SerializeField]
-    private Inventory theInventory;
-
     private void Start()
     {
         mainCamera = Camera.main;

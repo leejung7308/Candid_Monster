@@ -47,15 +47,19 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         itemCount = _count;
         itemImage.sprite = item.itemImage; //acess item image
 
-        if (item.itemType != Item.ItemType.Equipment)
+        if (item.itemType != Item.ItemType.Equipment && item.itemType != Item.ItemType.ETC)
         {
             go_CountImage.SetActive(true);
             text_Count.text = itemCount.ToString();
         }
-        else //weapon
+        else if(item.itemType == Item.ItemType.Equipment) //weapon
         {
             text_Count.text = "0";
             go_CountImage.SetActive(false);
+        }
+        else
+        {
+
         }
 
         SetColor(1);

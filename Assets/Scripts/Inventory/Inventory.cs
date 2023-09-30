@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -12,14 +13,19 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject go_SlotsParent;  // Slot들의 부모인 Grid Setting 
 
+    [SerializeField]
+    private TextMeshProUGUI text_Coin;
+
     private Slot[] slots;  // 슬롯들 배열
 
     private ItemInfo theItemInfo;
+    private CollectionSlot theCollectionSlot;
 
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
+        theCollectionSlot = FindObjectOfType<CollectionSlot>();
 
     }
 
@@ -55,7 +61,7 @@ public class Inventory : MonoBehaviour
 
     public void AcquireItem(Item.Item _item, int _count = 1)
     {
-        if (Item.ItemType.Equipment != _item.itemType)
+        if (Item.ItemType.Equipment != _item.itemType && Item.ItemType.ETC != _item.itemType)
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -68,15 +74,32 @@ public class Inventory : MonoBehaviour
                     }
                 }
             }
-        }
-
-        for (int i = 0; i < slots.Length; i++)
+        }else if (Item.ItemType.ETC == _item.itemType)
         {
-            if (slots[i].item == null)
+            text_Coin.text = (_count * _item.itemValue).ToString();
+        }
+        if(Item.ItemType.ETC != _item.itemType)
+        {
+            for (int i = 0; i < slots.Length; i++)
             {
-                slots[i].AddItem(_item, _count);
-                return;
+                if (slots[i].item == null)
+                {
+                    slots[i].AddItem(_item, _count);
+                    return;
+                }
             }
         }
+    }
+
+    public string GetCoinText()
+    {
+        return text_Coin.text;
+    }
+
+    public void SetCoinText(int _text_Coin)
+    {
+        int CoinText = int.Parse(text_Coin.text);
+        CoinText -= _text_Coin;
+        text_Coin.text = CoinText.ToString();
     }
 }

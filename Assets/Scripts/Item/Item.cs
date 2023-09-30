@@ -99,6 +99,8 @@ namespace Item
         [TextArea]  // 여러 줄 가능해짐
         public string itemDesc; // 아이템의 설명
 
+        public int itemValue;
+
         public Item(float caffeine, float alcohol, float nicotine)
         {
             this.caffeine = caffeine;

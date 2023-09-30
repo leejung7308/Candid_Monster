@@ -4,10 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ItemInfo : MonoBehaviour
+public class IMItemInfo : MonoBehaviour
 {
     [SerializeField]
     private GameObject go_Base;
+
+    [SerializeField]
+    private IMBuyButton theIMBuyButton;
+    [SerializeField]
+    private BuyCount theBuyCount;
 
     [SerializeField]
     private TextMeshProUGUI txt_ItemName;
@@ -18,18 +23,30 @@ public class ItemInfo : MonoBehaviour
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
     {
+        
         go_Base.SetActive(true);
-        _pos += new Vector3(go_Base.GetComponent<RectTransform>().rect.width * 0.5f,
-                            -go_Base.GetComponent<RectTransform>().rect.height * 0.5f, 0);
-        go_Base.transform.position = _pos;
+        theIMBuyButton.SetBuyItem(_item);
+        theBuyCount.SetBuyItem(_item);
 
         txt_ItemName.text = _item.itemName;
         txt_ItemDesc.text = _item.itemDesc;
-        txt_ItemValue.text = (_item.itemValue/2).ToString();
+        txt_ItemValue.text = _item.itemValue.ToString();
+
+        theBuyCount.SetBuyCount();
     }
 
     public void HideToolTip()
     {
         go_Base.SetActive(false);
+    }
+
+    public string GetItem()
+    {
+        return txt_ItemName.text;
+    }
+
+    public bool GetToolTipActive()
+    {
+        return go_Base.activeSelf;
     }
 }
