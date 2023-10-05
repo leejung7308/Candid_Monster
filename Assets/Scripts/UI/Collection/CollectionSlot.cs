@@ -11,24 +11,12 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     public Image itemImage;
     public Image itemHideImage;
 
-    public Image collectionImage;
-
-    [SerializeField]
-    private TextMeshProUGUI txt_ItemName;
-    [SerializeField]
-    private TextMeshProUGUI txt_ItemDesc;
-
-    public bool descActive = true;
-    public GameObject descHideImage;
+    private CollectionDesc theCollectionDesc;
 
     void Start()
     {
         AddItem();
-    }
-
-    void Update()
-    {
-  
+        theCollectionDesc = FindObjectOfType<CollectionDesc>();
     }
 
     // µµ°¨ È¹µæ
@@ -56,8 +44,6 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
         Color color = itemHideImage.color;
         color.a = _alpha;
         itemHideImage.color = color;
-
-        descActive = false;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -66,23 +52,13 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
         {
             if (item != null)
             {
-                if (descActive == false)
-                {
-                    descHideImage.SetActive(false);
-                    ShowDesc(item);
-                }
-                else
-                {
-                    descHideImage.SetActive(true);
-                }
+                ShowDesc(item, transform.position);
             }
         }
     }
 
-    public void ShowDesc(Item.Item _item)
+    public void ShowDesc(Item.Item _item, Vector3 _pos)
     {
-        collectionImage.sprite = _item.itemImage;
-        txt_ItemName.text = _item.itemName;
-        txt_ItemDesc.text = _item.itemDesc;
+        theCollectionDesc.ShowDesc(_item, _pos);
     }
 }

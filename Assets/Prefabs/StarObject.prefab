@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3034855680302089579}
   - component: {fileID: 9108856288992730772}
-  - component: {fileID: 8282099800557747720}
   - component: {fileID: 7604803209655224737}
   - component: {fileID: 2832053878536515744}
   m_Layer: 5
@@ -56,19 +55,7 @@ MonoBehaviour:
   itemDesc: 'bling bling star
 
     its yellow'
---- !u!114 &8282099800557747720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2279428083488642998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91465cfc4cedf214da455f647ce08fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 9108856288992730772}
+  itemValue: 0
 --- !u!58 &7604803209655224737
 CircleCollider2D:
   m_ObjectHideFlags: 0

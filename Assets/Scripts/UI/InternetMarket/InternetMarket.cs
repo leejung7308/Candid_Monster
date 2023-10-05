@@ -28,10 +28,11 @@ public class InternetMarket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TryOpenInternetMarket();
+        //TryOpenInternetMarket();
         Coin();
     }
 
+    /*
     private void TryOpenInternetMarket()
     {
         if (Input.GetKeyDown(KeyCode.O))
@@ -45,13 +46,14 @@ public class InternetMarket : MonoBehaviour
 
         }
     }
+    */
 
-    private void OpenInternetMarket()
+    public void OpenInternetMarket()
     {
         go_InternetMarketBase.SetActive(true);
     }
 
-    private void CloseInternetMarket()
+    public void CloseInternetMarket()
     {
         go_InternetMarketBase.SetActive(false);
         theIMItemInfo.HideToolTip();

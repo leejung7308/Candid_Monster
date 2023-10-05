@@ -12,9 +12,6 @@ public class InternetMarketSlot : MonoBehaviour, IPointerClickHandler
 
     private IMItemInfo theIMItemInfo;
 
-    [SerializeField]
-    private Inventory theInventory;
-
     void Start()
     {
         AddItem();

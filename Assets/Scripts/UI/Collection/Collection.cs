@@ -20,9 +20,10 @@ public class Collection : MonoBehaviour
 
     void Update()
     {
-        TryOpenCollection();
+        //TryOpenCollection();
     }
 
+    /*
     private void TryOpenCollection()
     {
         if (Input.GetKeyDown(KeyCode.U))
@@ -35,13 +36,14 @@ public class Collection : MonoBehaviour
                 CloseCollection();
         }
     }
+    */
 
-    private void OpenCollection()
+    public void OpenCollection()
     {
         go_CollectionBase.SetActive(true);
     }
 
-    private void CloseCollection()
+    public void CloseCollection()
     {
         go_CollectionBase.SetActive(false);
         descHideImage.SetActive(true);

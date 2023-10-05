@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3041399875933730660}
   - component: {fileID: 8200504801463315495}
-  - component: {fileID: 3883649200676103888}
   - component: {fileID: 2275907673155229753}
   - component: {fileID: 7928947647629303063}
   m_Layer: 5
@@ -47,23 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d90156fa0790a4f9d4964995ee1d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caffeine: 0
+  alcohol: 0
+  nicotine: 0
   itemName: Coin
   itemType: 3
   itemImage: {fileID: -222068966, guid: 07d1d364cc3af2047a70fd375fe247d4, type: 3}
   itemDesc: Coin
---- !u!114 &3883649200676103888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927694576777091998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91465cfc4cedf214da455f647ce08fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 8200504801463315495}
+  itemValue: 0
 --- !u!58 &2275907673155229753
 CircleCollider2D:
   m_ObjectHideFlags: 0
