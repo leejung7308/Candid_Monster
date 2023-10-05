@@ -7713,60 +7713,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 917105267}
-    - targetCorrespondingSourceObject: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 917105268}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
---- !u!1 &917105266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
-  m_PrefabInstance: {fileID: 917105265}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &917105267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917105266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70d90156fa0790a4f9d4964995ee1d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
-  itemName: knife
-  itemType: 0
-  itemImage: {fileID: 21300000, guid: 70e3e5240f0d50f43a000a319e8a4854, type: 3}
-  itemDesc: 'just knife
-
-    very cheap'
-  itemValue: 0
---- !u!114 &917105268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917105266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91465cfc4cedf214da455f647ce08fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 917105267}
 --- !u!114 &917105269 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5967434786978410537, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
   m_PrefabInstance: {fileID: 917105265}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917105266}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
@@ -8516,7 +8470,8 @@ PrefabInstance:
       propertyPath: itemValue
       value: 10000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3883649200676103888, guid: a247923a76e50814881d637c10db9134, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15457,7 +15412,8 @@ PrefabInstance:
       propertyPath: itemValue
       value: 100
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8282099800557747720, guid: a0fa4aeb1c62d954eb5b8809f1143a90, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
