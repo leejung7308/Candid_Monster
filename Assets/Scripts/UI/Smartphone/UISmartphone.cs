@@ -5,15 +5,17 @@ using UnityEngine.EventSystems;
 
 public class UISmartphone : MonoBehaviour, IPointerClickHandler
 {
-    public static bool SmartphoneActivated = false;
-
     [SerializeField]
     private GameObject SmartphoneBase;
+
+    private Collection theCollection;
+    private InternetMarket theInternetMarket;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        theCollection = FindObjectOfType<Collection>();
+        theInternetMarket = FindObjectOfType<InternetMarket>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.clickCount == 1)
         {
-            if (SmartphoneActivated == false)
+            if (SmartphoneBase.activeSelf == false)
             {
                 OpenSmartphone();
             }
@@ -41,23 +43,25 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (SmartphoneActivated == false)
+            if (SmartphoneBase.activeSelf == false)
                 OpenSmartphone();
             else
                 CloseSmartphone();
 
         }
     }
- 
+   
     private void OpenSmartphone()
     {
         SmartphoneBase.SetActive(true);
-        SmartphoneActivated = true;
     }
 
     private void CloseSmartphone()
     {
+        GameObject.Find("Collection").transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("Phone_image").transform.GetChild(2).gameObject.SetActive(true);
+        GameObject.Find("InternetMarket").transform.GetChild(0).gameObject.SetActive(false);
+
         SmartphoneBase.SetActive(false);
-        SmartphoneActivated = false;
     }
 }

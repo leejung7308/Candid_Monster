@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class Collection : MonoBehaviour
 {
-    public static bool collectionActivated = false;
-
     [SerializeField]
     private GameObject go_CollectionBase;
 
@@ -20,23 +18,8 @@ public class Collection : MonoBehaviour
 
     void Update()
     {
-        //TryOpenCollection();
-    }
 
-    /*
-    private void TryOpenCollection()
-    {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            collectionActivated = !collectionActivated;
-
-            if (collectionActivated)
-                OpenCollection();
-            else
-                CloseCollection();
-        }
     }
-    */
 
     public void OpenCollection()
     {
