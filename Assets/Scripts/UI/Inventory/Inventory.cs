@@ -6,17 +6,17 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public static bool inventoryActivated = false;  // 인벤토리 활성화 여부. true가 되면 카메라 움직임과 다른 입력을 막을 것이다.
-
     [SerializeField]
-    private GameObject go_InventoryBase; // Inventory_Base 이미지
+    private GameObject go_InventoryBase;
     [SerializeField]
-    private GameObject go_SlotsParent;  // Slot들의 부모인 Grid Setting 
+    private GameObject go_SlotsParent;
+    [SerializeField]
+    private Transform _targetTr;
 
     [SerializeField]
     private TextMeshProUGUI text_Coin;
 
-    private Slot[] slots;  // 슬롯들 배열
+    private Slot[] slots;
 
     private ItemInfo theItemInfo;
     private CollectionSlot theCollectionSlot;
@@ -26,7 +26,6 @@ public class Inventory : MonoBehaviour
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
         theCollectionSlot = FindObjectOfType<CollectionSlot>();
-
     }
 
     void Update()
@@ -38,16 +37,14 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            inventoryActivated = !inventoryActivated;
-
-            if (inventoryActivated)
+            if (go_InventoryBase.activeSelf==false)
                 OpenInventory();
             else
                 CloseInventory();
 
         }
     }
-
+    
     private void OpenInventory()
     {
         go_InventoryBase.SetActive(true);
@@ -57,6 +54,7 @@ public class Inventory : MonoBehaviour
     {
         go_InventoryBase.SetActive(false);
         theItemInfo.HideToolTip();
+        //_targetTr.position = new Vector3(400, 200, 0);
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)
@@ -65,7 +63,7 @@ public class Inventory : MonoBehaviour
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                if (slots[i].item != null)  // null 이라면 slots[i].item.itemName 할 때 런타임 에러
+                if (slots[i].item != null)
                 {
                     if (slots[i].item.itemName == _item.itemName)
                     {
