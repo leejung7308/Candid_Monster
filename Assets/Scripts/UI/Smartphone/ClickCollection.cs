@@ -18,11 +18,13 @@ public class ClickCollection : MonoBehaviour
     {
         theCollection.OpenCollection();
         OnlineStore.SetActive(false);
+        GameObject.Find("Icon_Setting").transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void OnClickQuitButton()
     {
         OnlineStore.SetActive(true);
         theCollection.CloseCollection();
+        GameObject.Find("Icon_Setting").transform.GetChild(0).gameObject.SetActive(true);
     }
 }

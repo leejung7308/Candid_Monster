@@ -51,7 +51,7 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
         }
     }
    
-    private void OpenSmartphone()
+    public void OpenSmartphone()
     {
         SmartphoneBase.SetActive(true);
     }
