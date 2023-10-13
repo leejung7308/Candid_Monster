@@ -59,8 +59,8 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     private void CloseSmartphone()
     {
         GameObject.Find("Collection").transform.GetChild(0).gameObject.SetActive(false);
-        GameObject.Find("Phone_image").transform.GetChild(2).gameObject.SetActive(true);
-        GameObject.Find("InternetMarket").transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("Home").transform.GetChild(1).gameObject.SetActive(true);
+        GameObject.Find("OnlineStore").transform.GetChild(0).gameObject.SetActive(false);
 
         SmartphoneBase.SetActive(false);
     }
