@@ -24,7 +24,8 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     {
         if (item != null)
         {
-            itemImage.sprite = item.itemImage;
+            itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+            itemImage.color = item.GetComponent<SpriteRenderer>().color;
         }
         else
         {

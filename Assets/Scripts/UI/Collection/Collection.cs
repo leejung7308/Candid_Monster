@@ -10,17 +10,6 @@ public class Collection : MonoBehaviour
 
     public GameObject descHideImage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public void OpenCollection()
     {
         go_CollectionBase.SetActive(true);

@@ -8,20 +8,19 @@ public class ClickCollection : MonoBehaviour
 
     public GameObject OnlineStore;
 
-    // Start is called before the first frame update
     void Start()
     {
         theCollection = FindObjectOfType<Collection>();
     }
 
-    public void OnClickCollectionButton()
+    private void OnClickCollectionButton()
     {
         theCollection.OpenCollection();
         OnlineStore.SetActive(false);
         GameObject.Find("Icon_Setting").transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    public void OnClickQuitButton()
+    private void OnClickQuitButton()
     {
         OnlineStore.SetActive(true);
         theCollection.CloseCollection();

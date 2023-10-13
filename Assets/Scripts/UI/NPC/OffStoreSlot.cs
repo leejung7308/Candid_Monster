@@ -17,24 +17,18 @@ public class OffStoreSlot : MonoBehaviour, IPointerClickHandler
 
     private Inventory theInventory;
 
-    // Start is called before the first frame update
     void Start()
     {
         AddItem();
         theInventory = FindObjectOfType<Inventory>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddItem()
     {
         if (item != null)
         {
-            itemImage.sprite = item.itemImage;
+            itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+            itemImage.color = item.GetComponent<SpriteRenderer>().color;
             txt_ItemName.text = item.itemName;
             txt_ItemValue.text = item.itemValue.ToString();
         }

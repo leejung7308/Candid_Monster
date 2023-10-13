@@ -8,7 +8,6 @@ public class IMItemInfo : MonoBehaviour
 {
     [SerializeField]
     private GameObject go_Base;
-
     [SerializeField]
     private IMBuyButton theIMBuyButton;
     [SerializeField]
@@ -22,8 +21,7 @@ public class IMItemInfo : MonoBehaviour
     private TextMeshProUGUI txt_ItemValue;
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
-    {
-        
+    {   
         go_Base.SetActive(true);
         theIMBuyButton.SetBuyItem(_item);
         theBuyCount.SetBuyItem(_item);

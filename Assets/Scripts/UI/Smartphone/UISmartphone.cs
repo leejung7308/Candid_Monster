@@ -11,14 +11,12 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     private Collection theCollection;
     private InternetMarket theInternetMarket;
 
-    // Start is called before the first frame update
     void Start()
     {
         theCollection = FindObjectOfType<Collection>();
         theInternetMarket = FindObjectOfType<InternetMarket>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         TryOpenSmartphone();

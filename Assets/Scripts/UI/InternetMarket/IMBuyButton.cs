@@ -9,14 +9,13 @@ public class IMBuyButton : MonoBehaviour, IPointerClickHandler
     public Item.Item item;
     int purchaseCost;
 
-    [SerializeField]
     private Inventory theInventory;
-    [SerializeField]
     private BuyCount theBuyCount;
 
     private void Start()
     {
         theBuyCount = FindObjectOfType<BuyCount>();
+        theInventory = FindObjectOfType<Inventory>();
     }
 
     public void SetBuyItem(Item.Item _item)

@@ -8,17 +8,6 @@ public class Salesman : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private GameObject go_OfflineStoreBase;
 
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_OfflineStoreBase.activeSelf==false)

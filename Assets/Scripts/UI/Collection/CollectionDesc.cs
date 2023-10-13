@@ -21,6 +21,7 @@ public class CollectionDesc : MonoBehaviour
 
         txt_ItemName.text = _item.itemName;
         txt_ItemDesc.text = _item.itemDesc;
-        collectionImage.sprite = _item.itemImage;
+        collectionImage.sprite = _item.GetComponent<SpriteRenderer>().sprite;
+        collectionImage.color = _item.GetComponent<SpriteRenderer>().color;
     }
 }
