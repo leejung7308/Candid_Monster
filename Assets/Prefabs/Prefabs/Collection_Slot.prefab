@@ -61,6 +61,11 @@ MonoBehaviour:
   item: {fileID: 0}
   itemImage: {fileID: 8409050413282793872}
   itemHideImage: {fileID: 1052756012503811298}
+  collectionImage: {fileID: 0}
+  txt_ItemName: {fileID: 0}
+  txt_ItemDesc: {fileID: 0}
+  descActive: 1
+  descHideImage: {fileID: 0}
 --- !u!1 &2401471780172176263
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4901961, g: 0.5764706, b: 0.6784314, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -196,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.227451, g: 0.227451, b: 0.31764707, a: 0.79607844}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

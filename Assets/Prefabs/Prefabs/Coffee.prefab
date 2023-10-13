@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &593603576000265972
+--- !u!1 &1426898323791162227
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7456163345470235896}
-  - component: {fileID: 388198385748816934}
-  - component: {fileID: -3079251468905652356}
-  - component: {fileID: 7039786901740709865}
-  - component: {fileID: 5967434786978410537}
+  - component: {fileID: 4110655315832862341}
+  - component: {fileID: 9159825621501671420}
+  - component: {fileID: -1160668164774514604}
+  - component: {fileID: 9016068850861083609}
+  - component: {fileID: 7594881839001062966}
   m_Layer: 0
-  m_Name: Knife
+  m_Name: Coffee
   m_TagString: Weapon(Player)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7456163345470235896
+--- !u!4 &4110655315832862341
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593603576000265972}
+  m_GameObject: {fileID: 1426898323791162227}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.9630939, y: 5.9316263, z: -0.0000000786805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.739, y: -0.3299, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!212 &388198385748816934
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &9159825621501671420
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593603576000265972}
+  m_GameObject: {fileID: 1426898323791162227}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: -1156624541
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70e3e5240f0d50f43a000a319e8a4854, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c6d711c58237f224a895ac7f598fc23d, type: 3}
+  m_Color: {r: 0.3301887, g: 0.12224668, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,14 +87,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-3079251468905652356
+--- !u!50 &-1160668164774514604
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593603576000265972}
+  m_GameObject: {fileID: 1426898323791162227}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -114,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &7039786901740709865
+--- !u!68 &9016068850861083609
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593603576000265972}
+  m_GameObject: {fileID: 1426898323791162227}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -149,45 +149,39 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.37740004, y: 0.39192292}
-  - {x: 0.37740007, y: 0.39192292}
-  - {x: 0.37627444, y: 0.369018}
-  - {x: 0.36199728, y: 0.3160699}
-  - {x: 0.34493575, y: 0.26811725}
-  - {x: 0.31659773, y: 0.20832737}
-  - {x: 0.28911313, y: 0.1653286}
-  - {x: 0.25699034, y: 0.12376037}
-  - {x: -0.2607441, y: -0.41785377}
-  - {x: -0.4021818, y: -0.27502334}
-  - {x: -0.1374293, y: -0.009558603}
-  - {x: 0.161944, y: 0.27489984}
-  - {x: 0.26267156, y: 0.33046645}
-  - {x: 0.35821697, y: 0.400121}
-  - {x: 0.37187, y: 0.39785156}
-  - {x: 0.37744704, y: 0.39263362}
-  - {x: 0.377447, y: 0.39263362}
+  - {x: -0.18192989, y: -0.3227341}
+  - {x: -0.24355125, y: 0.18019257}
+  - {x: -0.24351406, y: 0.26250055}
+  - {x: -0.21359158, y: 0.2624558}
+  - {x: -0.17918015, y: 0.32165277}
+  - {x: 0.18148565, y: 0.32159403}
+  - {x: 0.21643257, y: 0.26632953}
+  - {x: 0.24580526, y: 0.26633593}
+  - {x: 0.24432278, y: 0.1793007}
+  - {x: 0.2398777, y: 0.14564785}
+  - {x: 0.18018293, y: -0.32242388}
+  - {x: -0.18191117, y: -0.32259476}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &5967434786978410537
+--- !u!114 &7594881839001062966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593603576000265972}
+  m_GameObject: {fileID: 1426898323791162227}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
+  caffeine: 10
   alcohol: 0
   nicotine: 0
-  itemName: knife
+  itemName: 
   itemType: 0
-  itemImage: {fileID: 21300000, guid: 70e3e5240f0d50f43a000a319e8a4854, type: 3}
-  itemDesc: just knife
-  itemValue: 1000
+  itemImage: {fileID: 0}
+  itemDesc: 
   damage: 1

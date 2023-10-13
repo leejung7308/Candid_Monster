@@ -32,15 +32,10 @@ public class Player : EntityStatus
     }
     private void Update()
     {
-        if (!Inventory.inventoryActivated) {
-            LookAt();
-            WeaponSwap();
-            Attack();
-            if(hp<=0) EntityDie();
-        }
-        //LookAt();
-        //WeaponSwap();
-        //Attack();
+        LookAt();
+        WeaponSwap();
+        Attack();
+        if(hp<=0) EntityDie();
     }
     void FixedUpdate()
     {
@@ -115,7 +110,6 @@ public class Player : EntityStatus
 
             if (hitObject != null)
             {
-                //Debug.Log(hitObject.transform.GetComponent<Consumable>().item.itemName + " ȹ�� �߽��ϴ�.");
                 theInventory.AcquireItem(hitObject);
                 collision.gameObject.SetActive(false);
             }
