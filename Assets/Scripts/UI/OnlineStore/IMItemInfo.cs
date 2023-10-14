@@ -7,8 +7,6 @@ using TMPro;
 public class IMItemInfo : MonoBehaviour
 {
     [SerializeField]
-    private GameObject go_Base;
-    [SerializeField]
     private IMBuyButton theIMBuyButton;
     [SerializeField]
     private BuyCount theBuyCount;
@@ -22,7 +20,6 @@ public class IMItemInfo : MonoBehaviour
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
     {   
-        go_Base.SetActive(true);
         theIMBuyButton.SetBuyItem(_item);
         theBuyCount.SetBuyItem(_item);
 
@@ -33,18 +30,8 @@ public class IMItemInfo : MonoBehaviour
         theBuyCount.SetBuyCount();
     }
 
-    public void HideToolTip()
-    {
-        go_Base.SetActive(false);
-    }
-
     public string GetItem()
     {
         return txt_ItemName.text;
-    }
-
-    public bool GetToolTipActive()
-    {
-        return go_Base.activeSelf;
     }
 }

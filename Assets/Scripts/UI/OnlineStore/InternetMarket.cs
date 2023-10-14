@@ -8,13 +8,21 @@ public class InternetMarket : MonoBehaviour
 {
     [SerializeField]
     private GameObject go_InternetMarketBase;
-    [SerializeField]
-    private GameObject go_SlotsParent;
+
     [SerializeField]
     private TextMeshProUGUI text_Coin;
 
     private IMItemInfo theIMItemInfo;
     private Inventory theInventory;
+
+    [SerializeField]
+    private TextMeshProUGUI txt_ItemName;
+    [SerializeField]
+    private TextMeshProUGUI txt_ItemDesc;
+    [SerializeField]
+    private TextMeshProUGUI txt_ItemValue;
+    [SerializeField]
+    private BuyCount theBuyCount;
 
     void Start()
     {
@@ -35,7 +43,11 @@ public class InternetMarket : MonoBehaviour
     public void CloseInternetMarket()
     {
         go_InternetMarketBase.SetActive(false);
-        theIMItemInfo.HideToolTip();
+
+        txt_ItemName.text = "";
+        txt_ItemDesc.text = "";
+        txt_ItemValue.text = "";
+        theBuyCount.SetBuyCount();
     }
 
     private void Coin()
