@@ -25,7 +25,6 @@ public class IMItemInfo : MonoBehaviour
 
         txt_ItemName.text = _item.itemName;
         txt_ItemDesc.text = _item.itemDesc;
-        txt_ItemValue.text = _item.itemValue.ToString();
 
         theBuyCount.SetBuyCount();
     }

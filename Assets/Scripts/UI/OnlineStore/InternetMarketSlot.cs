@@ -12,6 +12,11 @@ public class InternetMarketSlot : MonoBehaviour, IPointerClickHandler
 
     private IMItemInfo theIMItemInfo;
 
+    [SerializeField]
+    private TextMeshProUGUI txt_ItemName;
+    [SerializeField]
+    private TextMeshProUGUI txt_ItemValue;
+
     void Start()
     {
         AddItem();
@@ -24,6 +29,8 @@ public class InternetMarketSlot : MonoBehaviour, IPointerClickHandler
         {
             itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
             itemImage.color = item.GetComponent<SpriteRenderer>().color;
+            txt_ItemName.text = item.itemName;
+            txt_ItemValue.text = item.itemValue.ToString();
         }
         else
         {

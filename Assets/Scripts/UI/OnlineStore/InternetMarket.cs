@@ -19,8 +19,7 @@ public class InternetMarket : MonoBehaviour
     private TextMeshProUGUI txt_ItemName;
     [SerializeField]
     private TextMeshProUGUI txt_ItemDesc;
-    [SerializeField]
-    private TextMeshProUGUI txt_ItemValue;
+
     [SerializeField]
     private BuyCount theBuyCount;
 
@@ -46,7 +45,7 @@ public class InternetMarket : MonoBehaviour
 
         txt_ItemName.text = "";
         txt_ItemDesc.text = "";
-        txt_ItemValue.text = "";
+
         theBuyCount.SetBuyCount();
     }
 
