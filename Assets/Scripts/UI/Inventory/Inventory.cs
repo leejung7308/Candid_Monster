@@ -45,16 +45,16 @@ public class Inventory : MonoBehaviour
         }
     }
     
-    private void OpenInventory()
+    public void OpenInventory()
     {
         go_InventoryBase.SetActive(true);
     }
 
-    private void CloseInventory()
+    public void CloseInventory()
     {
         go_InventoryBase.SetActive(false);
         theItemInfo.HideToolTip();
-        //_targetTr.position = new Vector3(400, 200, 0);
+        //_targetTr.position = new Vector3(400, 200, 0); //인벤토리 오픈 위치 고정
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)
