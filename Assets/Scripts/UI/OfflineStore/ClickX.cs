@@ -8,6 +8,7 @@ public class ClickX : MonoBehaviour
     private WineSalesman theWineSalesman;
     private GolfSalesman theGolfSalesman;
     private SmokeSalesman theSmokeSalesman;
+    private ConvienceSalesman theConvienceSalesman;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class ClickX : MonoBehaviour
         theSmokeSalesman = FindObjectOfType<SmokeSalesman>();
         theWineSalesman = FindObjectOfType<WineSalesman>();
         theGolfSalesman = FindObjectOfType<GolfSalesman>();
+        theConvienceSalesman = FindObjectOfType<ConvienceSalesman>();
     }
 
     public void OnCoffeeQuit()
@@ -35,5 +37,10 @@ public class ClickX : MonoBehaviour
     public void OnSmokeQuit()
     {
         theSmokeSalesman.CloseSmokeStore();
+    }
+
+    public void OnConvienceQuit()
+    {
+        theConvienceSalesman.CloseConvienceStore();
     }
 }

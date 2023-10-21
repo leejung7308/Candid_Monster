@@ -34,6 +34,7 @@ public class CoffeeSalesman : MonoBehaviour, IPointerClickHandler
         GameObject.Find("NPC_Wine").transform.GetChild(0).gameObject.SetActive(false);
         GameObject.Find("NPC_Golf").transform.GetChild(0).gameObject.SetActive(false);
         GameObject.Find("NPC_Smoke").transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void CloseCoffeeStore()
@@ -41,6 +42,7 @@ public class CoffeeSalesman : MonoBehaviour, IPointerClickHandler
         GameObject.Find("NPC_Wine").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("NPC_Golf").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("NPC_Smoke").transform.GetChild(0).gameObject.SetActive(true);
+        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(true);
         go_CoffeeStoreBase.SetActive(false);
         theInventory.CloseInventory();
 
