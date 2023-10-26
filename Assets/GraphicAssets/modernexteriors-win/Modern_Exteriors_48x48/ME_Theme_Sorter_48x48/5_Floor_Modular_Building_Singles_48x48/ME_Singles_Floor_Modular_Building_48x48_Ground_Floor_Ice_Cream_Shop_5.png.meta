@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,2296 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_0
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f09d509f5d71f946acf7b5c6d9d8578
+      internalID: 675925754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b24dea1153115d44a39671b2a2c321b
+      internalID: -78211853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e963c882dd5ae8846921db938adcda03
+      internalID: -1257219747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5ae2e46059b254baf744a5f44e69cb
+      internalID: 1084094534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251255eb0187cad4fa74659e21af4872
+      internalID: 1097062443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2dbe46437929545aca5e084d0a9568
+      internalID: 2072599514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ead04d74ede094db1b58ad98b88cf7
+      internalID: -1828844478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ade641d90ba984285da5c6b4798a7e
+      internalID: 1758929867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd2a461eb10dbf48ba669a77a05cd3f
+      internalID: -1399071159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7bcc73ef536334fab0edaa1fb7e811
+      internalID: -595364595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_10
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d79fd159267f741b62973de316ff83
+      internalID: -1182248965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71938654679ee02478e08eeaf9969201
+      internalID: -1621745479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_12
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af42be0a13d3b94b88557bd237f370d
+      internalID: -1359936486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b51c5753e91b649b786488ce1dc129
+      internalID: 873449441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1274d599ad57340826f5260a24eed4
+      internalID: 1686217447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7ad674e752cf8439ecd51e3dbbf9fb
+      internalID: 1973790004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114117e12aa9c044bb6325af82a57860
+      internalID: -961777408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbcff494dd20ad4293291c55f412863
+      internalID: -577649359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_18
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587ed1abb5bb35249b5ef564c12db662
+      internalID: -145160845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2954a09434de7f64482acaf4705a9764
+      internalID: 573546586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543a0abbcb24d784d9e93af103d5b7a6
+      internalID: 1917142660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcdb64017ee7c547b54a00792b76f07
+      internalID: 1739872831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b9a359c80150a4f88205c56448ffc6
+      internalID: 707637213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce5c022e5676324daa710e958f3a7f1
+      internalID: -1335027300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_24
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6e223b2b498b94eb886e6b6f8daecf
+      internalID: 2140129717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58113d912fe5da45952df421864f749
+      internalID: -1042348334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_26
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e5f25bbd4817d44b04906cbf1c4ac8
+      internalID: -361327006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d73abd2e59c6458671afddfced7fd
+      internalID: -1250371349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea5487cf51a20643897f9f2f4731a33
+      internalID: -1969155479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20fd0f5353fa7343a6d04ad62f76b28
+      internalID: 1215487964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_30
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49986db3093e36a40947b8b8bd152e90
+      internalID: -564083617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_31
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00913156c5fee242b53274ea17343ca
+      internalID: -663258297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_32
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefb59dd2168ad1468724a6303d4357b
+      internalID: 1132724794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5464506b776b15d4bb13e9dffaea8f32
+      internalID: 938048942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_34
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60faef8b40775994da30e9eaf25b71ba
+      internalID: -485203188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03fa79f1a03cf042a9d12cb71594511
+      internalID: -2070226634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_36
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717cf0039258be84fa82a0571a472d2d
+      internalID: -750958960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99d29adcc881ca468e4cb0274bd648f
+      internalID: -1197292266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_38
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7533c0e2e49ac408dcf1e62e2401a1
+      internalID: -338474125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea0be858d41e0f4a989c27bfee0e6cb
+      internalID: 73613426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_40
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541a531745ec3cb40abea1ae7a304b3f
+      internalID: 1664660122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b9a745ae4dd214598ccc7dbf0a2d3e
+      internalID: 57506104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_42
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9763ed812b46c4b814300ab4d1a895
+      internalID: -12721634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bb87c2bd7cdab46a65c07d18d5c2eb
+      internalID: 1390586040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_44
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6635e8795be7854c9911ccfbc211d3d
+      internalID: -1970015017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_45
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfc56345164125459b20aa801f39ae1
+      internalID: -1525869260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_46
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8feb6c5dc2f447c4bbfe2f710eae7abf
+      internalID: 1223653235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6961ff1b1777344589c58a869d2eebb
+      internalID: 1500716213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_48
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80d179272e021b4fa364cc02ae980d4
+      internalID: 163618024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_49
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686b420ea479f66409dbb354d2d70fd2
+      internalID: 126485497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_50
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce880f6d91377654c887858f824db32d
+      internalID: -1583057567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1ec2eb2d1d9f54d96c417f85bcd361
+      internalID: 1188874813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_52
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce335ff7d8e5035469bad8784ddd5626
+      internalID: -1227180293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f51b55719267ff49b12b19a40b3a310
+      internalID: -1671323135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_54
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5353b5e98e49184fbf6079b297a8146
+      internalID: -1131916353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_55
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7da34983b13d3f46bf4a1ef9375c9e3
+      internalID: -60918526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_56
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19206ce26e76d9845a44462269f64498
+      internalID: -292827772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f265e628c479b4f9b558917244da40
+      internalID: -933611199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_58
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60387d3249cb8a4b96c997d032282c4
+      internalID: -1144125030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_59
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d16dec42a8473f4286884103e73c120
+      internalID: -1435275169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_60
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d64897f4259ed42b7a6ffdf2155927
+      internalID: 2111767220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8592ce240448dda4ebfc1ae58a43b04a
+      internalID: 1883952774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_62
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b1f5dbd23ce3848b45ef5667894840
+      internalID: 299992583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_63
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a03b5c02c560846afea246d3301c78
+      internalID: -621202645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_64
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8105763571fff124495927fdd261aed1
+      internalID: -1884430938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f19b336c640234988a25a3d8929b97
+      internalID: 1281145200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_66
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d04fd848ad0c6244a2bd723e8420fdc
+      internalID: -2126983293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad50906e00a7c2a4697d34a069ed4552
+      internalID: 701818330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_68
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a76ffd7df1e6fe4fbed89a262deae57
+      internalID: 1117055813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_69
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d74e229701d4649a6a75319a106633
+      internalID: 368245099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_70
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296e05f8ea245e4489ac7570e5c2a914
+      internalID: -470732254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_71
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee70faa7f63ae1d41a5869d01fb111c9
+      internalID: -1789870395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_72
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de15337c194d5c4ebdac732ad4d0d5a
+      internalID: -1869374747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_73
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ed573865111784aaf118a61e5c0792
+      internalID: 2061124922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_74
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b75c717cc7c284fba84d9143fcd4d6
+      internalID: 545640965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dceb13b106dde4d8c89d43c9e89b5e
+      internalID: -1977771066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_76
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0cf74471094a941948d87e328424a0
+      internalID: -556496584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_77
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43378a07af2d5e94b932e8f8360fa18c
+      internalID: -401322662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_78
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50334f68ced9a54081d386770eb8722
+      internalID: -1699805511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_79
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34133621994aa444ea4908e7bcdc98ca
+      internalID: -783405853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_80
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e28e78af5fe509479064976baa76c47
+      internalID: -1062046406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0121f32bae99beb4686118fd9741d7e2
+      internalID: 1769119133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_82
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d451cf7e50b7f4b836fbf43bbd15d8
+      internalID: -1753625397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_83
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3a6f737e14e014ebf6c6f4e5c6265b
+      internalID: 1465651153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_84
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc3485093b92a7478a74b9466755789
+      internalID: -1281882595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_85
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b4ba00a4aa6a44caeabe1d7c93f725
+      internalID: -1680845014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_86
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d485c09fd589f404e945bcab29e2b5f1
+      internalID: -1023331744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_87
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52280a7cfc163c94ca1dd414ccacd131
+      internalID: 1551368702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_88
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb03eb2f2733e2429e1c57486341ba2
+      internalID: -1105589831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_89
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6368c698db74b9740a4306d1f4fd2291
+      internalID: -486766700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_90
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49da81d310a95cf43ab3dae9f9b04f86
+      internalID: 1491015909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_91
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bb3073d5d7fc8448f56857fa801496
+      internalID: -1103857580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_92
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1d13df62613bc4b94f6f03b7faa8dc
+      internalID: 1472117705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_93
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9e4bd239257c44ebe05ef8a125956c
+      internalID: 1885398268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_94
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7237e1be7deb54092e1fad6cefbede
+      internalID: -1509064417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180f294172e7f2240ae8440624c446aa
+      internalID: 689543896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_96
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2169dd514232b6f40b113f8220e0da0d
+      internalID: -186434292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_97
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb41aa0548cea724cab672795e84a4e4
+      internalID: 2139707153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_98
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f7181beb16423479ea5ef22097c435
+      internalID: -372759627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79484e24f6c03646bef2fba92015584
+      internalID: 1139262213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_100
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942f56d93bb82a34c89b208691e10b47
+      internalID: -1313658301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_101
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5ace1df00c19b44ba9a157299cee0d
+      internalID: 878158704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_102
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b263965fcce1e4d8c8e343dce41e9b
+      internalID: -774594662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_103
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21d4aade1bce9d49b4970d90690fb9f
+      internalID: -703083830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_104
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97321b8d048a7db4b817e7625a3065e0
+      internalID: 815589383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_105
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d6813d10d90044cae15a54071679ba
+      internalID: -2045747499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_106
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27142da3d61d57428a9c07b508fd1a7
+      internalID: -1060535626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_107
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b7cd1a1aa6855478d1486d3926db36
+      internalID: -1155333413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_108
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5a9df94d89f2c45b6858cccda84a1a
+      internalID: 1363502213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +2408,116 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_0: 675925754
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_1: -78211853
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_10: -1182248965
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_100: -1313658301
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_101: 878158704
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_102: -774594662
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_103: -703083830
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_104: 815589383
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_105: -2045747499
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_106: -1060535626
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_107: -1155333413
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_108: 1363502213
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_11: -1621745479
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_12: -1359936486
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_13: 873449441
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_14: 1686217447
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_15: 1973790004
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_16: -961777408
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_17: -577649359
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_18: -145160845
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_19: 573546586
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_2: -1257219747
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_20: 1917142660
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_21: 1739872831
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_22: 707637213
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_23: -1335027300
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_24: 2140129717
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_25: -1042348334
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_26: -361327006
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_27: -1250371349
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_28: -1969155479
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_29: 1215487964
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_3: 1084094534
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_30: -564083617
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_31: -663258297
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_32: 1132724794
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_33: 938048942
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_34: -485203188
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_35: -2070226634
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_36: -750958960
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_37: -1197292266
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_38: -338474125
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_39: 73613426
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_4: 1097062443
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_40: 1664660122
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_41: 57506104
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_42: -12721634
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_43: 1390586040
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_44: -1970015017
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_45: -1525869260
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_46: 1223653235
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_47: 1500716213
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_48: 163618024
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_49: 126485497
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_5: 2072599514
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_50: -1583057567
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_51: 1188874813
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_52: -1227180293
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_53: -1671323135
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_54: -1131916353
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_55: -60918526
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_56: -292827772
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_57: -933611199
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_58: -1144125030
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_59: -1435275169
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_6: -1828844478
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_60: 2111767220
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_61: 1883952774
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_62: 299992583
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_63: -621202645
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_64: -1884430938
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_65: 1281145200
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_66: -2126983293
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_67: 701818330
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_68: 1117055813
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_69: 368245099
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_7: 1758929867
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_70: -470732254
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_71: -1789870395
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_72: -1869374747
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_73: 2061124922
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_74: 545640965
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_75: -1977771066
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_76: -556496584
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_77: -401322662
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_78: -1699805511
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_79: -783405853
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_8: -1399071159
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_80: -1062046406
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_81: 1769119133
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_82: -1753625397
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_83: 1465651153
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_84: -1281882595
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_85: -1680845014
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_86: -1023331744
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_87: 1551368702
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_88: -1105589831
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_89: -486766700
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_9: -595364595
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_90: 1491015909
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_91: -1103857580
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_92: 1472117705
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_93: 1885398268
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_94: -1509064417
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_95: 689543896
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_96: -186434292
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_97: 2139707153
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_98: -372759627
+      ME_Singles_Floor_Modular_Building_48x48_Ground_Floor_Ice_Cream_Shop_5_99: 1139262213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
