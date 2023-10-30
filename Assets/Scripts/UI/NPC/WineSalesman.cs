@@ -31,16 +31,10 @@ public class WineSalesman : MonoBehaviour, IPointerClickHandler
     private void OpenWineStore()
     {
         go_WineStoreBase.SetActive(true);
-        GameObject.Find("NPC_Golf").transform.GetChild(0).gameObject.SetActive(false);
-        GameObject.Find("NPC_Smoke").transform.GetChild(0).gameObject.SetActive(false);
-        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void CloseWineStore()
     {
-        GameObject.Find("NPC_Golf").transform.GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("NPC_Smoke").transform.GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(true);
         go_WineStoreBase.SetActive(false);
         theInventory.CloseInventory();
     }
