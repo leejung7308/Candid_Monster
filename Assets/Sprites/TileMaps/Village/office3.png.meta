@@ -1,0 +1,778 @@
+fileFormatVersion: 2
+guid: c3cc7935e03a3104bb286be25d323850
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: office3_163
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3897e153d019c429b1de88218dc8fc
+      internalID: 219839785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_164
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840461bd9e956254594a4b0c943807f7
+      internalID: 733582641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_165
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d871e27e5cf394aa7f4e9df6021fc9
+      internalID: 1874561000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_166
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79e76601e681eb48a565a0bb485e042
+      internalID: 1284840925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_167
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66c9541e3821954cb3c28612c0e417c
+      internalID: -1126048573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_168
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03237f6d1a26fd4f9d382377be0b197
+      internalID: -1198244686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_173
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 263
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d472d014591954396bf17500674ef3
+      internalID: 506079009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_180
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210e2ca9f57a1c54c958bc178251c282
+      internalID: -247167007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_181
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b7448f5ecba2f40b7c85474059f7e4
+      internalID: 1794344783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_182
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e920c7ab9251b2a4e981f00e49becc71
+      internalID: 828289101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_183
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2388144dbdef1f14f8a946daca0a05c9
+      internalID: -1886955194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_184
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b228a2f4236e8e48b2a0d201ccc6c7b
+      internalID: 1061145379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_185
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8744aaab6f2346147b97aeab2db1a8f5
+      internalID: -1752213889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office3_190
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 239
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a967435b6dc30428841e265b42d36a
+      internalID: 2082442926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      office3_0: 739127365
+      office3_1: 60184909
+      office3_10: 581997869
+      office3_100: 2045511366
+      office3_101: -1703415992
+      office3_102: -350380418
+      office3_103: 1062893243
+      office3_104: -270607868
+      office3_105: 1690388740
+      office3_106: -613232212
+      office3_107: -306580243
+      office3_108: -330648173
+      office3_109: 1229482962
+      office3_11: -1338672619
+      office3_110: -852083990
+      office3_111: 581600439
+      office3_112: 609076174
+      office3_113: -43403095
+      office3_114: 173403888
+      office3_115: 1518796593
+      office3_116: -509860438
+      office3_117: -570887096
+      office3_118: -1802133787
+      office3_119: 558363755
+      office3_12: 676149658
+      office3_120: -862980730
+      office3_121: 617831238
+      office3_122: 1847845436
+      office3_123: 1635830957
+      office3_124: 722326593
+      office3_125: 1791498579
+      office3_126: 1501737620
+      office3_127: -397876235
+      office3_128: 1144012112
+      office3_129: -1174447490
+      office3_13: -213854841
+      office3_130: -440093633
+      office3_131: 1172253883
+      office3_132: 249482077
+      office3_133: -27578069
+      office3_134: 1499077385
+      office3_135: -1013060369
+      office3_136: -1005395745
+      office3_137: 1519124602
+      office3_138: 92659082
+      office3_139: 93577459
+      office3_14: -1845945511
+      office3_140: -26374109
+      office3_141: -158690573
+      office3_142: 1564969306
+      office3_143: -1536850158
+      office3_144: -1930029021
+      office3_145: -1321622442
+      office3_146: -383152595
+      office3_147: 899124521
+      office3_148: 1852488231
+      office3_149: 1269138078
+      office3_15: 628222076
+      office3_150: -217927483
+      office3_151: 6361004
+      office3_152: 1926744200
+      office3_153: 1205509069
+      office3_154: 1698821994
+      office3_155: -897718978
+      office3_156: 1616138145
+      office3_157: -492216562
+      office3_158: 66937141
+      office3_159: -1418820583
+      office3_16: -801592630
+      office3_160: 1639254001
+      office3_161: 298839526
+      office3_162: 1931071166
+      office3_163: 219839785
+      office3_164: 733582641
+      office3_165: 1874561000
+      office3_166: 1284840925
+      office3_167: -1126048573
+      office3_168: -1198244686
+      office3_169: -578641082
+      office3_17: -103852873
+      office3_170: -1207752300
+      office3_171: 828728812
+      office3_172: 1648375010
+      office3_173: 506079009
+      office3_174: 897127515
+      office3_175: 1862786494
+      office3_176: 1376231992
+      office3_177: -2134464242
+      office3_178: -1288521404
+      office3_179: 622004794
+      office3_18: 1418081287
+      office3_180: -247167007
+      office3_181: 1794344783
+      office3_182: 828289101
+      office3_183: -1886955194
+      office3_184: 1061145379
+      office3_185: -1752213889
+      office3_186: 199089736
+      office3_187: 1983967242
+      office3_188: -1833792915
+      office3_189: -495047308
+      office3_19: -49370501
+      office3_190: 2082442926
+      office3_191: 2046157340
+      office3_192: -1590868840
+      office3_193: 534151214
+      office3_194: -470344950
+      office3_195: 50456831
+      office3_196: -1871983209
+      office3_197: 541434712
+      office3_198: -1610211457
+      office3_199: 1040810249
+      office3_2: -522802742
+      office3_20: 1654852636
+      office3_200: 1583327110
+      office3_201: 1469490654
+      office3_202: 334310791
+      office3_203: 233924371
+      office3_204: -476663356
+      office3_205: -1530109693
+      office3_206: -131161006
+      office3_207: -788686584
+      office3_208: -1321528848
+      office3_209: -407168016
+      office3_21: -1455511405
+      office3_210: 1974856715
+      office3_211: -1675640412
+      office3_212: -355369580
+      office3_213: -1380157179
+      office3_214: 119084297
+      office3_215: 1461077716
+      office3_216: 1363338560
+      office3_217: 843873337
+      office3_218: -1818370478
+      office3_219: -1146261890
+      office3_22: 334476076
+      office3_220: 1532020646
+      office3_221: -2099875861
+      office3_222: 145700263
+      office3_223: 115250041
+      office3_224: -1708436345
+      office3_225: 1533014728
+      office3_226: 844753163
+      office3_227: -637217197
+      office3_228: -1351855913
+      office3_229: -1689894292
+      office3_23: 888545128
+      office3_230: -802539865
+      office3_231: 1333457548
+      office3_232: -508431514
+      office3_233: -851619179
+      office3_234: -30221288
+      office3_235: -1849520446
+      office3_236: 15206720
+      office3_237: -1095476882
+      office3_238: 1422612613
+      office3_239: -1343529217
+      office3_24: -1657026556
+      office3_240: 1154086074
+      office3_241: 1287810595
+      office3_242: -372647948
+      office3_243: -1734797076
+      office3_244: -926822136
+      office3_245: 451761142
+      office3_246: -1080840197
+      office3_247: -2029529409
+      office3_248: 2045583698
+      office3_249: -1366315507
+      office3_25: -1047684858
+      office3_250: -34708884
+      office3_251: 1512606875
+      office3_252: 1941315574
+      office3_253: -241982442
+      office3_254: 182409030
+      office3_255: -125903153
+      office3_256: -2001213167
+      office3_257: 1844297474
+      office3_258: -668334320
+      office3_259: -2141563790
+      office3_26: 1399710344
+      office3_260: 2046433369
+      office3_261: -1732197341
+      office3_262: 260306567
+      office3_263: -956069910
+      office3_264: 1886053247
+      office3_265: 1319764016
+      office3_266: -1545402158
+      office3_267: 1495080074
+      office3_268: 1221195651
+      office3_269: -582026775
+      office3_27: -335633369
+      office3_270: -1282134443
+      office3_271: 164080951
+      office3_272: 700068128
+      office3_273: -1723803342
+      office3_274: 1137596367
+      office3_275: 1724286356
+      office3_276: -1200052953
+      office3_277: 147094612
+      office3_278: -2077293597
+      office3_279: 1901237368
+      office3_28: 2034683264
+      office3_280: 90007485
+      office3_281: -1943795119
+      office3_282: -239741890
+      office3_283: -1092162396
+      office3_284: 661846747
+      office3_285: 1595320597
+      office3_286: 2083814147
+      office3_287: 61343876
+      office3_288: 33207830
+      office3_289: -1782045931
+      office3_29: -1846100334
+      office3_290: 399379319
+      office3_291: -148048765
+      office3_292: -1733437773
+      office3_293: 1891353469
+      office3_294: 1629263041
+      office3_295: -994098444
+      office3_296: -1514988797
+      office3_297: -634906615
+      office3_298: -1977939961
+      office3_299: -945937714
+      office3_3: -2105562797
+      office3_30: 1766366646
+      office3_300: -1089342544
+      office3_301: -1393135612
+      office3_302: 1060123713
+      office3_303: -1751899476
+      office3_304: -572422411
+      office3_305: -176514748
+      office3_306: 1600916742
+      office3_307: -1881341563
+      office3_308: 1353836394
+      office3_309: 1144880367
+      office3_31: -1674967653
+      office3_310: 797149118
+      office3_311: 823402358
+      office3_312: 1045791275
+      office3_313: 833067975
+      office3_314: 1482266994
+      office3_315: 1559570138
+      office3_316: 72538012
+      office3_317: 1294889754
+      office3_318: -1625816544
+      office3_319: -1443425094
+      office3_32: 288469124
+      office3_320: 676699338
+      office3_321: -825787232
+      office3_322: -1298305881
+      office3_323: -2132248656
+      office3_324: 321758331
+      office3_325: 1903523604
+      office3_326: -392745635
+      office3_327: -570084960
+      office3_328: 493527321
+      office3_329: 743474907
+      office3_33: 1321681429
+      office3_330: 1762591472
+      office3_331: -1866911280
+      office3_332: 1081427098
+      office3_333: 1144191883
+      office3_334: -1688727697
+      office3_335: 670532962
+      office3_336: 493948431
+      office3_337: 36842610
+      office3_338: -280257694
+      office3_339: -873667750
+      office3_34: 287772299
+      office3_340: -611283591
+      office3_341: -1565911487
+      office3_342: -1737848331
+      office3_343: -2104491816
+      office3_344: -1073099949
+      office3_345: -480608589
+      office3_346: 1833509433
+      office3_347: -1279281710
+      office3_348: -1817688725
+      office3_349: -1593389443
+      office3_35: 794323850
+      office3_350: -246129034
+      office3_351: -1325981345
+      office3_352: -1852320383
+      office3_353: 1462063267
+      office3_354: 2043539579
+      office3_355: 857787871
+      office3_356: 494797329
+      office3_36: 123319898
+      office3_37: 2123356933
+      office3_38: 199189098
+      office3_39: 1661121731
+      office3_4: 332181129
+      office3_40: -1695776473
+      office3_41: -882847247
+      office3_42: -928762381
+      office3_43: -1041987060
+      office3_44: -1149502267
+      office3_45: 343152392
+      office3_46: 845001670
+      office3_47: 588800238
+      office3_48: 1216938192
+      office3_49: 64384726
+      office3_5: 845825944
+      office3_50: -495026254
+      office3_51: -27193962
+      office3_52: -1803725145
+      office3_53: -1959733765
+      office3_54: 1416022037
+      office3_55: 82186933
+      office3_56: -227320459
+      office3_57: -458810097
+      office3_58: 983227076
+      office3_59: 1182249162
+      office3_6: 600674689
+      office3_60: 1110552521
+      office3_61: 222049091
+      office3_62: -23873318
+      office3_63: -1394989253
+      office3_64: 1352326504
+      office3_65: -655704324
+      office3_66: 97746039
+      office3_67: 692954872
+      office3_68: 160254348
+      office3_69: 158144492
+      office3_7: -576574493
+      office3_70: 1195660872
+      office3_71: -1026487002
+      office3_72: 900153693
+      office3_73: 1686985754
+      office3_74: 195307493
+      office3_75: -1175664702
+      office3_76: -841946814
+      office3_77: -1664631176
+      office3_78: 2026182157
+      office3_79: -455335603
+      office3_8: -2118257191
+      office3_80: 1491879542
+      office3_81: -1260451838
+      office3_82: 1982301641
+      office3_83: 1368855652
+      office3_84: 83624331
+      office3_85: -71671935
+      office3_86: -721932935
+      office3_87: 1990960756
+      office3_88: 2048414364
+      office3_89: -935145171
+      office3_9: -340816167
+      office3_90: -2116479810
+      office3_91: -429352697
+      office3_92: 346189578
+      office3_93: -797645331
+      office3_94: 1235363857
+      office3_95: 1538031895
+      office3_96: 1372801170
+      office3_97: 1408779779
+      office3_98: -1676580453
+      office3_99: 196448615
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
