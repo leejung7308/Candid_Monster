@@ -31,12 +31,10 @@ public class SmokeSalesman : MonoBehaviour, IPointerClickHandler
     public void OpenSmokeStore()
     {
         go_SmokeStoreBase.SetActive(true);
-        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void CloseSmokeStore()
     {
-        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(true);
         go_SmokeStoreBase.SetActive(false);
         theInventory.CloseInventory();
 

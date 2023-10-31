@@ -20744,23 +20744,23 @@ Tilemap:
   - first: {x: -1, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 27
-      m_TileSpriteIndex: 0
+      m_TileIndex: 21
+      m_TileSpriteIndex: 41
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 0
   - first: {x: 0, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 27
-      m_TileSpriteIndex: 0
+      m_TileIndex: 21
+      m_TileSpriteIndex: 41
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 0
   - first: {x: -1, y: -7, z: 0}
     second:
       serializedVersion: 2
@@ -21291,7 +21291,33 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  m_AnimatedTiles: {}
+  m_AnimatedTiles:
+  - first: {x: -1, y: -8, z: 0}
+    second:
+      serializedVersion: 2
+      m_AnimatedSprites:
+      - {fileID: -1567023588, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: -1476815014, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 452369488, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 1268935323, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 825956571, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 1703282964, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      m_AnimationSpeed: 3.338387
+      m_AnimationTimeOffset: 0
+      m_Flags: 0
+  - first: {x: 0, y: -8, z: 0}
+    second:
+      serializedVersion: 2
+      m_AnimatedSprites:
+      - {fileID: -1567023588, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: -1476815014, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 452369488, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 1268935323, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 825956571, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      - {fileID: 1703282964, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
+      m_AnimationSpeed: 4.9581265
+      m_AnimationTimeOffset: 0
+      m_Flags: 0
   m_TileAssetArray:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 8b2abf664ac3320469ce63251d0e436e, type: 2}
@@ -21335,8 +21361,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ed5aaca706d4170408cb671360ab3b93, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: fc274c12ab9e32840bcbf5946cced1f0, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: f06d216b8ccc3294aa6ea8cc691af481, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 37e68d9affbe87f45b3188ad67182180, type: 2}
   - m_RefCount: 1
@@ -21347,7 +21373,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 51164eaab3237af48930dac2743a777e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0332519ee2aea2c48a6e4e717778700f, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a8431eecf6482c64ba5230a53c2a367d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 1fb5ecb4d7b7f924f93d8983ee5e72a8, type: 2}
@@ -21388,7 +21414,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5ba9207c052c1ad4eb97a5d16d73cebc, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 3
+  - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 9f47f490076ece34684229073bb29674, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 55aed4799ab4a8a43b71dd8e6db35454, type: 3}
@@ -21470,6 +21496,8 @@ Tilemap:
     m_Data: {fileID: -1928584305, guid: 7c42610aa19438f4499d90958b1ad68d, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1125553693, guid: d99303e99076e7144ae593d6d51da1f0, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 1703282964, guid: 897c090fabac85f4a80ad843cee92231, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 60
     m_Data:
@@ -28542,7 +28570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -142, y: -40}
+  m_AnchoredPosition: {x: -55, y: -50}
   m_SizeDelta: {x: 40, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857237191
