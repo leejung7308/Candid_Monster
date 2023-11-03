@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class InternetMarket : MonoBehaviour
+public class OnlineMarket : MonoBehaviour
 {
     [SerializeField]
-    private GameObject go_InternetMarketBase;
+    private GameObject go_OnlineMarketBase;
 
     [SerializeField]
     private TextMeshProUGUI text_Coin;
+
     private Inventory theInventory;
 
     [SerializeField]
@@ -19,7 +20,7 @@ public class InternetMarket : MonoBehaviour
     private TextMeshProUGUI txt_ItemDesc;
 
     [SerializeField]
-    private BuyCount theBuyCount;
+    private OnBuyCount theOnBuyCount;
 
     void Start()
     {
@@ -31,19 +32,19 @@ public class InternetMarket : MonoBehaviour
         Coin();
     }
 
-    public void OpenInternetMarket()
+    public void OpenOnlineMarket()
     {
-        go_InternetMarketBase.SetActive(true);
+        go_OnlineMarketBase.SetActive(true);
     }
 
-    public void CloseInternetMarket()
+    public void CloseOnlineMarket()
     {
-        go_InternetMarketBase.SetActive(false);
+        go_OnlineMarketBase.SetActive(false);
 
         txt_ItemName.text = "";
         txt_ItemDesc.text = "";
 
-        theBuyCount.SetBuyCount();
+        theOnBuyCount.SetBuyCount();
     }
 
     private void Coin()

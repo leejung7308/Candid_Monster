@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class IMItemInfo : MonoBehaviour
+public class OnItemToolTip : MonoBehaviour
 {
     [SerializeField]
-    private IMBuyButton theIMBuyButton;
+    private OnBuyButton theOnBuyButton;
     [SerializeField]
-    private BuyCount theBuyCount;
+    private OnBuyCount theOnBuyCount;
 
     [SerializeField]
     private TextMeshProUGUI txt_ItemName;
@@ -17,14 +17,14 @@ public class IMItemInfo : MonoBehaviour
     private TextMeshProUGUI txt_ItemDesc;
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
-    {   
-        theIMBuyButton.SetBuyItem(_item);
-        theBuyCount.SetBuyItem(_item);
+    {
+        theOnBuyButton.SetBuyItem(_item);
+        theOnBuyCount.SetBuyItem(_item);
 
         txt_ItemName.text = _item.itemName;
         txt_ItemDesc.text = _item.itemDesc;
 
-        theBuyCount.SetBuyCount();
+        theOnBuyCount.SetBuyCount();
     }
 
     public string GetItem()
