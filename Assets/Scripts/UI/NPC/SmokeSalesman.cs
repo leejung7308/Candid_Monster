@@ -37,6 +37,10 @@ public class SmokeSalesman : MonoBehaviour, IPointerClickHandler
     {
         go_SmokeStoreBase.SetActive(false);
         theInventory.CloseInventory();
+    }
 
+    public bool CheckSmokeStore()
+    {
+        return go_SmokeStoreBase.activeSelf;
     }
 }

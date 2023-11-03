@@ -37,6 +37,10 @@ public class GolfSalesman : MonoBehaviour, IPointerClickHandler
     {
         go_GolfStoreBase.SetActive(false);
         theInventory.CloseInventory();
+    }
 
+    public bool CheckGolfStore()
+    {
+        return go_GolfStoreBase.activeSelf;
     }
 }

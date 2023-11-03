@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using System;
 
 public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
@@ -11,25 +12,17 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     private float doubleClickTimeThreshold = 0.3f;
 
     public Item.Item item;
-    public int itemCount;
+    private int itemCount;
     public Image itemImage; 
-
-    [SerializeField]
-    private TextMeshProUGUI text_Count;
     [SerializeField]
     private GameObject go_CountImage;
     [SerializeField]
-    private GameObject go_CoffeeStore;
-    [SerializeField]
-    private GameObject go_WineStore;
-    [SerializeField]
-    private GameObject go_GolfStore;
-    [SerializeField]
-    private GameObject go_SmokeStore;
+    private TextMeshProUGUI text_Count;
 
     private Player thePlayer;
     private ItemInfo theItemInfo;
     private Inventory theInventory;
+    private Storage theStorage;
 
     private Rect baseRect; 
 
@@ -38,6 +31,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         thePlayer = FindObjectOfType<Player>();
         theItemInfo = FindObjectOfType<ItemInfo>();
         theInventory = FindObjectOfType<Inventory>();
+        theStorage = FindObjectOfType<Storage>();
         baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
@@ -92,6 +86,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
 
         text_Count.text = "0";
         go_CountImage.SetActive(false);
+        HideInfo();
     }
     
     private IEnumerator ResetDoubleClickFlag()
@@ -102,7 +97,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        
         if (eventData.clickCount == 2)
         {
             isDoubleClick = true;
@@ -113,54 +107,67 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         {
             if(item != null)
             {
-                if (item.itemType == Item.ItemType.Equipment)
+                if (theInventory.CheckStorage() == true)
                 {
-                    if (thePlayer != null)
+                    for(int i = 0; i < itemCount; i++)
                     {
-                        thePlayer.EquipItem(item.itemName);
+                        theStorage.AcquireItem(item);
+                    }
+                    ClearSlot();
+                }
+                else 
+                {
+                    if (item.itemType == Item.ItemType.Equipment)
+                    {
+                        if (thePlayer != null)
+                        {
+                            thePlayer.EquipItem(item.itemName); //아이템 장착
+                        }
+                    }
+                    else
+                    {
+                        //아이템 소모
+                        Debug.Log("used item");
+                        SetSlotCount(-1);
                     }
                 }
-                else
-                {
-                    SetSlotCount(-1);
-                }
-            }
+            }  
         }
 
-        if (go_CoffeeStore.activeSelf==true || go_WineStore.activeSelf == true || go_GolfStore.activeSelf == true || go_SmokeStore.activeSelf == true)
+        if (theInventory.CheckGolfStore() == true || theInventory.CheckWineStore() == true || theInventory.CheckSmokeStore() == true || theInventory.CheckCoffeeStore() == true)
         {
             if(eventData.button == PointerEventData.InputButton.Right)
             {
                 if (item != null)
                 {
-                    theInventory.SetCoinText(-(item.itemValue / 2));
+                    theInventory.SetCoinText(-(item.itemValue / 2)); //아이템 판매
                     SetSlotCount(-1);
                 }
             }
         }
     }
 
-    public void ShowToolTip(Item.Item _item, Vector3 _pos)
+    public void ShowInfo(Item.Item _item, Vector3 _pos)
     {
-        theItemInfo.ShowToolTip(_item, _pos);
+        theItemInfo.ShowInfo(_item, _pos);
     }
 
-    public void HideToolTip()
+    public void HideInfo()
     {
-        theItemInfo.HideToolTip();
+        theItemInfo.HideInfo();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (item != null)
         {
-            ShowToolTip(item, transform.position);
+            ShowInfo(item, transform.position);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        HideToolTip();
+        HideInfo();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -175,7 +182,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
-        HideToolTip();
+        HideInfo();
 
         if (item != null)
             DragSlot.instance.transform.position = eventData.position;

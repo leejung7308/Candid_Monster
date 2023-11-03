@@ -38,4 +38,9 @@ public class ConvienceSalesman : MonoBehaviour, IPointerClickHandler
         go_ConvienceStoreBase.SetActive(false);
         theInventory.CloseInventory();
     }
+
+    public bool CheckConvienceStore()
+    {
+        return go_ConvienceStoreBase.activeSelf;
+    }
 }
