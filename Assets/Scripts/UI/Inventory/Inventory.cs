@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
     private WineSalesman theWineSalesman;
     private GolfSalesman theGolfSalesman;
     private SmokeSalesman theSmokeSalesman;
+    private ConvienceSalesman theConvienceSalesman;
     private StorageClick theStorageClick;
 
 
@@ -39,6 +40,7 @@ public class Inventory : MonoBehaviour
         theGolfSalesman = FindObjectOfType<GolfSalesman>();
         theSmokeSalesman = FindObjectOfType<SmokeSalesman>();
         theStorageClick = FindObjectOfType<StorageClick>();
+        theConvienceSalesman = FindObjectOfType<ConvienceSalesman>();
     }
 
     void Update()
@@ -167,6 +169,22 @@ public class Inventory : MonoBehaviour
         try
         {
             if (theGolfSalesman.CheckGolfStore() != null && theGolfSalesman.CheckGolfStore() == true)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        catch (NullReferenceException ie)
+        {
+            return false;
+        }
+    }
+    public bool CheckConvienceStore()
+    {
+        try
+        {
+            if (theConvienceSalesman.CheckConvienceStore() != null && theConvienceSalesman.CheckConvienceStore() == true)
             {
                 return true;
             }

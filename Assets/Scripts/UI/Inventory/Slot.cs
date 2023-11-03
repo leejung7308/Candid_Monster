@@ -94,7 +94,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         yield return new WaitForSeconds(doubleClickTimeThreshold);
         isDoubleClick = false;
     }
-    
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.clickCount == 2)
@@ -102,7 +102,19 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
             isDoubleClick = true;
             StartCoroutine(ResetDoubleClickFlag());
         }
-       
+
+        if (theInventory.CheckGolfStore() == true || theInventory.CheckWineStore() == true || theInventory.CheckSmokeStore() == true || theInventory.CheckCoffeeStore() == true || theInventory.CheckConvienceStore()==true)
+        {
+            if (eventData.button == PointerEventData.InputButton.Right)
+            {
+                if (item != null)
+                {
+                    theInventory.SetCoinText(-(item.itemValue / 2)); //아이템 판매
+                    SetSlotCount(-1);
+                }
+            }
+        }
+
         if (isDoubleClick)
         {
             if(item != null)
@@ -132,18 +144,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
                     }
                 }
             }  
-        }
-
-        if (theInventory.CheckGolfStore() == true || theInventory.CheckWineStore() == true || theInventory.CheckSmokeStore() == true || theInventory.CheckCoffeeStore() == true)
-        {
-            if(eventData.button == PointerEventData.InputButton.Right)
-            {
-                if (item != null)
-                {
-                    theInventory.SetCoinText(-(item.itemValue / 2)); //아이템 판매
-                    SetSlotCount(-1);
-                }
-            }
         }
     }
 
