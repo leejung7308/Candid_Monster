@@ -15,8 +15,6 @@ public class IMItemInfo : MonoBehaviour
     private TextMeshProUGUI txt_ItemName;
     [SerializeField]
     private TextMeshProUGUI txt_ItemDesc;
-    [SerializeField]
-    private TextMeshProUGUI txt_ItemValue;
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
     {   

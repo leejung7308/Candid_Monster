@@ -38,4 +38,9 @@ public class WineSalesman : MonoBehaviour, IPointerClickHandler
         go_WineStoreBase.SetActive(false);
         theInventory.CloseInventory();
     }
+
+    public bool CheckWineStore()
+    {
+        return go_WineStoreBase.activeSelf;
+    }
 }

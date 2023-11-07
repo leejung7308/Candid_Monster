@@ -31,16 +31,16 @@ public class GolfSalesman : MonoBehaviour, IPointerClickHandler
     public void OpenGolfStore()
     {
         go_GolfStoreBase.SetActive(true);
-        GameObject.Find("NPC_Smoke").transform.GetChild(0).gameObject.SetActive(false);
-        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void CloseGolfStore()
     {
-        GameObject.Find("NPC_Smoke").transform.GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("NPC_Convience").transform.GetChild(0).gameObject.SetActive(true);
         go_GolfStoreBase.SetActive(false);
         theInventory.CloseInventory();
+    }
 
+    public bool CheckGolfStore()
+    {
+        return go_GolfStoreBase.activeSelf;
     }
 }

@@ -39,4 +39,9 @@ public class CoffeeSalesman : MonoBehaviour, IPointerClickHandler
         theInventory.CloseInventory();
 
     }
+
+    public bool CheckCoffeeStore()
+    {
+        return go_CoffeeStoreBase.activeSelf;
+    }
 }

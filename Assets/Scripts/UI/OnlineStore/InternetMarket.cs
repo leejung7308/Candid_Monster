@@ -11,8 +11,6 @@ public class InternetMarket : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI text_Coin;
-
-    private IMItemInfo theIMItemInfo;
     private Inventory theInventory;
 
     [SerializeField]
@@ -25,7 +23,6 @@ public class InternetMarket : MonoBehaviour
 
     void Start()
     {
-        theIMItemInfo = FindObjectOfType<IMItemInfo>();
         theInventory = FindObjectOfType<Inventory>();
     }
 

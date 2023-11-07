@@ -11,7 +11,6 @@ public class DragSlot : MonoBehaviour
     [SerializeField]
     private Image imageItem;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
