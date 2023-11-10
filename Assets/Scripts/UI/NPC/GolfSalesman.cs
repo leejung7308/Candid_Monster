@@ -15,6 +15,20 @@ public class GolfSalesman : MonoBehaviour, IPointerClickHandler
         theInventory = FindObjectOfType<Inventory>();
     }
 
+    void Update()
+    {
+        TryCloseGolfStore();
+    }
+
+    private void TryCloseGolfStore()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_GolfStoreBase.activeSelf == true)
+                CloseGolfStore();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_GolfStoreBase.activeSelf == false)

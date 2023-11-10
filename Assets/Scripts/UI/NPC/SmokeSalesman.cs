@@ -15,6 +15,20 @@ public class SmokeSalesman : MonoBehaviour, IPointerClickHandler
         theInventory = FindObjectOfType<Inventory>();
     }
 
+    void Update()
+    {
+        TryCloseSmokeStore();
+    }
+
+    private void TryCloseSmokeStore()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_SmokeStoreBase.activeSelf == true)
+                CloseSmokeStore();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_SmokeStoreBase.activeSelf == false)

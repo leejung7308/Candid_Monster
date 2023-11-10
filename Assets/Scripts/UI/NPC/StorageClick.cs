@@ -15,6 +15,20 @@ public class StorageClick : MonoBehaviour, IPointerClickHandler
         theInventory = FindObjectOfType<Inventory>();
     }
 
+    void Update()
+    {
+        TryCloseStorage();
+    }
+
+    private void TryCloseStorage()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_Storage.activeSelf == true)
+                CloseStorage();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_Storage.activeSelf == false)

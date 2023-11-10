@@ -15,6 +15,20 @@ public class ConvienceSalesman : MonoBehaviour, IPointerClickHandler
         theInventory = FindObjectOfType<Inventory>();
     }
 
+    void Update()
+    {
+        TryCloseConvienceStore();
+    }
+
+    private void TryCloseConvienceStore()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_ConvienceStoreBase.activeSelf == true)
+                CloseConvienceStore();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_ConvienceStoreBase.activeSelf == false)

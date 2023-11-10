@@ -12,6 +12,8 @@ public class IMBuyButton : MonoBehaviour, IPointerClickHandler
     private Inventory theInventory;
     private BuyCount theBuyCount;
 
+    public GameObject Parcel;
+
     private void Start()
     {
         theBuyCount = FindObjectOfType<BuyCount>();
@@ -29,6 +31,7 @@ public class IMBuyButton : MonoBehaviour, IPointerClickHandler
         {
             if (item != null)
             {
+                OnParcel();
                 for (int i = 0; i < theBuyCount.GetBuyCount(); i++)
                 {
                     purchaseCost += item.itemValue;
@@ -45,5 +48,15 @@ public class IMBuyButton : MonoBehaviour, IPointerClickHandler
                 purchaseCost = 0;
             }
         }
+    }
+
+    private void OnParcel()
+    {
+        Parcel.SetActive(true);
+        Invoke("HideParcel", 1);
+    }
+    private void HideParcel()
+    {
+        Parcel.SetActive(false);
     }
 }

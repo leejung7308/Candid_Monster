@@ -7,6 +7,13 @@ public class ComputerClick : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     private GameObject go_OnlineMarket;
+    [SerializeField]
+    private OnlineMarket theOnlineMarket;
+
+    void Start()
+    {
+        theOnlineMarket = FindObjectOfType<OnlineMarket>();
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -27,6 +34,6 @@ public class ComputerClick : MonoBehaviour, IPointerClickHandler
 
     public void CloseOnlineMarket()
     {
-        go_OnlineMarket.SetActive(false);
+        theOnlineMarket.CloseOnlineMarket();
     }
 }

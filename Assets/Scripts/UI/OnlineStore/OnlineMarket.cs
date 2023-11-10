@@ -30,6 +30,16 @@ public class OnlineMarket : MonoBehaviour
     void Update()
     {
         Coin();
+        TryCloseOnlineMarket();
+    }
+
+    private void TryCloseOnlineMarket()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_OnlineMarketBase.activeSelf == true)
+                CloseOnlineMarket();
+        }
     }
 
     public void OpenOnlineMarket()

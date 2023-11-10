@@ -14,12 +14,10 @@ public class ClickOnlineStore : MonoBehaviour
     private void OnClickOnlineStoreButton()
     {
         theInternetMarket.OpenInternetMarket();
-        GameObject.Find("Icon_Setting").transform.GetChild(0).gameObject.SetActive(false);
     }
 
     private void OnClickQuitButton()
     {
         theInternetMarket.CloseInternetMarket();
-        GameObject.Find("Icon_Setting").transform.GetChild(0).gameObject.SetActive(true);
     }
 }

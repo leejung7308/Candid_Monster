@@ -46,20 +46,30 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         TryOpenInventory();
+        TryCloseInventory();
     }
 
     private void TryOpenInventory()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            if (go_InventoryBase.activeSelf==false)
+            if (go_InventoryBase.activeSelf == false)
                 OpenInventory();
             else
                 CloseInventory();
 
         }
     }
-    
+
+    private void TryCloseInventory()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_InventoryBase.activeSelf == true)
+                CloseInventory();
+        }
+    }
+
     public void OpenInventory()
     {
         go_InventoryBase.SetActive(true);
@@ -69,7 +79,7 @@ public class Inventory : MonoBehaviour
     {
         go_InventoryBase.SetActive(false);
         theItemInfo.HideInfo();
-        //_targetTr.position = new Vector3(400, 200, 0); //인벤토리 오픈 위치 고정
+        //_targetTr.position = new Vector3(400, 200, 0); //Inventory open position static
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)
@@ -87,11 +97,12 @@ public class Inventory : MonoBehaviour
                     }
                 }
             }
-        }else if (Item.ItemType.ETC == _item.itemType)
+        }
+        else if (Item.ItemType.ETC == _item.itemType)
         {
             text_Coin.text = (_count * _item.itemValue).ToString();
         }
-        if(Item.ItemType.ETC != _item.itemType)
+        if (Item.ItemType.ETC != _item.itemType)
         {
             for (int i = 0; i < slots.Length; i++)
             {

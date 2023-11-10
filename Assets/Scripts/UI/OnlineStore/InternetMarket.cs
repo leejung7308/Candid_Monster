@@ -21,6 +21,9 @@ public class InternetMarket : MonoBehaviour
     [SerializeField]
     private BuyCount theBuyCount;
 
+    public GameObject IconCollection;
+    public GameObject IconSetting;
+
     void Start()
     {
         theInventory = FindObjectOfType<Inventory>();
@@ -29,11 +32,23 @@ public class InternetMarket : MonoBehaviour
     void Update()
     {
         Coin();
+        TryCloseInternetMarket();
+    }
+
+    public void TryCloseInternetMarket()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_InternetMarketBase.activeSelf == true)
+                CloseInternetMarket();
+        }
     }
 
     public void OpenInternetMarket()
     {
         go_InternetMarketBase.SetActive(true);
+        IconSetting.SetActive(false);
+        IconCollection.SetActive(false);
     }
 
     public void CloseInternetMarket()
@@ -44,6 +59,8 @@ public class InternetMarket : MonoBehaviour
         txt_ItemDesc.text = "";
 
         theBuyCount.SetBuyCount();
+        IconCollection.SetActive(true);
+        IconSetting.SetActive(true);
     }
 
     private void Coin()

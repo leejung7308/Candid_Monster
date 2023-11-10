@@ -15,6 +15,20 @@ public class WineSalesman : MonoBehaviour, IPointerClickHandler
         theInventory = FindObjectOfType<Inventory>();
     }
 
+    void Update()
+    {
+        TryCloseWineStore();
+    }
+
+    private void TryCloseWineStore()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_WineStoreBase.activeSelf == true)
+                CloseWineStore();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_WineStoreBase.activeSelf == false)

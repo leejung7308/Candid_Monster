@@ -11,6 +11,10 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     private Collection theCollection;
     private InternetMarket theInternetMarket;
 
+    public GameObject IconCollection;
+    public GameObject IconOnlineStore;
+    public GameObject IconSetting;
+
     void Start()
     {
         theCollection = FindObjectOfType<Collection>();
@@ -20,6 +24,7 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     void Update()
     {
         TryOpenSmartphone();
+        TryCloseSmartphone();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -48,6 +53,15 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
 
         }
     }
+
+    private void TryCloseSmartphone()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && IconSetting.activeSelf==true)
+        {
+            if (SmartphoneBase.activeSelf == true)
+                CloseSmartphone();
+        }
+    }
    
     public void OpenSmartphone()
     {
@@ -56,10 +70,6 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
 
     private void CloseSmartphone()
     {
-        GameObject.Find("Collection").transform.GetChild(0).gameObject.SetActive(false);
-        GameObject.Find("Home").transform.GetChild(1).gameObject.SetActive(true);
-        GameObject.Find("OnlineStore").transform.GetChild(0).gameObject.SetActive(false);
-
         SmartphoneBase.SetActive(false);
     }
 }
