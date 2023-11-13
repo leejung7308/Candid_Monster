@@ -7,6 +7,17 @@ using System;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] private Item.Item[] items;
+
+    public Slot[] GetSlots() { return slots; }
+
+    public void LoadToInven(int _arrayNum, string _itemName, int _itemNum)
+    {
+        for (int i = 0; i < items.Length; i++)
+            if (items[i].itemName == _itemName)
+                slots[_arrayNum].AddItem(items[i], _itemNum);
+    }
+
     [SerializeField]
     private GameObject go_InventoryBase;
     [SerializeField]
