@@ -24,4 +24,14 @@ public class CollectionDesc : MonoBehaviour
         collectionImage.sprite = _item.GetComponent<SpriteRenderer>().sprite;
         collectionImage.color = _item.GetComponent<SpriteRenderer>().color;
     }
+
+    public void UnknownDesc(Item.Item _item, Vector3 _pos)
+    {
+        descHideImage.SetActive(false);
+
+        txt_ItemName.text = "";
+        txt_ItemDesc.text = "";
+        collectionImage.sprite = _item.GetComponent<SpriteRenderer>().sprite;
+        collectionImage.color = Color.black;
+    }
 }

@@ -31,13 +31,13 @@ public class IMBuyButton : MonoBehaviour, IPointerClickHandler
         {
             if (item != null)
             {
-                OnParcel();
                 for (int i = 0; i < theBuyCount.GetBuyCount(); i++)
                 {
                     purchaseCost += item.itemValue;
                 }
                 if (purchaseCost <= int.Parse(theInventory.GetCoinText()))
                 {
+                    OnParcel();
                     for (int i = 0; i < theBuyCount.GetBuyCount(); i++)
                     {
                         theInventory.SetCoinText(item.itemValue);

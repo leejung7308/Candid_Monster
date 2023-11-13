@@ -6,34 +6,39 @@ using UnityEngine.EventSystems;
 public class ComputerClick : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
-    private GameObject go_OnlineMarket;
-    [SerializeField]
-    private OnlineMarket theOnlineMarket;
+    private GameObject go_Computer;
 
-    void Start()
+    public OnlineMarket theOnlineMarket;
+
+    void Update()
     {
-        theOnlineMarket = FindObjectOfType<OnlineMarket>();
+        TryCloseComputer();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (go_OnlineMarket.activeSelf == false)
+        if (go_Computer.activeSelf == false)
         {
-            OpenOnlineMarket();
-        }
-        else
-        {
-            CloseOnlineMarket();
+            OpenComputer();
+            theOnlineMarket.OpenOnlineMarket();
         }
     }
 
-    public void OpenOnlineMarket()
+    public void OpenComputer()
     {
-        go_OnlineMarket.SetActive(true);
+        go_Computer.SetActive(true);
     }
 
-    public void CloseOnlineMarket()
+    private void TryCloseComputer()
     {
-        theOnlineMarket.CloseOnlineMarket();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_Computer.activeSelf == true)
+            {
+                theOnlineMarket.CloseOnlineMarket();
+                go_Computer.SetActive(false);
+
+            }
+        }
     }
 }

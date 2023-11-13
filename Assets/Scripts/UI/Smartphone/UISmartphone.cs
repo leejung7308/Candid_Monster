@@ -8,8 +8,8 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private GameObject SmartphoneBase;
 
-    private Collection theCollection;
-    private InternetMarket theInternetMarket;
+    public Collection theCollection;
+    public InternetMarket theInternetMarket;
 
     public GameObject IconCollection;
     public GameObject IconOnlineStore;
@@ -17,8 +17,7 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        theCollection = FindObjectOfType<Collection>();
-        theInternetMarket = FindObjectOfType<InternetMarket>();
+
     }
 
     void Update()
@@ -71,5 +70,7 @@ public class UISmartphone : MonoBehaviour, IPointerClickHandler
     private void CloseSmartphone()
     {
         SmartphoneBase.SetActive(false);
+        theCollection.CloseCollection();
+        theInternetMarket.CloseInternetMarket();
     }
 }

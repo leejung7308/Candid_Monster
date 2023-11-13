@@ -27,13 +27,21 @@ public class Inventory : MonoBehaviour
     private ConvienceSalesman theConvienceSalesman;
     private StorageClick theStorageClick;
 
-    public string[][] Acquire = new string[][]
+    public string[][] AcquireEquip = new string[][]
  {
     new string[] {"Americano Nine Shot", "0"},
     new string[] {"Whiskey", "0"},
     new string[] {"Liquid Cigarette", "0"},
     new string[] { "Putter", "0"},
     new string[] {"Star", "0" }
+ };
+    public string[][] AcquireConsumable = new string[][]
+ {
+    new string[] {"Star", "0"},
+    new string[] {"Vitamin Juice", "0"},
+    new string[] {"Vitamin Tonic", "0"},
+    new string[] { "Adhesive Bandage", "0"},
+    new string[] {"First Aid Kit", "0" }
  };
 
     void Start()
@@ -127,11 +135,24 @@ public class Inventory : MonoBehaviour
 
     private void CollectionRegister(Item.Item _item)
     {
-        for (int i = 0; i < Acquire.Length; i++)
+        if(Item.ItemType.Equipment == _item.itemType)
         {
-            if (Acquire[i][0] == _item.itemName)
+            for (int i = 0; i < AcquireEquip.Length; i++)
             {
-                Acquire[i][1] = "1";
+                if (AcquireEquip[i][0] == _item.itemName)
+                {
+                    AcquireEquip[i][1] = "1";
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < AcquireConsumable.Length; i++)
+            {
+                if (AcquireConsumable[i][0] == _item.itemName)
+                {
+                    AcquireConsumable[i][1] = "1";
+                }
             }
         }
     }

@@ -41,10 +41,18 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
 
     public void UnlockItem()
     {
-        string[][] itemunlock = theInventory.Acquire;
-        for(int i = 0; i < theInventory.Acquire.Length; i++)
+        string[][] EquipUnlock = theInventory.AcquireEquip;
+        string[][] ConsumableUnlock = theInventory.AcquireConsumable;
+        for (int i = 0; i < theInventory.AcquireEquip.Length; i++)
         {
-            if (item != null && itemunlock[i][0] == item.itemName && itemunlock[i][1] == "1")
+            if (item != null && EquipUnlock[i][0] == item.itemName && EquipUnlock[i][1] == "1")
+            {
+                SetColor(0);
+            }
+        }
+        for (int i = 0; i < theInventory.AcquireConsumable.Length; i++)
+        {
+            if (item != null && ConsumableUnlock[i][0] == item.itemName && ConsumableUnlock[i][1] == "1")
             {
                 SetColor(0);
             }
@@ -62,9 +70,16 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.clickCount == 1)
         {
-            if (item != null && itemHideImage.color.a == 0)
+            if(item != null)
             {
-                ShowDesc(item, transform.position);
+                if (itemHideImage.color.a == 0)
+                {
+                    ShowDesc(item, transform.position);
+                }
+                else
+                {
+                    UnKnownDesc(item, transform.position);
+                }
             }
         }
     }
@@ -72,5 +87,10 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     public void ShowDesc(Item.Item _item, Vector3 _pos)
     {
         theCollectionDesc.ShowDesc(_item, _pos);
+    }
+
+    public void UnKnownDesc(Item.Item _item, Vector3 _pos)
+    {
+        theCollectionDesc.UnknownDesc(_item, _pos);
     }
 }
