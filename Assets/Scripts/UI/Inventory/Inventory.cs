@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour
     private Slot[] slots;
 
     private ItemInfo theItemInfo;
-    private CollectionSlot theCollectionSlot;
     private CoffeeSalesman theCoffeeSalesman;
     private WineSalesman theWineSalesman;
     private GolfSalesman theGolfSalesman;
@@ -28,13 +27,19 @@ public class Inventory : MonoBehaviour
     private ConvienceSalesman theConvienceSalesman;
     private StorageClick theStorageClick;
 
-
+    public string[][] Acquire = new string[][]
+ {
+    new string[] {"Americano Nine Shot", "0"},
+    new string[] {"Whiskey", "0"},
+    new string[] {"Liquid Cigarette", "0"},
+    new string[] { "Putter", "0"},
+    new string[] {"Star", "0" }
+ };
 
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
-        theCollectionSlot = FindObjectOfType<CollectionSlot>();
         theCoffeeSalesman = FindObjectOfType<CoffeeSalesman>();
         theWineSalesman = FindObjectOfType<WineSalesman>();
         theGolfSalesman = FindObjectOfType<GolfSalesman>();
@@ -100,10 +105,15 @@ public class Inventory : MonoBehaviour
         }
         else if (Item.ItemType.ETC == _item.itemType)
         {
-            text_Coin.text = (_count * _item.itemValue).ToString();
+            int Money;
+            Money = int.Parse(text_Coin.text);
+            Money += _count * _item.itemValue;
+            text_Coin.text = Money.ToString();
         }
+
         if (Item.ItemType.ETC != _item.itemType)
         {
+            CollectionRegister(_item);
             for (int i = 0; i < slots.Length; i++)
             {
                 if (slots[i].item == null)
@@ -111,6 +121,17 @@ public class Inventory : MonoBehaviour
                     slots[i].AddItem(_item, _count);
                     return;
                 }
+            }
+        }
+    }
+
+    private void CollectionRegister(Item.Item _item)
+    {
+        for (int i = 0; i < Acquire.Length; i++)
+        {
+            if (Acquire[i][0] == _item.itemName)
+            {
+                Acquire[i][1] = "1";
             }
         }
     }

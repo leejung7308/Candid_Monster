@@ -13,7 +13,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
 
     public Item.Item item;
     private int itemCount;
-    public Image itemImage; 
+    public Image itemImage;
     [SerializeField]
     private GameObject go_CountImage;
     [SerializeField]

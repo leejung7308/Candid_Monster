@@ -12,15 +12,21 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     public Image itemHideImage;
 
     private CollectionDesc theCollectionDesc;
+    private Inventory theInventory;
 
     void Start()
     {
-        AddItem();
+        Additem();
         theCollectionDesc = FindObjectOfType<CollectionDesc>();
+        theInventory = FindObjectOfType<Inventory>();
     }
 
-    // 도감 획득
-    public void AddItem()
+    void Update()
+    {
+        UnlockItem();
+    }
+
+    private void Additem()
     {
         if (item != null)
         {
@@ -31,13 +37,18 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
         {
             itemImage.sprite = null;
         }
-        AcquireItem();
     }
 
-    public void AcquireItem()
+    public void UnlockItem()
     {
-        //도감 아이템 해금 조건 추가
-        SetColor(0);
+        string[][] itemunlock = theInventory.Acquire;
+        for(int i = 0; i < theInventory.Acquire.Length; i++)
+        {
+            if (item != null && itemunlock[i][0] == item.itemName && itemunlock[i][1] == "1")
+            {
+                SetColor(0);
+            }
+        }
     }
 
     private void SetColor(float _alpha)
@@ -51,7 +62,7 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.clickCount == 1)
         {
-            if (item != null)
+            if (item != null && itemHideImage.color.a == 0)
             {
                 ShowDesc(item, transform.position);
             }

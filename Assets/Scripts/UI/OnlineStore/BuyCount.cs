@@ -25,19 +25,19 @@ public class BuyCount : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //if (eventData.clickCount == 1)
-        //{
+        if(item != null)
+        {
             if (eventData.pointerCurrentRaycast.gameObject == PlusButton)
             {
                 UpdateBuyCount(1);
             }
-            else if(eventData.pointerCurrentRaycast.gameObject == MinusButton)
+            else if (eventData.pointerCurrentRaycast.gameObject == MinusButton)
             {
                 UpdateBuyCount(-1);
             }
             Value = item.itemValue * buyCount;
             text_Purchase.text = Value.ToString();
-        //}
+        }
     }
 
     public void UpdateBuyCount(int _buyCount)
