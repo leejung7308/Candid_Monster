@@ -17,6 +17,7 @@ public class HomePortal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            theSaveAndLoad.ResetSaveData();
             theSaveAndLoad.SaveData();
             StartCoroutine(LoadCoroutine());
         }

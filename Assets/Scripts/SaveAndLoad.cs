@@ -11,6 +11,8 @@ public class SaveData
     public List<int> invenArrayNumber = new List<int>();
     public List<string> invenItemName = new List<string>();
     public List<int> invenItemNumber = new List<int>();
+
+    public string Coin;
 }
 
 public class SaveAndLoad : MonoBehaviour
@@ -38,6 +40,8 @@ public class SaveAndLoad : MonoBehaviour
 
         //saveData.playerPos = thePlayer.transform.position;
         //saveData.playerRot = thePlayer.transform.rotation.eulerAngles;
+
+        saveData.Coin = theInventory.GetCoinText();
 
         Slot[] slots = theInventory.GetSlots();
         for (int i = 0; i < slots.Length; i++)
@@ -69,11 +73,19 @@ public class SaveAndLoad : MonoBehaviour
 
             //thePlayer.transform.position = saveData.playerPos;
             //thePlayer.transform.eulerAngles = saveData.playerRot;
+            theInventory.SetCoinText(-int.Parse(saveData.Coin));
 
             for (int i = 0; i < saveData.invenItemName.Count; i++)
                 theInventory.LoadToInven(saveData.invenArrayNumber[i], saveData.invenItemName[i], saveData.invenItemNumber[i]);
         }
         else
             Debug.Log("none save file");
+    }
+
+    public void ResetSaveData()
+    {
+        saveData.invenArrayNumber.Clear();
+        saveData.invenItemName.Clear();
+        saveData.invenItemNumber.Clear();
     }
 }
