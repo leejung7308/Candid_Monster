@@ -7,7 +7,7 @@ using System;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private Item.Item[] items;
+    public Item.Item[] items;
 
     [SerializeField]
     private GameObject go_InventoryBase;
@@ -22,24 +22,18 @@ public class Inventory : MonoBehaviour
     private Slot[] slots;
 
     private ItemInfo theItemInfo;
-    private CoffeeSalesman theCoffeeSalesman;
-    private WineSalesman theWineSalesman;
-    private GolfSalesman theGolfSalesman;
-    private SmokeSalesman theSmokeSalesman;
-    private ConvienceSalesman theConvienceSalesman;
-    private StorageClick theStorageClick;
+    public GameObject CoffeeStore;
+    public GameObject WineStore;
+    public GameObject GolfStore;
+    public GameObject SmokeStore;
+    public GameObject ConvienceStore;
+    public GameObject Storage;
     public Collection theCollection;
 
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
-        theCoffeeSalesman = FindObjectOfType<CoffeeSalesman>();
-        theWineSalesman = FindObjectOfType<WineSalesman>();
-        theGolfSalesman = FindObjectOfType<GolfSalesman>();
-        theSmokeSalesman = FindObjectOfType<SmokeSalesman>();
-        theStorageClick = FindObjectOfType<StorageClick>();
-        theConvienceSalesman = FindObjectOfType<ConvienceSalesman>();
     }
 
     void Update()
@@ -157,101 +151,51 @@ public class Inventory : MonoBehaviour
 
     public bool CheckCoffeeStore()
     {
-        try
+        if (CoffeeStore.activeSelf == true)
         {
-            if (theCoffeeSalesman.CheckCoffeeStore() != null && theCoffeeSalesman.CheckCoffeeStore() == true)
-            {
-                return true;
-            }
-            else
-                return false;
+            return true;
         }
-        catch (NullReferenceException ie)
-        {
-            return false;
-        }
+        else return false;
     }
     public bool CheckWineStore()
     {
-        try
+        if (WineStore.activeSelf == true)
         {
-            if (theWineSalesman.CheckWineStore() != null && theWineSalesman.CheckWineStore() == true)
-            {
-                return true;
-            }
-            else
-                return false;
+            return true;
         }
-        catch (NullReferenceException ie)
-        {
-            return false;
-        }
+        else return false;
     }
     public bool CheckSmokeStore()
     {
-        try
+        if (SmokeStore.activeSelf == true)
         {
-            if (theSmokeSalesman.CheckSmokeStore() != null && theSmokeSalesman.CheckSmokeStore() == true)
-            {
-                return true;
-            }
-            else
-                return false;
+            return true;
         }
-        catch (NullReferenceException ie)
-        {
-            return false;
-        }
+        else return false;
     }
     public bool CheckGolfStore()
     {
-        try
+        if (GolfStore.activeSelf == true)
         {
-            if (theGolfSalesman.CheckGolfStore() != null && theGolfSalesman.CheckGolfStore() == true)
-            {
-                return true;
-            }
-            else
-                return false;
+            return true;
         }
-        catch (NullReferenceException ie)
-        {
-            return false;
-        }
+        else return false;
     }
     public bool CheckConvienceStore()
     {
-        try
+        if (ConvienceStore.activeSelf == true)
         {
-            if (theConvienceSalesman.CheckConvienceStore() != null && theConvienceSalesman.CheckConvienceStore() == true)
-            {
-                return true;
-            }
-            else
-                return false;
+            return true;
         }
-        catch (NullReferenceException ie)
-        {
-            return false;
-        }
+        else return false;
     }
 
     public bool CheckStorage()
     {
-        try
+        if (Storage.activeSelf == true)
         {
-            if (theStorageClick.CheckStorage() == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
-        catch (NullReferenceException ie)
-        {
-            return false;
-        }
+        else return false;
     }
 }

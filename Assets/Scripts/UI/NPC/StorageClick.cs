@@ -9,10 +9,13 @@ public class StorageClick : MonoBehaviour, IPointerClickHandler
     private GameObject go_Storage;
 
     private Inventory theInventory;
+    [SerializeField] 
+    private SaveAndLoadStorage theSaveAndLoadStorage;
 
     void Start()
     {
         theInventory = FindObjectOfType<Inventory>();
+        theSaveAndLoadStorage = FindObjectOfType<SaveAndLoadStorage>();
     }
 
     void Update()
@@ -45,17 +48,15 @@ public class StorageClick : MonoBehaviour, IPointerClickHandler
 
     public void OpenStorage()
     {
+        theSaveAndLoadStorage.LoadStorage();
         go_Storage.SetActive(true);
     }
 
     public void CloseStorage()
     {
+        theSaveAndLoadStorage.ResetSaveStorage();
+        theSaveAndLoadStorage.SaveStorage();
         go_Storage.SetActive(false);
         theInventory.CloseInventory();
-    }
-
-    public bool CheckStorage()
-    {
-        return go_Storage.activeSelf;
     }
 }
