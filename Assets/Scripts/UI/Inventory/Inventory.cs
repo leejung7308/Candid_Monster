@@ -9,15 +9,6 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private Item.Item[] items;
 
-    public Slot[] GetSlots() { return slots; }
-
-    public void LoadToInven(int _arrayNum, string _itemName, int _itemNum)
-    {
-        for (int i = 0; i < items.Length; i++)
-            if (items[i].itemName == _itemName)
-                slots[_arrayNum].AddItem(items[i], _itemNum);
-    }
-
     [SerializeField]
     private GameObject go_InventoryBase;
     [SerializeField]
@@ -37,23 +28,7 @@ public class Inventory : MonoBehaviour
     private SmokeSalesman theSmokeSalesman;
     private ConvienceSalesman theConvienceSalesman;
     private StorageClick theStorageClick;
-
-    public string[][] AcquireEquip = new string[][]
- {
-    new string[] {"Americano Nine Shot", "0"},
-    new string[] {"Whiskey", "0"},
-    new string[] {"Liquid Cigarette", "0"},
-    new string[] { "Putter", "0"},
-    new string[] {"Star", "0" }
- };
-    public string[][] AcquireConsumable = new string[][]
- {
-    new string[] {"Star", "0"},
-    new string[] {"Vitamin Juice", "0"},
-    new string[] {"Vitamin Tonic", "0"},
-    new string[] { "Adhesive Bandage", "0"},
-    new string[] {"First Aid Kit", "0" }
- };
+    public Collection theCollection;
 
     void Start()
     {
@@ -71,6 +46,15 @@ public class Inventory : MonoBehaviour
     {
         TryOpenInventory();
         TryCloseInventory();
+    }
+
+    public Slot[] GetSlots() { return slots; }
+
+    public void LoadToInven(int _arrayNum, string _itemName, int _itemNum)
+    {
+        for (int i = 0; i < items.Length; i++)
+            if (items[i].itemName == _itemName)
+                slots[_arrayNum].AddItem(items[i], _itemNum);
     }
 
     private void TryOpenInventory()
@@ -132,41 +116,32 @@ public class Inventory : MonoBehaviour
 
         if (Item.ItemType.ETC != _item.itemType)
         {
-            CollectionRegister(_item);
             for (int i = 0; i < slots.Length; i++)
             {
                 if (slots[i].item == null)
                 {
                     slots[i].AddItem(_item, _count);
+                    UnlockCollection(_item);
                     return;
                 }
             }
         }
     }
 
-    private void CollectionRegister(Item.Item _item)
+    public void UnlockCollection(Item.Item _item)
     {
-        if(Item.ItemType.Equipment == _item.itemType)
+        Item.Item[] items = theCollection.GetItems();
+
+        for(int i = 0; i < items.Length; i++)
         {
-            for (int i = 0; i < AcquireEquip.Length; i++)
+            if(items[i].itemName == _item.itemName)
             {
-                if (AcquireEquip[i][0] == _item.itemName)
-                {
-                    AcquireEquip[i][1] = "1";
-                }
-            }
-        }
-        else
-        {
-            for (int i = 0; i < AcquireConsumable.Length; i++)
-            {
-                if (AcquireConsumable[i][0] == _item.itemName)
-                {
-                    AcquireConsumable[i][1] = "1";
-                }
+                items[i].itemAcquire = 1;
             }
         }
     }
+
+    public Item.Item[] GetItems() { return items; }
 
     public string GetCoinText()
     {

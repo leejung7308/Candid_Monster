@@ -98,6 +98,7 @@ namespace Item
         [TextArea]
         public string itemDesc;
         public int itemValue;
+        public int itemAcquire = 0;
 
         public Item(float caffeine, float alcohol, float nicotine)
         {

@@ -16,46 +16,23 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        Additem();
         theCollectionDesc = FindObjectOfType<CollectionDesc>();
         theInventory = FindObjectOfType<Inventory>();
     }
 
     void Update()
     {
-        UnlockItem();
+
     }
 
-    private void Additem()
+    public void AddItem(Item.Item _item)
     {
-        if (item != null)
+        item = _item;
+        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+        itemImage.color = item.GetComponent<SpriteRenderer>().color;
+        if (_item.itemAcquire == 1)
         {
-            itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
-            itemImage.color = item.GetComponent<SpriteRenderer>().color;
-        }
-        else
-        {
-            itemImage.sprite = null;
-        }
-    }
-
-    public void UnlockItem()
-    {
-        string[][] EquipUnlock = theInventory.AcquireEquip;
-        string[][] ConsumableUnlock = theInventory.AcquireConsumable;
-        for (int i = 0; i < theInventory.AcquireEquip.Length; i++)
-        {
-            if (item != null && EquipUnlock[i][0] == item.itemName && EquipUnlock[i][1] == "1")
-            {
-                SetColor(0);
-            }
-        }
-        for (int i = 0; i < theInventory.AcquireConsumable.Length; i++)
-        {
-            if (item != null && ConsumableUnlock[i][0] == item.itemName && ConsumableUnlock[i][1] == "1")
-            {
-                SetColor(0);
-            }
+            SetColor(0);
         }
     }
 

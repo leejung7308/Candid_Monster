@@ -12,10 +12,54 @@ public class Collection : MonoBehaviour
     public GameObject IconOnlineMarket;
     public GameObject IconSetting;
 
+    private CollectionSlot[] equipmentslots;
+    private CollectionSlot[] consumableslots;
+    [SerializeField]
+    private GameObject go_equipmentSlot;
+    [SerializeField]
+    private GameObject go_ConsumableSlot;
+    public Inventory theInventory;
+    public Item.Item[] items;
+
+    void Start()
+    {
+        equipmentslots = go_equipmentSlot.GetComponentsInChildren<CollectionSlot>();
+        consumableslots = go_ConsumableSlot.GetComponentsInChildren<CollectionSlot>();
+        AcquireItem();
+    }
+
     void Update()
     {
         TryCloseCollection();
+        UnlockCollection();
     }
+
+    public void AcquireItem()
+    {
+        int j = 0;
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].itemType == Item.ItemType.Equipment)
+            {
+                equipmentslots[i].AddItem(items[i]);
+            }
+            else
+            {
+                consumableslots[j].AddItem(items[i]);
+                j++;
+            }
+        }
+    }
+
+    public Item.Item[] GetItems() { return items; }
+    public void SetItems()
+    {
+        items = theInventory.GetItems();
+    }
+
+    public CollectionSlot[] GetEquipmentSlots() { return equipmentslots; }
+
+    public CollectionSlot[] GetConsumableSlots() { return consumableslots; }
 
     private void TryCloseCollection()
     {
@@ -24,6 +68,12 @@ public class Collection : MonoBehaviour
             if (go_CollectionBase.activeSelf == true)
                 CloseCollection();
         }
+    }
+
+    public void UnlockCollection()
+    {
+        SetItems();
+        AcquireItem();
     }
 
     public void OpenCollection()
