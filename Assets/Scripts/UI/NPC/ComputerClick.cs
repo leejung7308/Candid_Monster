@@ -28,6 +28,10 @@ public class ComputerClick : MonoBehaviour, IPointerClickHandler
     {
         go_Computer.SetActive(true);
     }
+    public void CloseComputer()
+    {
+        go_Computer.SetActive(false);
+    }
 
     private void TryCloseComputer()
     {
@@ -36,7 +40,7 @@ public class ComputerClick : MonoBehaviour, IPointerClickHandler
             if (go_Computer.activeSelf == true)
             {
                 theOnlineMarket.CloseOnlineMarket();
-                go_Computer.SetActive(false);
+                CloseComputer();
 
             }
         }

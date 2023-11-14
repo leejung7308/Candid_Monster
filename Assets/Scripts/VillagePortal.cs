@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class VillagePortal : MonoBehaviour
 {
     public static VillagePortal instance;
-    private SaveAndLoad theSaveAndLoad; 
+    private SaveAndLoad theSaveAndLoad;
 
     void Start()
     {
