@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : EntityStatus
 {
-    public Player(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
+    public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
+        base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
     public GameObject angle;
     public List<GameObject> weaponPrefabs;
@@ -32,17 +33,28 @@ public class Player : EntityStatus
     }
     private void Update()
     {
+        if (isConfused)
+        {
+            weapon.tag = "Weapon(ConfusedPlayer)";
+        }
+        else
+        {
+            weapon.tag = "Weapon(Player)";
+        }
         LookAt();
         WeaponSwap();
-        Attack();
-        if(hp<=0) EntityDie();
+        if(!isFainted) Attack();
+        if(fatigue>100) EntityDie();
     }
     void FixedUpdate()
     {
-        float xinput = Input.GetAxis("Horizontal");
-        float yinput = Input.GetAxis("Vertical");
-        Vector2 newVelocity = new Vector2(xinput, yinput);
-        gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity*moveSpeed;
+        if (!isFainted)
+        {
+            float xinput = Input.GetAxis("Horizontal");
+            float yinput = Input.GetAxis("Vertical");
+            Vector2 newVelocity = new Vector2(xinput, yinput);
+            gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
+        }
     }
     void LookAt()
     {
@@ -114,7 +126,7 @@ public class Player : EntityStatus
                 collision.gameObject.SetActive(false);
             }
         }
-        if (collision.tag == "Weapon(Monster)" && !isInvincible)
+        if ((collision.tag == "Weapon(Monster)" || collision.tag == "Weapon(ConfusedMonster)")&& !isInvincible)
         {
             Debug.Log("플레이어 피격");
             Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
