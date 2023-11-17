@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class StatUI : MonoBehaviour
 {
-    GameObject player;
-    public Image hpGauge;
+    EntityStatus player;
+    public Image fatigueGauge;
     public Image alcoholGauge;
     public Image nicotineGauge;
     public Image caffeineGauge;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStatus>();
     }
 
     void Update()
     {
-        hpGauge.fillAmount = player.GetComponent<EntityStatus>().hp / 10;
-        alcoholGauge.fillAmount = player.GetComponent<EntityStatus>().alcohol / 100;
-        nicotineGauge.fillAmount = player.GetComponent<EntityStatus>().nicotine / 100;
-        caffeineGauge.fillAmount = player.GetComponent<EntityStatus>().caffeine / 100;
+        fatigueGauge.fillAmount = player.fatigue / 100;
+        alcoholGauge.fillAmount = player.alcohol / player.maxAlcohol;
+        nicotineGauge.fillAmount = player.nicotine /player.maxNicotine;
+        caffeineGauge.fillAmount = player.caffeine / player.maxCaffeine;
     }
 }
