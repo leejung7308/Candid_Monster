@@ -8,6 +8,10 @@ TagManager:
   - CanBePickedUp
   - Weapon(Player)
   - Weapon(Monster)
+  - Monster
+  - Weapon(ConfusedPlayer)
+  - Weapon(ConfusedMonster)
+  - ConfusedMonster
   layers:
   - Default
   - TransparentFX

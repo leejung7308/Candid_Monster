@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class Radar : MonoBehaviour
 {
-    public bool isDetected = false;
-    private void OnTriggerEnter2D(Collider2D col)
+    Monster monster;
+    private void Start()
     {
-        if (col.tag == "Player")
-        {
-            isDetected = true;
-        }
+        monster = transform.parent.GetComponent<Monster>();
     }
-    private void OnTriggerExit2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (col.tag == "Player")
+        if(!transform.parent.GetComponent<EntityStatus>().isConfused)
         {
-            isDetected = false;
+            if(collision.tag == "ConfusedMonster" || collision.tag == "Player") 
+            {
+                monster.MonsterMovement(collision.gameObject);
+                monster.LookAt(collision.gameObject);
+            }
+        }
+        else if(transform.parent.GetComponent<EntityStatus>().isConfused || collision.tag == "ConfusedMonster")
+        {
+            if(collision.tag == "Monster" || collision.tag == "ConfusedMonster")
+            {
+                monster.MonsterMovement(collision.gameObject);
+                monster.LookAt(collision.gameObject);
+            }
         }
     }
 }

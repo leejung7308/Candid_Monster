@@ -884,7 +884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &180152027
 Transform:
   m_ObjectHideFlags: 0
@@ -912,7 +912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11c6b77a40cce54aa579a3c8402f9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDetected: 0
 --- !u!58 &180152029
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1969,9 +1968,10 @@ GameObject:
   m_Component:
   - component: {fileID: 418332286}
   - component: {fileID: 418332285}
+  - component: {fileID: 418332289}
   - component: {fileID: 418332288}
   - component: {fileID: 418332290}
-  - component: {fileID: 418332289}
+  - component: {fileID: 418332291}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2087,13 +2087,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcf385c3d58c6b4881892ee2da9d100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  fatigue: 0
   moveSpeed: 10
   attackSpeed: 0.5
   alcohol: 0
   caffeine: 0
   nicotine: 0
-  isInvincible: 0
+  maxFatigue: 0
+  maxAlcohol: 100
+  maxCaffeine: 100
+  maxNicotine: 100
+  isConfused: 0
+  isFainted: 0
+  isInvincible: 1
   invincibleTime: 2
   angle: {fileID: 1720518688}
   weaponPrefabs:
@@ -2134,12 +2140,24 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &418332291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418332284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4440e050f1b3c4b46b6c4d54ee59e6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &422142671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5082,9 +5100,10 @@ GameObject:
   - component: {fileID: 834206348}
   - component: {fileID: 834206344}
   - component: {fileID: 834206343}
+  - component: {fileID: 834206349}
   m_Layer: 0
   m_Name: Monster(Ranged)
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5118,7 +5137,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5150,7 +5169,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &834206345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5163,18 +5182,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  fatigue: 0
   moveSpeed: 5
   attackSpeed: 0.5
   alcohol: 0
   caffeine: 0
   nicotine: 0
+  maxFatigue: 100
+  maxAlcohol: 100
+  maxCaffeine: 100
+  maxNicotine: 100
+  isConfused: 0
+  isFainted: 0
   isInvincible: 0
   invincibleTime: 2
   radarObject: {fileID: 862663885}
   attackRangeObject: {fileID: 2111500280}
   angle: {fileID: 2126162543}
-  weaponPrefab: {fileID: 1426898323791162227, guid: 5d03364fda2953a4f871698c079ed618, type: 3}
+  weaponPrefab: {fileID: 593603576000265972, guid: e8a25c6ab6914cb4dab91e4d21255169, type: 3}
   weapon: {fileID: 0}
   weaponSpawnPos: {fileID: 186590576}
   spawnPoint: {x: -15, y: 0}
@@ -5270,6 +5295,18 @@ MonoBehaviour:
     percentage: 100
   - item: {fileID: 9108856288992730772, guid: a521407343d8927468297970028a3518, type: 3}
     percentage: 100
+--- !u!114 &834206349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834206342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4440e050f1b3c4b46b6c4d54ee59e6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &851944387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6001,7 +6038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &862663886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6014,7 +6051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11c6b77a40cce54aa579a3c8402f9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDetected: 0
 --- !u!58 &862663887
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10693,7 +10729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d76ad3d845be1b438b95e6bfb4e5124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpGauge: {fileID: 989956482}
+  fatigueGauge: {fileID: 989956482}
   alcoholGauge: {fileID: 2053559248}
   nicotineGauge: {fileID: 1548834156}
   caffeineGauge: {fileID: 1985924904}
@@ -10833,9 +10869,10 @@ GameObject:
   - component: {fileID: 1683692135}
   - component: {fileID: 1683692131}
   - component: {fileID: 1683692130}
+  - component: {fileID: 1683692136}
   m_Layer: 0
   m_Name: Monster(Melee)
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10869,7 +10906,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10901,7 +10938,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &1683692132
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10984,14 +11021,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b38dcae5b4d7e4e89a14e4e71ab5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  fatigue: 0
   moveSpeed: 5
   attackSpeed: 0.5
   alcohol: 0
   caffeine: 0
   nicotine: 0
+  maxFatigue: 0
+  maxAlcohol: 10
+  maxCaffeine: 10
+  maxNicotine: 10
+  isConfused: 0
+  isFainted: 0
   isInvincible: 0
-  invincibleTime: 2
+  invincibleTime: 1
   radarObject: {fileID: 180152026}
   attackRangeObject: {fileID: 1865216626}
   angle: {fileID: 1402499698}
@@ -11013,6 +11056,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropItemTable: []
+--- !u!114 &1683692136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683692129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4440e050f1b3c4b46b6c4d54ee59e6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1695397564 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7515501108831254717, guid: b6f1a85e5d145524b82e420fac18e232, type: 3}
@@ -12317,8 +12372,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1865216627}
   - component: {fileID: 1865216628}
-  - component: {fileID: 1865216629}
   - component: {fileID: 1865216630}
+  - component: {fileID: 1865216631}
   m_Layer: 0
   m_Name: Attack Range
   m_TagString: Untagged
@@ -12376,19 +12431,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &1865216629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865216626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11c6b77a40cce54aa579a3c8402f9c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDetected: 0
 --- !u!50 &1865216630
 Rigidbody2D:
   serializedVersion: 4
@@ -12416,6 +12458,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1865216631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865216626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55248e844fac3b849ac6dc02d5199c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1879698670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14429,8 +14483,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2111500283}
   - component: {fileID: 2111500282}
-  - component: {fileID: 2111500281}
   - component: {fileID: 2111500284}
+  - component: {fileID: 2111500285}
   m_Layer: 0
   m_Name: Attack Range
   m_TagString: Untagged
@@ -14438,19 +14492,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2111500281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111500280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11c6b77a40cce54aa579a3c8402f9c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDetected: 0
 --- !u!58 &2111500282
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14528,6 +14569,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2111500285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111500280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55248e844fac3b849ac6dc02d5199c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2112536070
 PrefabInstance:
   m_ObjectHideFlags: 0

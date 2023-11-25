@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Monster : EntityStatus
 {
-    public Monster(float hp, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine) : base(hp, moveSpeed, attackSpeed, alcohol, caffeine, nicotine) { }
+    public Monster(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
+        base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
     public GameObject radarObject;
     public GameObject attackRangeObject;
@@ -29,40 +30,50 @@ public class Monster : EntityStatus
     }
     private void Update()
     {
-        SetWeapon();
-        Attack();
-        LookAt();
-        MonsterMovement();
-        if(hp<=0) EntityDie();
-    }
-    private void MonsterMovement()
-    {
-        if (radar.isDetected) //플레이어가 레이더에 감지 되면 플레이어를 따라감
+        if (isConfused)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, Time.deltaTime * moveSpeed);
-        }
-        else //플레이어가 레이더를 벗어나면 원래 위치(스폰 위치)로 돌아감
-        {
-            transform.position = Vector2.MoveTowards(transform.position, spawnPoint, Time.deltaTime * moveSpeed);
-        }
-    }
-    private void LookAt()
-    {
-        if (player.transform.position.x < transform.position.x)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            weapon.tag = "Weapon(ConfusedMonster)";
+            gameObject.tag = "ConfusedMonster";
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            weapon.tag = "Weapon(Monster)";
+            gameObject.tag = "Monster";
+        }
+        ApplyDebuff(CheckDebuffCondition());
+        SetWeapon();
+        if (fatigue>100) EntityDie();
+    }
+    public void MonsterMovement(GameObject follow)
+    {
+        if (!isFainted)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
+        }        
+    }
+    public void LookAt(GameObject follow)
+    {
+        if (!isFainted)
+        {
+            if (follow.transform.position.x < transform.position.x)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
-    private void Attack()
+    public void Attack()
     {
-        if (attackRange.isDetected && Time.time > nextAttack)
+        if (!isFainted)
         {
-            nextAttack = Time.time + attackSpeed;
-            StartCoroutine(Swing(angle));
+            if (Time.time > nextAttack)
+            {
+                nextAttack = Time.time + attackSpeed;
+                StartCoroutine(Swing(angle));
+            }
         }
     }
     private void SetWeapon()
@@ -77,12 +88,25 @@ public class Monster : EntityStatus
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Weapon(Player)" && !isInvincible)
+        if(!isConfused && !isInvincible)
         {
-            Debug.Log("몬스터 피격"); 
-            Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
-            EntityHit(currentDamageHolder);
-            StartCoroutine(InvincibleMode(invincibleTime));
+            if (collision.tag == "Weapon(Player)" || collision.tag == "Weapon(ConfusedMonster)")
+            {
+                Debug.Log("몬스터 피격");
+                Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
+                EntityHit(currentDamageHolder);
+                StartCoroutine(InvincibleMode(invincibleTime));
+            }
+        }
+        if(isConfused && !isInvincible)
+        {
+            if(collision.tag == "Weapon(Player)" || collision.tag == "Weapon(Monster)" || collision.tag == "Weapon(ConfusedMonster)")
+            {
+                Debug.Log("몬스터 피격");
+                Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
+                EntityHit(currentDamageHolder);
+                StartCoroutine(InvincibleMode(invincibleTime));
+            }
         }
     }
 }
