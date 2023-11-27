@@ -11,7 +11,7 @@ public class SceneTransform : MonoBehaviour
     void Start()
     {
         theSaveAndLoad = FindObjectOfType<SaveAndLoad>();
-        StartCoroutine(LoadCoroutine());
+        //StartCoroutine(LoadCoroutine());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +25,7 @@ public class SceneTransform : MonoBehaviour
 
     IEnumerator LoadCoroutine()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync("UIScene");
+        AsyncOperation operation = SceneManager.LoadSceneAsync("EntityScene");
 
         while (!operation.isDone)
         {
