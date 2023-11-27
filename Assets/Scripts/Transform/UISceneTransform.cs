@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTransform : MonoBehaviour
+public class UISceneTransform : MonoBehaviour
 {
-    public static SceneTransform instance;
+    public static UISceneTransform instance;
     private SaveAndLoad theSaveAndLoad;
 
     void Start()
@@ -25,7 +25,7 @@ public class SceneTransform : MonoBehaviour
 
     IEnumerator LoadCoroutine()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync("EntityScene");
+        AsyncOperation operation = SceneManager.LoadSceneAsync("UIScene");
 
         while (!operation.isDone)
         {
