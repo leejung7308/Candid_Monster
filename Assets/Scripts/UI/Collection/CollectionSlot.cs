@@ -12,32 +12,28 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     public Image itemHideImage;
 
     private CollectionDesc theCollectionDesc;
+    private Inventory theInventory;
 
     void Start()
     {
-        AddItem();
         theCollectionDesc = FindObjectOfType<CollectionDesc>();
+        theInventory = FindObjectOfType<Inventory>();
     }
 
-    // 도감 획득
-    public void AddItem()
+    void Update()
     {
-        if (item != null)
-        {
-            itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
-            itemImage.color = item.GetComponent<SpriteRenderer>().color;
-        }
-        else
-        {
-            itemImage.sprite = null;
-        }
-        AcquireItem();
+
     }
 
-    public void AcquireItem()
+    public void AddItem(Item.Item _item)
     {
-        //도감 아이템 해금 조건 추가
-        SetColor(0);
+        item = _item;
+        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+        itemImage.color = item.GetComponent<SpriteRenderer>().color;
+        if (_item.itemAcquire == 1)
+        {
+            SetColor(0);
+        }
     }
 
     private void SetColor(float _alpha)
@@ -51,9 +47,16 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.clickCount == 1)
         {
-            if (item != null)
+            if(item != null)
             {
-                ShowDesc(item, transform.position);
+                if (itemHideImage.color.a == 0)
+                {
+                    ShowDesc(item, transform.position);
+                }
+                else
+                {
+                    UnKnownDesc(item, transform.position);
+                }
             }
         }
     }
@@ -61,5 +64,10 @@ public class CollectionSlot : MonoBehaviour, IPointerClickHandler
     public void ShowDesc(Item.Item _item, Vector3 _pos)
     {
         theCollectionDesc.ShowDesc(_item, _pos);
+    }
+
+    public void UnKnownDesc(Item.Item _item, Vector3 _pos)
+    {
+        theCollectionDesc.UnknownDesc(_item, _pos);
     }
 }

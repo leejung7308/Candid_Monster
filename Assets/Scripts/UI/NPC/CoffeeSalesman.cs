@@ -15,6 +15,20 @@ public class CoffeeSalesman : MonoBehaviour, IPointerClickHandler
         theInventory = FindObjectOfType<Inventory>();
     }
 
+    void Update()
+    {
+        TryCloseOfflineMarket();
+    }
+
+    private void TryCloseOfflineMarket()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (go_CoffeeStoreBase.activeSelf == true)
+                CloseCoffeeStore();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (go_CoffeeStoreBase.activeSelf == false)

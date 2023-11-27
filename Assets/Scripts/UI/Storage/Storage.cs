@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
+    //[SerializeField] private Item.Item[] items;
+
     [SerializeField]
     private GameObject go_Inventory;
     [SerializeField]
     private GameObject go_SlotsParent;
+
     private StorageSlot[] theSlot;
     private ItemInfo theItemInfo;
+    private Inventory theInventory;
 
     void Start()
     {
         theSlot = go_SlotsParent.GetComponentsInChildren<StorageSlot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
+        theInventory = FindObjectOfType<Inventory>();
+    }
+
+    public StorageSlot[] GetStorageSlots() { return theSlot; }
+
+    public void LoadToStorage(int _arrayNum, string _itemName, int _itemNum)
+    {
+        Item.Item[] items = theInventory.GetItems();
+
+        for (int i = 0; i < items.Length; i++)
+            if (items[i].itemName == _itemName)
+                theSlot[_arrayNum].AddItem(items[i], _itemNum);
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)

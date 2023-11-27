@@ -12,8 +12,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     private float doubleClickTimeThreshold = 0.3f;
 
     public Item.Item item;
-    private int itemCount;
-    public Image itemImage; 
+    public int itemCount;
+    public Image itemImage;
     [SerializeField]
     private GameObject go_CountImage;
     [SerializeField]
@@ -35,7 +35,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
-    // 아이템 이미지의 투명도 조절
     private void SetColor(float _alpha)
     {
         Color color = itemImage.color;
@@ -109,7 +108,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
             {
                 if (item != null)
                 {
-                    theInventory.SetCoinText(-(item.itemValue / 2)); //아이템 판매
+                    theInventory.SetCoinText(-(item.itemValue / 2)); //sell item
                     SetSlotCount(-1);
                 }
             }
@@ -133,12 +132,11 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
                     {
                         if (thePlayer != null)
                         {
-                            thePlayer.EquipItem(item.itemName); //아이템 장착
+                            thePlayer.EquipItem(item.itemName);
                         }
                     }
                     else
                     {
-                        //아이템 소모
                         Debug.Log("used item");
                         SetSlotCount(-1);
                     }

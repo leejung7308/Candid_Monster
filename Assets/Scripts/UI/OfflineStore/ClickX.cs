@@ -9,8 +9,9 @@ public class ClickX : MonoBehaviour
     private GolfSalesman theGolfSalesman;
     private SmokeSalesman theSmokeSalesman;
     private ConvienceSalesman theConvienceSalesman;
-    private StorageClick theStorageClick;
     private OnlineMarket theOnlineMarket;
+    private ComputerClick theComputerClick;
+    private StorageClick theStorageClick;
 
     void Start()
     {
@@ -19,8 +20,9 @@ public class ClickX : MonoBehaviour
         theWineSalesman = FindObjectOfType<WineSalesman>();
         theGolfSalesman = FindObjectOfType<GolfSalesman>();
         theConvienceSalesman = FindObjectOfType<ConvienceSalesman>();
-        theStorageClick = FindObjectOfType<StorageClick>();
         theOnlineMarket = FindObjectOfType<OnlineMarket>();
+        theComputerClick = FindObjectOfType<ComputerClick>();
+        theStorageClick = FindObjectOfType<StorageClick>();
     }
 
     public void OnCoffeeQuit()
@@ -48,13 +50,14 @@ public class ClickX : MonoBehaviour
         theConvienceSalesman.CloseConvienceStore();
     }
 
-    public void OnStorageQuit()
-    {
-        theStorageClick.CloseStorage();
-    }
-
     public void OnMarketQuit()
     {
         theOnlineMarket.CloseOnlineMarket();
+        theComputerClick.CloseComputer();
+    }
+
+    public void OnStorageQuit()
+    {
+        theStorageClick.CloseStorage();
     }
 }

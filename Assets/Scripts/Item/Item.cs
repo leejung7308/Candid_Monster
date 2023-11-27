@@ -92,14 +92,13 @@ namespace Item
         public float alcohol;
         public float nicotine;
         
-        public string itemName; // 
-        public ItemType itemType; // 
-        public Sprite itemImage; // 
-
-        [TextArea]  // 여러 줄 가능해짐
-        public string itemDesc; // 아이템의 설명
-
+        public string itemName;
+        public ItemType itemType;
+        public Sprite itemImage;
+        [TextArea]
+        public string itemDesc;
         public int itemValue;
+        public int itemAcquire = 0;
 
         public Item(float caffeine, float alcohol, float nicotine)
         {
