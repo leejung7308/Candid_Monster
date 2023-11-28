@@ -11,7 +11,7 @@ public class SceneTransform : MonoBehaviour
     void Start()
     {
         theSaveAndLoad = FindObjectOfType<SaveAndLoad>();
-        //StartCoroutine(LoadCoroutine());
+        theSaveAndLoad.LoadData();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
