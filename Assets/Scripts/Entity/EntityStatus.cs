@@ -2,6 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * EntityStatus 객체의 몇몇 상태 정보들을 복사해두고 적용하기 위한 Data Object.
+ */
+public class EntityStatusData
+{
+    public float fatigue;
+    public float moveSpeed;
+    public float attackSpeed;
+    public float maxFatigue;
+    public float maxAlcohol;
+    public float maxCaffeine;
+    public float maxNicotine;
+
+    public EntityStatusData(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue, int maxAlcohol, int maxCaffeine, int maxNicotine)
+    {
+        this.fatigue = fatigue;
+        this.moveSpeed = moveSpeed;
+        this.attackSpeed = attackSpeed;
+        this.maxFatigue = maxFatigue;
+        this.maxAlcohol = maxAlcohol;
+        this.maxCaffeine = maxCaffeine;
+        this.maxNicotine = maxNicotine;
+    }
+    
+    public EntityStatusData(EntityStatus entity)
+    {
+        Copy(entity);
+    }
+    
+    public void Copy(EntityStatus entity)
+    {
+        fatigue = entity.fatigue;
+        moveSpeed = entity.moveSpeed;
+        attackSpeed = entity.attackSpeed;
+        maxFatigue = entity.maxFatigue;
+        maxAlcohol = entity.maxAlcohol;
+        maxCaffeine = entity.maxCaffeine;
+        maxNicotine = entity.maxNicotine;
+    }
+
+    public void Apply(EntityStatus entity)
+    {
+        entity.fatigue = fatigue;
+        entity.moveSpeed = moveSpeed;
+        entity.attackSpeed = attackSpeed;
+        entity.maxFatigue = maxFatigue;
+        entity.maxAlcohol = maxAlcohol;
+        entity.maxCaffeine = maxCaffeine;
+        entity.maxNicotine = maxNicotine;
+    }
+}
+
 public class EntityStatus : MonoBehaviour
 {
     public float fatigue;
@@ -77,9 +129,6 @@ public class EntityStatus : MonoBehaviour
                 gameObject.GetComponent<Debuff>().StartNicotineDebuff();
                 nicotine = 0;
                 break;
-            default: 
-                break;
-
         }
     }
     public int CheckDebuffCondition()
