@@ -12,6 +12,8 @@ public class Player : EntityStatus
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
     public bool isMelee = true;
+    public bool enableFatigue = true;
+    float fatigueTimer = 0.0f;
     public Inventory theInventory;
     private GameObject weapon;
     private float nextAttack;
@@ -44,6 +46,8 @@ public class Player : EntityStatus
         LookAt();
         WeaponSwap();
         if(!isFainted) Attack();
+        if(enableFatigue)
+            IncreaseFatigue();
         if(fatigue>100) EntityDie();
     }
     void FixedUpdate()
@@ -126,7 +130,7 @@ public class Player : EntityStatus
                 collision.gameObject.SetActive(false);
             }
         }
-        if ((collision.tag == "Weapon(Monster)" || collision.tag == "Weapon(ConfusedMonster)")&& !isInvincible)
+        if (!isInvincible && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)")))
         {
             Debug.Log("플레이어 피격");
             Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
@@ -169,5 +173,15 @@ public class Player : EntityStatus
                 weapons[2].gameObject.SetActive(false);
                 weapon = weapons[3];
             }
+    }
+    
+    /**
+     * 피로도 증가 로직.
+     */
+    void IncreaseFatigue()
+    {
+        fatigueTimer += Time.deltaTime;
+        if(fatigueTimer >= 6.0f)        // 6초에 한 번씩 피로도 증가.
+            fatigue += 1;
     }
 }
