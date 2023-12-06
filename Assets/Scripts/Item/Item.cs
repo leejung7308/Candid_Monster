@@ -8,7 +8,7 @@ namespace Item
      * 아이템이 가지는 3가지 속성의 수치를 나타냅니다.
      * 몬스터 공격시 상성에 따른 피해 계산, 스킬로 인한 일부 수치의 변화 등을 용이하게 만들기 위해,
      * 속성 수치를 표현하는 별도의 컨테이너 클래스를 구현합니다.
-     * 속성 수치를 참조해야하는 모든 종류의 함수에서, 아이템의 참조를 원치 않을 경우 ElementalStatus 객체만 넘겨받아 처리할 수 있습니다.
+     * 속성 수치를 참조해야하는 모든 종류의 함수에서, 아이템의 참조를 원치 않을 경우 DamageHolder 객체만 넘겨받아 처리할 수 있습니다.
      *
      * 예를 들어, 카페인 수치를 100% 증가시키는 스킬을 사용 후 카페인 수치를 요구하는 몬스터를 공격하는 과정은
      * 아래와 같은 순서로 추상화될 수 있습니다.
@@ -27,7 +27,7 @@ namespace Item
         public readonly float Nicotine;
         public readonly float Damage;
 
-        public DamageHolder(float caffeine, float alcohol, float nicotine, float damage)
+        public DamageHolder(float caffeine = 1.0f, float alcohol = 1.0f, float nicotine = 1.0f, float damage = 1.0f)
         {
             Caffeine = caffeine;
             Alcohol = alcohol;
@@ -88,9 +88,9 @@ namespace Item
      */
     public class Item: MonoBehaviour
     {
-        public float caffeine;
-        public float alcohol;
-        public float nicotine;
+        public int caffeine;
+        public int alcohol;
+        public int nicotine;
         
         public string itemName;
         public ItemType itemType;
@@ -100,7 +100,7 @@ namespace Item
         public int itemValue;
         public int itemAcquire = 0;
 
-        public Item(float caffeine, float alcohol, float nicotine)
+        public Item(int caffeine, int alcohol, int nicotine)
         {
             this.caffeine = caffeine;
             this.alcohol = alcohol;
@@ -109,9 +109,9 @@ namespace Item
 
         public virtual DamageHolder GetDamageHolder()
             => new DamageHolder(
-                this.caffeine,
-                this.alcohol,
-                this.nicotine,
+                caffeine,
+                alcohol,
+                nicotine,
                 0.0f
             );
     }
