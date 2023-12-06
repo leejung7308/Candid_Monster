@@ -88,25 +88,25 @@ public class Monster : EntityStatus
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isConfused && !isInvincible)
+        if (!isInvincible)
         {
-            if (collision.tag == "Weapon(Player)" || collision.tag == "Weapon(ConfusedMonster)")
+            if (!isConfused && (collision.CompareTag("Weapon(Player)") || collision.CompareTag("Weapon(ConfusedMonster)")))
             {
                 Debug.Log("몬스터 피격");
-                Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
-                EntityHit(currentDamageHolder);
-                StartCoroutine(InvincibleMode(invincibleTime));
+                HandleMonsterHit(collision.GetComponent<Player>().GetDamageHolder());
             }
-        }
-        if(isConfused && !isInvincible)
-        {
-            if(collision.tag == "Weapon(Player)" || collision.tag == "Weapon(Monster)" || collision.tag == "Weapon(ConfusedMonster)")
+            else if (collision.CompareTag("Weapon(Player)") || collision.CompareTag("Weapon(Monster)") ||
+                     collision.CompareTag("Weapon(ConfusedMonster)"))
             {
                 Debug.Log("몬스터 피격");
-                Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
-                EntityHit(currentDamageHolder);
-                StartCoroutine(InvincibleMode(invincibleTime));
+                HandleMonsterHit(collision.GetComponent<Player>().GetDamageHolder());
             }
         }
+    }
+
+    public void HandleMonsterHit(Item.DamageHolder originalDamageHolder)
+    {
+        EntityHit(originalDamageHolder);
+        StartCoroutine(InvincibleMode(invincibleTime));
     }
 }
