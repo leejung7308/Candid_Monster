@@ -22,6 +22,8 @@ namespace Item
      */
     public class DamageHolder
     {
+        public readonly Player Player;
+        public readonly EntityStatus Monster;
         public readonly float Caffeine;
         public readonly float Alcohol;
         public readonly float Nicotine;
@@ -34,14 +36,7 @@ namespace Item
             Nicotine = nicotine;
             Damage = damage;
         }
-
-        public DamageHolder(float damage)
-        {
-            Caffeine = 0;
-            Alcohol = 0;
-            Nicotine = 0;
-            Damage = damage;
-        }
+        
         public static DamageHolder operator +(DamageHolder a)
             => a;
         public static DamageHolder operator -(DamageHolder a)

@@ -1,31 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Radar : MonoBehaviour
 {
-    Monster monster;
-    private void Start()
+    public Monster monster;
+    bool isBlinded = false;
+    float blindTimer = 0.0f;
+    
+    void Start()
     {
         monster = transform.parent.GetComponent<Monster>();
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    void Update()
     {
-        if(!transform.parent.GetComponent<EntityStatus>().isConfused)
+        if (isBlinded)
+            CheckBlindTimer();
+    }
+    
+    /**
+     * 어그로 해제 (Blind)의 Timer를 관리한다.
+     */
+    void CheckBlindTimer()
+    {
+        blindTimer += Time.deltaTime;
+        if(blindTimer >= 2.0f)
         {
-            if(collision.tag == "ConfusedMonster" || collision.tag == "Player") 
-            {
-                monster.MonsterMovement(collision.gameObject);
-                monster.LookAt(collision.gameObject);
-            }
+            isBlinded = false;
+            blindTimer = 0.0f;
         }
-        else if(transform.parent.GetComponent<EntityStatus>().isConfused || collision.tag == "ConfusedMonster")
+    }
+    
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("BlindArea"))
+            Blind();
+        
+        if(isBlinded)   // 어그로 풀린 상태일 경우, 움직이지 않는다.
+            return;
+
+        if(collision.CompareTag("ConfusedMonster"))
         {
-            if(collision.tag == "Monster" || collision.tag == "ConfusedMonster")
-            {
-                monster.MonsterMovement(collision.gameObject);
-                monster.LookAt(collision.gameObject);
-            }
+            monster.MonsterMovement(collision.gameObject);
+            monster.LookAt(collision.gameObject);
         }
+        else if(monster.isConfused && collision.CompareTag("Monster"))
+        {
+            monster.MonsterMovement(collision.gameObject);
+            monster.LookAt(collision.gameObject);
+        }
+        else if(collision.CompareTag("Player"))
+        {
+            monster.MonsterMovement(collision.gameObject);
+            monster.LookAt(collision.gameObject);
+        }
+    }
+
+    public void Blind()
+    {
+        if(isBlinded)
+            blindTimer = 0.0f;
+        else
+            isBlinded = true;
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Item;
 using UnityEngine;
 
 /**
@@ -113,29 +114,38 @@ public class EntityStatus : MonoBehaviour
     {
             Destroy(gameObject);
     }
-    virtual protected void ApplyDebuff(int index)
+    virtual protected void ApplyDebuff(DebuffType type)
     {
-        switch (index)
+        switch (type)
         {
-            case 0:
+            case DebuffType.Alcohol:
                 gameObject.GetComponent<Debuff>().StartAlcoholDebuff();
                 alcohol = 0;
                 break;
-            case 1:
+            case DebuffType.Caffeine:
                 gameObject.GetComponent<Debuff>().StartCaffeineDebuff();
                 caffeine = 0;
                 break;
-            case 2:
+            case DebuffType.Nicotine:
                 gameObject.GetComponent<Debuff>().StartNicotineDebuff();
                 nicotine = 0;
                 break;
+            case DebuffType.Mark:
+                gameObject.GetComponent<Debuff>().StartMarkDebuff();
+                break;
         }
     }
-    public int CheckDebuffCondition()
+    public DebuffType CheckDebuffCondition()
     {
-        if (alcohol >= maxAlcohol) return 0;
-        else if (caffeine >= maxCaffeine) return 1;
-        else if (nicotine >= maxNicotine) return 2;
-        else return -1;    
+        if (alcohol >= maxAlcohol) return DebuffType.Alcohol;
+        else if (caffeine >= maxCaffeine) return DebuffType.Caffeine;
+        else if (nicotine >= maxNicotine) return DebuffType.Nicotine;
+        else return DebuffType.None;
     }
+    
+    /**
+     * 엔티티가 입힐 수 있는 현재 피해량을 담은 DamageHolder를 계산한다.
+     */
+    public virtual DamageHolder GetDamageHolder() => new DamageHolder();
+
 }

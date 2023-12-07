@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Item;
 using UnityEngine;
 
 public class Monster : EntityStatus
@@ -86,21 +87,25 @@ public class Monster : EntityStatus
         gameObject.GetComponent<DropTable>().ItemDrop(transform.position);
         base.EntityDie();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isInvincible)
+        if (isInvincible)       // 무적일 경우, 충돌 연산을 무시한다.
+            return;
+
+        if(collision.CompareTag("Weapon(Player)"))
         {
-            if (!isConfused && (collision.CompareTag("Weapon(Player)") || collision.CompareTag("Weapon(ConfusedMonster)")))
-            {
-                Debug.Log("몬스터 피격");
-                HandleMonsterHit(collision.GetComponent<Player>().GetDamageHolder());
-            }
-            else if (collision.CompareTag("Weapon(Player)") || collision.CompareTag("Weapon(Monster)") ||
-                     collision.CompareTag("Weapon(ConfusedMonster)"))
-            {
-                Debug.Log("몬스터 피격");
-                HandleMonsterHit(collision.GetComponent<Player>().GetDamageHolder());
-            }
+            Debug.Log("몬스터가 플레이어와 충돌.");
+            HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder());
+        }
+        else if(isConfused && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)")))
+        {
+            Debug.Log("몬스터가 혼란 상태이고, 몬스터와 충돌.");
+            HandleMonsterHit(collision.GetComponentInParent<Monster>().GetDamageHolder());
+        }
+        else if (collision.CompareTag("Weapon(ConfusedMonster)"))
+        {
+            Debug.Log("몬스터가 혼란 상태인 몬스터에게 공격당함.");
+            HandleMonsterHit(collision.GetComponentInParent<Monster>().GetDamageHolder());
         }
     }
 
@@ -109,4 +114,6 @@ public class Monster : EntityStatus
         EntityHit(originalDamageHolder);
         StartCoroutine(InvincibleMode(invincibleTime));
     }
+
+    public override DamageHolder GetDamageHolder() => weapon.GetComponent<Weapon>().GetDamageHolder();
 }
