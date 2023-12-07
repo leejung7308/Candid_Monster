@@ -13,6 +13,7 @@ public class Monster : EntityStatus
     public GameObject weaponPrefab;
     public GameObject weapon;
     public GameObject weaponSpawnPos;
+    public GameObject room;
     public Vector2 spawnPoint;
     public bool isMelee = true;
     Radar radar;
@@ -42,7 +43,7 @@ public class Monster : EntityStatus
         }
         ApplyDebuff(CheckDebuffCondition());
         SetWeapon();
-        if (fatigue>100) EntityDie();
+        if (fatigue>maxFatigue) EntityDie();
     }
     public void MonsterMovement(GameObject follow)
     {
@@ -84,6 +85,7 @@ public class Monster : EntityStatus
     protected override void EntityDie()
     {
         gameObject.GetComponent<DropTable>().ItemDrop(transform.position);
+        room.GetComponent<EntityManager>().monsterCount--;
         base.EntityDie();
     }
     private void OnTriggerEnter2D(Collider2D collision)
