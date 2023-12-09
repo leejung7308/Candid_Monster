@@ -34,7 +34,7 @@ RectTransform:
   - {fileID: 7455452755462056935}
   - {fileID: 7739241066257614317}
   - {fileID: 818375539070115798}
-  m_Father: {fileID: 673179723528013959}
+  m_Father: {fileID: 2948762708382482953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -207,6 +207,10 @@ MonoBehaviour:
   descHideImage: {fileID: 1877741349818240398}
   IconOnlineMarket: {fileID: 4654594262786131267}
   IconSetting: {fileID: 7797410833787234959}
+  go_equipmentSlot: {fileID: 0}
+  go_ConsumableSlot: {fileID: 0}
+  theInventory: {fileID: 0}
+  items: []
 --- !u!1 &1042158832584349392
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +240,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7992355120182207987}
   m_Father: {fileID: 673179723528013959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -260,6 +265,7 @@ MonoBehaviour:
   theBuyCount: {fileID: 6247319470571716826}
   txt_ItemName: {fileID: 4440327106398991843}
   txt_ItemDesc: {fileID: 2100295746335614282}
+  DeliveryFee: {fileID: 0}
 --- !u!222 &2046923618186880353
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -491,7 +497,6 @@ RectTransform:
   - {fileID: 7450813314200879240}
   - {fileID: 2426065797389134444}
   - {fileID: 2948762708382482953}
-  - {fileID: 7992355120182207987}
   m_Father: {fileID: 4054818458822805647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1887,6 +1892,7 @@ MonoBehaviour:
   theBuyCount: {fileID: 6247319470571716826}
   IconCollection: {fileID: 6551114386654284156}
   IconSetting: {fileID: 7797410833787234959}
+  DeliveryFee: {fileID: 0}
 --- !u!1 &4179506000538174771
 GameObject:
   m_ObjectHideFlags: 0

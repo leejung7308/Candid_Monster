@@ -7,7 +7,7 @@ using TMPro;
 public class OnBuyButton : MonoBehaviour, IPointerClickHandler
 {
     public Item.Item item;
-    int purchaseCost;
+    int purchaseCost=3000;
 
     private Inventory theInventory;
     private OnBuyCount theOnBuyCount;
@@ -38,6 +38,7 @@ public class OnBuyButton : MonoBehaviour, IPointerClickHandler
                 if (purchaseCost <= int.Parse(theInventory.GetCoinText()))
                 {
                     OnParcel();
+                    theInventory.SetCoinText(3000);
                     for (int i = 0; i < theOnBuyCount.GetBuyCount(); i++)
                     {
                         theInventory.SetCoinText(item.itemValue);
@@ -45,7 +46,7 @@ public class OnBuyButton : MonoBehaviour, IPointerClickHandler
                     }
                     theOnBuyCount.SetBuyCount();
                 }
-                purchaseCost = 0;
+                purchaseCost = 3000;
             }
         }
     }

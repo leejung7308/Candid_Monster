@@ -15,6 +15,7 @@ public class IMItemInfo : MonoBehaviour
     private TextMeshProUGUI txt_ItemName;
     [SerializeField]
     private TextMeshProUGUI txt_ItemDesc;
+    public GameObject DeliveryFee;
 
     public void ShowToolTip(Item.Item _item, Vector3 _pos)
     {   
@@ -23,6 +24,7 @@ public class IMItemInfo : MonoBehaviour
 
         txt_ItemName.text = _item.itemName;
         txt_ItemDesc.text = _item.itemDesc;
+        DeliveryFee.SetActive(true);
 
         theBuyCount.SetBuyCount();
     }

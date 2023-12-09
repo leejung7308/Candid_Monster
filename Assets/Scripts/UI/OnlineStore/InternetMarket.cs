@@ -23,6 +23,7 @@ public class InternetMarket : MonoBehaviour
 
     public GameObject IconCollection;
     public GameObject IconSetting;
+    public GameObject DeliveryFee;
 
     void Start()
     {
@@ -57,7 +58,7 @@ public class InternetMarket : MonoBehaviour
 
         txt_ItemName.text = "";
         txt_ItemDesc.text = "";
-
+        DeliveryFee.SetActive(false);
         theBuyCount.SetBuyCount();
         IconCollection.SetActive(true);
         IconSetting.SetActive(true);
