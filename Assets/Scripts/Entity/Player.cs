@@ -41,18 +41,18 @@ public class Player : EntityStatus
         SetWeapon(0);
         Debug.Log("Add Active skills");
         activeSkills = new Dictionary<KeyCode, ActiveSkill>();
-        // activeSkills.Add(KeyCode.E, new ThrowAlcoholBottle(this));
+        activeSkills.Add(KeyCode.E, new ThrowAlcoholBottle(this));
         activeSkills.Add(KeyCode.R, new LetsGoDinner(this));
-        // activeSkills.Add(KeyCode.T, new EspressoDoubleShot(this));
-        // activeSkills.Add(KeyCode.Y, new ElectronicSmoking(this));
-        // activeSkills.Add(KeyCode.U, new OneByOneSmoking(this));
+        activeSkills.Add(KeyCode.T, new EspressoDoubleShot(this));
+        activeSkills.Add(KeyCode.Y, new ElectronicSmoking(this));
+        activeSkills.Add(KeyCode.U, new OneByOneSmoking(this));
         Debug.Log("Add Damage Passives");
         damagePassives = new List<DamagePassive>();
-        // damagePassives.Add(new BombAlcohol());
+        damagePassives.Add(new BombAlcohol());
         Debug.Log("Add Player Status Passives");
         playerStatPassives = new List<PlayserStatusPassive>();
         playerStatPassives.Add(new CoffeBoost(this));
-        // playerStatPassives.Add(new SmokingTime(this));
+        playerStatPassives.Add(new SmokingTime(this));
     }
     void Update()
     {
@@ -66,11 +66,13 @@ public class Player : EntityStatus
         }
         LookAt();
         WeaponSwap();
+        ApplyPlayerStatusPassives();
         HandleActiveSkills();
         if(!isFainted) Attack();
         if(enableFatigue)
             IncreaseFatigue();
         if(fatigue>100) EntityDie();
+        ApplyDebuff(CheckDebuffCondition());
     }
     void FixedUpdate()
     {
@@ -144,15 +146,23 @@ public class Player : EntityStatus
         }
         return dh;
     }
+
+    void ApplyPlayerStatusPassives()
+    {
+        foreach (PlayserStatusPassive psp in playerStatPassives)
+        {
+            psp.ApplyStatusChange();
+        }
+    }
     void HandleActiveSkills()
     {
         foreach (KeyValuePair<KeyCode, ActiveSkill> pair in activeSkills)
         {
+            pair.Value.HandleCooldown();
             if(Input.GetKeyDown(pair.Key))
             {
-                ActiveSkill skill = pair.Value;
-                Debug.Log($"Apply ActiveSkill `{skill.GetType().Name}`");
-                skill.Activate();
+                Debug.Log($"Apply ActiveSkill `{pair.Value.GetType().Name}`");
+                pair.Value.Activate();
             }
         }
     }

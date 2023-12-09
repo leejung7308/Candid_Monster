@@ -1,4 +1,5 @@
 ﻿using Item;
+using UnityEngine;
 
 namespace Entity.Skill
 {
@@ -20,8 +21,10 @@ namespace Entity.Skill
             hitCount += 1;
             if(hitCount >= additionalHit)
             {
+                Debug.Log($"추가타 발생! 이전 데미지: {damageHolder.Damage}");
                 hitCount = 0;
-                return damageHolder * new DamageHolder(damage: 2);
+                damageHolder *= new DamageHolder(damage: 2);
+                Debug.Log($"적용된 데미지: {damageHolder.Damage}");
             }
             return damageHolder;
         }
@@ -33,8 +36,9 @@ namespace Entity.Skill
      */
     public class CoffeBoost : PlayserStatusPassive
     {
-        const float attackSpeedRatio = 1.5f;
-        const float moveSpeedRatio = 1.5f;
+        const float attackSpeedRatio = 1.35f;
+        const float moveSpeedRatio = 1.35f;
+        bool applied = false;
         EntityStatusData originalStatus;
         
         public CoffeBoost(EntityStatus target) : base(target)
@@ -46,11 +50,20 @@ namespace Entity.Skill
         {
             if(target.caffeine >= 80)
             {
-                target.moveSpeed *= moveSpeedRatio;
-                target.attackSpeed *= attackSpeedRatio;
+                if(!applied)
+                {
+                    Debug.Log("PassiveSkill > CoffeBoost > Apply Boost!");
+                    target.moveSpeed *= moveSpeedRatio;
+                    target.attackSpeed *= attackSpeedRatio;
+                    applied = true;
+                }
             }
-            else
+            else if (applied)
+            {
+                Debug.Log("PassiveSkill > CoffeBoost > Remove Boost...");
                 originalStatus.Apply(target);
+                applied = false;
+            }
         }
     }
     

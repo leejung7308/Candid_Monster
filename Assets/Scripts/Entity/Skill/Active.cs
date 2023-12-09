@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Entity;
 using UnityEngine;
 using UObject = UnityEngine.Object;
@@ -11,19 +12,37 @@ namespace Entity.Skill
     {
         Player _player;
         GameObject _projectilePrefab;
+        CaptureArea nearby;
 
         public ThrowAlcoholBottle(Player player)
         {
             _player = player;
+            nearby = player.GetComponentInChildren<CaptureArea>();
             _projectilePrefab = Resources.Load<GameObject>("Prefabs/AlcoholProjectile");
-            if (_projectilePrefab == null)
-                Debug.Log("ThrowAlcoholBottle > Cannot Load Prefab Object!");
         }
 
         public override void Activate()
         {
-            GameObject pj = UObject.Instantiate(_projectilePrefab, _player.transform.position, _player.transform.rotation);
-            pj.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Force);      // TODO: 플레이어가 바라보는 방향으로 던지기.
+            if(isCooldown)
+                return;
+            
+            GameObject projectileObject = UObject.Instantiate(_projectilePrefab, _player.transform.position, _player.transform.rotation);
+            Projectile pj = projectileObject.GetComponent<AoEProjectile>();
+            _player.StartCoroutine(nearby.Toggle());
+            
+            try
+            {
+                Radar seenFirst = nearby.GetNearby();
+                Debug.Log($"ActiveSkill > ThrowAlcoholBottle > Projectile Target: {seenFirst.gameObject.name}");
+                pj.SetTarget(seenFirst.gameObject);
+            }
+            catch (InvalidOperationException e)
+            {
+                Debug.Log($"ActiveSkill > ThrowAlcoholBottle > Projectile has NO target.");
+                pj.SetTarget(null);
+            }
+            
+            StartCooldown();
         }
     }
     /**
@@ -34,21 +53,26 @@ namespace Entity.Skill
     public class LetsGoDinner : ActiveSkill
     {
         Player _player;
-        BlindArea ba;
+        CaptureArea ba;
         public LetsGoDinner(Player player)
         {
             _player = player;
-            ba = player.GetComponentInChildren<BlindArea>();
+            ba = player.GetComponentInChildren<CaptureArea>();
         }
 
         public override void Activate()
         {
+            if(isCooldown)
+                return;
+            
             _player.StartCoroutine(ba.Toggle());
-            ba.GetBlindedTargets().ForEach(radar =>
+            ba.GetCapturedTargets().ForEach(radar =>
             {
-                Debug.Log($"Active > LetsGoDinner > Detected 'Radar' object: {(radar == null ? "null" : radar.ToString())}");
+                Debug.Log($"Active > LetsGoDinner > Detected 'Radar' object: {(radar is null ? "null" : radar.ToString())}");
                 radar.Blind();
             });
+            
+            StartCooldown();
         }
     }
     /**
@@ -64,7 +88,13 @@ namespace Entity.Skill
         }
         public override void Activate()
         {
+            if(isCooldown)
+                return;
+            
+            Debug.Log("ActiveSkill > EspressoDoubleShot: Activated!");
             target.caffeine += 10;
+            
+            StartCooldown();
         }
     }
     
@@ -75,21 +105,26 @@ namespace Entity.Skill
     public class ElectronicSmoking : ActiveSkill
     {
         Player _player;
-        BlindArea ba;
+        CaptureArea ba;
         public ElectronicSmoking(Player player)
         {
             _player = player;
-            ba = player.GetComponent<BlindArea>();
+            ba = player.GetComponentInChildren<CaptureArea>();
         }
 
         public override void Activate()
         {
+            if(isCooldown)
+                return;
+            
             _player.StartCoroutine(ba.Toggle());
-            ba.GetBlindedTargets().ForEach(radar =>
+            ba.GetCapturedTargets().ForEach(radar =>
             {
                 radar.Blind();
                 radar.monster.nicotine += 10;
             });
+            
+            StartCooldown();
         }
     }
 
@@ -97,17 +132,37 @@ namespace Entity.Skill
     {
         Player _player;
         GameObject _projectilePrefab;
+        CaptureArea nearby;
 
         public OneByOneSmoking(Player player)
         {
             _player = player;
             _projectilePrefab = Resources.Load<GameObject>("Prefabs/MarkProjectile");
+            nearby = player.GetComponentInChildren<CaptureArea>();
         }
 
         public override void Activate()
         {
-            GameObject pj = UObject.Instantiate(_projectilePrefab, _player.transform.position, _player.transform.rotation);
-            pj.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Force);      // TODO: 플레이어가 바라보는 방향으로 던지기.
+            if(isCooldown)
+                return;
+            
+            GameObject projectileObject = UObject.Instantiate(_projectilePrefab, _player.transform.position, _player.transform.rotation);
+            Projectile pj = projectileObject.GetComponent<SkillProjectile>();
+            _player.StartCoroutine(nearby.Toggle());
+            
+            try
+            {
+                Radar seenFirst = nearby.GetNearby();
+                Debug.Log($"ActiveSkill > OneByOneSmoking > Projectile Target: {seenFirst.gameObject.name}");
+                pj.SetTarget(seenFirst.gameObject);
+            }
+            catch (InvalidOperationException e)
+            {
+                Debug.Log($"ActiveSkill > OneByOneSmoking > Projectile has NO target.");
+                pj.SetTarget(null);
+            }
+            
+            StartCooldown();
         }
     }
 }

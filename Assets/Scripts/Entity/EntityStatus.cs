@@ -84,12 +84,14 @@ public class EntityStatus : MonoBehaviour
         this.maxCaffeine = maxCaffeine;
         this.maxNicotine = maxNicotine;
     }
-    protected void EntityHit(Item.DamageHolder currentDamageHolder)
+    protected void EntityHit(DamageHolder currentDamageHolder)
     {
         alcohol += currentDamageHolder.Alcohol;
         caffeine += currentDamageHolder.Caffeine;
         nicotine += currentDamageHolder.Nicotine;
         fatigue += currentDamageHolder.Damage;
+        
+        Debug.Log($"{gameObject.name} 은 {currentDamageHolder.Damage} 만큼의 피해를 입었다!");
     }
     protected IEnumerator Swing(GameObject angle)
     {
@@ -119,18 +121,22 @@ public class EntityStatus : MonoBehaviour
         switch (type)
         {
             case DebuffType.Alcohol:
+                Debug.Log("Debuff > Activate Alcohol Debuff!");
                 gameObject.GetComponent<Debuff>().StartAlcoholDebuff();
                 alcohol = 0;
                 break;
             case DebuffType.Caffeine:
+                Debug.Log("Debuff > Activate Caffeine Debuff!");
                 gameObject.GetComponent<Debuff>().StartCaffeineDebuff();
                 caffeine = 0;
                 break;
             case DebuffType.Nicotine:
+                Debug.Log("Debuff > Activate Nicotine Debuff!");
                 gameObject.GetComponent<Debuff>().StartNicotineDebuff();
                 nicotine = 0;
                 break;
             case DebuffType.Mark:
+                Debug.Log("Debuff > Activate Mark Debuff!");
                 gameObject.GetComponent<Debuff>().StartMarkDebuff();
                 break;
         }

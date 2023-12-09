@@ -1,17 +1,16 @@
-﻿using UnityEngine;
+﻿using Entity;
+using UnityEngine;
 
-public class SkillProjectile : MonoBehaviour
+public class SkillProjectile : Projectile
 {
     [SerializeField]
     DebuffType damageType = DebuffType.None;
 
-    void OnTriggerEnter2D(Collider2D other)
+    public override void Break(Collider2D other)
     {
-        if(other.CompareTag("Monster") || other.CompareTag("Player") || other.CompareTag("ConfusedMonster"))
-        {
+        if(other is not null)
             HandleProjectileHit(other.GetComponent<EntityStatus>());
-            Destroy(this);
-        }
+        Destroy(gameObject);
     }
     
     /**

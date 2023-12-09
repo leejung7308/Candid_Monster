@@ -12,7 +12,9 @@ TagManager:
   - Weapon(ConfusedPlayer)
   - Weapon(ConfusedMonster)
   - ConfusedMonster
-  - BlindArea
+  - MapObjects
+  - Wall
+  - CaptureArea
   layers:
   - Default
   - TransparentFX

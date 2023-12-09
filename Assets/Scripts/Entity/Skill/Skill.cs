@@ -1,4 +1,6 @@
-﻿namespace Entity.Skill
+﻿using UnityEngine;
+
+namespace Entity.Skill
 {
     /**
      * 엔티티가 사용할 수 있는 스킬에 대한 개념적인 표현 객체.
@@ -10,9 +12,44 @@
     /**
      * 액티브 스킬에 대한 개념적인 표현 객체.
      */
-    public abstract class ActiveSkill : Skill
+    public class ActiveSkill : Skill
     {
-        public abstract void Activate();
+        float cooldown;
+        protected bool isCooldown = false;
+        float cooldown_left = 0.0f;
+        public ActiveSkill(float cooldown = 2.0f)
+        {
+            this.cooldown = cooldown;
+        }
+        public virtual void Activate()
+        {
+            if (!isCooldown)
+                StartCooldown();
+        }
+        
+        /**
+         * 이 스킬의 쿨다운을 시작한다.
+         */
+        public void StartCooldown()
+        {
+            cooldown_left = cooldown;
+            isCooldown = true;
+        }
+        /**
+        * 액티브 스킬의 쿨타임을 처리한다.
+        */
+        public void HandleCooldown()
+        {
+            if(isCooldown)
+            {
+                cooldown_left -= Time.deltaTime;
+                if(cooldown_left <= 0.0f)
+                {
+                    isCooldown = false;
+                }
+            }
+        }
+        
     }
     
     /**

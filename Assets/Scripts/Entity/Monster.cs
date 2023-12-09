@@ -20,7 +20,7 @@ public class Monster : EntityStatus
     Radar attackRange;
     GameObject player;
     float nextAttack;
-    private void Start()
+    void Start()
     {
         radar = radarObject.GetComponent<Radar>();
         attackRange = attackRangeObject.GetComponent<Radar>();
@@ -29,7 +29,7 @@ public class Monster : EntityStatus
         weapon.transform.parent = transform;
         weapon.tag = "Weapon(Monster)";
     }
-    private void Update()
+    void Update()
     {
         if (isConfused)
         {
@@ -43,41 +43,40 @@ public class Monster : EntityStatus
         }
         ApplyDebuff(CheckDebuffCondition());
         SetWeapon();
-        if (fatigue>100) EntityDie();
+        if (fatigue>maxFatigue) EntityDie();
     }
     public void MonsterMovement(GameObject follow)
     {
-        if (!isFainted)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
-        }        
+        if(isFainted)
+            return;
+        
+        transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
     }
     public void LookAt(GameObject follow)
     {
-        if (!isFainted)
+        if(isFainted)
+            return;
+        
+        if (follow.transform.position.x < transform.position.x)
         {
-            if (follow.transform.position.x < transform.position.x)
-            {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-            else
-            {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
     public void Attack()
     {
-        if (!isFainted)
+        if(isFainted)
+            return;
+        if (Time.time > nextAttack)
         {
-            if (Time.time > nextAttack)
-            {
-                nextAttack = Time.time + attackSpeed;
-                StartCoroutine(Swing(angle));
-            }
+            nextAttack = Time.time + attackSpeed;
+            StartCoroutine(Swing(angle));
         }
     }
-    private void SetWeapon()
+    void SetWeapon()
     {
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;

@@ -1,3 +1,5 @@
+using System;
+using Entity.Skill;
 using UnityEngine;
 
 public class Radar : MonoBehaviour
@@ -28,11 +30,14 @@ public class Radar : MonoBehaviour
             blindTimer = 0.0f;
         }
     }
-    
+
     void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("BlindArea"))
-            Blind();
+        if(collision.CompareTag("CaptureArea"))
+        {
+            CaptureArea ca = collision.GetComponent<CaptureArea>();
+            ca.AddCapturedTarget(this);
+        }
         
         if(isBlinded)   // 어그로 풀린 상태일 경우, 움직이지 않는다.
             return;
@@ -53,7 +58,10 @@ public class Radar : MonoBehaviour
             monster.LookAt(collision.gameObject);
         }
     }
-
+    
+    /**
+     * 일시적으로 적을 탐색하지 못하는 실명 상태에 걸린다.
+     */
     public void Blind()
     {
         if(isBlinded)

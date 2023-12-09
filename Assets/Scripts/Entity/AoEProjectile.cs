@@ -4,21 +4,15 @@ using System.Collections.Generic;
 using Entity;
 using UnityEngine;
 
-public class AoEProjectile : MonoBehaviour
+public class AoEProjectile : Projectile
 {
     [SerializeField]
-    bool createAoE = false;
-    [SerializeField]
     GameObject aoeFieldPrefab;
-
-    void OnTriggerEnter2D(Collider2D other)
+    
+    public override void Break(Collider2D other)
     {
-        if(other.CompareTag("Monster") || other.CompareTag("Player") || other.CompareTag("ConfusedMonster"))
-        {
-            if (createAoE)
-                SpawnAoE();
-            Destroy(this);
-        }
+        SpawnAoE();
+        Destroy(gameObject);
     }
     
     /**

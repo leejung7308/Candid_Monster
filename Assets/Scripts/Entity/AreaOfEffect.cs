@@ -12,7 +12,7 @@ public class AreaOfEffect: MonoBehaviour
         time += Time.deltaTime;
         if(time >= duration)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
     void OnTriggerStay2D(Collider2D other)
