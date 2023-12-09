@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon
+  - CanBePickedUp
+  - Weapon(Player)
+  - Weapon(Monster)
+  - Monster
+  - Weapon(ConfusedPlayer)
+  - Weapon(ConfusedMonster)
+  - ConfusedMonster
   layers:
   - Default
   - TransparentFX
@@ -40,4 +48,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wall1
+    uniqueID: 4146491829
+    locked: 0
+  - name: Objects Under1
+    uniqueID: 846807451
+    locked: 0
+  - name: Player&Monster
+    uniqueID: 112474025
+    locked: 0
+  - name: Weapon
+    uniqueID: 3138342755
+    locked: 0
+  - name: Objects Above1
+    uniqueID: 3070437125
+    locked: 0
+  - name: Items
+    uniqueID: 1574347813
     locked: 0

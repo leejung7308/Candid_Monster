@@ -5,7 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/CharacterScene.unity
+=======
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+>>>>>>> develop
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/UIScene.unity
+    guid: fcb16bf123737644492c09c4ec4e0183
+  - enabled: 1
+    path: Assets/Scenes/EntityScene.unity
+    guid: 7a1e4af12608f1240a4f3b818a83bf62
+  - enabled: 1
+    path: Assets/Scenes/GameMainScene.unity
+    guid: a2e49325b30882645892506fc30ad442
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: eb73ce21dabf41a4bb4e532a651b816d
   m_configObjects: {}
