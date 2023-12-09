@@ -21,6 +21,7 @@ public class OnlineMarket : MonoBehaviour
 
     [SerializeField]
     private OnBuyCount theOnBuyCount;
+    public GameObject DeliveryFee;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class OnlineMarket : MonoBehaviour
 
         txt_ItemName.text = "";
         txt_ItemDesc.text = "";
-
+        DeliveryFee.SetActive(false);
         theOnBuyCount.SetBuyCount();
     }
 
