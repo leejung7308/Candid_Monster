@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Clock
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -1544145494, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: 2009201788, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: 1835944290, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: -1921766228, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: -59049438, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: 1295005898, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: -1165712520, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: 2097433363, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: 637520826, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  - {fileID: -1048092736, guid: 886092ec4f5c4d446bfe2e1e534538af, type: 3}
+  m_MinSpeed: 3
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
