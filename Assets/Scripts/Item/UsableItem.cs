@@ -3,7 +3,7 @@
     public class UsableItem : Item
     {
 
-        public UsableItem(float caffeine, float alcohol, float nicotine) : base(caffeine, alcohol, nicotine)
+        public UsableItem(int caffeine, int alcohol, int nicotine) : base(caffeine, alcohol, nicotine)
         {
         }
 
