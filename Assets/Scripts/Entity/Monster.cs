@@ -11,10 +11,8 @@ public class Monster : EntityStatus
     public GameObject radarObject;
     public GameObject attackRangeObject;
     public GameObject weaponPrefab;
-    public GameObject weapon;
     public GameObject weaponSpawnPos;
     public GameObject room;
-    public bool isMelee = true;
     Radar radar;
     Radar attackRange;
     GameObject player;
@@ -31,6 +29,7 @@ public class Monster : EntityStatus
     }
     void Update()
     {
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         if (isConfused)
         {
             weapon.tag = "Weapon(ConfusedMonster)";

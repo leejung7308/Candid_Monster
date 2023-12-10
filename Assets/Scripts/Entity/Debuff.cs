@@ -33,23 +33,38 @@ public class Debuff : MonoBehaviour
     public IEnumerator AlcoholDebuff()
     {
         gameObject.GetComponent<EntityStatus>().isConfused = true;
-        yield return new WaitForSeconds(15f);
+        for(int i = 0; i < 6; i++)
+            transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0.75f, 0.1f, 1);
+        yield return new WaitForSeconds(AlcholoDebuffDuration);
+        for (int i = 0; i < 6; i++)
+            transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent <EntityStatus>().isConfused = false;
+        gameObject.GetComponent<EntityStatus>().isDebuffed = false;
         prevAlcoholCoro = null;
     }
     public IEnumerator CaffeineDebuff()
     {
         gameObject.GetComponent<EntityStatus>().isFainted = true;
-        yield return new WaitForSeconds(15f);
+        for (int i = 0; i < 6; i++)
+            transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.3f, 0.2f, 1);
+        yield return new WaitForSeconds(CaffeineDebuffDuration);
+        for (int i = 0; i < 6; i++)
+            transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent <EntityStatus>().isFainted = false;
+        gameObject.GetComponent<EntityStatus>().isDebuffed = false;
         prevCaffeineCoro = null;
     }
     public IEnumerator NicotineDebuff()
     {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++)
+            transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 0, 1);
+        for (int i = 0; i < NicotineDebuffSecs; i++) {
             gameObject.GetComponent<EntityStatus>().fatigue += 2;
             yield return new WaitForSeconds(1f);
         }
+        for (int i = 0; i < 6; i++)
+            transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        gameObject.GetComponent<EntityStatus>().isDebuffed = false;
         prevNicotineCoro = null;
     }
     public IEnumerator MarkDebuff()

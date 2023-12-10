@@ -70,6 +70,8 @@ public class EntityStatus : MonoBehaviour
     public bool isConfused = false;
     public bool isFainted = false;
     public bool isInvincible = false;
+    public bool isDebuffed = false;
+    public GameObject weapon;
     
     public EntityStatus(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine)
     {
@@ -90,29 +92,27 @@ public class EntityStatus : MonoBehaviour
         caffeine += currentDamageHolder.Caffeine;
         nicotine += currentDamageHolder.Nicotine;
         fatigue += currentDamageHolder.Damage;
-        
+        if (CheckDebuffCondition() != DebuffType.None) isDebuffed = true;
         Debug.Log($"{gameObject.name} 은 {currentDamageHolder.Damage} 만큼의 피해를 입었다!");
     }
     protected IEnumerator InvincibleMode(float time)
     {
-        Color originalColor = transform.GetChild(0).GetComponent<SpriteRenderer>().color;
+        Color originalColor = weapon.GetComponent<SpriteRenderer>().color;
         isInvincible = true;
-        for (int j = 0; j < 5; j++)
+        if (!isDebuffed)
         {
             for (int i = 0; i < 6; i++)
-            {
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 0.5f, 0.4f, 1);
-            }
-            yield return new WaitForSeconds(time / 10);
-            for (int i = 0; i < 6; i++)
-            {
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 0.4f, 1);
-            }
-            yield return new WaitForSeconds(time / 10);
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.7f);
+            weapon.GetComponent<SpriteRenderer>().color = originalColor - new Color(0, 0, 0, 0.3f);
         }
-        for (int i = 0; i < 6; i++)
+        yield return new WaitForSeconds(time);
+        if (!isDebuffed)
         {
-            transform.GetChild(i).GetComponent<SpriteRenderer>().color = originalColor;
+            for (int i = 0; i < 6; i++)
+            {
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); ;
+            }
+            weapon.GetComponent<SpriteRenderer>().color = originalColor;
         }
         isInvincible = false;
     }
