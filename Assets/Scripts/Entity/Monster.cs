@@ -10,12 +10,10 @@ public class Monster : EntityStatus
     public float invincibleTime;
     public GameObject radarObject;
     public GameObject attackRangeObject;
-    public GameObject angle;
     public GameObject weaponPrefab;
     public GameObject weapon;
     public GameObject weaponSpawnPos;
     public GameObject room;
-    public Vector2 spawnPoint;
     public bool isMelee = true;
     Radar radar;
     Radar attackRange;
@@ -27,6 +25,7 @@ public class Monster : EntityStatus
         attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
         weapon = Instantiate(weaponPrefab);
+        weapon.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
         weapon.transform.parent = transform;
         weapon.tag = "Weapon(Monster)";
     }
@@ -44,7 +43,7 @@ public class Monster : EntityStatus
         }
         ApplyDebuff(CheckDebuffCondition());
         SetWeapon();
-        if (fatigue>maxFatigue) EntityDie();
+        if (fatigue>=maxFatigue) EntityDie();
     }
     public void MonsterMovement(GameObject follow)
     {
@@ -74,7 +73,6 @@ public class Monster : EntityStatus
         if (Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            StartCoroutine(Swing(angle));
         }
     }
     void SetWeapon()

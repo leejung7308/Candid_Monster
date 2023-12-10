@@ -93,28 +93,32 @@ public class EntityStatus : MonoBehaviour
         
         Debug.Log($"{gameObject.name} 은 {currentDamageHolder.Damage} 만큼의 피해를 입었다!");
     }
-    protected IEnumerator Swing(GameObject angle)
-    {
-        for (int i = 90; i >= -90; i--)
-        {
-            angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, i);
-            yield return new WaitForSeconds(0.001f);
-        }
-        angle.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-
-    }
     protected IEnumerator InvincibleMode(float time)
     {
-        Color originalColor = gameObject.GetComponent<SpriteRenderer>().color;
+        Color originalColor = transform.GetChild(0).GetComponent<SpriteRenderer>().color;
         isInvincible = true;
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 1);
-        yield return new WaitForSeconds(time);
-        gameObject.GetComponent<SpriteRenderer>().color = originalColor;
+        for (int j = 0; j < 5; j++)
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 0.5f, 0.4f, 1);
+            }
+            yield return new WaitForSeconds(time / 10);
+            for (int i = 0; i < 6; i++)
+            {
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 0.4f, 1);
+            }
+            yield return new WaitForSeconds(time / 10);
+        }
+        for (int i = 0; i < 6; i++)
+        {
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = originalColor;
+        }
         isInvincible = false;
     }
     virtual protected void EntityDie()
     {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
     virtual protected void ApplyDebuff(DebuffType type)
     {

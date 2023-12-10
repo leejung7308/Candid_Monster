@@ -11,7 +11,6 @@ public class Player : EntityStatus
     public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
         base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
-    public GameObject angle;
     public List<GameObject> weaponPrefabs;
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
@@ -19,6 +18,7 @@ public class Player : EntityStatus
     public bool enableFatigue = true;
     float fatigueTimer = 0.0f;
     public Inventory theInventory;
+    private Animator animator;
     GameObject weapon;
     float nextAttack;
     Dictionary<KeyCode, ActiveSkill> activeSkills;
@@ -29,6 +29,7 @@ public class Player : EntityStatus
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         mainCamera = Camera.main;
         for (int i = 0; i < 4; i++)
         {
@@ -71,17 +72,22 @@ public class Player : EntityStatus
         if(!isFainted) Attack();
         if(enableFatigue)
             IncreaseFatigue();
-        if(fatigue>100) EntityDie();
+        if(fatigue>=100) EntityDie();
         ApplyDebuff(CheckDebuffCondition());
     }
     void FixedUpdate()
     {
         if (!isFainted)
         {
-            float xinput = Input.GetAxis("Horizontal");
-            float yinput = Input.GetAxis("Vertical");
-            Vector2 newVelocity = new Vector2(xinput, yinput);
-            gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0) animator.SetBool("isMove", false);
+            else
+            {
+                float xinput = Input.GetAxis("Horizontal");
+                float yinput = Input.GetAxis("Vertical");
+                Vector2 newVelocity = new Vector2(xinput, yinput);
+                gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
+                animator.SetBool("isMove", true);
+            }
         }
     }
     void LookAt()
@@ -171,8 +177,12 @@ public class Player : EntityStatus
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            StartCoroutine(Swing(angle));
+            animator.SetBool("isAttack", true);
         }
+    }
+    void AttackEnd()
+    {
+        animator.SetBool("isAttack", false);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -190,6 +200,10 @@ public class Player : EntityStatus
         {
             Debug.Log("플레이어 피격");
             HandleEntityDamage(collision.GetComponent<Weapon>().GetDamageHolder());
+        }
+        if(collision.tag == "Monster")
+        {
+            Item.DamageHolder currentDamageHolder = collision.GetComponent<Monster>().weapon.GetComponent<Item.Weapon>().GetDamageHolder();
         }
     }
     
