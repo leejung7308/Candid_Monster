@@ -57,21 +57,20 @@ public class Player : EntityStatus
     }
     void Update()
     {
-        if (isConfused)
-        {
-            weapon.tag = "Weapon(ConfusedPlayer)";
-        }
-        else
-        {
-            weapon.tag = "Weapon(Player)";
-        }
-        LookAt();
+        if (isConfused) weapon.tag = "Weapon(ConfusedPlayer)";
+        else weapon.tag = "Weapon(Player)";
+
         WeaponSwap();
         ApplyPlayerStatusPassives();
         HandleActiveSkills();
-        if(!isFainted) Attack();
-        if(enableFatigue)
-            IncreaseFatigue();
+
+        if (!isFainted)
+        {
+            Attack();
+            LookAt();
+        }
+
+        if (enableFatigue) IncreaseFatigue();
         if(fatigue>=100) EntityDie();
         ApplyDebuff(CheckDebuffCondition());
     }
