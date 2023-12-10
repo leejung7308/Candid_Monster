@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6205271617752145379}
+  - component: {fileID: 3377071193291869923}
   - component: {fileID: 7578932338337641736}
   - component: {fileID: -3500097506522250148}
   - component: {fileID: 5030732104487839430}
-  - component: {fileID: 3377071193291869923}
   m_Layer: 0
   m_Name: Cigarette
   m_TagString: Weapon(Player)
@@ -35,6 +35,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3377071193291869923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717584867156859975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caffeine: 0
+  alcohol: 0
+  nicotine: 50
+  itemName: 
+  itemType: 0
+  itemImage: {fileID: 0}
+  itemDesc: 
+  itemValue: 0
+  itemAcquire: 0
+  damage: 0
 --- !u!212 &7578932338337641736
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -159,25 +181,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2922455, y: 1.3113357}
   m_EdgeRadius: 0
---- !u!114 &3377071193291869923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1717584867156859975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 10
-  itemName: 
-  itemType: 0
-  itemImage: {fileID: 0}
-  itemDesc: 
-  itemValue: 0
-  itemAcquire: 0
-  damage: 0
