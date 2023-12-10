@@ -14,12 +14,10 @@ public class Player : EntityStatus
     public List<GameObject> weaponPrefabs;
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
-    public bool isMelee = true;
     public bool enableFatigue = true;
     float fatigueTimer = 0.0f;
     public Inventory theInventory;
     private Animator animator;
-    GameObject weapon;
     float nextAttack;
     Dictionary<KeyCode, ActiveSkill> activeSkills;
     List<DamagePassive> damagePassives;
@@ -57,22 +55,17 @@ public class Player : EntityStatus
     }
     void Update()
     {
-        if (isConfused)
-        {
-            weapon.tag = "Weapon(ConfusedPlayer)";
-        }
-        else
-        {
-            weapon.tag = "Weapon(Player)";
-        }
-        LookAt();
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        if (isConfused) weapon.tag = "Weapon(ConfusedPlayer)";
+        else weapon.tag = "Weapon(Player)";
+
         WeaponSwap();
         ApplyPlayerStatusPassives();
         HandleActiveSkills();
-        if(!isFainted) Attack();
-        if(enableFatigue)
-            IncreaseFatigue();
-        if(fatigue>=100) EntityDie();
+        Attack();
+        LookAt();
+        if (enableFatigue) IncreaseFatigue();
+        if(fatigue>=maxFatigue) EntityDie();
         ApplyDebuff(CheckDebuffCondition());
     }
     void FixedUpdate()
@@ -89,9 +82,13 @@ public class Player : EntityStatus
                 animator.SetBool("isMove", true);
             }
         }
+        else animator.SetBool("isMove", false);
     }
     void LookAt()
     {
+        if (isFainted)
+            return;
+
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < transform.position.x)
         {
@@ -108,7 +105,6 @@ public class Player : EntityStatus
         {
             Debug.Log("무기1번");
             SetWeapon(0);
-            isMelee = true;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -174,6 +170,9 @@ public class Player : EntityStatus
     }
     void Attack()
     {
+        if (isFainted)
+            return;
+
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
