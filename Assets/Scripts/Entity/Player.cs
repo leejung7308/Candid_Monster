@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Entity;
+using Entity.Skill;
+using Item;
 
 public class Player : EntityStatus
 {
@@ -11,14 +15,19 @@ public class Player : EntityStatus
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
     public bool isMelee = true;
+    public bool enableFatigue = true;
+    float fatigueTimer = 0.0f;
     public Inventory theInventory;
-    private GameObject weapon;
-    private float nextAttack;
     private Animator animator;
+    GameObject weapon;
+    float nextAttack;
+    Dictionary<KeyCode, ActiveSkill> activeSkills;
+    List<DamagePassive> damagePassives;
+    List<PlayserStatusPassive> playerStatPassives;
 
     Camera mainCamera;
 
-    private void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
         mainCamera = Camera.main;
@@ -31,8 +40,22 @@ public class Player : EntityStatus
             weapons.Add(tmp);
         }
         SetWeapon(0);
+        Debug.Log("Add Active skills");
+        activeSkills = new Dictionary<KeyCode, ActiveSkill>();
+        activeSkills.Add(KeyCode.E, new ThrowAlcoholBottle(this));
+        activeSkills.Add(KeyCode.R, new LetsGoDinner(this));
+        activeSkills.Add(KeyCode.T, new EspressoDoubleShot(this));
+        activeSkills.Add(KeyCode.Y, new ElectronicSmoking(this));
+        activeSkills.Add(KeyCode.U, new OneByOneSmoking(this));
+        Debug.Log("Add Damage Passives");
+        damagePassives = new List<DamagePassive>();
+        damagePassives.Add(new BombAlcohol());
+        Debug.Log("Add Player Status Passives");
+        playerStatPassives = new List<PlayserStatusPassive>();
+        playerStatPassives.Add(new CoffeBoost(this));
+        playerStatPassives.Add(new SmokingTime(this));
     }
-    private void Update()
+    void Update()
     {
         if (isConfused)
         {
@@ -44,9 +67,13 @@ public class Player : EntityStatus
         }
         LookAt();
         WeaponSwap();
-        ApplyDebuff(CheckDebuffCondition());
-        if (!isFainted) Attack();
+        ApplyPlayerStatusPassives();
+        HandleActiveSkills();
+        if(!isFainted) Attack();
+        if(enableFatigue)
+            IncreaseFatigue();
         if(fatigue>=100) EntityDie();
+        ApplyDebuff(CheckDebuffCondition());
     }
     void FixedUpdate()
     {
@@ -113,6 +140,38 @@ public class Player : EntityStatus
         }
         weapon = weapons[weaponNum];
     }
+    /**
+     * 무기의 DamageHolder에 플레이어에게 적용중인 패시브 스킬로 인한 데미지 변화를 적용한다.
+     */
+    DamageHolder ApplyDamagePassives(DamageHolder original)
+    {
+        DamageHolder dh = original;
+        foreach (DamagePassive dp in damagePassives)
+        {
+            dh = dp.ApplyDamageChange(dh);
+        }
+        return dh;
+    }
+
+    void ApplyPlayerStatusPassives()
+    {
+        foreach (PlayserStatusPassive psp in playerStatPassives)
+        {
+            psp.ApplyStatusChange();
+        }
+    }
+    void HandleActiveSkills()
+    {
+        foreach (KeyValuePair<KeyCode, ActiveSkill> pair in activeSkills)
+        {
+            pair.Value.HandleCooldown();
+            if(Input.GetKeyDown(pair.Key))
+            {
+                Debug.Log($"Apply ActiveSkill `{pair.Value.GetType().Name}`");
+                pair.Value.Activate();
+            }
+        }
+    }
     void Attack()
     {
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
@@ -137,17 +196,36 @@ public class Player : EntityStatus
                 collision.gameObject.SetActive(false);
             }
         }
-        if ((collision.tag == "Weapon(Monster)" || collision.tag == "Weapon(ConfusedMonster)")&& !isInvincible)
+        if (!isInvincible && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)")))
         {
             Debug.Log("플레이어 피격");
-            Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
-            EntityHit(currentDamageHolder);
-            StartCoroutine(InvincibleMode(invincibleTime));
+            HandleEntityDamage(collision.GetComponent<Weapon>().GetDamageHolder());
         }
         if(collision.tag == "Monster")
         {
             Item.DamageHolder currentDamageHolder = collision.GetComponent<Monster>().weapon.GetComponent<Item.Weapon>().GetDamageHolder();
         }
+    }
+    
+    /**
+     * 플레이어의 현제 공격으로 인한 DamageHolder 객체를 생성한다.
+     * 무기의 DamageHolder를 기본으로 하고, 여러 DamagePassive들로 인한 데미지 변화를 반영한 최종 결과를 반환한다.
+     */
+    public override DamageHolder GetDamageHolder()
+    {
+        DamageHolder dh = weapon.GetComponent<Weapon>().GetDamageHolder();
+        dh = ApplyDamagePassives(dh);
+        return dh;
+    }
+    
+    /**
+     * 플레이어의 데미지 처리를 담당한다.
+     * @param originalDamageHolder: 플레이어에게 가해질 데미지.
+     */
+    public void HandleEntityDamage(DamageHolder originalDamageHolder)
+    {
+        EntityHit(originalDamageHolder);
+        StartCoroutine(InvincibleMode(invincibleTime));     // 중복해서 피해를 입는것을 방지하기 위한 일시 무적.
     }
 
     public void EquipItem(string _name)
@@ -184,5 +262,19 @@ public class Player : EntityStatus
                 weapons[2].gameObject.SetActive(false);
                 weapon = weapons[3];
             }
+    }
+    
+    /**
+     * 피로도 증가 로직.
+     */
+    void IncreaseFatigue()
+    {
+        fatigueTimer += Time.deltaTime;
+        if(fatigueTimer >= 6.0f) // 6초에 한 번씩 피로도 증가.
+        {
+            Debug.Log("Increase Fatigue!");
+            fatigue += 1;
+            fatigueTimer = 0.0f;
+        }
     }
 }
