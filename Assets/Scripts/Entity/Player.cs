@@ -7,7 +7,6 @@ public class Player : EntityStatus
     public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
         base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
-    public GameObject angle;
     public List<GameObject> weaponPrefabs;
     public List<GameObject> weapons;
     public GameObject weaponSpawnPos;
@@ -15,11 +14,13 @@ public class Player : EntityStatus
     public Inventory theInventory;
     private GameObject weapon;
     private float nextAttack;
+    private Animator animator;
 
     Camera mainCamera;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         mainCamera = Camera.main;
         for (int i = 0; i < 4; i++)
         {
@@ -43,17 +44,23 @@ public class Player : EntityStatus
         }
         LookAt();
         WeaponSwap();
-        if(!isFainted) Attack();
-        if(fatigue>100) EntityDie();
+        ApplyDebuff(CheckDebuffCondition());
+        if (!isFainted) Attack();
+        if(fatigue>=100) EntityDie();
     }
     void FixedUpdate()
     {
         if (!isFainted)
         {
-            float xinput = Input.GetAxis("Horizontal");
-            float yinput = Input.GetAxis("Vertical");
-            Vector2 newVelocity = new Vector2(xinput, yinput);
-            gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0) animator.SetBool("isMove", false);
+            else
+            {
+                float xinput = Input.GetAxis("Horizontal");
+                float yinput = Input.GetAxis("Vertical");
+                Vector2 newVelocity = new Vector2(xinput, yinput);
+                gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
+                animator.SetBool("isMove", true);
+            }
         }
     }
     void LookAt()
@@ -111,8 +118,12 @@ public class Player : EntityStatus
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            StartCoroutine(Swing(angle));
+            animator.SetBool("isAttack", true);
         }
+    }
+    void AttackEnd()
+    {
+        animator.SetBool("isAttack", false);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -132,6 +143,10 @@ public class Player : EntityStatus
             Item.DamageHolder currentDamageHolder = collision.GetComponent<Item.Weapon>().GetDamageHolder();
             EntityHit(currentDamageHolder);
             StartCoroutine(InvincibleMode(invincibleTime));
+        }
+        if(collision.tag == "Monster")
+        {
+            Item.DamageHolder currentDamageHolder = collision.GetComponent<Monster>().weapon.GetComponent<Item.Weapon>().GetDamageHolder();
         }
     }
 

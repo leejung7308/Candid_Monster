@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7963401461284472788}
   - component: {fileID: 2357533434980876242}
   - component: {fileID: -385254601836969344}
-  - component: {fileID: 6823260596287068354}
   - component: {fileID: 775397459117901850}
+  - component: {fileID: 6051503926299313168}
   m_Layer: 0
   m_Name: Alcohol
   m_TagString: Weapon(Player)
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1156624541
+  m_SortingLayerID: 112474025
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 6bec644b640462c4bb0a79a75474f113, type: 3}
   m_Color: {r: 0.18172847, g: 0.4811321, b: 0.17475079, a: 1}
   m_FlipX: 0
@@ -114,8 +114,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &6823260596287068354
-CapsuleCollider2D:
+--- !u!114 &775397459117901850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854303780617584345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caffeine: 0
+  alcohol: 10
+  nicotine: 0
+  itemName: 
+  itemType: 0
+  itemImage: {fileID: 0}
+  itemDesc: 
+  itemValue: 0
+  itemAcquire: 0
+  damage: 0
+--- !u!61 &6051503926299313168
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,27 +168,16 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019221008, y: 0}
-  m_Size: {x: 0.318994, y: 0.85333335}
-  m_Direction: 0
---- !u!114 &775397459117901850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854303780617584345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 10
-  nicotine: 0
-  itemName: 
-  itemType: 0
-  itemImage: {fileID: 0}
-  itemDesc: 
-  itemValue: 0
-  damage: 0
+  m_Offset: {x: 0.0020633638, y: 0.39781427}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.18920763}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45876116, y: 1.28}
+  m_EdgeRadius: 0
