@@ -40,11 +40,11 @@ public class Player : EntityStatus
         SetWeapon(0);
         Debug.Log("Add Active skills");
         activeSkills = new Dictionary<KeyCode, ActiveSkill>();
-        activeSkills.Add(KeyCode.E, new ThrowAlcoholBottle(this));
-        activeSkills.Add(KeyCode.R, new LetsGoDinner(this));
+        //activeSkills.Add(KeyCode.E, new ThrowAlcoholBottle(this));
+        //activeSkills.Add(KeyCode.R, new LetsGoDinner(this));
         activeSkills.Add(KeyCode.T, new EspressoDoubleShot(this));
         activeSkills.Add(KeyCode.Y, new ElectronicSmoking(this));
-        activeSkills.Add(KeyCode.U, new OneByOneSmoking(this));
+        //activeSkills.Add(KeyCode.U, new OneByOneSmoking(this));
         Debug.Log("Add Damage Passives");
         damagePassives = new List<DamagePassive>();
         damagePassives.Add(new BombAlcohol());
