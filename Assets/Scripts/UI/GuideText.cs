@@ -5,17 +5,24 @@ using TMPro;
 
 public class GuideText : MonoBehaviour
 {
-    public GameObject text_room1;
-    public GameObject text_room2;
-    public GameObject text_room3;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public List<GameObject> texts = new List<GameObject>();
+    GameObject player;
+    private void Start()
     {
-        if (collision.CompareTag("Player"))
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+    private void Update()
+    {
+        if (player.transform.position.y < 6) SetText(0);
+        if(player.transform.position.y>6 && player.transform.position.y < 27) SetText(1);
+        if(player.transform.position.y>27) SetText(2);
+    }
+    void SetText(int index)
+    {
+        for(int i = 0; i < 3; i++)
         {
-            text_room1.SetActive(false);
-            text_room2.SetActive(true);
-            text_room3.SetActive(false);
+            if (i == index) texts[i].SetActive(true);
+            else texts[i].SetActive(false);
         }
     }
 }

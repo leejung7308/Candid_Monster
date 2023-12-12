@@ -8,6 +8,7 @@ public class TutorialCameraConversion : MonoBehaviour
     public GameObject MainCamera;
     public GameObject Exit;
     public GameObject TutorialClear;
+    public GameObject room3text;
     public GameObject room3;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +19,8 @@ public class TutorialCameraConversion : MonoBehaviour
             MainCamera.SetActive(false);
             Exit.SetActive(true);
             TutorialClear.SetActive(true);
-            room3.SetActive(false);
+            room3.GetComponent<GuideText>().enabled = false;
+            room3text.SetActive(false);
         }
     }
 }
