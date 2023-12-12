@@ -25,7 +25,7 @@ public class SceneTransform : MonoBehaviour
 
     IEnumerator LoadCoroutine()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync("EntityScene");
+        AsyncOperation operation = SceneManager.LoadSceneAsync("TutorialScene");
 
         while (!operation.isDone)
         {
