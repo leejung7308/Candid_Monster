@@ -27,6 +27,7 @@ public class LoadingDeongeonManager : MonoBehaviour
 
     void Start()
     {
+        theSaveAndLoad = FindObjectOfType<SaveAndLoad>();
         StartCoroutine(LoadCoroutine());
     }
 
