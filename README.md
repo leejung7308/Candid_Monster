@@ -1,2 +1,2 @@
-# 2023-2 캡스톤디자인종합프로젝트1 (라) - candid monster
+# 2023-겨울방학 겜마루 겨울 공모전 - Candid Monster
 
