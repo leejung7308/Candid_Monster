@@ -1,0 +1,3669 @@
+fileFormatVersion: 2
+guid: 560b11b0f129d904d9f6873aecffc1da
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Basement_copied_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2303
+        width: 73
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33a041aa783e7d4e89296622663cdb9
+      internalID: -1291838239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2304
+        width: 96
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6755cfc1441a149822a5f75af126c2
+      internalID: -587983167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_2
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2324
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3672e9f56c1c3f24f9727df01de0a559
+      internalID: 1513220091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 2327
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57987e1df97645d418022d48e8be1122
+      internalID: 297498533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_4
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 2327
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427b856b9f3f6c84e8c6ff09c9dab8ab
+      internalID: 1886759303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_5
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2231
+        width: 43
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a34ebd17d7d3854e9782081e548c883
+      internalID: 649538090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2228
+        width: 82
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0213af5f071cd024fa077a815aa40d73
+      internalID: 664811542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_7
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 2237
+        width: 28
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5064a8c767c3644b14c8bd218a37c4
+      internalID: -1447056710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_8
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2160
+        width: 73
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b2f4d5425298549801e3f8a31a4590
+      internalID: -1683512183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 2016
+        width: 68
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38adf14b26d57a04ab8b54b943fb713d
+      internalID: 397764555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_10
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 2016
+        width: 67
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e826527a89f0d4587092b3ef7b65a9
+      internalID: 196669116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_11
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1793
+        width: 386
+        height: 398
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff47ecb56c5ac02479150f331ed32e65
+      internalID: 2062578703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_12
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 2141
+        width: 28
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46748998da03bdf4ab8d499b6c2aee55
+      internalID: 109352341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2016
+        width: 73
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866207ab6fc0ff1479f96ad07aeefa77
+      internalID: -135521446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_14
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 2045
+        width: 28
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ba11f9a389f744f947c4c2d870ee4e
+      internalID: 765007215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_15
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1832
+        width: 73
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556277b829371d845bce00ac40c0d128
+      internalID: 1214415918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_16
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1823
+        width: 68
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204ab9ee127ff7e4180fb2ce7cf926f8
+      internalID: 863799073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_17
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1823
+        width: 67
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aaae570945f74d4c826fde91c3fa050
+      internalID: 464968693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_18
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1658
+        width: 101
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d023a799321a64e46aee21be185f062a
+      internalID: -1100446123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_19
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1679
+        width: 101
+        height: 137
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8269d02944eb38241b87fdecd3e53b9e
+      internalID: -1989277132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_20
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1662
+        width: 120
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33aa460f8b20d1e4c9b93412c397b665
+      internalID: 1478237519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_21
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1679
+        width: 122
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfd428f8aeaca442b57592b7e9172d6
+      internalID: 1570472115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_22
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1689
+        width: 37
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85fe677518a9a84193afa0cfc3fb6d9
+      internalID: 52723532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_23
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1727
+        width: 38
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e641418638ec3114ca4cab64cc277d4e
+      internalID: -122412971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_24
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1679
+        width: 38
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a477279d0cd14814fba8732852e85a56
+      internalID: -992617788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_25
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1535
+        width: 101
+        height: 137
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81daa186fdb68554f9a28022f832536f
+      internalID: -1604516645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_26
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1583
+        width: 122
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ef6b42df37bcc49a69e4d4f6fb746c
+      internalID: 1019312351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_27
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1593
+        width: 37
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414acdb70f0d868498392b937390deea
+      internalID: 532943038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_28
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1631
+        width: 38
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09b327024d65764e987f5e65af990b8
+      internalID: -16371613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1493
+        width: 145
+        height: 134
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eceb11cc7eedc7748b56e09f71d89d69
+      internalID: -271252554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_30
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1535
+        width: 120
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecaae3cfcfe236947949635b82f1571a
+      internalID: -166637767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_31
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1583
+        width: 38
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9b6d9d3c921844f97d339f54923255
+      internalID: -1280866576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_32
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1487
+        width: 122
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd780ffa80cf644390943994c9e3fd6
+      internalID: -1857646906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_33
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1496
+        width: 37
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b5b284cdfee17499738a5fbe03c2c5
+      internalID: -2079270039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_34
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1535
+        width: 38
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7beefd0dc30014ab9beb8e64708bd1
+      internalID: -1359350888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_35
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1247
+        width: 157
+        height: 251
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66009c2949fcf13418a0ffadc2d2642d
+      internalID: 11955963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_36
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1487
+        width: 38
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37e38bcb3a265d4d9f15fb389ecf2fe
+      internalID: -1533508147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_37
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1439
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acae1a732eefa0443a435c13ad3577f5
+      internalID: 2092681213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_38
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1439
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76c005db8a4ea04aa373bf4aed52699
+      internalID: -903368855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_39
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1395
+        width: 41
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6764516b8ef08604db69004b214ec785
+      internalID: -466758699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_40
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1451
+        width: 31
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b1dafda9c8faf4d875d7cabca29419
+      internalID: 1201497135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_41
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1443
+        width: 14
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43af5a4661ece0145886467f96b1beaa
+      internalID: 1898253994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_42
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1400
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d1ef2784e84e24eb0b330118e547ab
+      internalID: -705668208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_43
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1439
+        width: 38
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21acf03675bd0f247877432425d8a3ee
+      internalID: 838804564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_44
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1400
+        width: 37
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6f1e5bf5307744cba172644801ccac
+      internalID: 1613110601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_45
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1439
+        width: 37
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45eb3c4529e0de44991b7af2fed09109
+      internalID: -83993612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_46
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1400
+        width: 37
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c971c5b40c461f545a94a38676645de2
+      internalID: -1312311262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_47
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1439
+        width: 38
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351d33164241bc240b897ab5395bdb93
+      internalID: 192519048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_48
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1260
+        width: 104
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4b3aeafde46b048a8fd92ee0936d89
+      internalID: 956792483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_49
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1395
+        width: 43
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1b12f2853514c4d9fa9f3530444708
+      internalID: 714540703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_50
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1406
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aeba8ed0fe80da4bbe8a2b29f5801a0
+      internalID: 875651115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_51
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1391
+        width: 38
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95fbcad77c431747a88a32be47da8b4
+      internalID: -1317337664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_52
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1391
+        width: 37
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81d52e8e1cd29844a1286e677e6d68b
+      internalID: -696551585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_53
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1199
+        width: 49
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019cf2369a71e5740abdb95f25207d4a
+      internalID: 1301030803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_54
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1295
+        width: 103
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98495542b976008499c2ffe1d50754af
+      internalID: 1953445278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_55
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1226
+        width: 66
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc9de8e3fa238d4aacfd47cf01d3e76
+      internalID: -1321224608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_56
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1295
+        width: 68
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487180318f183d14bbf042918470e901
+      internalID: 376794355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_57
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1199
+        width: 49
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a325657f10647c04b9e737615671e5be
+      internalID: 159565753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_58
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 1295
+        width: 68
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a305cb9465cfb4a9c487ec9f139ea0
+      internalID: -270149281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_59
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1151
+        width: 104
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624a9962aade76a4796f68e24c2f901c
+      internalID: -982491965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_60
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1154
+        width: 41
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf027cb353b72b4a8786c0a2dab226f
+      internalID: -910313121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_61
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1239
+        width: 16
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314a18e33e34c524d9a558b616af5e7b
+      internalID: -1791251036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_62
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1235
+        width: 17
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8ede0385db6dc4ea37bc401495f14a
+      internalID: -1497232015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_63
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1199
+        width: 68
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1694920b5000e94199daf20ba34e187
+      internalID: 1263246538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_64
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 1199
+        width: 68
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9471a9e58a1b84a9d1e54ba77149de
+      internalID: -359782060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_65
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1116
+        width: 31
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3072c253bc2051469beaf6a8a8b99f4
+      internalID: 1433296780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_66
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1106
+        width: 40
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280d1ff75fd2d014fb18e041b2304956
+      internalID: -674869817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_67
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1109
+        width: 61
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2db4c705cbe1a849a0f2b1c86b5ade8
+      internalID: -1988558334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_68
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1058
+        width: 145
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a8f32eb16561d4796abd92b4537513
+      internalID: -1511977068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_69
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1121
+        width: 37
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd8b93b935d5c749acc89e2c4e5b43e
+      internalID: 1091023743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_70
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1118
+        width: 26
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ab13cedfa50e540b1e652192ecbc87
+      internalID: -608475747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_71
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1118
+        width: 26
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a599ba450ea2c0741ac2ed5a52698622
+      internalID: 1511198154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_72
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1118
+        width: 49
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6b623b2a2459047956c06128a089ce
+      internalID: 1989715517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_73
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1118
+        width: 25
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd60c33f18d036f4f8a73aa13bdfc208
+      internalID: -175316142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_74
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1118
+        width: 26
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546e23e7166324541beadf9004ce4016
+      internalID: 208727773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_75
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 962
+        width: 146
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6368a1c6146a93d4aae07d4c55949351
+      internalID: 1219383760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_76
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 914
+        width: 145
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0215ea22e737e4ea6396b7249643f7
+      internalID: 128297112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_77
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1025
+        width: 37
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3d268626068bf4b8fe6ab875080c4b
+      internalID: 1885369952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_78
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1022
+        width: 26
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d770cc40c3fb04babf0cee5fbca61b
+      internalID: 407336336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_79
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1022
+        width: 26
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb1b3b8288f1ef4fa7ad1726172bd1c
+      internalID: 319617607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_80
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1022
+        width: 49
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2162442ae3736a345919c935bfad191a
+      internalID: 1918642790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_81
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1022
+        width: 25
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f3d0235a368434e9c36a674f83c35b
+      internalID: 1912482275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_82
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1022
+        width: 26
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba2f12d3490c1b43afbbbd79b5713ca
+      internalID: -230897406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_83
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 929
+        width: 37
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e41d32f527f0b45ba149fd83534718
+      internalID: -437769335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_84
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 923
+        width: 88
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fc4c87e0d3a844dba8ea6fcb59a6fa
+      internalID: -100419369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_85
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 923
+        width: 88
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f46f723b03e0b4aa888656cb506112
+      internalID: -1229944983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_86
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 923
+        width: 88
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df880fe8a3206f4d9938b5c3733f388
+      internalID: -330708578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_87
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 839
+        width: 47
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d580b25060c0f4086125cfcae91501
+      internalID: 827145449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_88
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 839
+        width: 242
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7955ed7a16243bc44a12f856d9135bed
+      internalID: 1746398643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_89
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 857
+        width: 32
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d822c30ad08dccd478783cf0697debad
+      internalID: 318986145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_90
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 827
+        width: 88
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e0f1b5aeeb5f7498afe2cc09d573e7
+      internalID: -1552244515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_91
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 830
+        width: 28
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45e0e97e915ada42bc40a67f4eb29a6
+      internalID: -76967936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_92
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 864
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e22e4557a1d7146b16eda99c0b4582
+      internalID: 2044943601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_93
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 833
+        width: 146
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0531d30cf09a55241a1dca9a89a04579
+      internalID: -703561326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_94
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 795
+        width: 41
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f23f10714d97a449262fcad62c628b
+      internalID: -2144234102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_95
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 785
+        width: 32
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42009e3b68bc3c48b899e44977405fa
+      internalID: 2003629829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_96
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 722
+        width: 58
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8274d6dfad1c941bec2920aeda7b23
+      internalID: -1628058616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_97
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 722
+        width: 59
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049ab955f4852594791427aef1c1cb38
+      internalID: 1317591771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_98
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 735
+        width: 62
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202e87889d5cf4b4d8dc7cd4e68f6825
+      internalID: -1217445492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_99
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 735
+        width: 62
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf7be5e8b2ba8f49beaec552c8645f9
+      internalID: 942425597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_100
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 728
+        width: 34
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efeaad14ac3f2e4e9f8cacdac80e573
+      internalID: 2147351781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_101
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 728
+        width: 34
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d4eafcc9680c2468e2ef5ae64bd5ac
+      internalID: -1436848313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_102
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 768
+        width: 39
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeba5436451e7b4daf4d6f908ffbfcf
+      internalID: -488293721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_103
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 795
+        width: 47
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601dab93e570e584490f7f4dec6495f5
+      internalID: 1475108026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_104
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 795
+        width: 40
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743b8b914f630b1479ca4c67bf64ed6e
+      internalID: -172099745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_105
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 795
+        width: 19
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ee72c03b1d376499e06540efb29a5c
+      internalID: 1502188195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_106
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 737
+        width: 32
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ddabac1365a054985f53e6954db43b
+      internalID: -1729881802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_107
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 671
+        width: 26
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7402b845a89fa2e46983d68b8977d63b
+      internalID: 688118999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_108
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 671
+        width: 26
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d01567df87d1c84596f39702c7a98b7
+      internalID: 1652520271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_109
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 671
+        width: 25
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f374c63fd470e44fa62677b2a51bec0
+      internalID: 179348408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_110
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 689
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a9eebced458ee4face8ddf24e20fe2
+      internalID: -1745528016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_111
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 626
+        width: 58
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94a117e026155145ad076ecd9893075
+      internalID: -45776195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_112
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 626
+        width: 59
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad084bfe6189f94ca70032e90c96550
+      internalID: -2142836799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_113
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 639
+        width: 62
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b83d92e2bbd9f418b0b72fcbac4979
+      internalID: -557919889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_114
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 639
+        width: 62
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452037f80f7033f498eb0ccac357ee52
+      internalID: 1248543093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_115
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 632
+        width: 34
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137197a90d30f584a8e86ce591b30f21
+      internalID: 863667454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_116
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 623
+        width: 20
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaedb93fc1b780042a29e7d092cdbdd0
+      internalID: -281129399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_117
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 623
+        width: 20
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a0589756179864b9152844f95e827b
+      internalID: -577698351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_118
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 641
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba65676660a492f4694d31749b176c69
+      internalID: -561561314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_119
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 554
+        width: 106
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63e95714205ab44c88b796dafa69e98
+      internalID: -1653971171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_120
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 593
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e21317d2bd96b489746b4116d2cad9
+      internalID: -1332252841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_121
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 530
+        width: 58
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728ed735f566f824e82545091f84b09e
+      internalID: -1658365341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_122
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 530
+        width: 59
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c9855c95efff34ebc440b5af5f2681
+      internalID: -2049633504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_123
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 557
+        width: 66
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927489b8538fa4c47bfe938bc7ca39bc
+      internalID: 2125926231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_124
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 557
+        width: 66
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9635570f82edb44b219ca7b8fbbed5
+      internalID: 1721409328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_125
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 462
+        width: 107
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b509ef543a57e594e86f0b31652aed87
+      internalID: 965385804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_126
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 545
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7d183121c3c494abd413cf05472d89
+      internalID: 1721326044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_127
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 416
+        width: 90
+        height: 134
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265b41171eb9215438004625534fd08e
+      internalID: 1671862937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_128
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 497
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ba1ca67d2c644408e37159b53be336
+      internalID: -467552481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_129
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 435
+        width: 58
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cc842b011d4fd48966880071e862fe
+      internalID: -2024576556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_130
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 435
+        width: 59
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73cef5a5354cd643a1c38e8c7cebabe
+      internalID: -927337096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_131
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 462
+        width: 66
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eafd8db73164a4080a7963428f514a
+      internalID: -968079041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_132
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 462
+        width: 66
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91934d05da8e7ff46aa883f70b1b9eac
+      internalID: 2047875750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_133
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 449
+        width: 32
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d762430a13dd1458b85f87593e7d6f
+      internalID: 617316811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_134
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 151
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aeb1faae964ef544b2ade4b266952f5
+      internalID: 102722725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_135
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 335
+        width: 56
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d222413a3f32e64b9b08a87a8e7c6d3
+      internalID: 51636334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_136
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 335
+        width: 56
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a34fdba8690c264497ccf7dee4537da
+      internalID: 1927081800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_137
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 335
+        width: 55
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2031c7ef39259a742ac9373ad5efc07e
+      internalID: 1795257142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_138
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 312
+        width: 61
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c1c358dddec754c85b4b8f4bc716bf
+      internalID: -1912171180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_139
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 312
+        width: 61
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd3c8000c7cccf4dbad0dbbfe17dfb5
+      internalID: 2007449045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 49
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff30177876c0d743966303fe771ff39
+      internalID: -1647886323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_141
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 275
+        width: 62
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e601530e51c1d4cb2d41357b98da2b
+      internalID: -1023105429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_142
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 275
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc637f806ece9804c8d07d1d0f2365c0
+      internalID: -428305898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_143
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 275
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71382a84b3050764391dfcb6d1dc5ee4
+      internalID: -1211612294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_144
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 47
+        width: 337
+        height: 241
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33edb384d22514644b96567e2d1792ed
+      internalID: -1365797796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_145
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 197
+        width: 47
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272239b134fc37041b806b8d45539d85
+      internalID: -1281458784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_146
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 203
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c58b7a18a711d4b8319eceab2e9af3
+      internalID: -899188569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_147
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 179
+        width: 62
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb5e57c002f5754b85d2743412c8ffa
+      internalID: -235444220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_148
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 179
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e0d62cb895c65449aace4baebb984b
+      internalID: -402158679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_149
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 179
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef4c9ddc74f7fc45bf8b6c053bda733
+      internalID: 422383913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_150
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 173
+        width: 44
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc43d48cdf836240b6a9be4945a0d86
+      internalID: -867582835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_151
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 59
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b733382e9b4c24ea73d8da80040e92
+      internalID: -1611500108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_152
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 89
+        width: 59
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd63929667a3404fa500e21b281c360
+      internalID: -2095026619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_153
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 101
+        width: 35
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a6588e0ee64c94db17cd4e52bced24
+      internalID: 261755938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_154
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 89
+        width: 37
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a9f09cc1df7894c8fd4941ef98c977
+      internalID: 1971742189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_155
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 128
+        width: 40
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfd955e039a9184893a1a65fc03891f
+      internalID: 1392594580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_156
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 77
+        width: 44
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d68256fd4ef62543b3180ea7a11a38a
+      internalID: 223226270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_157
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 53
+        width: 32
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38da11f7fbbbcb4439f65a30342a3e02
+      internalID: -1117663764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_158
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 74
+        width: 34
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96845b0bd611b564ba0fd3cc0cb67da8
+      internalID: 792837911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_159
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 18
+        width: 182
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb082f634fea7ae41b13847c826d1eaa
+      internalID: -1334221251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basement_copied_160
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2304
+        width: 96
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f60ee58adf3ee4fb8cd77875ff2c74
+      internalID: -463031083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Basement_copied_0: -1291838239
+      Basement_copied_1: -587983167
+      Basement_copied_10: 196669116
+      Basement_copied_100: 2147351781
+      Basement_copied_101: -1436848313
+      Basement_copied_102: -488293721
+      Basement_copied_103: 1475108026
+      Basement_copied_104: -172099745
+      Basement_copied_105: 1502188195
+      Basement_copied_106: -1729881802
+      Basement_copied_107: 688118999
+      Basement_copied_108: 1652520271
+      Basement_copied_109: 179348408
+      Basement_copied_11: 2062578703
+      Basement_copied_110: -1745528016
+      Basement_copied_111: -45776195
+      Basement_copied_112: -2142836799
+      Basement_copied_113: -557919889
+      Basement_copied_114: 1248543093
+      Basement_copied_115: 863667454
+      Basement_copied_116: -281129399
+      Basement_copied_117: -577698351
+      Basement_copied_118: -561561314
+      Basement_copied_119: -1653971171
+      Basement_copied_12: 109352341
+      Basement_copied_120: -1332252841
+      Basement_copied_121: -1658365341
+      Basement_copied_122: -2049633504
+      Basement_copied_123: 2125926231
+      Basement_copied_124: 1721409328
+      Basement_copied_125: 965385804
+      Basement_copied_126: 1721326044
+      Basement_copied_127: 1671862937
+      Basement_copied_128: -467552481
+      Basement_copied_129: -2024576556
+      Basement_copied_13: -135521446
+      Basement_copied_130: -927337096
+      Basement_copied_131: -968079041
+      Basement_copied_132: 2047875750
+      Basement_copied_133: 617316811
+      Basement_copied_134: 102722725
+      Basement_copied_135: 51636334
+      Basement_copied_136: 1927081800
+      Basement_copied_137: 1795257142
+      Basement_copied_138: -1912171180
+      Basement_copied_139: 2007449045
+      Basement_copied_14: 765007215
+      Basement_copied_140: -1647886323
+      Basement_copied_141: -1023105429
+      Basement_copied_142: -428305898
+      Basement_copied_143: -1211612294
+      Basement_copied_144: -1365797796
+      Basement_copied_145: -1281458784
+      Basement_copied_146: -899188569
+      Basement_copied_147: -235444220
+      Basement_copied_148: -402158679
+      Basement_copied_149: 422383913
+      Basement_copied_15: 1214415918
+      Basement_copied_150: -867582835
+      Basement_copied_151: -1611500108
+      Basement_copied_152: -2095026619
+      Basement_copied_153: 261755938
+      Basement_copied_154: 1971742189
+      Basement_copied_155: 1392594580
+      Basement_copied_156: 223226270
+      Basement_copied_157: -1117663764
+      Basement_copied_158: 792837911
+      Basement_copied_159: -1334221251
+      Basement_copied_16: 863799073
+      Basement_copied_160: -463031083
+      Basement_copied_17: 464968693
+      Basement_copied_18: -1100446123
+      Basement_copied_19: -1989277132
+      Basement_copied_2: 1513220091
+      Basement_copied_20: 1478237519
+      Basement_copied_21: 1570472115
+      Basement_copied_22: 52723532
+      Basement_copied_23: -122412971
+      Basement_copied_24: -992617788
+      Basement_copied_25: -1604516645
+      Basement_copied_26: 1019312351
+      Basement_copied_27: 532943038
+      Basement_copied_28: -16371613
+      Basement_copied_29: -271252554
+      Basement_copied_3: 297498533
+      Basement_copied_30: -166637767
+      Basement_copied_31: -1280866576
+      Basement_copied_32: -1857646906
+      Basement_copied_33: -2079270039
+      Basement_copied_34: -1359350888
+      Basement_copied_35: 11955963
+      Basement_copied_36: -1533508147
+      Basement_copied_37: 2092681213
+      Basement_copied_38: -903368855
+      Basement_copied_39: -466758699
+      Basement_copied_4: 1886759303
+      Basement_copied_40: 1201497135
+      Basement_copied_41: 1898253994
+      Basement_copied_42: -705668208
+      Basement_copied_43: 838804564
+      Basement_copied_44: 1613110601
+      Basement_copied_45: -83993612
+      Basement_copied_46: -1312311262
+      Basement_copied_47: 192519048
+      Basement_copied_48: 956792483
+      Basement_copied_49: 714540703
+      Basement_copied_5: 649538090
+      Basement_copied_50: 875651115
+      Basement_copied_51: -1317337664
+      Basement_copied_52: -696551585
+      Basement_copied_53: 1301030803
+      Basement_copied_54: 1953445278
+      Basement_copied_55: -1321224608
+      Basement_copied_56: 376794355
+      Basement_copied_57: 159565753
+      Basement_copied_58: -270149281
+      Basement_copied_59: -982491965
+      Basement_copied_6: 664811542
+      Basement_copied_60: -910313121
+      Basement_copied_61: -1791251036
+      Basement_copied_62: -1497232015
+      Basement_copied_63: 1263246538
+      Basement_copied_64: -359782060
+      Basement_copied_65: 1433296780
+      Basement_copied_66: -674869817
+      Basement_copied_67: -1988558334
+      Basement_copied_68: -1511977068
+      Basement_copied_69: 1091023743
+      Basement_copied_7: -1447056710
+      Basement_copied_70: -608475747
+      Basement_copied_71: 1511198154
+      Basement_copied_72: 1989715517
+      Basement_copied_73: -175316142
+      Basement_copied_74: 208727773
+      Basement_copied_75: 1219383760
+      Basement_copied_76: 128297112
+      Basement_copied_77: 1885369952
+      Basement_copied_78: 407336336
+      Basement_copied_79: 319617607
+      Basement_copied_8: -1683512183
+      Basement_copied_80: 1918642790
+      Basement_copied_81: 1912482275
+      Basement_copied_82: -230897406
+      Basement_copied_83: -437769335
+      Basement_copied_84: -100419369
+      Basement_copied_85: -1229944983
+      Basement_copied_86: -330708578
+      Basement_copied_87: 827145449
+      Basement_copied_88: 1746398643
+      Basement_copied_89: 318986145
+      Basement_copied_9: 397764555
+      Basement_copied_90: -1552244515
+      Basement_copied_91: -76967936
+      Basement_copied_92: 2044943601
+      Basement_copied_93: -703561326
+      Basement_copied_94: -2144234102
+      Basement_copied_95: 2003629829
+      Basement_copied_96: -1628058616
+      Basement_copied_97: 1317591771
+      Basement_copied_98: -1217445492
+      Basement_copied_99: 942425597
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
