@@ -1,0 +1,3763 @@
+fileFormatVersion: 2
+guid: cd600468a3dcdbe4fa059206276e1ed0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Office_copied_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2363
+        width: 48
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c858148657cb743b1ffdb036916711
+      internalID: -1457955683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2399
+        width: 140
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596ef07cfcb305740a4e59ba982a1975
+      internalID: 324338727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2363
+        width: 97
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b721d6247c18e04e9183de190296197
+      internalID: -1452534290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 2399
+        width: 140
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656754b6b4e7e9344b40f961d66eed23
+      internalID: 667546636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_4
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 2363
+        width: 98
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dc2ba2362eb4242abffd88aa51b922
+      internalID: -724355472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_5
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 2399
+        width: 139
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f0360cd3fa1c6448de95e18afc687c
+      internalID: 1622713034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_6
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 2363
+        width: 50
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3818b6861e27a074ca1100e259c74ef2
+      internalID: -356936785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_7
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2468
+        width: 44
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8989983e370bc4592a3b14f0aad4ff
+      internalID: -1444143671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_8
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2373
+        width: 44
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d03886afec025488dfa762f12b75f4
+      internalID: 1195077568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2171
+        width: 48
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b7454ebc74ca04ba2e341e6e5891d5
+      internalID: -1187455523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2207
+        width: 140
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4eb297914d097d4292fe6fa580d7663
+      internalID: -1030972883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_11
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2171
+        width: 97
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423904e853877164d82781de016a860d
+      internalID: -1122034960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 2207
+        width: 140
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c850c08f42de5e04eabc507685659e69
+      internalID: -265777498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_13
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 2159
+        width: 308
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3e9f7fa63490a458dc46ffdd434808
+      internalID: 2143407414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_14
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 2093
+        width: 50
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1bb1218e12fc14296fc88f569cf9bb
+      internalID: -2014221264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_15
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 2150
+        width: 41
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3796b5a4c70249a41939c2633d9af03d
+      internalID: 1719181301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_16
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 2150
+        width: 41
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bde58c146fea24b9b1841536fad3ab
+      internalID: 1009066604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_17
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2110
+        width: 80
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c186c541e78ca104a8e6fee4ddac243f
+      internalID: -278089155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2069
+        width: 48
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7378ec94b23de5646886d0955027c915
+      internalID: 1799391019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 2076
+        width: 37
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffab4f2ac8e1d843b95bca95e54a098
+      internalID: 291511712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_20
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 2076
+        width: 38
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9741896a3fe3594084c9dd7abfd67cc
+      internalID: -1097071962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_21
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2081
+        width: 44
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040970697f88cea43811bc9b2d3f5e57
+      internalID: -1796141702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_22
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2084
+        width: 77
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1206d30d8d424d4a80ce980ba37ed39
+      internalID: 1663818423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_23
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 2117
+        width: 14
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48eb33a7906e787408fab7c67f584d17
+      internalID: 489602738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_24
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 2072
+        width: 50
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca7954f458df44409d61411dbb7e32f
+      internalID: -133577817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_25
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2096
+        width: 46
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3f343e3d9f3294fbb842ba363a6803
+      internalID: 129502920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_26
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2063
+        width: 32
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e65a11f1dc9224690e92d653da47b7
+      internalID: 1674926298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_27
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 2063
+        width: 31
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9941c96c2f6f53c4489a0e2e75a159a8
+      internalID: 2480084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_28
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 2063
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa48b4c4ab19ee14da1d8077b2c6a625
+      internalID: -813104861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1973
+        width: 193
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b9e8b96405c4c40805ace62de1fab6
+      internalID: -419079621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_30
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1979
+        width: 37
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcd3850f42e19d4f9f0faa18ea20533
+      internalID: 352828882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_31
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1979
+        width: 38
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69982535ff72cfe40b27254b312fb52c
+      internalID: -1417397590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_32
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1997
+        width: 50
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230c8e10a8785ac4aacd573b728cb55f
+      internalID: 505841029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_33
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1985
+        width: 44
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094917db583ab8a45bf89ed49c735df8
+      internalID: 1991546205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_34
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1985
+        width: 44
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39a324a2b2eaf04da2137ef66a721b5
+      internalID: -1149149335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_35
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1973
+        width: 92
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b60da8b5e12dd841a64697a12ed749c
+      internalID: -2006792133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_36
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 2021
+        width: 14
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e53c1dedc5bb04c853b57c63623bc5
+      internalID: 184795635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_37
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2015
+        width: 80
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b262d2fffd61470458ed55948395d61e
+      internalID: 1736182281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_38
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1976
+        width: 50
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb4e479475767e418d30df446048ae7
+      internalID: 169021665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_39
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1994
+        width: 46
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5baefc4fc81f19e4b93f9d8ad50056a3
+      internalID: -364181177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_40
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1968
+        width: 80
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b332e979f362342a75ea8930699720
+      internalID: -1609213825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_41
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1968
+        width: 23
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0ab9d58b34c99468314cb35a86453b
+      internalID: 1308069710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_42
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1886
+        width: 74
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5467a8393e9c741b307a1c6af038fc
+      internalID: 169819623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_43
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1907
+        width: 38
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296ffcf4bcade7c41bc2890b608655df
+      internalID: 1834954346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_44
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1919
+        width: 32
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4c56e06bfff5043b973525e87a06fa
+      internalID: -1848181050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_45
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1919
+        width: 32
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4379f3769df26a4d8c203353ebf04d3
+      internalID: 165298774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_46
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1919
+        width: 41
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3cfd8dfaa1e1d4691296e637c4c6c1
+      internalID: 783765780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_47
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1853
+        width: 38
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c24e9a2e5e3a3b4b83af1939f9a4574
+      internalID: 353121409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_48
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1853
+        width: 92
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9ad710ecad12d4386f5a1cf42270ae
+      internalID: 963339625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_49
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1877
+        width: 92
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a69a37c01e7f24eaa97895a0c18410
+      internalID: 1887718270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_50
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1920
+        width: 80
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae4626903559294b95ec6bd4a34928f
+      internalID: 733753844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_51
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1919
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9dcfb36bfc9a74680f4846970c55a7
+      internalID: -110162431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_52
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1919
+        width: 50
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6c86da13d1c1a46aed490561142926
+      internalID: 2065616779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_53
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1919
+        width: 46
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6f4f4021cbb704c8c363b7da0ae6ad
+      internalID: -1699732375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_54
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1871
+        width: 32
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac1375ff498dcb4c94bb9d08c282945
+      internalID: -1951270530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_55
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1871
+        width: 32
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51622125fed69a7458516a45d97bf144
+      internalID: -411368294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_56
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1871
+        width: 41
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980e7824181be4b4a8dd7168d5ff1e38
+      internalID: -599302069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_57
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1853
+        width: 41
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888c16c1695cb10428db3c1ea6fbfdb4
+      internalID: -1774284802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_58
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1871
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cb7d2424911ee4a84f084ca4b32b05
+      internalID: 434175629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_59
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1871
+        width: 50
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1f6c2788af95244b73beb3f726e08b
+      internalID: -1121280006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_60
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1871
+        width: 46
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6186131c84e17a64eab50010c2bb68d0
+      internalID: -40549092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_61
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1824
+        width: 37
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a571633a90c81564aaa4cce1762271ae
+      internalID: 171221398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_62
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1781
+        width: 92
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8a1f2102e7750478a78976d36bdb92
+      internalID: -648871627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_63
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1847
+        width: 50
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c9ed238a736d3489b27487389302b0
+      internalID: -770052293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1751
+        width: 337
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794dbac3fd632f943abe2903427ae413
+      internalID: -1184620865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_66
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1709
+        width: 92
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dd8241c2a59c04e9317bfb16b4cd68
+      internalID: 2125530893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_67
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1722
+        width: 47
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58965f77d7866384dafb8b5f7a005b67
+      internalID: 913895434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_68
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1769
+        width: 47
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75bd5f977f69c34292bb176a32c4bcc
+      internalID: -1996402866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_69
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1709
+        width: 43
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b45d939fe653a43802a53bc9e32268
+      internalID: -1024623229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_70
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1751
+        width: 41
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4a743653918624dac41a08354b65b4
+      internalID: 986580023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_71
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1751
+        width: 41
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab175229a85d13444b8b295ec49f5d95
+      internalID: -1457181328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_72
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1751
+        width: 41
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6eb0394cc549c48a01b46c29c770c9
+      internalID: 1756224647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_73
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1643
+        width: 95
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdbf67e223203c4cb6d44f2b0dcf324
+      internalID: -1462412330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_74
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1601
+        width: 125
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691599df320e8d042b20b9399e5c2cad
+      internalID: 212416710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_75
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1616
+        width: 49
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fa1e77fb81ef749a41997c92fa8b7b
+      internalID: -261344771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_76
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1616
+        width: 76
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebfb3b2fb74abc4bbac1539c021aae4
+      internalID: 1303797713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_77
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1673
+        width: 47
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be45ba9a1042eea43ba832da4b2d53b5
+      internalID: 575561685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_78
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1655
+        width: 41
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02166ddb0df02e448b4c7344e9bcb5d6
+      internalID: -142947850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_79
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1656
+        width: 36
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8483d79ed07974483258a20e7b531f
+      internalID: -673093519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_80
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1655
+        width: 41
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843a2fd443e5d0647930f96423e5c814
+      internalID: -870977907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1547
+        width: 94
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac1077a4c177d6439941852bc6bd9d0
+      internalID: 1016430010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_82
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1589
+        width: 76
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd138240885923442ad77ab4e3727de5
+      internalID: 1411169575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_83
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1578
+        width: 47
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81727cbf90f3ee489b7e27c58922322
+      internalID: 1267663467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_84
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1583
+        width: 67
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6655494872df641a143f240a4290f9
+      internalID: -2068572932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_85
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1583
+        width: 67
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e169a98596997504f941b06636791d02
+      internalID: -1852186769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_86
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1451
+        width: 48
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87681003c7712dd4982378146193e700
+      internalID: -289708433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_87
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1457
+        width: 125
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45967e1db63e354abbfc1a8c28e425f
+      internalID: -150220835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_88
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1520
+        width: 49
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94836823732776941826916112e02a67
+      internalID: -1380295042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_89
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1520
+        width: 76
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c743fb5db874022449a39321fe0b05a3
+      internalID: 222188716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_90
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1493
+        width: 76
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c7dd18c1b359349b1fd8a935de2264
+      internalID: 584053169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_91
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1482
+        width: 45
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b994522020e2154bbe72e47d0cc1880
+      internalID: -1149753438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_92
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1502
+        width: 67
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361da56c7d1d05e4984ca3d7e9c48088
+      internalID: 1354074331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_93
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1499
+        width: 67
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571723352700eac459fa0169fad06de0
+      internalID: 1571895077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_94
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1425
+        width: 49
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb2fbc3274852e40a2317bd117c9b7c
+      internalID: 1310175381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_95
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1424
+        width: 76
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449b63727b9dfc14384b7835422dc416
+      internalID: 1825978544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_96
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1430
+        width: 47
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcfff0e4dbfd4e49a27c858ef08dea6
+      internalID: 1700004135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_97
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1433
+        width: 47
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b7803ba0b3d2e4a8565009716618e7
+      internalID: -1849269247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_98
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1427
+        width: 46
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88176e3bead5be45b786c76009d8c9e
+      internalID: 143012269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_99
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1385
+        width: 46
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b7a00d23c926149a1953b2fe67dfe6
+      internalID: -1346398026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_100
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1358
+        width: 67
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfca1d5c6006cfd42b9cf69b576777c5
+      internalID: 365367365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_101
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1404
+        width: 67
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca75c5db269a04429f432163254d71f
+      internalID: 730658828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_102
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1322
+        width: 71
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8aa27b48c1ce884f9f935c5ac43c529
+      internalID: 622318490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_103
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1322
+        width: 70
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f877baf474b0991499eb757d2b1a6340
+      internalID: 1322872699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_104
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1322
+        width: 56
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31317e8b20ea0344aa36be50f0782b7
+      internalID: -195876899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_105
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1334
+        width: 47
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5778143e1dc01584e94cbb7db8015791
+      internalID: 46880301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_106
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1337
+        width: 47
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c13b7c9d6a9eb46808b443ccdbd8bc
+      internalID: -1466537049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_107
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1332
+        width: 46
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b0a549066e0f0498d83762ed1c9b2b
+      internalID: -198347568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_108
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1152
+        width: 298
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd434c4a73b17b4b9836732cafdb547
+      internalID: 1568187706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_110
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1214
+        width: 108
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f41a6a47ad6d2409b2c03e3e339bbb
+      internalID: -997624765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_111
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1220
+        width: 125
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d33ea342b20d047bf081d4cf72b5e6
+      internalID: 1496354454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_114
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1217
+        width: 109
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375e25dc7c0548c4185a2e42d326d8ed
+      internalID: 1489529120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_115
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1103
+        width: 125
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7322cb35f9e203b438596fa93e1c1513
+      internalID: 90640376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_116
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1103
+        width: 125
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41a6ef343477004a98c275385d2c9f1
+      internalID: -228270824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_118
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1124
+        width: 139
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258b6551e7a9ed945a7a9eec7ee26d07
+      internalID: 170006026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_119
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1007
+        width: 125
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54edbcf0c67c84c4682273fef3491814
+      internalID: -304510212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_120
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1007
+        width: 124
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3729ece1aac9c449e2dc7bcbe86520
+      internalID: 10162238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_121
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1007
+        width: 125
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810f84332ae5add42adc1692b90fc00e
+      internalID: -591532757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_122
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1031
+        width: 113
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b661ea929071e942ba0ece39fd96575
+      internalID: 848404786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_123
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1056
+        width: 135
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9801487ecaa263c469a5bad60d6c8f1a
+      internalID: -724004953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_124
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1008
+        width: 121
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17dd275711765f4095c97242b2b5c57
+      internalID: 955639377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_125
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 960
+        width: 120
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c34d66a2d0e75429df14cd4523eecd
+      internalID: -1886482625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_128
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 935
+        width: 113
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474963cedc9e43e49a47a4e02b12f52f
+      internalID: 1437547454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 430
+        height: 866
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd61a4b5978dad47b1cae228fc46ec2
+      internalID: -1699369871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_133
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 827
+        width: 38
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeb61001000f3546a15f2ff39897fa1
+      internalID: 971713443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_134
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 836
+        width: 46
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53056368037bc1847a253f818788e9c0
+      internalID: 72468826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_135
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 866
+        width: 73
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e1f83ff97b4cb45be50cadfa51dc97
+      internalID: 2066737835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_136
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 755
+        width: 97
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592685f0126b41d43a2379af2c4b22cc
+      internalID: 1433048821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_137
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 815
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df6759bbf0de24299b22044591e3c8
+      internalID: -549041320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_138
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 836
+        width: 31
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd6f4ce44478154aa25cb9f42d62add
+      internalID: -615882915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_139
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 827
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a003cd5482cd8bb42b68c33c3410ed8f
+      internalID: -735264365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_140
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 821
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798a1ec7a6d76a84d8e9064219c13e12
+      internalID: -1959471919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_141
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 773
+        width: 17
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d90f2d01cf6efc42a45a1c719987712
+      internalID: -799570142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_142
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 768
+        width: 47
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e85bff8295b72419c2cead99b81276
+      internalID: 191926247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_143
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 740
+        width: 46
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0956842f1b3b040b7f5ef727975c73
+      internalID: -2025619696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_144
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 737
+        width: 35
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3272e10972c1e3a4190142d0890b62c4
+      internalID: 975972517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_145
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 602
+        width: 80
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f77762515aab94391630d5445a3775
+      internalID: 1171513343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_146
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 602
+        width: 79
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe022de33d34b594b981d9d986cdbb5b
+      internalID: 1512550599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_147
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 602
+        width: 80
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78fa6fd763f5fb41bb0042665977bb5
+      internalID: 1265929818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_148
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 624
+        width: 79
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466ffa363ecd37b469a0744772fc8703
+      internalID: 559594078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_149
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 479
+        width: 79
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c99c4cec03362c41a9c6e56560a1018
+      internalID: 183034006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_150
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 479
+        width: 80
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308f514eec9d5704b9c92730ad21df2e
+      internalID: -2072626900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_151
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 479
+        width: 80
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2ccac20028ed449b135dfa3433960c
+      internalID: -1013551412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_152
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 527
+        width: 79
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5bb2405ec048640941b2ec4c54c83b
+      internalID: -255705800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_153
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 398
+        width: 37
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd360e3b5b8bfb940836d11940d824e0
+      internalID: 41942590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_154
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 398
+        width: 38
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a80a96bc0e698742b42af3b532b003d
+      internalID: -1546743805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_155
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 431
+        width: 79
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba386a1292c35f4c86b49c8d7b4e949
+      internalID: -2126314160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_156
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 383
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba19f5f3887bdb24abf0c6c3f76cda63
+      internalID: 987722418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_157
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 323
+        width: 97
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e841bf6933248a4b9d16ab57a29a4e4
+      internalID: 282944585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_158
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 342
+        width: 16
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d3202a75e959a45978351ecb91d8fe
+      internalID: 677183333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_159
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 308
+        width: 47
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b5e50040a6ade4f97aafea10556d37
+      internalID: 359693563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_160
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 306
+        width: 32
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cad0be47e8894d47844217c77dbe899
+      internalID: 883035323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_161
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 311
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0045b36aab07a24f9ce1a39827fd831
+      internalID: 2098896901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_162
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 212
+        width: 47
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033d142ad61b77443898187382d6d815
+      internalID: -1615060198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_163
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 212
+        width: 41
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae8616db571a2249877194e9d09aa60
+      internalID: 1837475917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_164
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 212
+        width: 46
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced45b272d21d5244b8b34ca1534132b
+      internalID: 1334232619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_165
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 209
+        width: 37
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1bcfcf85690b6468b915f4000baa2d
+      internalID: -2018112864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_166
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 191
+        width: 49
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e031d6d159ed3843902e4f4b10352d3
+      internalID: -1999613966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_167
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 116
+        width: 47
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b7edad822608841a279ec4b31d05b1
+      internalID: 1038160203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_168
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 116
+        width: 41
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37acd74831e59914b89f812acc9b06f2
+      internalID: -1403294529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_169
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 116
+        width: 46
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c5cc09b1ec4694ab0c293aaea9da98
+      internalID: -623438846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_170
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 96
+        width: 94
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6128103ba49f9584b988e3a3d4d9c42b
+      internalID: 657388958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_126
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2069
+        width: 48
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3712cf0ed21a4a4087ef8b971eedbda
+      internalID: -1194701885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_127
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2069
+        width: 47
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc82c8f3c5304614d96523eea82ce7c6
+      internalID: 1522134166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_129
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2069
+        width: 49
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a200f6221c62ad479706da323a05ca4
+      internalID: -1478116562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_copied_64
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1152
+        width: 298
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36477f4107a3334cb3bc6c8a13e1cca
+      internalID: -1122033196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Office_copied_0: -1457955683
+      Office_copied_1: 324338727
+      Office_copied_10: -1030972883
+      Office_copied_100: 365367365
+      Office_copied_101: 730658828
+      Office_copied_102: 622318490
+      Office_copied_103: 1322872699
+      Office_copied_104: -195876899
+      Office_copied_105: 46880301
+      Office_copied_106: -1466537049
+      Office_copied_107: -198347568
+      Office_copied_108: 1568187706
+      Office_copied_109: -154681082
+      Office_copied_11: -1122034960
+      Office_copied_110: -997624765
+      Office_copied_111: 1496354454
+      Office_copied_112: 1128456451
+      Office_copied_113: 1632686824
+      Office_copied_114: 1489529120
+      Office_copied_115: 90640376
+      Office_copied_116: -228270824
+      Office_copied_117: -13312999
+      Office_copied_118: 170006026
+      Office_copied_119: -304510212
+      Office_copied_12: -265777498
+      Office_copied_120: 10162238
+      Office_copied_121: -591532757
+      Office_copied_122: 848404786
+      Office_copied_123: -724004953
+      Office_copied_124: 955639377
+      Office_copied_125: -1886482625
+      Office_copied_126: -1194701885
+      Office_copied_127: 1522134166
+      Office_copied_128: 1437547454
+      Office_copied_129: -1478116562
+      Office_copied_13: 2143407414
+      Office_copied_130: -211020455
+      Office_copied_131: 1112337464
+      Office_copied_132: -1699369871
+      Office_copied_133: 971713443
+      Office_copied_134: 72468826
+      Office_copied_135: 2066737835
+      Office_copied_136: 1433048821
+      Office_copied_137: -549041320
+      Office_copied_138: -615882915
+      Office_copied_139: -735264365
+      Office_copied_14: -2014221264
+      Office_copied_140: -1959471919
+      Office_copied_141: -799570142
+      Office_copied_142: 191926247
+      Office_copied_143: -2025619696
+      Office_copied_144: 975972517
+      Office_copied_145: 1171513343
+      Office_copied_146: 1512550599
+      Office_copied_147: 1265929818
+      Office_copied_148: 559594078
+      Office_copied_149: 183034006
+      Office_copied_15: 1719181301
+      Office_copied_150: -2072626900
+      Office_copied_151: -1013551412
+      Office_copied_152: -255705800
+      Office_copied_153: 41942590
+      Office_copied_154: -1546743805
+      Office_copied_155: -2126314160
+      Office_copied_156: 987722418
+      Office_copied_157: 282944585
+      Office_copied_158: 677183333
+      Office_copied_159: 359693563
+      Office_copied_16: 1009066604
+      Office_copied_160: 883035323
+      Office_copied_161: 2098896901
+      Office_copied_162: -1615060198
+      Office_copied_163: 1837475917
+      Office_copied_164: 1334232619
+      Office_copied_165: -2018112864
+      Office_copied_166: -1999613966
+      Office_copied_167: 1038160203
+      Office_copied_168: -1403294529
+      Office_copied_169: -623438846
+      Office_copied_17: -278089155
+      Office_copied_170: 657388958
+      Office_copied_18: 1799391019
+      Office_copied_19: 291511712
+      Office_copied_2: -1452534290
+      Office_copied_20: -1097071962
+      Office_copied_21: -1796141702
+      Office_copied_22: 1663818423
+      Office_copied_23: 489602738
+      Office_copied_24: -133577817
+      Office_copied_25: 129502920
+      Office_copied_26: 1674926298
+      Office_copied_27: 2480084
+      Office_copied_28: -813104861
+      Office_copied_29: -419079621
+      Office_copied_3: 667546636
+      Office_copied_30: 352828882
+      Office_copied_31: -1417397590
+      Office_copied_32: 505841029
+      Office_copied_33: 1991546205
+      Office_copied_34: -1149149335
+      Office_copied_35: -2006792133
+      Office_copied_36: 184795635
+      Office_copied_37: 1736182281
+      Office_copied_38: 169021665
+      Office_copied_39: -364181177
+      Office_copied_4: -724355472
+      Office_copied_40: -1609213825
+      Office_copied_41: 1308069710
+      Office_copied_42: 169819623
+      Office_copied_43: 1834954346
+      Office_copied_44: -1848181050
+      Office_copied_45: 165298774
+      Office_copied_46: 783765780
+      Office_copied_47: 353121409
+      Office_copied_48: 963339625
+      Office_copied_49: 1887718270
+      Office_copied_5: 1622713034
+      Office_copied_50: 733753844
+      Office_copied_51: -110162431
+      Office_copied_52: 2065616779
+      Office_copied_53: -1699732375
+      Office_copied_54: -1951270530
+      Office_copied_55: -411368294
+      Office_copied_56: -599302069
+      Office_copied_57: -1774284802
+      Office_copied_58: 434175629
+      Office_copied_59: -1121280006
+      Office_copied_6: -356936785
+      Office_copied_60: -40549092
+      Office_copied_61: 171221398
+      Office_copied_62: -648871627
+      Office_copied_63: -770052293
+      Office_copied_64: -1122033196
+      Office_copied_65: -1184620865
+      Office_copied_66: 2125530893
+      Office_copied_67: 913895434
+      Office_copied_68: -1996402866
+      Office_copied_69: -1024623229
+      Office_copied_7: -1444143671
+      Office_copied_70: 986580023
+      Office_copied_71: -1457181328
+      Office_copied_72: 1756224647
+      Office_copied_73: -1462412330
+      Office_copied_74: 212416710
+      Office_copied_75: -261344771
+      Office_copied_76: 1303797713
+      Office_copied_77: 575561685
+      Office_copied_78: -142947850
+      Office_copied_79: -673093519
+      Office_copied_8: 1195077568
+      Office_copied_80: -870977907
+      Office_copied_81: 1016430010
+      Office_copied_82: 1411169575
+      Office_copied_83: 1267663467
+      Office_copied_84: -2068572932
+      Office_copied_85: -1852186769
+      Office_copied_86: -289708433
+      Office_copied_87: -150220835
+      Office_copied_88: -1380295042
+      Office_copied_89: 222188716
+      Office_copied_9: -1187455523
+      Office_copied_90: 584053169
+      Office_copied_91: -1149753438
+      Office_copied_92: 1354074331
+      Office_copied_93: 1571895077
+      Office_copied_94: 1310175381
+      Office_copied_95: 1825978544
+      Office_copied_96: 1700004135
+      Office_copied_97: -1849269247
+      Office_copied_98: 143012269
+      Office_copied_99: -1346398026
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
