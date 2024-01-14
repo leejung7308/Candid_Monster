@@ -3,7 +3,7 @@ guid: e74ba83eb64350944b1efc808974bec4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -122,6 +129,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -6858,329 +6866,328 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprites_37: 1334324174
-      Sprites_220: -1796053610
-      Sprites_211: -1131700305
-      Sprites_68: 322156006
-      Sprites_7: 764459208
-      Sprites_3: 513799098
-      Sprites_280: -709230481
-      Sprites_15: 1011385140
-      Sprites_106: 380940193
-      Sprites_13: 1887299369
-      Sprites_134: -288271657
-      Sprites_159: 249538658
-      Sprites_305: -708267721
-      Sprites_266: 585357706
-      Sprites_183: -392073515
-      Sprites_96: -1949998687
-      Sprites_284: -510238823
-      Sprites_262: -1085568706
-      Sprites_147: 316857400
-      Sprites_47: -1244469684
-      Sprites_116: 128972475
-      Sprites_225: -1722723443
-      Sprites_197: 443141179
-      Sprites_256: -1849379807
-      Sprites_268: 608227353
-      Sprites_126: -44875285
-      Sprites_307: 1436262953
-      Sprites_24: 1314726690
-      Sprites_93: -37603666
-      Sprites_27: -1606357112
-      Sprites_120: 88725685
-      Sprites_118: 1922807037
-      Sprites_300: -786462331
-      Sprites_21: 303948847
-      Sprites_50: 1700638046
-      Sprites_73: -236924767
-      Sprites_59: -915029974
-      Sprites_61: 2031658017
-      Sprites_312: -110641078
-      Sprites_89: -1325547323
-      Sprites_289: -1208149272
-      Sprites_273: -1451209343
-      Sprites_83: 1232807295
-      Sprites_290: -1179270395
-      Sprites_230: -2088194740
-      Sprites_131: 699781945
-      Sprites_63: -757211746
-      Sprites_28: -71241362
-      Sprites_257: 1476887742
-      Sprites_99: 1515705088
-      Sprites_35: 2007526789
-      Sprites_91: -810826982
-      Sprites_16: 542398698
-      Sprites_149: 2071312527
-      Sprites_292: 886347692
-      Sprites_202: -1476558721
-      Sprites_227: -1814936838
-      Sprites_84: 1724904164
-      Sprites_95: 905914416
-      Sprites_301: 227838883
-      Sprites_144: 283643424
-      Sprites_85: -1891634317
+      Sprites_0: -96645419
+      Sprites_1: -1264624167
+      Sprites_10: -243665214
+      Sprites_100: -615494021
+      Sprites_101: 979649037
+      Sprites_102: 767978118
       Sprites_103: -1974415248
-      Sprites_249: 1403968710
-      Sprites_71: 1679107470
-      Sprites_65: -1080310235
-      Sprites_238: -616083341
-      Sprites_90: 1800286041
-      Sprites_217: -475615528
-      Sprites_181: -1251132846
-      Sprites_226: 1562824381
-      Sprites_180: 2029729762
-      Sprites_235: 505362579
-      Sprites_184: -696932980
-      Sprites_128: -1514690841
-      Sprites_165: 1518657361
-      Sprites_62: -418318200
-      Sprites_36: 1620244719
-      Sprites_299: 470133446
-      Sprites_246: 1498045620
+      Sprites_104: 1380432575
+      Sprites_105: -729377839
+      Sprites_106: 380940193
+      Sprites_107: 1546265834
+      Sprites_108: 463597418
+      Sprites_109: 1436045333
       Sprites_11: -2037656759
-      Sprites_77: -1212225904
-      Sprites_53: 1413885698
-      Sprites_194: -1129572904
-      Sprites_244: -1811692996
-      Sprites_20: 668275842
       Sprites_110: -1404187092
-      Sprites_130: -2084287533
-      Sprites_260: 1965990152
-      Sprites_234: -915102935
-      Sprites_42: 830325537
-      Sprites_56: -309776304
-      Sprites_40: -535912942
-      Sprites_148: 318154893
-      Sprites_173: -675320177
-      Sprites_135: -2009463961
-      Sprites_213: -1497401144
-      Sprites_19: 1226492826
-      Sprites_212: -11864704
+      Sprites_111: -283110887
+      Sprites_112: -1652040463
+      Sprites_113: -1962046664
+      Sprites_114: 171301534
+      Sprites_115: 1356206499
+      Sprites_116: 128972475
+      Sprites_117: 1466367760
+      Sprites_118: 1922807037
       Sprites_119: -1508929192
+      Sprites_12: -70907092
+      Sprites_120: 88725685
+      Sprites_121: -1918738392
+      Sprites_122: 1861000494
+      Sprites_123: 758561193
       Sprites_124: 1820093625
-      Sprites_304: 169193423
+      Sprites_125: 1526323788
+      Sprites_126: -44875285
+      Sprites_127: -1899508648
+      Sprites_128: -1514690841
+      Sprites_129: 519819762
+      Sprites_13: 1887299369
+      Sprites_130: -2084287533
+      Sprites_131: 699781945
+      Sprites_132: -718108024
+      Sprites_133: -392263500
+      Sprites_134: -288271657
+      Sprites_135: -2009463961
+      Sprites_136: -1954426287
+      Sprites_137: -1050379331
+      Sprites_138: 1634410375
+      Sprites_139: -942223766
+      Sprites_14: -1714267686
+      Sprites_140: -1519457091
+      Sprites_141: -675869641
+      Sprites_142: -698737179
       Sprites_143: 751477785
+      Sprites_144: 283643424
+      Sprites_145: -1081097785
+      Sprites_146: 528435547
+      Sprites_147: 316857400
+      Sprites_148: 318154893
+      Sprites_149: 2071312527
+      Sprites_15: 1011385140
+      Sprites_150: -1029963451
+      Sprites_151: 302355148
+      Sprites_152: 1172733137
+      Sprites_153: -1018704978
+      Sprites_154: -562997347
+      Sprites_155: 924584831
+      Sprites_156: 1734332661
+      Sprites_157: -1897783188
+      Sprites_158: -1644283945
+      Sprites_159: 249538658
+      Sprites_16: 542398698
+      Sprites_160: 57994912
+      Sprites_161: -610196608
+      Sprites_162: -872475251
+      Sprites_163: 1473698537
+      Sprites_164: 1468789385
+      Sprites_165: 1518657361
+      Sprites_166: 1239960613
+      Sprites_167: 457936137
+      Sprites_168: -513127606
+      Sprites_169: -809384883
+      Sprites_17: -809732264
+      Sprites_170: 1791176336
+      Sprites_171: 850660670
+      Sprites_172: 826189623
+      Sprites_173: -675320177
+      Sprites_174: -2063460351
+      Sprites_175: -1439415486
+      Sprites_176: 1482510709
+      Sprites_177: -409904661
+      Sprites_178: 2059212116
+      Sprites_179: -1074520047
+      Sprites_18: 1451543266
+      Sprites_180: 2029729762
+      Sprites_181: -1251132846
+      Sprites_182: 996552076
+      Sprites_183: -392073515
+      Sprites_184: -696932980
+      Sprites_185: 2081194223
+      Sprites_186: 243312915
+      Sprites_187: -585592868
+      Sprites_188: 742869285
+      Sprites_189: -832048439
+      Sprites_19: 1226492826
+      Sprites_190: -981442642
+      Sprites_191: 1220297980
       Sprites_192: 1522626653
+      Sprites_193: 1040539728
+      Sprites_194: -1129572904
+      Sprites_195: -1240236577
+      Sprites_196: -1181645409
+      Sprites_197: 443141179
+      Sprites_198: 1650850660
+      Sprites_199: 1682201835
+      Sprites_2: -2112670038
+      Sprites_20: 668275842
+      Sprites_200: -1690740803
+      Sprites_201: -251652306
+      Sprites_202: -1476558721
+      Sprites_203: 322822861
+      Sprites_204: -1401081518
+      Sprites_205: -1961696581
+      Sprites_206: 587439346
+      Sprites_207: 1861208722
+      Sprites_208: 845362243
+      Sprites_209: 410131606
+      Sprites_21: 303948847
+      Sprites_210: -318471640
+      Sprites_211: -1131700305
+      Sprites_212: -11864704
+      Sprites_213: -1497401144
+      Sprites_214: -1132915844
+      Sprites_215: 1403485828
+      Sprites_216: 872255290
+      Sprites_217: -475615528
+      Sprites_218: -697386956
+      Sprites_219: 768496383
+      Sprites_22: 935374733
+      Sprites_220: -1796053610
+      Sprites_221: 868375621
+      Sprites_222: 1963725465
+      Sprites_223: -538432716
+      Sprites_224: 2109422791
+      Sprites_225: -1722723443
+      Sprites_226: 1562824381
+      Sprites_227: -1814936838
+      Sprites_228: 1911360168
+      Sprites_229: -1018747823
+      Sprites_23: -1439272
+      Sprites_230: -2088194740
+      Sprites_231: 97805440
+      Sprites_232: 1131649308
+      Sprites_233: 1644072603
+      Sprites_234: -915102935
+      Sprites_235: 505362579
+      Sprites_236: 1823293768
+      Sprites_237: -1399241054
+      Sprites_238: -616083341
+      Sprites_239: -1606079285
+      Sprites_24: 1314726690
+      Sprites_240: 2112326750
+      Sprites_241: 862323015
+      Sprites_242: -286310802
+      Sprites_243: -1523605323
+      Sprites_244: -1811692996
+      Sprites_245: 1871737322
+      Sprites_246: 1498045620
       Sprites_247: 1730362509
-      Sprites_57: -1547985422
+      Sprites_248: -892183017
+      Sprites_249: 1403968710
+      Sprites_25: -812320030
+      Sprites_250: -1830740134
+      Sprites_251: 822610059
+      Sprites_252: 1016166974
+      Sprites_253: 330939731
+      Sprites_254: -1267609826
+      Sprites_255: -1047539621
+      Sprites_256: -1849379807
+      Sprites_257: 1476887742
+      Sprites_258: 365598613
+      Sprites_259: 249327067
+      Sprites_26: -2030901441
+      Sprites_260: 1965990152
+      Sprites_261: 1386185264
+      Sprites_262: -1085568706
+      Sprites_263: 1098629647
+      Sprites_264: 1133910771
+      Sprites_265: 620552911
+      Sprites_266: 585357706
+      Sprites_267: 1813071266
+      Sprites_268: 608227353
+      Sprites_269: 1971588756
+      Sprites_27: -1606357112
+      Sprites_270: 1778748786
+      Sprites_271: 1691202231
+      Sprites_272: -677816133
+      Sprites_273: -1451209343
+      Sprites_274: 1269021555
+      Sprites_275: -536844301
+      Sprites_276: -1653634755
+      Sprites_277: -361737973
+      Sprites_278: 195709838
+      Sprites_279: 1693500313
+      Sprites_28: -71241362
+      Sprites_280: -709230481
+      Sprites_281: 1585271624
       Sprites_282: -1965449597
       Sprites_283: -591320778
-      Sprites_311: -864220737
-      Sprites_298: -773283601
-      Sprites_133: -392263500
-      Sprites_302: 2083816177
-      Sprites_250: -1830740134
-      Sprites_186: 243312915
-      Sprites_166: 1239960613
-      Sprites_25: -812320030
-      Sprites_54: 927370595
-      Sprites_81: -789969582
-      Sprites_168: -513127606
-      Sprites_129: 519819762
-      Sprites_182: 996552076
-      Sprites_206: 587439346
-      Sprites_178: 2059212116
-      Sprites_203: 322822861
-      Sprites_265: 620552911
-      Sprites_29: -1233947551
-      Sprites_38: -1069276309
-      Sprites_218: -697386956
-      Sprites_193: 1040539728
-      Sprites_18: 1451543266
-      Sprites_67: 725435765
-      Sprites_189: -832048439
-      Sprites_231: 97805440
-      Sprites_152: 1172733137
-      Sprites_303: -1181990675
-      Sprites_72: -930782600
-      Sprites_76: -1674517754
-      Sprites_175: -1439415486
-      Sprites_79: 1518636569
-      Sprites_123: 758561193
-      Sprites_176: 1482510709
-      Sprites_114: 171301534
-      Sprites_161: -610196608
-      Sprites_8: -793248486
-      Sprites_254: -1267609826
-      Sprites_164: 1468789385
-      Sprites_195: -1240236577
-      Sprites_60: -967913300
-      Sprites_223: -538432716
-      Sprites_229: -1018747823
-      Sprites_248: -892183017
-      Sprites_51: -637999196
-      Sprites_291: -342039098
-      Sprites_222: 1963725465
-      Sprites_10: -243665214
-      Sprites_94: 1016842870
-      Sprites_2: -2112670038
-      Sprites_92: 1493279448
-      Sprites_216: 872255290
-      Sprites_278: 195709838
-      Sprites_86: 1814312138
-      Sprites_200: -1690740803
-      Sprites_104: 1380432575
-      Sprites_315: -1220956261
-      Sprites_6: 1285804805
-      Sprites_155: 924584831
-      Sprites_5: -1892227447
-      Sprites_22: 935374733
-      Sprites_69: -688416384
-      Sprites_49: 1920720842
-      Sprites_279: 1693500313
-      Sprites_185: 2081194223
-      Sprites_70: -1721668818
-      Sprites_46: 1467338502
-      Sprites_259: 249327067
-      Sprites_87: 931877348
-      Sprites_31: 1420853912
-      Sprites_214: -1132915844
-      Sprites_243: -1523605323
-      Sprites_163: 1473698537
-      Sprites_171: 850660670
-      Sprites_125: 1526323788
-      Sprites_198: 1650850660
-      Sprites_174: -2063460351
-      Sprites_210: -318471640
-      Sprites_264: 1133910771
-      Sprites_44: 1363230753
-      Sprites_101: 979649037
-      Sprites_306: -2045424875
-      Sprites_293: 1401083387
-      Sprites_204: -1401081518
-      Sprites_14: -1714267686
-      Sprites_115: 1356206499
-      Sprites_105: -729377839
-      Sprites_157: -1897783188
-      Sprites_318: 1221284335
-      Sprites_48: -1735386491
-      Sprites_127: -1899508648
-      Sprites_272: -677816133
-      Sprites_286: 1777123126
-      Sprites_113: -1962046664
-      Sprites_75: 331674487
-      Sprites_117: 1466367760
-      Sprites_9: 1554533810
-      Sprites_23: -1439272
-      Sprites_41: -1837479867
-      Sprites_261: 1386185264
-      Sprites_169: -809384883
-      Sprites_162: -872475251
-      Sprites_233: 1644072603
-      Sprites_274: 1269021555
-      Sprites_309: -1453529717
-      Sprites_314: -660267766
-      Sprites_107: 1546265834
-      Sprites_245: 1871737322
-      Sprites_270: 1778748786
-      Sprites_237: -1399241054
-      Sprites_205: -1961696581
-      Sprites_208: 845362243
-      Sprites_82: -1131442814
-      Sprites_80: 1236532676
-      Sprites_4: -629687981
-      Sprites_295: -455873336
-      Sprites_313: 1195887262
-      Sprites_33: -492773195
-      Sprites_121: -1918738392
-      Sprites_190: -981442642
-      Sprites_74: 1495797216
-      Sprites_172: 826189623
-      Sprites_170: 1791176336
-      Sprites_187: -585592868
-      Sprites_263: 1098629647
-      Sprites_191: 1220297980
-      Sprites_240: 2112326750
-      Sprites_228: 1911360168
-      Sprites_58: -1449702526
-      Sprites_109: 1436045333
-      Sprites_269: 1971588756
-      Sprites_151: 302355148
-      Sprites_64: -263302834
-      Sprites_158: -1644283945
-      Sprites_239: -1606079285
-      Sprites_140: -1519457091
-      Sprites_209: 410131606
-      Sprites_12: -70907092
-      Sprites_45: 290711728
-      Sprites_150: -1029963451
-      Sprites_122: 1861000494
-      Sprites_253: 330939731
-      Sprites_199: 1682201835
-      Sprites_111: -283110887
-      Sprites_215: 1403485828
-      Sprites_97: -570820719
-      Sprites_275: -536844301
-      Sprites_219: 768496383
-      Sprites_39: -175185470
-      Sprites_271: 1691202231
-      Sprites_136: -1954426287
-      Sprites_30: -1171262152
-      Sprites_98: 2111655852
-      Sprites_241: 862323015
-      Sprites_297: -46820324
-      Sprites_310: 1708051323
-      Sprites_296: 675948825
-      Sprites_287: 1249263445
-      Sprites_34: -1882385775
-      Sprites_112: -1652040463
-      Sprites_160: 57994912
-      Sprites_201: -251652306
-      Sprites_267: 1813071266
-      Sprites_255: -1047539621
-      Sprites_146: 528435547
-      Sprites_308: 1322662186
-      Sprites_17: -809732264
-      Sprites_1: -1264624167
-      Sprites_139: -942223766
-      Sprites_317: 1112792131
-      Sprites_251: 822610059
-      Sprites_258: 365598613
-      Sprites_242: -286310802
-      Sprites_236: 1823293768
-      Sprites_276: -1653634755
-      Sprites_102: 767978118
-      Sprites_55: -1591560053
+      Sprites_284: -510238823
       Sprites_285: -1116079652
-      Sprites_43: 1448660957
-      Sprites_167: 457936137
-      Sprites_145: -1081097785
-      Sprites_0: -96645419
-      Sprites_138: 1634410375
-      Sprites_142: -698737179
-      Sprites_281: 1585271624
-      Sprites_108: 463597418
-      Sprites_207: 1861208722
-      Sprites_32: 843469374
-      Sprites_156: 1734332661
-      Sprites_294: 761674990
-      Sprites_52: 1293525156
-      Sprites_153: -1018704978
-      Sprites_137: -1050379331
-      Sprites_141: -675869641
-      Sprites_88: 1782700798
-      Sprites_132: -718108024
-      Sprites_277: -361737973
+      Sprites_286: 1777123126
+      Sprites_287: 1249263445
       Sprites_288: -1196097202
-      Sprites_177: -409904661
-      Sprites_26: -2030901441
-      Sprites_78: 784661471
-      Sprites_224: 2109422791
-      Sprites_232: 1131649308
-      Sprites_319: -829679133
-      Sprites_188: 742869285
-      Sprites_66: 288815219
+      Sprites_289: -1208149272
+      Sprites_29: -1233947551
+      Sprites_290: -1179270395
+      Sprites_291: -342039098
+      Sprites_292: 886347692
+      Sprites_293: 1401083387
+      Sprites_294: 761674990
+      Sprites_295: -455873336
+      Sprites_296: 675948825
+      Sprites_297: -46820324
+      Sprites_298: -773283601
+      Sprites_299: 470133446
+      Sprites_3: 513799098
+      Sprites_30: -1171262152
+      Sprites_300: -786462331
+      Sprites_301: 227838883
+      Sprites_302: 2083816177
+      Sprites_303: -1181990675
+      Sprites_304: 169193423
+      Sprites_305: -708267721
+      Sprites_306: -2045424875
+      Sprites_307: 1436262953
+      Sprites_308: 1322662186
+      Sprites_309: -1453529717
+      Sprites_31: 1420853912
+      Sprites_310: 1708051323
+      Sprites_311: -864220737
+      Sprites_312: -110641078
+      Sprites_313: 1195887262
+      Sprites_314: -660267766
+      Sprites_315: -1220956261
       Sprites_316: -356684108
-      Sprites_100: -615494021
-      Sprites_154: -562997347
-      Sprites_196: -1181645409
-      Sprites_252: 1016166974
-      Sprites_221: 868375621
-      Sprites_179: -1074520047
-  spritePackingTag: 
+      Sprites_317: 1112792131
+      Sprites_318: 1221284335
+      Sprites_319: -829679133
+      Sprites_32: 843469374
+      Sprites_33: -492773195
+      Sprites_34: -1882385775
+      Sprites_35: 2007526789
+      Sprites_36: 1620244719
+      Sprites_37: 1334324174
+      Sprites_38: -1069276309
+      Sprites_39: -175185470
+      Sprites_4: -629687981
+      Sprites_40: -535912942
+      Sprites_41: -1837479867
+      Sprites_42: 830325537
+      Sprites_43: 1448660957
+      Sprites_44: 1363230753
+      Sprites_45: 290711728
+      Sprites_46: 1467338502
+      Sprites_47: -1244469684
+      Sprites_48: -1735386491
+      Sprites_49: 1920720842
+      Sprites_5: -1892227447
+      Sprites_50: 1700638046
+      Sprites_51: -637999196
+      Sprites_52: 1293525156
+      Sprites_53: 1413885698
+      Sprites_54: 927370595
+      Sprites_55: -1591560053
+      Sprites_56: -309776304
+      Sprites_57: -1547985422
+      Sprites_58: -1449702526
+      Sprites_59: -915029974
+      Sprites_6: 1285804805
+      Sprites_60: -967913300
+      Sprites_61: 2031658017
+      Sprites_62: -418318200
+      Sprites_63: -757211746
+      Sprites_64: -263302834
+      Sprites_65: -1080310235
+      Sprites_66: 288815219
+      Sprites_67: 725435765
+      Sprites_68: 322156006
+      Sprites_69: -688416384
+      Sprites_7: 764459208
+      Sprites_70: -1721668818
+      Sprites_71: 1679107470
+      Sprites_72: -930782600
+      Sprites_73: -236924767
+      Sprites_74: 1495797216
+      Sprites_75: 331674487
+      Sprites_76: -1674517754
+      Sprites_77: -1212225904
+      Sprites_78: 784661471
+      Sprites_79: 1518636569
+      Sprites_8: -793248486
+      Sprites_80: 1236532676
+      Sprites_81: -789969582
+      Sprites_82: -1131442814
+      Sprites_83: 1232807295
+      Sprites_84: 1724904164
+      Sprites_85: -1891634317
+      Sprites_86: 1814312138
+      Sprites_87: 931877348
+      Sprites_88: 1782700798
+      Sprites_89: -1325547323
+      Sprites_9: 1554533810
+      Sprites_90: 1800286041
+      Sprites_91: -810826982
+      Sprites_92: 1493279448
+      Sprites_93: -37603666
+      Sprites_94: 1016842870
+      Sprites_95: 905914416
+      Sprites_96: -1949998687
+      Sprites_97: -570820719
+      Sprites_98: 2111655852
+      Sprites_99: 1515705088
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
