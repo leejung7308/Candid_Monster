@@ -44,18 +44,18 @@ public class Radar : MonoBehaviour
 
         if(collision.CompareTag("ConfusedMonster"))
         {
-            monster.MonsterMovement(collision.gameObject);
-            monster.LookAt(collision.gameObject);
+            //monster.MonsterMovement(collision.gameObject);
+            //monster.LookAt(collision.gameObject);
         }
         else if(monster.isConfused && collision.CompareTag("Monster"))
         {
-            monster.MonsterMovement(collision.gameObject);
-            monster.LookAt(collision.gameObject);
+            //monster.MonsterMovement(collision.gameObject);
+            //monster.LookAt(collision.gameObject);
         }
         else if(collision.CompareTag("Player"))
         {
-            monster.MonsterMovement(collision.gameObject);
-            monster.LookAt(collision.gameObject);
+            //monster.MonsterMovement(collision.gameObject);
+            //monster.LookAt(collision.gameObject);
         }
     }
     

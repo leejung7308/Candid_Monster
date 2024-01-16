@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Item;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Monster : EntityStatus
 {
@@ -13,12 +14,17 @@ public class Monster : EntityStatus
     public GameObject weaponPrefab;
     public GameObject weaponSpawnPos;
     public GameObject room;
+    [SerializeField]Transform target;
+    NavMeshAgent agent;
     Radar radar;
     Radar attackRange;
     GameObject player;
     float nextAttack;
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         radar = radarObject.GetComponent<Radar>();
         attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -29,6 +35,7 @@ public class Monster : EntityStatus
     }
     void Update()
     {
+        agent.SetDestination(target.position);
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         if (isConfused)
         {
