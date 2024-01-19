@@ -23,6 +23,7 @@ public class Monster : EntityStatus
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         radar = radarObject.GetComponent<Radar>();
@@ -35,7 +36,6 @@ public class Monster : EntityStatus
     }
     void Update()
     {
-        agent.SetDestination(target.position);
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         if (isConfused)
         {
@@ -55,8 +55,9 @@ public class Monster : EntityStatus
     {
         if(isFainted)
             return;
-        
-        transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
+
+        agent.SetDestination(follow.transform.position);
+        //transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
     }
     public void LookAt(GameObject follow)
     {
