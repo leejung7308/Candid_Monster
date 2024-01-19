@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Item;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Monster : EntityStatus
 {
@@ -13,12 +14,18 @@ public class Monster : EntityStatus
     public GameObject weaponPrefab;
     public GameObject weaponSpawnPos;
     public GameObject room;
+    [SerializeField]Transform target;
+    NavMeshAgent agent;
     Radar radar;
     Radar attackRange;
     GameObject player;
     float nextAttack;
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = moveSpeed;
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         radar = radarObject.GetComponent<Radar>();
         attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -48,8 +55,9 @@ public class Monster : EntityStatus
     {
         if(isFainted)
             return;
-        
-        transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
+
+        agent.SetDestination(follow.transform.position);
+        //transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
     }
     public void LookAt(GameObject follow)
     {

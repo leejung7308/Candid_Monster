@@ -1,6 +1,7 @@
 using System;
 using Entity.Skill;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Radar : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class Radar : MonoBehaviour
             monster.LookAt(collision.gameObject);
         }
     }
-    
+
     /**
      * 일시적으로 적을 탐색하지 못하는 실명 상태에 걸린다.
      */
