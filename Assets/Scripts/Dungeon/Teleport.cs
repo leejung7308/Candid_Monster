@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    public Vector2 TeleportPosition;
+    public GameObject TeleportPosition;
     public GameObject nextRoom;
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             nextRoom.SetActive(true);
-            collision.transform.position = TeleportPosition;
-            transform.parent.gameObject.SetActive(false);
+            collision.transform.position = TeleportPosition.transform.position;
+            transform.parent.transform.gameObject.SetActive(false);
+        }
+    }*/
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            nextRoom.SetActive(true);
+            collision.transform.position = TeleportPosition.transform.position;
+            transform.parent.parent.gameObject.SetActive(false);
         }
     }
 }
