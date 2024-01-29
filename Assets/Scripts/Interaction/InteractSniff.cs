@@ -112,7 +112,6 @@ public class InteractSniff : MonoBehaviour
             chatBubbles[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = "";
         }
         isCameraMoving = false;
-        yield return new WaitForSeconds(1);
         player.GetComponent<EntityStatus>().isInvincible = false;
         camera.GetComponent<MainCamera>().isSniff = false;
     }
