@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainCamera : MonoBehaviour
 {
     private GameObject player;
+    public bool isSniff = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class MainCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position+new Vector3(0,0,-10f);
+        if (!isSniff)
+            transform.position = player.transform.position+new Vector3(0,0,-10f);
     }
 }
