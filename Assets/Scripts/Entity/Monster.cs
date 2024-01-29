@@ -14,6 +14,9 @@ public class Monster : EntityStatus
     public GameObject weaponPrefab;
     public GameObject weaponSpawnPos;
     public GameObject room;
+    public bool isAlcohol;
+    public bool isCaffeine;
+    public bool isNicotine;
     [SerializeField]Transform target;
     NavMeshAgent agent;
     Radar radar;
