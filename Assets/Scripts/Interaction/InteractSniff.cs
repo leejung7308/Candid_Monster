@@ -13,7 +13,6 @@ public class InteractSniff : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     bool isCameraMoving = false;
     bool canInteract = false;
-    bool chatbubble = false;
     GameObject player;
     GameObject camera;
     Vector3 targetPosition = Vector3.zero;
