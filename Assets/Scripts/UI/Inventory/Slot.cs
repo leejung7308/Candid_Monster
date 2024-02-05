@@ -132,7 +132,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
                     {
                         if (thePlayer != null)
                         {
-                            thePlayer.EquipItem(item.itemName);
+                            //thePlayer.EquipItem(item.itemName);
                         }
                     }
                     else
