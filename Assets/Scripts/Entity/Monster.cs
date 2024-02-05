@@ -12,8 +12,11 @@ public class Monster : EntityStatus
     public GameObject radarObject;
     public GameObject attackRangeObject;
     public GameObject weaponPrefab;
-    public GameObject weaponSpawnPos;
+    //public GameObject weaponSpawnPos;
     public GameObject room;
+    public bool isAlcohol;
+    public bool isCaffeine;
+    public bool isNicotine;
     [SerializeField]Transform target;
     NavMeshAgent agent;
     Radar radar;
@@ -26,8 +29,8 @@ public class Monster : EntityStatus
         agent.speed = moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        radar = radarObject.GetComponent<Radar>();
-        attackRange = attackRangeObject.GetComponent<Radar>();
+        //radar = radarObject.GetComponent<Radar>();
+        //attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
         weapon = Instantiate(weaponPrefab);
         weapon.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
@@ -39,12 +42,12 @@ public class Monster : EntityStatus
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         if (isConfused)
         {
-            weapon.tag = "Weapon(ConfusedMonster)";
+            //weapon.tag = "Weapon(ConfusedMonster)";
             gameObject.tag = "ConfusedMonster";
         }
         else
         {
-            weapon.tag = "Weapon(Monster)";
+            //weapon.tag = "Weapon(Monster)";
             gameObject.tag = "Monster";
         }
         ApplyDebuff(CheckDebuffCondition());
@@ -84,8 +87,8 @@ public class Monster : EntityStatus
     }
     void SetWeapon()
     {
-        weapon.transform.position = weaponSpawnPos.transform.position;
-        weapon.transform.rotation = weaponSpawnPos.transform.rotation;
+        weapon.transform.position = transform.position + new Vector3(0,1,0);
+        weapon.transform.rotation = transform.rotation;
     }
     protected override void EntityDie()
     {

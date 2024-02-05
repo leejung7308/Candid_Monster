@@ -101,14 +101,14 @@ public class EntityStatus : MonoBehaviour
         isInvincible = true;
         if (!isDebuffed)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < transform.childCount; i++)
                 transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.7f);
             weapon.GetComponent<SpriteRenderer>().color = originalColor - new Color(0, 0, 0, 0.3f);
         }
         yield return new WaitForSeconds(time);
         if (!isDebuffed)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); ;
             }
