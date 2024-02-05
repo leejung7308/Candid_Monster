@@ -11,9 +11,9 @@ public class Player : EntityStatus
     public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
         base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
-    public List<GameObject> weaponPrefabs;
-    public List<GameObject> weapons;
-    public GameObject weaponSpawnPos;
+    //public List<GameObject> weaponPrefabs;
+    //public List<GameObject> weapons;
+    //public GameObject weaponSpawnPos;
     public bool enableFatigue = true;
     float fatigueTimer = 0.0f;
     public Inventory theInventory;
@@ -27,17 +27,17 @@ public class Player : EntityStatus
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
         mainCamera = Camera.main;
-        for (int i = 0; i < 4; i++)
+        /*for (int i = 0; i < 4; i++)
         {
             GameObject tmp = Instantiate(weaponPrefabs[i]);
             tmp.transform.position = new Vector2(1000, 1000);
             tmp.SetActive(false);
             tmp.transform.parent = transform.GetChild(0);
             weapons.Add(tmp);
-        }
-        SetWeapon(0);
+        }*/
+        //SetWeapon(0);
         Debug.Log("Add Active skills");
         activeSkills = new Dictionary<KeyCode, ActiveSkill>();
         activeSkills.Add(KeyCode.E, new ThrowAlcoholBottle(this));
@@ -56,10 +56,10 @@ public class Player : EntityStatus
     void Update()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        if (isConfused) weapon.tag = "Weapon(ConfusedPlayer)";
-        else weapon.tag = "Weapon(Player)";
+        /*if (isConfused) weapon.tag = "Weapon(ConfusedPlayer)";
+        else weapon.tag = "Weapon(Player)";*/
 
-        WeaponSwap();
+        //WeaponSwap();
         ApplyPlayerStatusPassives();
         HandleActiveSkills();
         Attack();
@@ -79,10 +79,10 @@ public class Player : EntityStatus
                 float yinput = Input.GetAxis("Vertical");
                 Vector2 newVelocity = new Vector2(xinput, yinput);
                 gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
-                animator.SetBool("isMove", true);
+                transform.GetChild(0).GetComponent<AnimationManager>().MoveStart();
             }
         }
-        else animator.SetBool("isMove", false);
+        else transform.GetChild(0).GetComponent<AnimationManager>().MoveEnd();
     }
     void LookAt()
     {
@@ -92,14 +92,14 @@ public class Player : EntityStatus
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < transform.position.x)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
-    void WeaponSwap()
+    /*void WeaponSwap()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -123,8 +123,8 @@ public class Player : EntityStatus
         }
         weapon.transform.position = weaponSpawnPos.transform.position;
         weapon.transform.rotation = weaponSpawnPos.transform.rotation;
-    }
-    void SetWeapon(int weaponNum)
+    }*/
+    /*void SetWeapon(int weaponNum)
     {
         weapons[weaponNum].gameObject.SetActive(true);
         for(int i = 0; i < 4; i++)
@@ -135,7 +135,7 @@ public class Player : EntityStatus
             }
         }
         weapon = weapons[weaponNum];
-    }
+    }*/
     /**
      * 무기의 DamageHolder에 플레이어에게 적용중인 패시브 스킬로 인한 데미지 변화를 적용한다.
      */
@@ -176,12 +176,8 @@ public class Player : EntityStatus
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            animator.SetBool("isAttack", true);
+            transform.GetChild(0).GetComponent<AnimationManager>().AttackStart();
         }
-    }
-    void AttackEnd()
-    {
-        animator.SetBool("isAttack", false);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -227,7 +223,7 @@ public class Player : EntityStatus
         StartCoroutine(InvincibleMode(invincibleTime));     // 중복해서 피해를 입는것을 방지하기 위한 일시 무적.
     }
 
-    public void EquipItem(string _name)
+    /*public void EquipItem(string _name)
     {
             if (_name == "knife")
             {
@@ -261,7 +257,7 @@ public class Player : EntityStatus
                 weapons[2].gameObject.SetActive(false);
                 weapon = weapons[3];
             }
-    }
+    }*/
     
     /**
      * 피로도 증가 로직.
