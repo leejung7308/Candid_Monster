@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static System.Net.Mime.MediaTypeNames;
@@ -8,19 +9,21 @@ public class InteractSniff : MonoBehaviour
 {
     public GameObject interactionFloating;
     public List<GameObject> monsters = new List<GameObject>();
-    public List<GameObject> chatBubbles = new List<GameObject>();
     public KeyCode interactionKey = KeyCode.G;
     private Vector3 velocity = Vector3.zero;
+    [SerializeField] List<GameObject> chatBubbles = new List<GameObject>();
     bool isCameraMoving = false;
     bool canInteract = false;
     GameObject player;
     GameObject camera;
+    GameObject canvas;
     Vector3 targetPosition = Vector3.zero;
     List<string> texts = new List<string>();
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         camera = GameObject.FindGameObjectWithTag("MainCamera");
+        canvas = GameObject.FindGameObjectWithTag("UI");
         for(int i = 0; i < monsters.Count; i++)
         {
             targetPosition += monsters[i].transform.position;
@@ -28,40 +31,93 @@ public class InteractSniff : MonoBehaviour
         targetPosition = targetPosition/monsters.Count + new Vector3(0,0,-10);
         if(monsters.Count == 1)
         {
-            if (monsters[0].GetComponent<MonsterTest>().isAlcohol) {
-                texts.Add("¾Æ ÁøÂ¥ ¼ú ¸Ô°í\n¼ººÒÇÏ°í ½Í´Ù...");
+            chatBubbles.Add(canvas.transform.Find("Chat Bubble_1").gameObject);
+            if (monsters[0].GetComponent<Monster>().isAlcohol) {
+                texts.Add("ì•„ ì§„ì§œ ìˆ  ë¨¹ê³ \nì„±ë¶ˆí•˜ê³  ì‹¶ë‹¤...");
             }
-            if (monsters[0].GetComponent <MonsterTest>().isCaffeine) {
-                texts.Add("Ä¿ÇÇ ÇÑ ÀÜ ÇÏ¸é\n³¯¾Æ°¥ °Å °°¾Æ...");
+            if (monsters[0].GetComponent <Monster>().isCaffeine) {
+                texts.Add("ì»¤í”¼ í•œ ì” í•˜ë©´\në‚ ì•„ê°ˆ ê±° ê°™ì•„...");
             }
-            if (monsters[0].GetComponent<MonsterTest>().isNicotine) {
-                texts.Add("´ÏÄÚÆ¾...!\n´ÏÄÚÆ¾ÀÌ ºÎÁ·ÇØ...!");
+            if (monsters[0].GetComponent<Monster>().isNicotine) {
+                texts.Add("ë‹ˆì½”í‹´...!\në‹ˆì½”í‹´ì´ ë¶€ì¡±í•´...!");
             }
         }
         else if(monsters.Count == 2)
         {
-            if (monsters[0].GetComponent<MonsterTest>().isAlcohol)
+            chatBubbles.Add(canvas.transform.Find("Chat Bubble_1").gameObject);
+            chatBubbles.Add(canvas.transform.Find("Chat Bubble_2").gameObject);
+            if (monsters[0].GetComponent<Monster>().isAlcohol)
             {
-                texts.Add("³¡³ª°í ¼ÒÁÖ ÇÑ ÀÜ\nÇÏ½Ç±î¿ä?");
-                texts.Add("Å°¾ß! ¼ÒÁÖ ¸Ô°í\n±¤¸í Ã£ÀÚ!");
+                texts.Add("ëë‚˜ê³  ì†Œì£¼ í•œ ì”\ní•˜ì‹¤ê¹Œìš”?");
+                texts.Add("í‚¤ì•¼! ì†Œì£¼ ë¨¹ê³ \nê´‘ëª… ì°¾ì!");
             }
-            if (monsters[0].GetComponent<MonsterTest>().isCaffeine)
+            if (monsters[0].GetComponent<Monster>().isCaffeine)
             {
-                texts.Add("Ä¿ÇÇ...\nÄ¿ÇÇ¸¦ ÁÖ¼¼¿ä...");
-                texts.Add("À¸¾î...\n³ªµµ Á» ÁÖ¼¼¿ä...");
+                texts.Add("ì»¤í”¼...\nì»¤í”¼ë¥¼ ì£¼ì„¸ìš”...");
+                texts.Add("ìœ¼ì–´...\në‚˜ë„ ì¢€ ì£¼ì„¸ìš”...");
             }
-            if (monsters[0].GetComponent<MonsterTest>().isNicotine)
+            if (monsters[0].GetComponent<Monster>().isNicotine)
             {
-                texts.Add("´ã¹è ÇÑ ´ë¸é\n¼ººÒ °¢?");
-                texts.Add("¤©¤·¤»¤»");
+                texts.Add("ë‹´ë°° í•œ ëŒ€ë©´\nì„±ë¶ˆ ê°?");
+                texts.Add("ã„¹ã…‡ã…‹ã…‹");
+            }
+        }
+        else if(monsters.Count == 3)
+        {
+            chatBubbles.Add(canvas.transform.Find("Chat Bubble_1").gameObject);
+            chatBubbles.Add(canvas.transform.Find("Chat Bubble_2").gameObject);
+            chatBubbles.Add(canvas.transform.Find("Chat Bubble_3").gameObject);
+            if (monsters[0].GetComponent<Monster>().isAlcohol)
+            {
+                texts.Add("ì†Œì£¼ ë§ˆë ¤ìš´ë°\nì €ë§Œ ê·¸ëŸ°ê°€ìš”?");
+                texts.Add("ì €ë„ ê·¸ë ‡ìŠµë‹ˆë‹¤.");
+                texts.Add("ë‚˜ë§Œ ê·¸ëŸ° ê²Œ\nì•„ë‹ˆêµ¬ë‚˜!");
+            }
+            if (monsters[0].GetComponent<Monster>().isCaffeine)
+            {
+                texts.Add("ì•„ ê°œí”¼ê³¤í•´\nì¹´í˜ì¸ì´ ë”¸ë¦°ë‹¤");
+                texts.Add("ì „ ì•„ì•„ ë¶€íƒí•´ìš”~");
+                texts.Add("ê·¸ëŸ¼ ë‚œ ì•„ì´ìŠ¤ ë¼ë–¼!");
+            }
+            if (monsters[0].GetComponent<Monster>().isNicotine)
+            {
+                texts.Add("ë‹´ë°° ëŠì€ì§€ 3ë¶„\nê¸ˆë‹¨í˜„ìƒ ì˜¨ë‹¤...");
+                texts.Add("ë‚˜ëŠ” 30ì´ˆ...\nê¸ˆë‹¨í˜„ìƒ ì˜¨ë‹¤...");
+                texts.Add("ê·¸ëŸ¬ì§€ ë§ê³ \ní”¼ê³  ì˜¤ì‹œì£ !");
             }
         }
     }
     private void Update()
     {
+        if (monsters.Count == 3)
+        {
+            if (monsters[0].GetComponent<Raycast>().isDetected || monsters[1].GetComponent<Raycast>().isDetected || monsters[2].GetComponent<Raycast>().isDetected)
+            {
+                monsters[0].GetComponent<Raycast>().isDetected = true;
+                monsters[1].GetComponent<Raycast>().isDetected = true;
+                monsters[2].GetComponent<Raycast>().isDetected = true;
+                gameObject.SetActive(false);
+            }
+        }
+        if (monsters.Count == 2)
+        {
+            if(monsters[0].GetComponent<Raycast>().isDetected || monsters[1].GetComponent<Raycast>().isDetected)
+            {
+                monsters[0].GetComponent<Raycast>().isDetected = true;
+                monsters[1].GetComponent<Raycast>().isDetected = true;
+                gameObject.SetActive(false);
+            }
+        }
+        if(monsters.Count == 1) { }
+        {
+            if (monsters[0].GetComponent<Raycast>().isDetected)
+            {
+                gameObject.SetActive(false) ;
+            }
+        }
         if(isCameraMoving)
         {
-            camera.transform.position = Vector3.MoveTowards(camera.transform.position, targetPosition, 0.05f);
+            camera.transform.position = Vector3.MoveTowards(camera.transform.position, targetPosition, 0.25f);
         }
         if (canInteract&&Input.GetKeyDown(interactionKey))
         {
@@ -91,16 +147,17 @@ public class InteractSniff : MonoBehaviour
         canInteract = false;
         interactionFloating.SetActive(false);
         player.GetComponent<EntityStatus>().isInvincible = true;
+        player.GetComponent<EntityStatus>().isFainted = true;
         camera.GetComponent<MainCamera>().isSniff = true;
         isCameraMoving = true;
         yield return new WaitForSeconds(1);
         for (int i = 0; i < monsters.Count; i++)
         {
             chatBubbles[i].gameObject.SetActive(true);
-            chatBubbles[i].transform.position = Camera.main.WorldToScreenPoint(monsters[i].transform.position + new Vector3(0, 1.5f, 0)); 
+            chatBubbles[i].transform.position = Camera.main.WorldToScreenPoint(monsters[i].transform.position + new Vector3(0, 3f, 0)); 
             foreach (char s in texts[i])
             {
-                chatBubbles[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text += s;
+                chatBubbles[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text += s;
                 yield return new WaitForSeconds(0.05f);
             }
         }
@@ -108,10 +165,11 @@ public class InteractSniff : MonoBehaviour
         for (int i = 0; i < monsters.Count; i++)
         {
             chatBubbles[i].gameObject.SetActive(false);
-            chatBubbles[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = "";
+            chatBubbles[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
         }
         isCameraMoving = false;
         player.GetComponent<EntityStatus>().isInvincible = false;
+        player.GetComponent<EntityStatus>().isFainted = false;
         camera.GetComponent<MainCamera>().isSniff = false;
     }
 }
