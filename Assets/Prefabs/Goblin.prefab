@@ -3052,7 +3052,7 @@ MonoBehaviour:
   isFainted: 0
   isInvincible: 0
   isDebuffed: 0
-  hitRange: {fileID: 0}
+  hitRange: {fileID: 1111180252390622034}
   weapon: {fileID: 2686574961122442354}
   parts:
   - {fileID: 8685623438757281798}
@@ -3086,6 +3086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayCastDistanceLeft: 5
   rayCastDistanceRight: 5
+  rayOffset: 0.84
+  attackRange: {fileID: 4663796740350842824}
   layerMask:
     serializedVersion: 2
     m_Bits: 8

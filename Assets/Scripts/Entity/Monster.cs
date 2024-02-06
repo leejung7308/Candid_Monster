@@ -41,7 +41,11 @@ public class Monster : EntityStatus
         }
         ApplyDebuff(CheckDebuffCondition());
         //SetWeapon();
-        if (fatigue>=maxFatigue) EntityDie();
+        if (fatigue >= maxFatigue)
+        {
+            fatigue = -1;
+            EntityDie();
+        }
     }
     public void MonsterMovement(GameObject follow)
     {
@@ -59,11 +63,11 @@ public class Monster : EntityStatus
         
         if (follow.transform.position.x < transform.position.x)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.localScale = new Vector3(2, 2, 1);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.localScale = new Vector3(-2, 2, 1);
         }
     }
     public void Attack()

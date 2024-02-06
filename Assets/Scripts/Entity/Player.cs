@@ -193,14 +193,10 @@ public class Player : EntityStatus
                 collision.gameObject.SetActive(false);
             }
         }
-        if (!isInvincible && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)")))
+        if (!isInvincible && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)") || collision.CompareTag("Monster")))
         {
             Debug.Log("플레이어 피격");
             HandleEntityDamage(collision.GetComponentInParent<Monster>().GetDamageHolder());
-        }
-        if(collision.tag == "Monster")
-        {
-            Item.DamageHolder currentDamageHolder = collision.GetComponent<Monster>().GetDamageHolder();
         }
     }
     

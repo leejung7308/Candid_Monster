@@ -12,8 +12,16 @@ public class AnimationManager : MonoBehaviour
     }
     public void AttackStart()
     {
-        transform.parent.GetComponent<EntityStatus>().hitRange.SetActive(true);
         animator.SetBool("isAttack", true);
+    }
+    public void HitStart()
+    {
+        transform.parent.GetComponent<EntityStatus>().hitRange.SetActive(true) ;
+    }
+    public void HitEnd()
+    {
+        transform.parent.GetComponent<EntityStatus>() .hitRange.SetActive(false) ;
+        transform.parent.GetComponent<Collider2D>().enabled = false ;
     }
     public void AttackEnd()
     {
