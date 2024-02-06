@@ -12,10 +12,12 @@ public class AnimationManager : MonoBehaviour
     }
     public void AttackStart()
     {
+        transform.parent.GetComponent<EntityStatus>().hitRange.SetActive(true);
         animator.SetBool("isAttack", true);
     }
     public void AttackEnd()
     {
+        transform.parent.GetComponent<EntityStatus>().hitRange.SetActive(false);
         animator.SetBool("isAttack", false);
     }
     public void MoveStart()
@@ -25,5 +27,14 @@ public class AnimationManager : MonoBehaviour
     public void MoveEnd() 
     {
         animator.SetBool("isMove", false);
+    }
+    public void EntityDieStart()
+    {
+        animator.SetBool("isDead", true);
+    }
+    public void EntityDieEnd()
+    {
+        animator.SetBool("isDead", false);
+        transform.parent.gameObject.SetActive(false);
     }
 }

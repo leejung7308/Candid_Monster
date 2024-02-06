@@ -26,6 +26,7 @@ public class Raycast : MonoBehaviour
         if (isDetected)
         {
             gameObject.GetComponent<Monster>().MonsterMovement(player);
+            gameObject.GetComponent<Monster>().LookAt(player);
         }
     }
     private void OnDrawGizmos()

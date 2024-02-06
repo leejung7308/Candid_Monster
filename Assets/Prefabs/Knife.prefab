@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7714286909243595825}
   m_Layer: 0
   m_Name: Knife
-  m_TagString: Weapon(Player)
+  m_TagString: Weapon(Monster)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593603576000265972}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9630939, y: 5.9316263, z: -0.0000000786805}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.510002, y: 87.69006, z: -0.083333015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -172,7 +172,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.507969, y: 0.2563752}
-    oldSize: {x: 1.835, y: 1.835}
+    oldSize: {x: 0.9175, y: 0.9175}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

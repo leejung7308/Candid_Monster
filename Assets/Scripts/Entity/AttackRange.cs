@@ -13,7 +13,7 @@ public class AttackRange : MonoBehaviour
                 transform.parent.GetComponent<Monster>().Attack();
             }
         }
-        else if (transform.parent.GetComponent<EntityStatus>().isConfused || collision.tag == "ConfusedMonster")
+        else if (transform.parent.GetComponent<EntityStatus>().isConfused)
         {
             if (collision.tag == "Monster" || collision.tag == "ConfusedMonster")
             {

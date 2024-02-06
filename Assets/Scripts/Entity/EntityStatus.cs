@@ -72,6 +72,7 @@ public class EntityStatus : MonoBehaviour
     public bool isFainted = false;
     public bool isInvincible = false;
     public bool isDebuffed = false;
+    public GameObject hitRange;
     public GameObject weapon;
     public List<GameObject> parts = new List<GameObject>();
     
@@ -124,7 +125,7 @@ public class EntityStatus : MonoBehaviour
     }
     virtual protected void EntityDie()
     {
-            gameObject.SetActive(false);
+        transform.GetChild(0).GetComponent<AnimationManager>().EntityDieStart();
     }
     virtual protected void ApplyDebuff(DebuffType type)
     {
