@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Item;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /**
@@ -72,6 +73,7 @@ public class EntityStatus : MonoBehaviour
     public bool isInvincible = false;
     public bool isDebuffed = false;
     public GameObject weapon;
+    public List<GameObject> parts = new List<GameObject>();
     
     public EntityStatus(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine)
     {
@@ -98,19 +100,23 @@ public class EntityStatus : MonoBehaviour
     protected IEnumerator InvincibleMode(float time)
     {
         Color originalColor = weapon.GetComponent<SpriteRenderer>().color;
+        List<Color> originalColors = new List<Color>();
         isInvincible = true;
         if (!isDebuffed)
         {
-            for (int i = 0; i < transform.childCount; i++)
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.7f);
+            for (int i = 0; i < parts.Count; i++)
+            {
+                originalColors.Add(parts[i].GetComponent<SpriteRenderer>().color);
+                parts[i].GetComponent<SpriteRenderer>().color = originalColors[i] - new Color(0, 0, 0, 0.3f);
+            }
             weapon.GetComponent<SpriteRenderer>().color = originalColor - new Color(0, 0, 0, 0.3f);
         }
         yield return new WaitForSeconds(time);
         if (!isDebuffed)
         {
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < parts.Count; i++)
             {
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); ;
+                parts[i].GetComponent<SpriteRenderer>().color = originalColors[i];
             }
             weapon.GetComponent<SpriteRenderer>().color = originalColor;
         }
