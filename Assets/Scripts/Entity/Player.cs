@@ -27,14 +27,16 @@ public class Player : EntityStatus
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        hitRange.tag = "Weapon(Player)";
+        animator = transform.GetChild(0).GetComponent<Animator>();
         mainCamera = Camera.main;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
-            GameObject tmp = Instantiate(weaponPrefabs[i]);
-            tmp.transform.position = new Vector2(1000, 1000);
+            GameObject tmp = new GameObject("Empty Object");
             tmp.SetActive(false);
-            tmp.transform.parent = transform.GetChild(0);
+            tmp.transform.parent = weaponSpawnPos.transform;
+            tmp.transform.rotation = weaponSpawnPos.transform.rotation;
+            tmp.transform.position = weaponSpawnPos.transform.position;
             weapons.Add(tmp);
         }
         SetWeapon(0);
@@ -56,8 +58,8 @@ public class Player : EntityStatus
     void Update()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        if (isConfused) weapon.tag = "Weapon(ConfusedPlayer)";
-        else weapon.tag = "Weapon(Player)";
+        if (isConfused) hitRange.tag = "Weapon(ConfusedPlayer)";
+        else hitRange.tag = "Weapon(Player)";
 
         WeaponSwap();
         ApplyPlayerStatusPassives();
@@ -79,10 +81,10 @@ public class Player : EntityStatus
                 float yinput = Input.GetAxis("Vertical");
                 Vector2 newVelocity = new Vector2(xinput, yinput);
                 gameObject.GetComponent<Rigidbody2D>().velocity = newVelocity * moveSpeed;
-                animator.SetBool("isMove", true);
+                transform.GetChild(0).GetComponent<AnimationManager>().MoveStart();
             }
         }
-        else animator.SetBool("isMove", false);
+        else transform.GetChild(0).GetComponent<AnimationManager>().MoveEnd();
     }
     void LookAt()
     {
@@ -92,11 +94,11 @@ public class Player : EntityStatus
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < transform.position.x)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.localScale = new Vector3(-2, 2, 1);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.localScale = new Vector3(2, 2, 1);
         }
     }
     void WeaponSwap()
@@ -121,8 +123,7 @@ public class Player : EntityStatus
             Debug.Log("무기4번");
             SetWeapon(3);
         }
-        weapon.transform.position = weaponSpawnPos.transform.position;
-        weapon.transform.rotation = weaponSpawnPos.transform.rotation;
+        //weapon.transform.position = weaponSpawnPos.transform.position;
     }
     void SetWeapon(int weaponNum)
     {
@@ -135,6 +136,7 @@ public class Player : EntityStatus
             }
         }
         weapon = weapons[weaponNum];
+        weapon.transform.position = weaponSpawnPos.transform.position;
     }
     /**
      * 무기의 DamageHolder에 플레이어에게 적용중인 패시브 스킬로 인한 데미지 변화를 적용한다.
@@ -176,12 +178,8 @@ public class Player : EntityStatus
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
-            animator.SetBool("isAttack", true);
+            transform.GetChild(0).GetComponent<AnimationManager>().AttackStart();
         }
-    }
-    void AttackEnd()
-    {
-        animator.SetBool("isAttack", false);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -195,14 +193,10 @@ public class Player : EntityStatus
                 collision.gameObject.SetActive(false);
             }
         }
-        if (!isInvincible && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)")))
+        if (!isInvincible && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)") || collision.CompareTag("Monster")))
         {
             Debug.Log("플레이어 피격");
-            HandleEntityDamage(collision.GetComponent<Weapon>().GetDamageHolder());
-        }
-        if(collision.tag == "Monster")
-        {
-            Item.DamageHolder currentDamageHolder = collision.GetComponent<Monster>().weapon.GetComponent<Item.Weapon>().GetDamageHolder();
+            HandleEntityDamage(collision.GetComponentInParent<Monster>().GetDamageHolder());
         }
     }
     

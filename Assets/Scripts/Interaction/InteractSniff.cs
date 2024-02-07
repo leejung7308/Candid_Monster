@@ -154,7 +154,7 @@ public class InteractSniff : MonoBehaviour
         for (int i = 0; i < monsters.Count; i++)
         {
             chatBubbles[i].gameObject.SetActive(true);
-            chatBubbles[i].transform.position = Camera.main.WorldToScreenPoint(monsters[i].transform.position + new Vector3(0, 3f, 0)); 
+            chatBubbles[i].transform.position = Camera.main.WorldToScreenPoint(monsters[i].transform.position + new Vector3(0, 2f, 0)); 
             foreach (char s in texts[i])
             {
                 chatBubbles[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text += s;

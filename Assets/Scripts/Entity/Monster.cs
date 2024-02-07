@@ -9,18 +9,12 @@ public class Monster : EntityStatus
     public Monster(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
         base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
-    public GameObject radarObject;
     public GameObject attackRangeObject;
-    public GameObject weaponPrefab;
-    //public GameObject weaponSpawnPos;
     public GameObject room;
     public bool isAlcohol;
     public bool isCaffeine;
     public bool isNicotine;
-    [SerializeField]Transform target;
     NavMeshAgent agent;
-    Radar radar;
-    Radar attackRange;
     GameObject player;
     float nextAttack;
     void Start()
@@ -29,30 +23,29 @@ public class Monster : EntityStatus
         agent.speed = moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        //radar = radarObject.GetComponent<Radar>();
-        //attackRange = attackRangeObject.GetComponent<Radar>();
         player = GameObject.FindGameObjectWithTag("Player");
-        weapon = Instantiate(weaponPrefab);
-        weapon.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-        weapon.transform.parent = transform;
-        weapon.tag = "Weapon(Monster)";
+        hitRange.tag = "Weapon(Monster)";
     }
     void Update()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         if (isConfused)
         {
-            //weapon.tag = "Weapon(ConfusedMonster)";
+            hitRange.tag = "Weapon(ConfusedMonster)";
             gameObject.tag = "ConfusedMonster";
         }
         else
         {
-            //weapon.tag = "Weapon(Monster)";
+            hitRange.tag = "Weapon(Monster)";
             gameObject.tag = "Monster";
         }
         ApplyDebuff(CheckDebuffCondition());
-        SetWeapon();
-        if (fatigue>=maxFatigue) EntityDie();
+        //SetWeapon();
+        if (fatigue >= maxFatigue)
+        {
+            fatigue = -1;
+            EntityDie();
+        }
     }
     public void MonsterMovement(GameObject follow)
     {
@@ -60,6 +53,7 @@ public class Monster : EntityStatus
             return;
 
         agent.SetDestination(follow.transform.position);
+        transform.GetChild(0).GetComponent<AnimationManager>().MoveStart();
         //transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
     }
     public void LookAt(GameObject follow)
@@ -69,11 +63,11 @@ public class Monster : EntityStatus
         
         if (follow.transform.position.x < transform.position.x)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.localScale = new Vector3(2, 2, 1);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.localScale = new Vector3(-2, 2, 1);
         }
     }
     public void Attack()
@@ -83,13 +77,14 @@ public class Monster : EntityStatus
         if (Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
+            transform.GetChild(0).GetComponent<AnimationManager>().AttackStart();
         }
     }
-    void SetWeapon()
+    /*void SetWeapon()
     {
         weapon.transform.position = transform.position + new Vector3(0,1,0);
         weapon.transform.rotation = transform.rotation;
-    }
+    }*/
     protected override void EntityDie()
     {
         gameObject.GetComponent<DropTable>().ItemDrop(transform.position);
