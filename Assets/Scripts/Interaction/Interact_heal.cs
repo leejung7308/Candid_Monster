@@ -8,6 +8,8 @@ public class Interact_heal : MonoBehaviour
 
     EntityStatus player;
 
+    public List<RespawnManager> respawnmanagers;
+
     //Player Acessable
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -49,6 +51,13 @@ public class Interact_heal : MonoBehaviour
         player.nicotine = 0.0f;
         player.caffeine = 0.0f;
         player.alcohol = 0.0f;
+
+        for(int i = 0; i < respawnmanagers.Count; i++) {
+            if(respawnmanagers[i].GetComponent<RespawnManager>().isRespawn) {
+                respawnmanagers[i].GetComponent<RespawnManager>().SpawnMonsters();
+                respawnmanagers[i].GetComponent<RespawnManager>().isRespawn = false;
+            }
+        }
         
     }
 }

@@ -17,7 +17,7 @@ public class Monster : EntityStatus
     NavMeshAgent agent;
     GameObject player;
     float nextAttack;
-    void Start()
+    public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = moveSpeed;
