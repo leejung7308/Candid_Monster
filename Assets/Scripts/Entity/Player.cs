@@ -22,6 +22,7 @@ public class Player : EntityStatus
     Dictionary<KeyCode, ActiveSkill> activeSkills;
     List<DamagePassive> damagePassives;
     List<PlayserStatusPassive> playerStatPassives;
+    [SerializeField] float scale;
 
     Camera mainCamera;
 
@@ -94,11 +95,11 @@ public class Player : EntityStatus
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < transform.position.x)
         {
-            transform.localScale = new Vector3(-2, 2, 1);
+            transform.localScale = new Vector3(scale, scale, 1);
         }
         else
         {
-            transform.localScale = new Vector3(2, 2, 1);
+            transform.localScale = new Vector3(-scale, scale, 1);
         }
     }
     void WeaponSwap()
