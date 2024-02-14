@@ -161,7 +161,7 @@ public class StorageSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (DragStorageSlot.instance.transform.localPosition.x < baseRect.xMin
+        /*if (DragStorageSlot.instance.transform.localPosition.x < baseRect.xMin
             || DragStorageSlot.instance.transform.localPosition.x > baseRect.xMax
             || DragStorageSlot.instance.transform.localPosition.y < baseRect.yMin
             || DragStorageSlot.instance.transform.localPosition.y > baseRect.yMax)
@@ -171,7 +171,7 @@ public class StorageSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
                 Quaternion.identity);
             DragStorageSlot.instance.theDragSlot.ClearSlot();
 
-        }
+        }*/
 
         DragStorageSlot.instance.SetColor(0);
         DragStorageSlot.instance.theDragSlot = null;

@@ -12,7 +12,11 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject go_InventoryBase;
     [SerializeField]
+    private GameObject go_EquipmentBase;
+    [SerializeField]
     private GameObject go_SlotsParent;
+    [SerializeField]
+    private GameObject go_EquipmentSlotsParent;
     [SerializeField]
     private Transform _targetTr;
 
@@ -75,11 +79,13 @@ public class Inventory : MonoBehaviour
     public void OpenInventory()
     {
         go_InventoryBase.SetActive(true);
+        go_EquipmentBase.SetActive(true);
     }
 
     public void CloseInventory()
     {
         go_InventoryBase.SetActive(false);
+        go_EquipmentBase.SetActive(false);
         theItemInfo.HideInfo();
         //_targetTr.position = new Vector3(400, 200, 0); //Inventory open position static
     }
