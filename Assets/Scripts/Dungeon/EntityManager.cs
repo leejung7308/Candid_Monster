@@ -7,6 +7,8 @@ public class EntityManager : MonoBehaviour
     public List<GameObject> doors = new List<GameObject>();
     public int monsterCount;
 
+    public List<InteractSniff> sniffs;
+
     // Update is called once per frame
     void Update()
     {

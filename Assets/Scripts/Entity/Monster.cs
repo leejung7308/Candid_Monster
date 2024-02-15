@@ -91,6 +91,7 @@ public class Monster : EntityStatus
         room.GetComponent<EntityManager>().monsterCount--;
         base.EntityDie();
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (isInvincible)       // 무적일 경우, 충돌 연산을 무시한다.

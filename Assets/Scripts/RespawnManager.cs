@@ -8,8 +8,7 @@ public class RespawnManager : MonoBehaviour
     public GameObject[] monsterPrefab; // 스폰할 몬스터 프리팹
     public GameObject room; //방
     
-    public List<Transform> spawnPositions = new List<Transform>(); // 스폰 위치 리스트
-    public GameObject respawnTrigger; // 힐 상호작용 오브젝트
+    public List<RectTransform> spawnPositions = new List<RectTransform>(); // 스폰 위치 리스트
     public bool isRespawn; //리스폰 여부
     public int monsterSet; //리스폰매니저에 할당된 몬스터 수
     
@@ -34,13 +33,14 @@ public class RespawnManager : MonoBehaviour
         for(int i = 0; i < monsterSet; i++) {
             var monster = monsterPrefab[i];
 
-            Debug.Log(monsterPrefab.Length);
-
             monster.gameObject.SetActive(true);
             monster.GetComponent<Monster>().fatigue = 0;
-            monster.GetComponent<Transform>().position = spawnPositions[i].position;
-            monster.GetComponent<Transform>().rotation = spawnPositions[i].rotation;
- 
+            monster.GetComponent<RectTransform>().position = spawnPositions[i].GetComponent<RectTransform>().position;
+            monster.GetComponent<RectTransform>().rotation = spawnPositions[i].GetComponent<RectTransform>().rotation;
+            monster.GetComponent<RectTransform>().localScale = spawnPositions[i].localScale;
+
+
+
             monster.GetComponent<CapsuleCollider2D>().enabled = true;
             monster.GetComponent<Raycast>().isDetected = false;
 
