@@ -26,13 +26,16 @@ public class Raycast : MonoBehaviour
         {
             isDetected = true;    
         }
+
         if (isDetected)
         {
             attackRange.SetActive(true);
             gameObject.GetComponent<Monster>().MonsterMovement(player);
             gameObject.GetComponent<Monster>().LookAt(player);
         }
+        else attackRange.SetActive(false);
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

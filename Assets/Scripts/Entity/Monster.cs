@@ -17,7 +17,7 @@ public class Monster : EntityStatus
     NavMeshAgent agent;
     GameObject player;
     float nextAttack;
-    void Start()
+    public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = moveSpeed;
@@ -91,6 +91,7 @@ public class Monster : EntityStatus
         room.GetComponent<EntityManager>().monsterCount--;
         base.EntityDie();
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (isInvincible)       // 무적일 경우, 충돌 연산을 무시한다.
