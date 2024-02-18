@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3041399875933730660}
-  - component: {fileID: 8200504801463315495}
   - component: {fileID: 2275907673155229753}
   - component: {fileID: 7928947647629303063}
+  - component: {fileID: 8325923361277688115}
   m_Layer: 5
   m_Name: money10000
   m_TagString: CanBePickedUp
@@ -34,26 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8200504801463315495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927694576777091998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70d90156fa0790a4f9d4964995ee1d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
-  itemName: Money10000
-  itemType: 3
-  itemImage: {fileID: 21300000, guid: d2dc84ed9b2b7514c9c034f0c40e5d7d, type: 3}
-  itemDesc: Coin
-  itemValue: 10000
 --- !u!58 &2275907673155229753
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,3 +121,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8325923361277688115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5927694576777091998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3956f9e80c44ea891019c760aa958c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caffeine: 0
+  alcohol: 0
+  nicotine: 0
+  itemName: 
+  itemType: 0
+  itemImage: {fileID: 0}
+  itemDesc: 
+  itemValue: 0
+  itemAcquire: 0

@@ -48,7 +48,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     {
         item = _item;
         itemCount = _count;
-        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite; 
+        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
         itemImage.color = item.GetComponent<SpriteRenderer>().color;
 
         if (item.itemType != Item.ItemType.Equipment && item.itemType != Item.ItemType.ETC)
@@ -130,12 +130,16 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
                 }
                 else 
                 {
-                    if (item.itemType == Item.ItemType.Equipment)
+                    if (item.itemType == Item.ItemType.Equipment && !this.CompareTag("EquipmentSlot"))
                     {
-                        /*if (thePlayer != null)
-                        {
-                            thePlayer.EquipItem(item);
-                        }*/
+                        item.Use();
+                        ClearSlot();
+                    }
+                    else if(item.itemType == Item.ItemType.Equipment && this.CompareTag("EquipmentSlot"))
+                    {
+                        theInventory.AcquireItem(item);
+                        ClearSlot();
+                        theEquipment.SetPlayerWeapon();
                     }
                     else
                     {
@@ -225,7 +229,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
             DragSlot.instance.dragSlot.AddItem(_tempItem, _tempItemCount);
         else
             DragSlot.instance.dragSlot.ClearSlot();
-        if (this.CompareTag("EquipmentSlot"))
+        if (this.CompareTag("EquipmentSlot") || DragSlot.instance.dragSlot.CompareTag("EquipmentSlot"))
         {
             theEquipment.GetComponent<Equipment>().SetPlayerWeapon();
         }

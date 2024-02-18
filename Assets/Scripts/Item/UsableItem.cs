@@ -6,10 +6,12 @@
         public UsableItem(int caffeine, int alcohol, int nicotine) : base(caffeine, alcohol, nicotine)
         {
         }
-
-        public void Use(Player target)
+        public override void Use()
         {
-            
+        }
+        public override float GetData()
+        {
+            return 0;
         }
     }
 }

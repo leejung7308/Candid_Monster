@@ -23,6 +23,7 @@ public class Player : EntityStatus
     List<PlayserStatusPassive> playerStatPassives;
     [SerializeField] float scale;
     [SerializeField] GameObject basicWeapon;
+    //[SerializeField] GameObject emptyWeapon;
 
     Camera mainCamera;
 
@@ -127,10 +128,12 @@ public class Player : EntityStatus
         weapons[weaponNum].gameObject.SetActive(true);
         for(int i = 0; i < 4; i++)
         {
-            if (weapons[i] != null && i != weaponNum) 
+            if (weapons[i] != null)
             {
+                if (i == weaponNum) continue;
                 weapons[i].gameObject.SetActive(false);
             }
+            
         }
         weapon = weapons[weaponNum];
         weapon.transform.position = weaponSpawnPos.transform.position;
@@ -169,7 +172,7 @@ public class Player : EntityStatus
     }
     void Attack()
     {
-        if (isFainted)
+        if (isFainted || weapon.GetComponent<SpriteRenderer>().sprite == null)
             return;
 
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
@@ -217,11 +220,17 @@ public class Player : EntityStatus
         EntityHit(originalDamageHolder);
         StartCoroutine(InvincibleMode(invincibleTime));     // 중복해서 피해를 입는것을 방지하기 위한 일시 무적.
     }
-
-    public void EquipItem(Item.Item item,int index)
+/*
+    public void UpdateEquipment(Slot[] slots)
     {
-        weapons[index] = item.gameObject;
-    }
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == null) continue;
+            GameObject tmp = Instantiate(emptyWeapon);
+            tmp.GetComponent<Weapon>().CopyData(slots[i].item);
+            weapons[i] = tmp;
+        }
+    }*/
     
     /**
      * 피로도 증가 로직.

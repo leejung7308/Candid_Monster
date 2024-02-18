@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour
     private TextMeshProUGUI text_Coin;
 
     private Slot[] slots;
+    private Slot[] equipmentSlots;
 
     private ItemInfo theItemInfo;
     public GameObject CoffeeStore;
@@ -34,11 +35,15 @@ public class Inventory : MonoBehaviour
     public GameObject Storage;
     public Collection theCollection;
 
+    Player player;
+
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+        equipmentSlots = go_EquipmentSlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
         items = theCollection.GetItems();
+        player = FindObjectOfType<Player>();
     }
 
     void Update()
@@ -128,7 +133,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
     public void UnlockCollection(Item.Item _item)
     {
         for(int i = 0; i < items.Length; i++)
