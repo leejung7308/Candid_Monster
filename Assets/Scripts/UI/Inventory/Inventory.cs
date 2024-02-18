@@ -38,6 +38,7 @@ public class Inventory : MonoBehaviour
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
+        items = theCollection.GetItems();
     }
 
     void Update()
@@ -130,8 +131,6 @@ public class Inventory : MonoBehaviour
 
     public void UnlockCollection(Item.Item _item)
     {
-        Item.Item[] items = theCollection.GetItems();
-
         for(int i = 0; i < items.Length; i++)
         {
             if(items[i].itemName == _item.itemName)
