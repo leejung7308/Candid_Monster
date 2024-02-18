@@ -11,8 +11,7 @@ public class Player : EntityStatus
     public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
         base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
     public float invincibleTime;
-    public List<GameObject> weaponPrefabs;
-    public List<GameObject> weapons;
+    public GameObject[] weapons;
     public GameObject weaponSpawnPos;
     public bool enableFatigue = true;
     float fatigueTimer = 0.0f;
@@ -22,6 +21,9 @@ public class Player : EntityStatus
     Dictionary<KeyCode, ActiveSkill> activeSkills;
     List<DamagePassive> damagePassives;
     List<PlayserStatusPassive> playerStatPassives;
+    [SerializeField] float scale;
+    [SerializeField] GameObject basicWeapon;
+    //[SerializeField] GameObject emptyWeapon;
 
     Camera mainCamera;
 
@@ -30,15 +32,8 @@ public class Player : EntityStatus
         hitRange.tag = "Weapon(Player)";
         animator = transform.GetChild(0).GetComponent<Animator>();
         mainCamera = Camera.main;
-        for (int i = 0; i < 3; i++)
-        {
-            GameObject tmp = new GameObject("Empty Object");
-            tmp.SetActive(false);
-            tmp.transform.parent = weaponSpawnPos.transform;
-            tmp.transform.rotation = weaponSpawnPos.transform.rotation;
-            tmp.transform.position = weaponSpawnPos.transform.position;
-            weapons.Add(tmp);
-        }
+        weapons = new GameObject[4];
+        weapons[0] = basicWeapon;
         SetWeapon(0);
         Debug.Log("Add Active skills");
         activeSkills = new Dictionary<KeyCode, ActiveSkill>();
@@ -51,9 +46,9 @@ public class Player : EntityStatus
         damagePassives = new List<DamagePassive>();
         damagePassives.Add(new BombAlcohol());
         Debug.Log("Add Player Status Passives");
-        playerStatPassives = new List<PlayserStatusPassive>();
+        /*playerStatPassives = new List<PlayserStatusPassive>();
         playerStatPassives.Add(new CoffeBoost(this));
-        playerStatPassives.Add(new SmokingTime(this));
+        playerStatPassives.Add(new SmokingTime(this));*/
     }
     void Update()
     {
@@ -62,8 +57,8 @@ public class Player : EntityStatus
         else hitRange.tag = "Weapon(Player)";
 
         WeaponSwap();
-        ApplyPlayerStatusPassives();
-        HandleActiveSkills();
+        //ApplyPlayerStatusPassives();
+        //HandleActiveSkills();
         Attack();
         LookAt();
         if (enableFatigue) IncreaseFatigue();
@@ -94,46 +89,51 @@ public class Player : EntityStatus
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < transform.position.x)
         {
-            transform.localScale = new Vector3(-2, 2, 1);
+            transform.localScale = new Vector3(scale, scale, 1);
         }
         else
         {
-            transform.localScale = new Vector3(2, 2, 1);
+            transform.localScale = new Vector3(-scale, scale, 1);
         }
     }
     void WeaponSwap()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            if (weapons[0] == null) return;
             Debug.Log("무기1번");
             SetWeapon(0);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            if (weapons[1] == null) return;
             Debug.Log("무기2번");
             SetWeapon(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            if (weapons[2] == null) return;
             Debug.Log("무기3번");
             SetWeapon(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            if (weapons[3] == null) return;
             Debug.Log("무기4번");
             SetWeapon(3);
         }
-        //weapon.transform.position = weaponSpawnPos.transform.position;
     }
     void SetWeapon(int weaponNum)
     {
         weapons[weaponNum].gameObject.SetActive(true);
         for(int i = 0; i < 4; i++)
         {
-            if (i != weaponNum)
+            if (weapons[i] != null)
             {
+                if (i == weaponNum) continue;
                 weapons[i].gameObject.SetActive(false);
             }
+            
         }
         weapon = weapons[weaponNum];
         weapon.transform.position = weaponSpawnPos.transform.position;
@@ -172,7 +172,7 @@ public class Player : EntityStatus
     }
     void Attack()
     {
-        if (isFainted)
+        if (isFainted || weapon.GetComponent<SpriteRenderer>().sprite == null)
             return;
 
         if (Input.GetMouseButton(0) && Time.time > nextAttack)
@@ -220,42 +220,17 @@ public class Player : EntityStatus
         EntityHit(originalDamageHolder);
         StartCoroutine(InvincibleMode(invincibleTime));     // 중복해서 피해를 입는것을 방지하기 위한 일시 무적.
     }
-
-    public void EquipItem(string _name)
+/*
+    public void UpdateEquipment(Slot[] slots)
     {
-            if (_name == "knife")
-            {
-                weapons[0].gameObject.SetActive(true);
-                weapons[1].gameObject.SetActive(false);
-                weapons[2].gameObject.SetActive(false);
-                weapons[3].gameObject.SetActive(false);
-                weapon = weapons[0];
-            }
-            else if(_name == "alcohol")
-            {
-                weapons[1].gameObject.SetActive(true);
-                weapons[0].gameObject.SetActive(false);
-                weapons[2].gameObject.SetActive(false);
-                weapons[3].gameObject.SetActive(false);
-                weapon = weapons[1];
-            }
-            else if(_name == "coffee")
-            {
-                weapons[2].gameObject.SetActive(true);
-                weapons[0].gameObject.SetActive(false);
-                weapons[1].gameObject.SetActive(false);
-                weapons[3].gameObject.SetActive(false);
-                weapon = weapons[2];
-            }
-            else if(_name == "cigarette")
-            {
-                weapons[3].gameObject.SetActive(true);
-                weapons[0].gameObject.SetActive(false);
-                weapons[1].gameObject.SetActive(false);
-                weapons[2].gameObject.SetActive(false);
-                weapon = weapons[3];
-            }
-    }
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == null) continue;
+            GameObject tmp = Instantiate(emptyWeapon);
+            tmp.GetComponent<Weapon>().CopyData(slots[i].item);
+            weapons[i] = tmp;
+        }
+    }*/
     
     /**
      * 피로도 증가 로직.

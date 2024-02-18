@@ -23,6 +23,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     private ItemInfo theItemInfo;
     private Inventory theInventory;
     private Storage theStorage;
+    private Equipment theEquipment;
 
     private Rect baseRect; 
 
@@ -32,6 +33,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         theItemInfo = FindObjectOfType<ItemInfo>();
         theInventory = FindObjectOfType<Inventory>();
         theStorage = FindObjectOfType<Storage>();
+        theEquipment = FindObjectOfType<Equipment>();
         baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
@@ -46,7 +48,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     {
         item = _item;
         itemCount = _count;
-        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite; 
+        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
         itemImage.color = item.GetComponent<SpriteRenderer>().color;
 
         if (item.itemType != Item.ItemType.Equipment && item.itemType != Item.ItemType.ETC)
@@ -128,12 +130,16 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
                 }
                 else 
                 {
-                    if (item.itemType == Item.ItemType.Equipment)
+                    if (item.itemType == Item.ItemType.Equipment && !this.CompareTag("EquipmentSlot"))
                     {
-                        if (thePlayer != null)
-                        {
-                            thePlayer.EquipItem(item.itemName);
-                        }
+                        item.Use();
+                        ClearSlot();
+                    }
+                    else if(item.itemType == Item.ItemType.Equipment && this.CompareTag("EquipmentSlot"))
+                    {
+                        theInventory.AcquireItem(item);
+                        ClearSlot();
+                        theEquipment.SetPlayerWeapon();
                     }
                     else
                     {
@@ -188,17 +194,18 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (DragSlot.instance.transform.localPosition.x < baseRect.xMin
+        /*if (DragSlot.instance.transform.localPosition.x < baseRect.xMin
             || DragSlot.instance.transform.localPosition.x > baseRect.xMax
             || DragSlot.instance.transform.localPosition.y < baseRect.yMin
             || DragSlot.instance.transform.localPosition.y > baseRect.yMax)
         {
-            Instantiate(DragSlot.instance.dragSlot.item,
+            Debug.Log("이거 실행");
+            *//*Instantiate(DragSlot.instance.dragSlot.item,
                 thePlayer.transform.position + thePlayer.transform.forward,
-                Quaternion.identity);
+                Quaternion.identity);*//*
             DragSlot.instance.dragSlot.ClearSlot();
 
-        }
+        }*/
 
         DragSlot.instance.SetColor(0);
         DragSlot.instance.dragSlot = null;
@@ -207,7 +214,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     public void OnDrop(PointerEventData eventData)
     {
         if (DragSlot.instance.dragSlot != null)
-            ChangeSlot();
+            if (DragSlot.instance.dragSlot.item.itemType != Item.ItemType.Equipment && this.CompareTag("EquipmentSlot")) return;
+            else ChangeSlot();
     }
 
     private void ChangeSlot()
@@ -221,5 +229,9 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
             DragSlot.instance.dragSlot.AddItem(_tempItem, _tempItemCount);
         else
             DragSlot.instance.dragSlot.ClearSlot();
+        if (this.CompareTag("EquipmentSlot") || DragSlot.instance.dragSlot.CompareTag("EquipmentSlot"))
+        {
+            theEquipment.GetComponent<Equipment>().SetPlayerWeapon();
+        }
     }
 }

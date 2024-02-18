@@ -81,7 +81,7 @@ namespace Item
     /**
      * 아이템의 기본 클래스입니다. 인터페이스는 객체 멤버를 가질 수 없어, 클래스로 구현되었습니다.
      */
-    public class Item: MonoBehaviour
+    public abstract class Item: MonoBehaviour
     {
         public int caffeine;
         public int alcohol;
@@ -102,6 +102,8 @@ namespace Item
             this.nicotine = nicotine;
         }
 
+        public abstract void Use();
+        public abstract float GetData();
         public virtual DamageHolder GetDamageHolder()
             => new DamageHolder(
                 caffeine,
