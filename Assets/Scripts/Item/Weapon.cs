@@ -5,6 +5,7 @@ namespace Item
     public class Weapon: Item
     {
         public float damage;
+        public bool isEnchanted = false;
         public Weapon(int caffeine, int alcohol, int nicotine, float damage): base(caffeine, alcohol, nicotine)
         {
             this.damage = damage;

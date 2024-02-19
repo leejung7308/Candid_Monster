@@ -94,6 +94,7 @@ namespace Item
         public string itemDesc;
         public int itemValue;
         public int itemAcquire = 0;
+        public bool isPickedUp = false;
 
         public Item(int caffeine, int alcohol, int nicotine)
         {

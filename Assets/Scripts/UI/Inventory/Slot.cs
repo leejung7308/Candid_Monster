@@ -224,14 +224,14 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         int _tempItemCount = itemCount;
 
         AddItem(DragSlot.instance.dragSlot.item, DragSlot.instance.dragSlot.itemCount);
-
+        Debug.Log(item.itemName);
         if (_tempItem != null)
             DragSlot.instance.dragSlot.AddItem(_tempItem, _tempItemCount);
         else
             DragSlot.instance.dragSlot.ClearSlot();
         if (this.CompareTag("EquipmentSlot") || DragSlot.instance.dragSlot.CompareTag("EquipmentSlot"))
         {
-            theEquipment.GetComponent<Equipment>().SetPlayerWeapon();
+            theEquipment.SetPlayerWeapon();
         }
     }
 }
