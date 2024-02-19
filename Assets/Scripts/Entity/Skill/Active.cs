@@ -92,7 +92,7 @@ namespace Entity.Skill
                 return;
             
             Debug.Log("ActiveSkill > EspressoDoubleShot: Activated!");
-            target.caffeine += 10;
+            //target.caffeine += 10;
             
             StartCooldown();
         }
@@ -121,7 +121,7 @@ namespace Entity.Skill
             ba.GetCapturedTargets().ForEach(radar =>
             {
                 radar.Blind();
-                radar.monster.nicotine += 10;
+                //radar.monster.nicotine += 10;
             });
             
             StartCooldown();

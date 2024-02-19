@@ -70,7 +70,7 @@ public class Debuff : MonoBehaviour
     public IEnumerator MarkDebuff()
     {
         for (int i = 0; i < MarkDebuffSec; i++) {
-            gameObject.GetComponent<EntityStatus>().nicotine += 2;
+            //gameObject.GetComponent<EntityStatus>().nicotine += 2;
             yield return new WaitForSeconds(1f);
         }
         prevMarkCoro = null;

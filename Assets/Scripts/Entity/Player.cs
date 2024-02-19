@@ -8,8 +8,8 @@ using Item;
 
 public class Player : EntityStatus
 {
-    public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
-        base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
+    public Player(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue) : 
+        base(fatigue, moveSpeed, attackSpeed, maxFatigue) { }
     public float invincibleTime;
     public GameObject[] weapons;
     public GameObject weaponSpawnPos;
@@ -69,7 +69,6 @@ public class Player : EntityStatus
         LookAt();
         if (enableFatigue) IncreaseFatigue();
         if(fatigue>=maxFatigue) EntityDie();
-        ApplyDebuff(CheckDebuffCondition());
     }
     void FixedUpdate()
     {

@@ -4,9 +4,9 @@ namespace Item
 {
     public class Weapon: Item
     {
-        public float damage;
+        public int damage;
         public bool isEnchanted = false;
-        public Weapon(int caffeine, int alcohol, int nicotine, float damage): base(caffeine, alcohol, nicotine)
+        public Weapon(int damage)
         {
             this.damage = damage;
         }
@@ -15,12 +15,19 @@ namespace Item
             Equipment equipment = FindObjectOfType<Equipment>();
             equipment.EquipItem(this);
         }
-        public override float GetData() {  return damage; }
+        public override int GetData() {  return damage; }
+        public override bool IsEnchanted() { return isEnchanted; }
+        public override void AddData(int data)
+        {
+            damage += data;
+        }
+        public override void Enchant()
+        {
+            isEnchanted = true;
+        }
         public void CopyData(Item item)
         {
-            this.alcohol = item.alcohol;
-            this.caffeine = item.caffeine;
-            this.nicotine = item.nicotine;
+            this.itemCategory = item.itemCategory;
             this.itemValue = item.itemValue;
             this.itemDesc = item.itemDesc;
             this.itemType = item.itemType;
@@ -31,9 +38,7 @@ namespace Item
         }
         public void Reset()
         {
-            this.alcohol = 0;
-            this.caffeine = 0; 
-            this.nicotine = 0;
+            this.itemCategory = 0;
             this.itemValue = 0;
             this.itemDesc = "";
             this.itemAcquire = 0;
@@ -44,9 +49,6 @@ namespace Item
         }
         public override DamageHolder GetDamageHolder()
             => new DamageHolder(
-                caffeine,
-                alcohol,
-                nicotine,
                 damage
             );
     }

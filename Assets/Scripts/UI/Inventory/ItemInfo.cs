@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Item;
 
 public class ItemInfo : MonoBehaviour
 {
@@ -21,7 +22,21 @@ public class ItemInfo : MonoBehaviour
         go_Base.transform.position = _pos;
 
         txt_ItemName.text = _item.itemName;
-        txt_ItemDesc.text = _item.itemDesc;
+        switch (_item.itemCategory) 
+        {
+            case ItemCategory.EnchantItem:
+                txt_ItemDesc.text = "종류 : \n인첸트 아이템\n" + "\n속성 :\n" + _item.itemType.ToString() + "\n\n추가 데미지 :\n" + _item.GetData().ToString();
+                break;
+            case ItemCategory.Equipment:
+                txt_ItemDesc.text = "종류 : \n무기\n" + "\n속성 :\n" + _item.itemType.ToString() + "\n\n무기 데미지 :\n" + _item.GetData().ToString();
+                break;
+            case ItemCategory.Used:
+                txt_ItemDesc.text = "종류 : \n소비 아이템\n" + "\n회복 수치 :\n" + _item.GetData().ToString();
+                break;
+            default:
+                txt_ItemDesc.text = _item.itemDesc;
+                break;
+        }
     }
 
     public void HideInfo()
