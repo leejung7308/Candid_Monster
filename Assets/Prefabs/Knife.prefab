@@ -47,16 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
   itemName: knife
+  itemCategory: 1
   itemType: 0
   itemImage: {fileID: 21300000, guid: 70e3e5240f0d50f43a000a319e8a4854, type: 3}
   itemDesc: just knife
   itemValue: 1000
   itemAcquire: 0
+  isPickedUp: 0
   damage: 10
+  isEnchanted: 0
 --- !u!212 &388198385748816934
 SpriteRenderer:
   m_ObjectHideFlags: 0

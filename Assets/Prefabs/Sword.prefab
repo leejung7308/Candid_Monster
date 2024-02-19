@@ -47,16 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
   itemName: Sword
+  itemCategory: 1
   itemType: 0
   itemImage: {fileID: 21300000, guid: 6548095e2a531754fa4aab98041ccbfb, type: 3}
   itemDesc: just a normal sword
   itemValue: 0
   itemAcquire: 0
+  isPickedUp: 0
   damage: 20
+  isEnchanted: 0
 --- !u!212 &613519732074519179
 SpriteRenderer:
   m_ObjectHideFlags: 0
