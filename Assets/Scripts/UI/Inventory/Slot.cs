@@ -24,6 +24,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     private Inventory theInventory;
     private Storage theStorage;
     private Equipment theEquipment;
+    private Enchant theEnchant;
 
     private Rect baseRect; 
 
@@ -34,6 +35,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         theInventory = FindObjectOfType<Inventory>();
         theStorage = FindObjectOfType<Storage>();
         theEquipment = FindObjectOfType<Equipment>();
+        theEnchant = FindObjectOfType<Enchant>();
         baseRect = transform.parent.parent.GetComponent<RectTransform>().rect;
     }
 
@@ -51,12 +53,12 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
         itemImage.color = item.GetComponent<SpriteRenderer>().color;
 
-        if (item.itemType != Item.ItemType.Equipment && item.itemType != Item.ItemType.ETC)
+        if (item.itemCategory != Item.ItemCategory.Equipment && item.itemCategory != Item.ItemCategory.ETC && item.itemCategory != Item.ItemCategory.EnchantItem)
         {
             go_CountImage.SetActive(true);
             text_Count.text = itemCount.ToString();
         }
-        else if(item.itemType == Item.ItemType.Equipment) 
+        else if(item.itemCategory == Item.ItemCategory.Equipment || item.itemCategory == Item.ItemCategory.EnchantItem) 
         {
             text_Count.text = "0";
             go_CountImage.SetActive(false);
@@ -78,7 +80,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
             ClearSlot();
     }
 
-    private void ClearSlot()
+    public void ClearSlot()
     {
         item = null;
         itemCount = 0;
@@ -128,19 +130,28 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
                     }
                     ClearSlot();
                 }
+                else if(theInventory.CheckEnchantTable() == true)
+                {
+                    if (item.itemCategory == Item.ItemCategory.Equipment && (this.CompareTag("InventorySlot") || this.CompareTag("EquipmentSlot")) && !item.IsEnchanted()) theEnchant.PutEquipment(item);
+                    else if (item.itemCategory == Item.ItemCategory.EnchantItem && this.CompareTag("InventorySlot")) theEnchant.PutEnchantItem(item);
+                    else if (this.CompareTag("Enchant(Weapon)") || this.CompareTag("Enchant(Item)") || this.CompareTag("Enchant(Result)")) theInventory.AcquireItem(item);
+                    else return;
+                    ClearSlot();
+                }
                 else 
                 {
-                    if (item.itemType == Item.ItemType.Equipment && !this.CompareTag("EquipmentSlot"))
+                    if (item.itemCategory == Item.ItemCategory.Equipment && !this.CompareTag("EquipmentSlot"))
                     {
                         item.Use();
                         ClearSlot();
                     }
-                    else if(item.itemType == Item.ItemType.Equipment && this.CompareTag("EquipmentSlot"))
+                    else if (item.itemCategory == Item.ItemCategory.Equipment && this.CompareTag("EquipmentSlot"))
                     {
                         theInventory.AcquireItem(item);
                         ClearSlot();
                         theEquipment.SetPlayerWeapon();
                     }
+                    else if (item.itemCategory == Item.ItemCategory.EnchantItem) return;
                     else
                     {
                         Debug.Log("used item");
@@ -214,8 +225,14 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     public void OnDrop(PointerEventData eventData)
     {
         if (DragSlot.instance.dragSlot != null)
-            if (DragSlot.instance.dragSlot.item.itemType != Item.ItemType.Equipment && this.CompareTag("EquipmentSlot")) return;
+        {
+            if (DragSlot.instance.dragSlot.item.itemCategory != Item.ItemCategory.Equipment && this.CompareTag("EquipmentSlot")) return;
+            if (DragSlot.instance.dragSlot.item.itemCategory != Item.ItemCategory.Equipment && this.CompareTag("Enchant(Weapon)")) return;
+            if (DragSlot.instance.dragSlot.item.itemCategory != Item.ItemCategory.EnchantItem && this.CompareTag("Enchant(Item)")) return;
+            if (this.CompareTag("Enchant(Weapon)") && DragSlot.instance.dragSlot.item.IsEnchanted()) return;
+            if (this.CompareTag("Enchant(Result)")) return;
             else ChangeSlot();
+        }
     }
 
     private void ChangeSlot()

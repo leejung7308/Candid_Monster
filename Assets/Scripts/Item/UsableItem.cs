@@ -25,5 +25,9 @@
         {
             return;
         }
+        public override void Enchant()
+        {
+            return;
+        }
     }
 }
