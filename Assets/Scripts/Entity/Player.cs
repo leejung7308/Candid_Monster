@@ -8,8 +8,8 @@ using Item;
 
 public class Player : EntityStatus
 {
-    public Player(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
-        base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
+    public Player(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue) : 
+        base(fatigue, moveSpeed, attackSpeed, maxFatigue) { }
     public float invincibleTime;
     public GameObject[] weapons;
     public GameObject weaponSpawnPos;
@@ -23,17 +23,23 @@ public class Player : EntityStatus
     List<PlayserStatusPassive> playerStatPassives;
     [SerializeField] float scale;
     [SerializeField] GameObject basicWeapon;
-    //[SerializeField] GameObject emptyWeapon;
+    [SerializeField] GameObject emptyWeapon;
 
     Camera mainCamera;
-
     void Start()
     {
         hitRange.tag = "Weapon(Player)";
         animator = transform.GetChild(0).GetComponent<Animator>();
         mainCamera = Camera.main;
         weapons = new GameObject[4];
-        weapons[0] = basicWeapon;
+        for(int i = 0; i < 4; i++) 
+        {
+            GameObject tmp = Instantiate(emptyWeapon, weaponSpawnPos.transform);
+            tmp.SetActive(false);
+            weapons[i] = tmp;
+        }
+        GameObject spawnWeapon = Instantiate(basicWeapon, transform.position, Quaternion.identity);
+        spawnWeapon.tag = "CanBePickedUp";
         SetWeapon(0);
         Debug.Log("Add Active skills");
         activeSkills = new Dictionary<KeyCode, ActiveSkill>();
@@ -63,7 +69,6 @@ public class Player : EntityStatus
         LookAt();
         if (enableFatigue) IncreaseFatigue();
         if(fatigue>=maxFatigue) EntityDie();
-        ApplyDebuff(CheckDebuffCondition());
     }
     void FixedUpdate()
     {
@@ -189,7 +194,9 @@ public class Player : EntityStatus
 
             if (hitObject != null)
             {
+                if (hitObject.isPickedUp) return;
                 theInventory.AcquireItem(hitObject);
+                hitObject.isPickedUp = true;
                 collision.gameObject.SetActive(false);
             }
         }

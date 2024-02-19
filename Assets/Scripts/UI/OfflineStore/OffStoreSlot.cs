@@ -46,7 +46,7 @@ public class OffStoreSlot : MonoBehaviour, IPointerClickHandler
             {
                 if (item.itemValue <= int.Parse(theInventory.GetCoinText()))
                 {
-                    if (item.itemType== Item.ItemType.Ingredient)
+                    if (item.itemCategory== Item.ItemCategory.Ingredient)
                     {
                         theInventory.SetCoinText(item.itemValue);
                         theInventory.AcquireItem(item);

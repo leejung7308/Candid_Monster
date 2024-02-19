@@ -23,7 +23,7 @@ public class Equipment : MonoBehaviour
         for(int  i = 0; i<4; i++)
         {
             slots[i].tag = "EquipmentSlot";
-            if (player.weapons[i] != null)
+            if (player.weapons[i].GetComponent<SpriteRenderer>().sprite != null)
             {
                 slots[i].AddItem(player.weapons[i].GetComponent<Item.Item>());
             }
@@ -35,27 +35,14 @@ public class Equipment : MonoBehaviour
         {
             if (slots[i].item != null)
             {
-                if (player.weapons[i] == null)
-                {
-                    GameObject tmp = Instantiate(emptyWeapon,weaponSpawnPoint.transform);
-                    tmp.GetComponent<Weapon>().CopyData(slots[i].item);
-                    tmp.GetComponent<SpriteRenderer>().sprite = slots[i].itemImage.sprite;
-                    tmp.SetActive(false);
-                    player.weapons[i] = tmp;
-                }
-                else
-                {
-                    player.weapons[i].GetComponent<Weapon>().CopyData(slots[i].item);
-                    player.weapons[i].GetComponent<SpriteRenderer>().sprite = slots[i].itemImage.sprite;
-                }
+                Debug.Log(slots[i].item.itemName);
+                player.weapons[i].GetComponent<Weapon>().CopyData(slots[i].item);
+                player.weapons[i].GetComponent<SpriteRenderer>().sprite = slots[i].itemImage.sprite;
             }
             else
             {
-                if (player.weapons[i] != null) 
-                { 
-                    player.weapons[i].GetComponent<Weapon>().Reset();
-                    player.weapons[i].GetComponent<SpriteRenderer>().sprite = null;
-                }
+                player.weapons[i].GetComponent<Weapon>().Reset();
+                player.weapons[i].GetComponent<SpriteRenderer>().sprite = null;
             }
         }
     }

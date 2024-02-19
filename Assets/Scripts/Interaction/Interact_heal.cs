@@ -64,9 +64,6 @@ public class Interact_heal : MonoBehaviour
         
         //플레이어 스탯 상태 초기화
         player.fatigue = 0.0f;
-        player.nicotine = 0.0f;
-        player.caffeine = 0.0f;
-        player.alcohol = 0.0f;
 
 
         //몬스터 리스폰

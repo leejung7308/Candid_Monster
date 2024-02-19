@@ -4,10 +4,14 @@ using Item;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum MonsterType
+{
+
+}
 public class Monster : EntityStatus
 {
-    public Monster(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) : 
-        base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine) { }
+    public Monster(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue) : 
+        base(fatigue, moveSpeed, attackSpeed, maxFatigue) { }
     public float invincibleTime;
     public GameObject attackRangeObject;
     public GameObject room;
@@ -29,17 +33,9 @@ public class Monster : EntityStatus
     void Update()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        if (isConfused)
-        {
-            hitRange.tag = "Weapon(ConfusedMonster)";
-            gameObject.tag = "ConfusedMonster";
-        }
-        else
-        {
-            hitRange.tag = "Weapon(Monster)";
-            gameObject.tag = "Monster";
-        }
-        ApplyDebuff(CheckDebuffCondition());
+       
+        hitRange.tag = "Weapon(Monster)";
+        gameObject.tag = "Monster";
         //SetWeapon();
         if (fatigue >= maxFatigue)
         {
@@ -49,18 +45,12 @@ public class Monster : EntityStatus
     }
     public void MonsterMovement(GameObject follow)
     {
-        if(isFainted)
-            return;
-
         agent.SetDestination(follow.transform.position);
         transform.GetChild(0).GetComponent<AnimationManager>().MoveStart();
         //transform.position = Vector2.MoveTowards(transform.position, follow.transform.position, Time.deltaTime * moveSpeed);
     }
     public void LookAt(GameObject follow)
     {
-        if(isFainted)
-            return;
-        
         if (follow.transform.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(2, 2, 1);
@@ -72,8 +62,6 @@ public class Monster : EntityStatus
     }
     public void Attack()
     {
-        if(isFainted)
-            return;
         if (Time.time > nextAttack)
         {
             nextAttack = Time.time + attackSpeed;
@@ -101,16 +89,6 @@ public class Monster : EntityStatus
         {
             Debug.Log("몬스터가 플레이어와 충돌.");
             HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder());
-        }
-        else if(isConfused && (collision.CompareTag("Weapon(Monster)") || collision.CompareTag("Weapon(ConfusedMonster)")))
-        {
-            Debug.Log("몬스터가 혼란 상태이고, 몬스터와 충돌.");
-            HandleMonsterHit(collision.GetComponentInParent<Monster>().GetDamageHolder());
-        }
-        else if (collision.CompareTag("Weapon(ConfusedMonster)"))
-        {
-            Debug.Log("몬스터가 혼란 상태인 몬스터에게 공격당함.");
-            HandleMonsterHit(collision.GetComponentInParent<Monster>().GetDamageHolder());
         }
     }
 

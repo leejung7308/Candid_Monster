@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Secretary : Monster
 {
-    public Secretary(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine) :
-        base(fatigue, moveSpeed, attackSpeed, alcohol, caffeine, nicotine, maxFatigue, maxAlcohol, maxCaffeine, maxNicotine)
+    public Secretary(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue) :
+        base(fatigue, moveSpeed, attackSpeed, maxFatigue)
     { }
     protected override void EntityDie()
     {

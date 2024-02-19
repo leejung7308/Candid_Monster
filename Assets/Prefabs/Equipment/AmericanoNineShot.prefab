@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3034855680302089579}
   - component: {fileID: 7604803209655224737}
   - component: {fileID: 2832053878536515744}
-  - component: {fileID: -7577701013950056935}
+  - component: {fileID: 6128228865263347552}
   m_Layer: 5
   m_Name: AmericanoNineShot
   m_TagString: CanBePickedUp
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7577701013950056935
+--- !u!114 &6128228865263347552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,16 +130,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2279428083488642998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e70757bca0124444b09b579614b0c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
-  itemName: Americano Nine Shot
-  itemType: 0
+  itemName: Ameriacano 9 shots
+  itemCategory: 5
+  itemType: 2
   itemImage: {fileID: 21300000, guid: 0308b55fa567e3f43a91f6b9366925cd, type: 3}
-  itemDesc: espresso nine shot
-  itemValue: 10000
+  itemDesc: 
+  itemValue: 0
   itemAcquire: 0
-  damage: 0
+  isPickedUp: 0
+  additionalDamage: 20

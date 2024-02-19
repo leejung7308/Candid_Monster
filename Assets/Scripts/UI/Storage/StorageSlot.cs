@@ -48,12 +48,12 @@ public class StorageSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
         itemImage.color = item.GetComponent<SpriteRenderer>().color;
 
-        if (item.itemType != Item.ItemType.Equipment)
+        if (item.itemCategory != Item.ItemCategory.Equipment)
         {
             go_CountImage.SetActive(true);
             text_Count.text = itemCount.ToString();
         }
-        else if (item.itemType == Item.ItemType.Equipment)
+        else if (item.itemCategory == Item.ItemCategory.Equipment)
         {
             text_Count.text = "0";
             go_CountImage.SetActive(false);

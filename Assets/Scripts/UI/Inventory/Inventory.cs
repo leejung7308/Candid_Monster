@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour
     public GameObject SmokeStore;
     public GameObject ConvienceStore;
     public GameObject Storage;
+    public GameObject EnchantTable;
     public Collection theCollection;
 
     Player player;
@@ -98,7 +99,7 @@ public class Inventory : MonoBehaviour
 
     public void AcquireItem(Item.Item _item, int _count = 1)
     {
-        if (Item.ItemType.Equipment != _item.itemType && Item.ItemType.ETC != _item.itemType)
+        if (Item.ItemCategory.Equipment != _item.itemCategory && Item.ItemCategory.ETC != _item.itemCategory && Item.ItemCategory.EnchantItem != _item.itemCategory)
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -112,7 +113,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
-        else if (Item.ItemType.ETC == _item.itemType)
+        else if (Item.ItemCategory.ETC == _item.itemCategory)
         {
             int Money;
             Money = int.Parse(text_Coin.text);
@@ -120,7 +121,7 @@ public class Inventory : MonoBehaviour
             text_Coin.text = Money.ToString();
         }
 
-        if (Item.ItemType.ETC != _item.itemType)
+        if (Item.ItemCategory.ETC != _item.itemCategory)
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -202,6 +203,14 @@ public class Inventory : MonoBehaviour
     public bool CheckStorage()
     {
         if (Storage.activeSelf == true)
+        {
+            return true;
+        }
+        else return false;
+    }
+    public bool CheckEnchantTable()
+    {
+        if (EnchantTable.activeSelf == true)
         {
             return true;
         }
