@@ -35,7 +35,7 @@ public class Storage : MonoBehaviour
 
     public void AcquireItem(Item.Item _item, int _count = 1)
     {
-        if (Item.ItemType.Equipment != _item.itemType)
+        if (Item.ItemCategory.Equipment != _item.itemCategory)
         {
             for (int i = 0; i < theSlot.Length; i++)
             {
@@ -49,7 +49,7 @@ public class Storage : MonoBehaviour
                 }
             }
         }
-        if (Item.ItemType.ETC != _item.itemType)
+        if (Item.ItemCategory.ETC != _item.itemCategory)
         {
             for (int i = 0; i < theSlot.Length; i++)
             {

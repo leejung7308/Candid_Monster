@@ -39,7 +39,7 @@ public class Collection : MonoBehaviour
         int j = 0;
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i].itemType == Item.ItemType.Equipment)
+            if (items[i].itemCategory == Item.ItemCategory.Equipment)
             {
                 equipmentslots[i].AddItem(items[i]);
             }

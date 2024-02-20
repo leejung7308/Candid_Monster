@@ -48,7 +48,7 @@ namespace Entity.Skill
         
         public override void ApplyStatusChange()
         {
-            if(target.caffeine >= 80)
+            /*if(target.caffeine >= 80)
             {
                 if(!applied)
                 {
@@ -63,7 +63,7 @@ namespace Entity.Skill
                 Debug.Log("PassiveSkill > CoffeBoost > Remove Boost...");
                 originalStatus.Apply(target);
                 applied = false;
-            }
+            }*/
         }
     }
     

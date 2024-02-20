@@ -21,7 +21,6 @@ public class SkillProjectile : Projectile
         switch(damageType)
         {
             case DebuffType.Caffeine:
-                target.caffeine += 10;
                 break;
             case DebuffType.Mark:
                 target.GetComponent<Debuff>().StartMarkDebuff();

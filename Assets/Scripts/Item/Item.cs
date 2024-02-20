@@ -70,43 +70,45 @@ namespace Item
             );
     }
 
-    public enum ItemType  // 아이템 유형
+    public enum ItemCategory  // 아이템 유형
     {
+        None,
         Equipment, //weapon
         Used, //consumable
         Ingredient,
         ETC,
+        EnchantItem,
     }
-
+    public enum ItemType
+    {
+        None,
+        alcohol,
+        caffeine,
+        nicotine,
+    }
     /**
      * 아이템의 기본 클래스입니다. 인터페이스는 객체 멤버를 가질 수 없어, 클래스로 구현되었습니다.
      */
-    public class Item: MonoBehaviour
+    public abstract class Item: MonoBehaviour
     {
-        public int caffeine;
-        public int alcohol;
-        public int nicotine;
-        
         public string itemName;
+        public ItemCategory itemCategory;
         public ItemType itemType;
         public Sprite itemImage;
         [TextArea]
         public string itemDesc;
         public int itemValue;
         public int itemAcquire = 0;
+        public bool isPickedUp = false;
 
-        public Item(int caffeine, int alcohol, int nicotine)
-        {
-            this.caffeine = caffeine;
-            this.alcohol = alcohol;
-            this.nicotine = nicotine;
-        }
 
+        public abstract void Use();
+        public abstract int GetData();
+        public abstract void AddData(int data);
+        public abstract bool IsEnchanted();
+        public abstract void Enchant();
         public virtual DamageHolder GetDamageHolder()
             => new DamageHolder(
-                caffeine,
-                alcohol,
-                nicotine,
                 0.0f
             );
     }

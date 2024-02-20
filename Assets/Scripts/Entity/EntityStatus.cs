@@ -13,19 +13,13 @@ public class EntityStatusData
     public float moveSpeed;
     public float attackSpeed;
     public float maxFatigue;
-    public float maxAlcohol;
-    public float maxCaffeine;
-    public float maxNicotine;
 
-    public EntityStatusData(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue, int maxAlcohol, int maxCaffeine, int maxNicotine)
+    public EntityStatusData(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue)
     {
         this.fatigue = fatigue;
         this.moveSpeed = moveSpeed;
         this.attackSpeed = attackSpeed;
         this.maxFatigue = maxFatigue;
-        this.maxAlcohol = maxAlcohol;
-        this.maxCaffeine = maxCaffeine;
-        this.maxNicotine = maxNicotine;
     }
     
     public EntityStatusData(EntityStatus entity)
@@ -39,9 +33,6 @@ public class EntityStatusData
         moveSpeed = entity.moveSpeed;
         attackSpeed = entity.attackSpeed;
         maxFatigue = entity.maxFatigue;
-        maxAlcohol = entity.maxAlcohol;
-        maxCaffeine = entity.maxCaffeine;
-        maxNicotine = entity.maxNicotine;
     }
 
     public void Apply(EntityStatus entity)
@@ -50,9 +41,6 @@ public class EntityStatusData
         entity.moveSpeed = moveSpeed;
         entity.attackSpeed = attackSpeed;
         entity.maxFatigue = maxFatigue;
-        entity.maxAlcohol = maxAlcohol;
-        entity.maxCaffeine = maxCaffeine;
-        entity.maxNicotine = maxNicotine;
     }
 }
 
@@ -61,13 +49,7 @@ public class EntityStatus : MonoBehaviour
     public float fatigue;
     public float moveSpeed;
     public float attackSpeed;
-    public float alcohol;
-    public float caffeine;
-    public float nicotine;
     public float maxFatigue;
-    public float maxAlcohol;
-    public float maxCaffeine;
-    public float maxNicotine;
     public bool isConfused = false;
     public bool isFainted = false;
     public bool isInvincible = false;
@@ -76,26 +58,16 @@ public class EntityStatus : MonoBehaviour
     public GameObject weapon;
     public List<GameObject> parts = new List<GameObject>();
     
-    public EntityStatus(float fatigue, float moveSpeed, float attackSpeed, float alcohol, float caffeine, float nicotine, float maxFatigue, float maxAlcohol, float maxCaffeine, float maxNicotine)
+    public EntityStatus(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue)
     {
         this.fatigue = fatigue;
         this.moveSpeed = moveSpeed;
         this.attackSpeed = attackSpeed;
-        this.alcohol = alcohol;
-        this.caffeine = caffeine;
-        this.nicotine = nicotine;
         this.maxFatigue = maxFatigue;
-        this.maxAlcohol = maxAlcohol;
-        this.maxCaffeine = maxCaffeine;
-        this.maxNicotine = maxNicotine;
     }
     protected void EntityHit(DamageHolder currentDamageHolder)
     {
-        alcohol += currentDamageHolder.Alcohol;
-        caffeine += currentDamageHolder.Caffeine;
-        nicotine += currentDamageHolder.Nicotine;
         fatigue += currentDamageHolder.Damage;
-        if (CheckDebuffCondition() != DebuffType.None) isDebuffed = true;
         Debug.Log($"{gameObject.name} 은 {currentDamageHolder.Damage} 만큼의 피해를 입었다!");
     }
     protected IEnumerator InvincibleMode(float time)
@@ -126,38 +98,6 @@ public class EntityStatus : MonoBehaviour
     virtual protected void EntityDie()
     {
         transform.GetChild(0).GetComponent<AnimationManager>().EntityDieStart();
-    }
-    virtual protected void ApplyDebuff(DebuffType type)
-    {
-        switch (type)
-        {
-            case DebuffType.Alcohol:
-                Debug.Log("Debuff > Activate Alcohol Debuff!");
-                gameObject.GetComponent<Debuff>().StartAlcoholDebuff();
-                alcohol = 0;
-                break;
-            case DebuffType.Caffeine:
-                Debug.Log("Debuff > Activate Caffeine Debuff!");
-                gameObject.GetComponent<Debuff>().StartCaffeineDebuff();
-                caffeine = 0;
-                break;
-            case DebuffType.Nicotine:
-                Debug.Log("Debuff > Activate Nicotine Debuff!");
-                gameObject.GetComponent<Debuff>().StartNicotineDebuff();
-                nicotine = 0;
-                break;
-            case DebuffType.Mark:
-                Debug.Log("Debuff > Activate Mark Debuff!");
-                gameObject.GetComponent<Debuff>().StartMarkDebuff();
-                break;
-        }
-    }
-    public DebuffType CheckDebuffCondition()
-    {
-        if (alcohol >= maxAlcohol) return DebuffType.Alcohol;
-        else if (caffeine >= maxCaffeine) return DebuffType.Caffeine;
-        else if (nicotine >= maxNicotine) return DebuffType.Nicotine;
-        else return DebuffType.None;
     }
     
     /**

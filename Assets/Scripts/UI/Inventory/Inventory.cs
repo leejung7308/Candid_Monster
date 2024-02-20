@@ -12,7 +12,11 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject go_InventoryBase;
     [SerializeField]
+    private GameObject go_EquipmentBase;
+    [SerializeField]
     private GameObject go_SlotsParent;
+    [SerializeField]
+    private GameObject go_EquipmentSlotsParent;
     [SerializeField]
     private Transform _targetTr;
 
@@ -20,6 +24,7 @@ public class Inventory : MonoBehaviour
     private TextMeshProUGUI text_Coin;
 
     private Slot[] slots;
+    private Slot[] equipmentSlots;
 
     private ItemInfo theItemInfo;
     public GameObject CoffeeStore;
@@ -28,12 +33,18 @@ public class Inventory : MonoBehaviour
     public GameObject SmokeStore;
     public GameObject ConvienceStore;
     public GameObject Storage;
+    public GameObject EnchantTable;
     public Collection theCollection;
+
+    Player player;
 
     void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+        equipmentSlots = go_EquipmentSlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
+        items = theCollection.GetItems();
+        player = FindObjectOfType<Player>();
     }
 
     void Update()
@@ -75,18 +86,20 @@ public class Inventory : MonoBehaviour
     public void OpenInventory()
     {
         go_InventoryBase.SetActive(true);
+        go_EquipmentBase.SetActive(true);
     }
 
     public void CloseInventory()
     {
         go_InventoryBase.SetActive(false);
+        go_EquipmentBase.SetActive(false);
         theItemInfo.HideInfo();
         //_targetTr.position = new Vector3(400, 200, 0); //Inventory open position static
     }
 
     public void AcquireItem(Item.Item _item, int _count = 1)
     {
-        if (Item.ItemType.Equipment != _item.itemType && Item.ItemType.ETC != _item.itemType)
+        if (Item.ItemCategory.Equipment != _item.itemCategory && Item.ItemCategory.ETC != _item.itemCategory && Item.ItemCategory.EnchantItem != _item.itemCategory)
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -100,7 +113,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
-        else if (Item.ItemType.ETC == _item.itemType)
+        else if (Item.ItemCategory.ETC == _item.itemCategory)
         {
             int Money;
             Money = int.Parse(text_Coin.text);
@@ -108,7 +121,7 @@ public class Inventory : MonoBehaviour
             text_Coin.text = Money.ToString();
         }
 
-        if (Item.ItemType.ETC != _item.itemType)
+        if (Item.ItemCategory.ETC != _item.itemCategory)
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -121,11 +134,8 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
     public void UnlockCollection(Item.Item _item)
     {
-        Item.Item[] items = theCollection.GetItems();
-
         for(int i = 0; i < items.Length; i++)
         {
             if(items[i].itemName == _item.itemName)
@@ -193,6 +203,14 @@ public class Inventory : MonoBehaviour
     public bool CheckStorage()
     {
         if (Storage.activeSelf == true)
+        {
+            return true;
+        }
+        else return false;
+    }
+    public bool CheckEnchantTable()
+    {
+        if (EnchantTable.activeSelf == true)
         {
             return true;
         }
