@@ -24,29 +24,21 @@ namespace Item
     {
         public readonly Player Player;
         public readonly EntityStatus Monster;
-        public readonly float Caffeine;
-        public readonly float Alcohol;
-        public readonly float Nicotine;
-        public readonly float Damage;
+        
+        public readonly int Damage;
 
-        public DamageHolder(float caffeine = 1.0f, float alcohol = 1.0f, float nicotine = 1.0f, float damage = 1.0f)
+        public DamageHolder(int damage = 1)
         {
-            Caffeine = caffeine;
-            Alcohol = alcohol;
-            Nicotine = nicotine;
             Damage = damage;
         }
         
         public static DamageHolder operator +(DamageHolder a)
             => a;
         public static DamageHolder operator -(DamageHolder a)
-            => new (-a.Caffeine, -a.Alcohol, -a.Nicotine, -a.Damage);
+            => new (-a.Damage);
         
         public static DamageHolder operator +(DamageHolder a, DamageHolder b)
         => new (
-            a.Caffeine + b.Caffeine,
-            a.Alcohol + b.Alcohol,
-            a.Nicotine + b.Nicotine,
             a.Damage + b.Damage
         );
         
@@ -55,17 +47,11 @@ namespace Item
         
         public static DamageHolder operator *(DamageHolder a, float ratio) 
             => new (
-                a.Caffeine * ratio,
-                a.Alcohol * ratio,
-                a.Nicotine * ratio,
-                a.Damage * ratio
+                (int)(a.Damage * ratio)
             );
         
         public static DamageHolder operator *(DamageHolder a, DamageHolder b)
             => new (
-                a.Caffeine * b.Caffeine,
-                a.Alcohol * b.Alcohol,
-                a.Nicotine * b.Nicotine,
                 a.Damage * b.Damage
             );
     }
@@ -82,9 +68,9 @@ namespace Item
     public enum ItemType
     {
         None,
-        alcohol,
-        caffeine,
-        nicotine,
+        Alcohol,
+        Caffeine,
+        Nicotine,
     }
     /**
      * 아이템의 기본 클래스입니다. 인터페이스는 객체 멤버를 가질 수 없어, 클래스로 구현되었습니다.
@@ -109,7 +95,7 @@ namespace Item
         public abstract void Enchant();
         public virtual DamageHolder GetDamageHolder()
             => new DamageHolder(
-                0.0f
+                0
             );
     }
 }

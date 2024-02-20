@@ -1,13 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Item;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public enum MonsterType
 {
-
+    None,
+    Alcohol, 
+    Caffeine,
+    Nicotine,
 }
+
 public class Monster : EntityStatus
 {
     public Monster(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue) : 
@@ -15,12 +21,32 @@ public class Monster : EntityStatus
     public float invincibleTime;
     public GameObject attackRangeObject;
     public GameObject room;
+
+    /*
     public bool isAlcohol;
     public bool isCaffeine;
     public bool isNicotine;
+    */
+    public MonsterType monsterType;
+
     NavMeshAgent agent;
     GameObject player;
     float nextAttack;
+    public GameObject auraObject;
+
+
+    public bool isBerserk = false;
+    public bool isWeakness = false;
+
+    float berserkSpeed;
+    float berserkAttackSpeed;
+
+    float originSpeed;
+    float originAttackSpeed;
+
+    float weaknessSpeed;
+    float weaknessAttackSpeed;
+
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -29,7 +55,11 @@ public class Monster : EntityStatus
         agent.updateUpAxis = false;
         player = GameObject.FindGameObjectWithTag("Player");
         hitRange.tag = "Weapon(Monster)";
+        auraObject.SetActive(false);
+
+        MonsterConditionCheck();
     }
+
     void Update()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -42,6 +72,38 @@ public class Monster : EntityStatus
             fatigue = -1;
             EntityDie();
         }
+
+        auraObject.transform.position = transform.position + new Vector3(0, 0.6f, 0);
+         
+        //Berserk Condition Check
+        if (isBerserk)
+        {
+            agent.speed = berserkSpeed;
+            base.attackSpeed = berserkAttackSpeed;
+            auraObject.SetActive(true);
+        }
+        else
+        {
+            agent.speed = originSpeed;
+            base.attackSpeed = originAttackSpeed;
+            auraObject.SetActive(false);
+        }
+
+        //Weakness Condtion Check
+        if (isWeakness)
+        {
+            agent.speed = weaknessSpeed;
+            base.attackSpeed = weaknessAttackSpeed;
+        }
+        else
+        {
+            agent.speed = originSpeed;
+            base.attackSpeed = originAttackSpeed;
+        }
+
+
+
+
     }
     public void MonsterMovement(GameObject follow)
     {
@@ -78,6 +140,8 @@ public class Monster : EntityStatus
         gameObject.GetComponent<DropTable>().ItemDrop(transform.position);
         room.GetComponent<EntityManager>().monsterCount--;
         base.EntityDie();
+        isBerserk = false;
+        isWeakness = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -85,18 +149,68 @@ public class Monster : EntityStatus
         if (isInvincible)       // 무적일 경우, 충돌 연산을 무시한다.
             return;
 
-        if(collision.CompareTag("Weapon(Player)"))
+        //When Collision with Weapon Collider
+        if (collision.CompareTag("Weapon(Player)"))
         {
-            Debug.Log("몬스터가 플레이어와 충돌.");
-            HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder());
+            if (isBerserk)
+            {
+                Debug.Log("Berserked 몬스터가 피격당함.");
+                HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0.5f);
+            }
+            else if (isWeakness)
+            {
+                Debug.Log("Weakened 몬스터가 피격당함.");
+                HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 2f);
+            }
+            else
+            {
+                //평타
+                if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType == ItemType.None)
+                {
+                    Debug.Log("몬스터가 1x 피격당함.");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1f);
+                }
+                //광폭
+                else if (!collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType.ToString().Equals(monsterType.ToString()))
+                {
+                    isBerserk = true;
+                    Debug.Log("몬스터가 광폭함.");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0.5f);
+                }
+                //약점
+                else if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType.ToString().Equals(monsterType.ToString()))
+                {
+                    isWeakness = true;
+                    Debug.Log("몬스터가 약점 피격당함.");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 2f);
+                }
+                else
+                {
+                    Debug.Log("오류");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0f);
+                    return;
+                }
+            }
         }
     }
 
-    public void HandleMonsterHit(Item.DamageHolder originalDamageHolder)
+    public void HandleMonsterHit(Item.DamageHolder originalDamageHolder, float rate)
     {
-        EntityHit(originalDamageHolder);
+        EntityHit(originalDamageHolder, rate);
         StartCoroutine(InvincibleMode(invincibleTime));
     }
 
     public override DamageHolder GetDamageHolder() => weapon.GetComponent<Weapon>().GetDamageHolder();
+
+    public void MonsterConditionCheck()
+    {
+        originSpeed = agent.speed;
+        originAttackSpeed = attackSpeed;
+
+        berserkSpeed = agent.speed * 2f;
+        berserkAttackSpeed = attackSpeed * 2f;
+
+        weaknessSpeed = agent.speed / 2f;
+        weaknessAttackSpeed = attackSpeed / 2f;
+    }
 }

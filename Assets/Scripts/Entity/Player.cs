@@ -224,7 +224,7 @@ public class Player : EntityStatus
      */
     public void HandleEntityDamage(DamageHolder originalDamageHolder)
     {
-        EntityHit(originalDamageHolder);
+        EntityHit(originalDamageHolder, 1);
         StartCoroutine(InvincibleMode(invincibleTime));     // 중복해서 피해를 입는것을 방지하기 위한 일시 무적.
     }
 /*
