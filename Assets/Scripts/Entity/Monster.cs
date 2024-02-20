@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Item;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class Monster : EntityStatus
 {
@@ -17,6 +18,20 @@ public class Monster : EntityStatus
     NavMeshAgent agent;
     GameObject player;
     float nextAttack;
+    public GameObject auraObject;
+
+
+    public bool Berserk = false;
+
+    float berserkSpeed;
+    float berserkAttackSpeed;
+
+    float originSpeed;
+    float originAttackSpeed;
+
+    float weaknessSpeed;
+    float weaknessAttackSpeed;
+
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -25,7 +40,11 @@ public class Monster : EntityStatus
         agent.updateUpAxis = false;
         player = GameObject.FindGameObjectWithTag("Player");
         hitRange.tag = "Weapon(Monster)";
+        auraObject.SetActive(false);
+
+        MonsterConditionCheck();
     }
+
     void Update()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -46,6 +65,25 @@ public class Monster : EntityStatus
             fatigue = -1;
             EntityDie();
         }
+
+        auraObject.transform.position = transform.position + new Vector3(0, 0.6f, 0);
+
+        //BerserkCondition Check
+        if (Berserk)
+        {
+            agent.speed = berserkSpeed;
+            base.attackSpeed = berserkAttackSpeed;
+            auraObject.SetActive(true);
+        }
+        else
+        {
+            agent.speed = originSpeed;
+            base.attackSpeed = originAttackSpeed;
+            auraObject.SetActive(false);
+        }
+
+        
+
     }
     public void MonsterMovement(GameObject follow)
     {
@@ -121,4 +159,16 @@ public class Monster : EntityStatus
     }
 
     public override DamageHolder GetDamageHolder() => weapon.GetComponent<Weapon>().GetDamageHolder();
+
+    public void MonsterConditionCheck()
+    {
+        originSpeed = agent.speed;
+        originAttackSpeed = attackSpeed;
+
+        berserkSpeed = agent.speed * 2;
+        berserkAttackSpeed = attackSpeed * 2;
+
+        weaknessSpeed = agent.speed / 2;
+        weaknessAttackSpeed = attackSpeed / 2;
+    }
 }
