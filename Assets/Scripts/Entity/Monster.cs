@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Item;
 using UnityEngine;
@@ -147,54 +148,47 @@ public class Monster : EntityStatus
     {
         if (isInvincible)       // 무적일 경우, 충돌 연산을 무시한다.
             return;
-        
+
         //When Collision with Weapon Collider
-        if(collision.CompareTag("Weapon(Player)"))
+        if (collision.CompareTag("Weapon(Player)"))
         {
-            if (isBerserk || isWeakness)
+            if (isBerserk)
             {
-                if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType == ItemType.None)
-                {
-                    Debug.Log("ConditionTrue 몬스터가 NoneType 충돌.");
-                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1);
-                }
-                if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType == ItemType.Alcohol)
-                {
-                    Debug.Log("ConditionTrue 몬스터가 AlcoholType 충돌.");
-                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1);
-                }
-                if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType == ItemType.Nicotine)
-                {
-                    Debug.Log("ConditionTrue 몬스터가 NicotineType 충돌.");
-                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1);
-                }
-                if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType == ItemType.Caffeine)
-                {
-                    Debug.Log("ConditionTrue 몬스터가 CaffeineType 충돌.");
-                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1);
-                }
+                Debug.Log("Berserked 몬스터가 피격당함.");
+                HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0.5f);
+            }
+            else if (isWeakness)
+            {
+                Debug.Log("Weakened 몬스터가 피격당함.");
+                HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 2f);
             }
             else
             {
+                //평타
                 if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType == ItemType.None)
                 {
-                    Debug.Log("ConditionFalse 몬스터가 x1 공격당함.");
-                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1);
+                    Debug.Log("몬스터가 1x 피격당함.");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1f);
+                }
+                //광폭
+                else if (!collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType.ToString().Equals(monsterType.ToString()))
+                {
+                    isBerserk = true;
+                    Debug.Log("몬스터가 광폭함.");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0.5f);
+                }
+                //약점
+                else if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType.ToString().Equals(monsterType.ToString()))
+                {
+                    isWeakness = true;
+                    Debug.Log("몬스터가 약점 피격당함.");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 2f);
                 }
                 else
                 {
-                    if (collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType.ToString().Equals(monsterType.ToString()))
-                    {
-                        isWeakness = true;
-                        Debug.Log("몬스터가 약점에 공격당함.");
-                        HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 2);
-                    }
-                    if (!collision.GetComponentInParent<Player>().weapon.GetComponent<Weapon>().itemType.ToString().Equals(monsterType.ToString()))
-                    {
-                        isBerserk = true;
-                        Debug.Log("몬스터가 광폭함.");
-                        HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0.5f);
-                    }
+                    Debug.Log("오류");
+                    HandleMonsterHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 0f);
+                    return;
                 }
             }
         }
