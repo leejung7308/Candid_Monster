@@ -65,11 +65,13 @@ public class EntityStatus : MonoBehaviour
         this.attackSpeed = attackSpeed;
         this.maxFatigue = maxFatigue;
     }
-    protected void EntityHit(DamageHolder currentDamageHolder)
+
+    protected void EntityHit(DamageHolder currentDamageHolder, float rate)
     {
-        fatigue += currentDamageHolder.Damage;
-        Debug.Log($"{gameObject.name} 은 {currentDamageHolder.Damage} 만큼의 피해를 입었다!");
+        fatigue += (currentDamageHolder.Damage * rate);
+        Debug.Log($"{gameObject.name} 은 {currentDamageHolder.Damage * rate} 만큼의 피해를 입었다!");
     }
+
     protected IEnumerator InvincibleMode(float time)
     {
         Color originalColor = weapon.GetComponent<SpriteRenderer>().color;

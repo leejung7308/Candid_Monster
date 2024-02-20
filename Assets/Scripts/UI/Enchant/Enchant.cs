@@ -54,15 +54,15 @@ public class Enchant : MonoBehaviour
         weaponSlot.item.AddData(enchantItemSlot.item.GetData());
         switch (enchantItemSlot.item.itemType)
         {
-            case Item.ItemType.alcohol:
+            case Item.ItemType.Alcohol:
                 weaponSlot.item.GetComponent<SpriteRenderer>().sprite = alcohol;
                 weaponSlot.item.itemImage = alcohol;
                 break;
-            case Item.ItemType.caffeine:
+            case Item.ItemType.Caffeine:
                 weaponSlot.item.GetComponent<SpriteRenderer>().sprite = caffeine;
                 weaponSlot.item.itemImage = caffeine;
                 break;
-            case Item.ItemType.nicotine:
+            case Item.ItemType.Nicotine:
                 weaponSlot.item.GetComponent<SpriteRenderer>().sprite = nicotine;
                 weaponSlot.item.itemImage = nicotine;
                 break;

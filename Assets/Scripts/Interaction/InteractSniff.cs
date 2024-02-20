@@ -32,13 +32,13 @@ public class InteractSniff : MonoBehaviour
         if(monsters.Count == 1)
         {
             chatBubbles.Add(canvas.transform.Find("Chat Bubble_1").gameObject);
-            if (monsters[0].GetComponent<Monster>().isAlcohol) {
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Alcohol) {
                 texts.Add("아 진짜 술 먹고\n성불하고 싶다...");
             }
-            if (monsters[0].GetComponent <Monster>().isCaffeine) {
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Caffeine) {
                 texts.Add("커피 한 잔 하면\n날아갈 거 같아...");
             }
-            if (monsters[0].GetComponent<Monster>().isNicotine) {
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Nicotine) {
                 texts.Add("니코틴...!\n니코틴이 부족해...!");
             }
         }
@@ -46,17 +46,17 @@ public class InteractSniff : MonoBehaviour
         {
             chatBubbles.Add(canvas.transform.Find("Chat Bubble_1").gameObject);
             chatBubbles.Add(canvas.transform.Find("Chat Bubble_2").gameObject);
-            if (monsters[0].GetComponent<Monster>().isAlcohol)
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Alcohol)
             {
                 texts.Add("끝나고 소주 한 잔\n하실까요?");
                 texts.Add("키야! 소주 먹고\n광명 찾자!");
             }
-            if (monsters[0].GetComponent<Monster>().isCaffeine)
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Caffeine)
             {
                 texts.Add("커피...\n커피를 주세요...");
                 texts.Add("으어...\n나도 좀 주세요...");
             }
-            if (monsters[0].GetComponent<Monster>().isNicotine)
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Nicotine)
             {
                 texts.Add("담배 한 대면\n성불 각?");
                 texts.Add("ㄹㅇㅋㅋ");
@@ -67,19 +67,19 @@ public class InteractSniff : MonoBehaviour
             chatBubbles.Add(canvas.transform.Find("Chat Bubble_1").gameObject);
             chatBubbles.Add(canvas.transform.Find("Chat Bubble_2").gameObject);
             chatBubbles.Add(canvas.transform.Find("Chat Bubble_3").gameObject);
-            if (monsters[0].GetComponent<Monster>().isAlcohol)
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Alcohol)
             {
                 texts.Add("소주 마려운데\n저만 그런가요?");
                 texts.Add("저도 그렇습니다.");
                 texts.Add("나만 그런 게\n아니구나!");
             }
-            if (monsters[0].GetComponent<Monster>().isCaffeine)
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Caffeine)
             {
                 texts.Add("아 개피곤해\n카페인이 딸린다");
                 texts.Add("전 아아 부탁해요~");
                 texts.Add("그럼 난 아이스 라떼!");
             }
-            if (monsters[0].GetComponent<Monster>().isNicotine)
+            if (monsters[0].GetComponent<Monster>().monsterType == MonsterType.Nicotine)
             {
                 texts.Add("담배 끊은지 3분\n금단현상 온다...");
                 texts.Add("나는 30초...\n금단현상 온다...");

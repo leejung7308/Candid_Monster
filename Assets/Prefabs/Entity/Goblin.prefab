@@ -1407,16 +1407,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
   itemName: Pickaxe
+  itemCategory: 0
   itemType: 0
   itemImage: {fileID: 21300000, guid: c9aeae2c4e3e2d245a042e813a6c742c, type: 3}
   itemDesc: just a normal pickaxe
   itemValue: 0
   itemAcquire: 0
+  isPickedUp: 0
   damage: 10
+  isEnchanted: 0
 --- !u!1 &3003742367368627550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,13 +3042,7 @@ MonoBehaviour:
   fatigue: 0
   moveSpeed: 2
   attackSpeed: 1
-  alcohol: 0
-  caffeine: 0
-  nicotine: 0
-  maxFatigue: 100
-  maxAlcohol: 100
-  maxCaffeine: 100
-  maxNicotine: 100
+  maxFatigue: 10
   isConfused: 0
   isFainted: 0
   isInvincible: 0
@@ -3070,9 +3064,7 @@ MonoBehaviour:
   invincibleTime: 2
   attackRangeObject: {fileID: 4663796740350842824}
   room: {fileID: 0}
-  isAlcohol: 0
-  isCaffeine: 0
-  isNicotine: 0
+  monsterType: 0
   auraObject: {fileID: 7818288501962923193}
   Berserk: 0
 --- !u!114 &310479672240429187

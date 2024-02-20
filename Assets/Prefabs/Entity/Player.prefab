@@ -748,16 +748,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4cda96b82d4427a13c07ce47280527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
   itemName: Sword
+  itemCategory: 0
   itemType: 0
   itemImage: {fileID: 21300000, guid: 6548095e2a531754fa4aab98041ccbfb, type: 3}
   itemDesc: just a normal sword
   itemValue: 1000
   itemAcquire: 0
+  isPickedUp: 0
   damage: 10
+  isEnchanted: 0
 --- !u!212 &8489681592938036247
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1792,19 +1792,13 @@ MonoBehaviour:
   fatigue: 0
   moveSpeed: 5
   attackSpeed: 0.5
-  alcohol: 0
-  caffeine: 0
-  nicotine: 0
   maxFatigue: 100
-  maxAlcohol: 100
-  maxCaffeine: 100
-  maxNicotine: 100
   isConfused: 0
   isFainted: 0
   isInvincible: 0
   isDebuffed: 0
-  hitRange: {fileID: 0}
-  weapon: {fileID: 0}
+  hitRange: {fileID: 7257739173728314025}
+  weapon: {fileID: 7917175440886252083, guid: 3c8a42d04abcbb94588c45b66ccc9ec4, type: 3}
   parts:
   - {fileID: 7177334899937131766}
   - {fileID: 8784666782843143838}
@@ -1824,12 +1818,14 @@ MonoBehaviour:
   - {fileID: 6387923071154851319}
   - {fileID: 8754880596978063037}
   invincibleTime: 2
-  weaponPrefabs: []
   weapons:
   - {fileID: 1192809048382645423}
   weaponSpawnPos: {fileID: 2210098413791487079}
   enableFatigue: 0
   theInventory: {fileID: 0}
+  scale: 0
+  basicWeapon: {fileID: 0}
+  emptyWeapon: {fileID: 0}
 --- !u!50 &6370290897593210118
 Rigidbody2D:
   serializedVersion: 4
