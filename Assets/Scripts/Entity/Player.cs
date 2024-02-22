@@ -24,6 +24,7 @@ public class Player : EntityStatus
     [SerializeField] float scale;
     [SerializeField] GameObject basicWeapon;
     [SerializeField] GameObject emptyWeapon;
+    [SerializeField] GameObject gameOver;
 
     Camera mainCamera;
     void Start()
@@ -38,8 +39,8 @@ public class Player : EntityStatus
             tmp.SetActive(false);
             weapons[i] = tmp;
         }
-        GameObject spawnWeapon = Instantiate(basicWeapon, transform.position, Quaternion.identity);
-        spawnWeapon.tag = "CanBePickedUp";
+        /*GameObject spawnWeapon = Instantiate(basicWeapon, transform.position, Quaternion.identity);
+        spawnWeapon.tag = "CanBePickedUp";*/
         SetWeapon(0);
         Debug.Log("Add Active skills");
         activeSkills = new Dictionary<KeyCode, ActiveSkill>();
@@ -85,6 +86,11 @@ public class Player : EntityStatus
             }
         }
         else transform.GetChild(0).GetComponent<AnimationManager>().MoveEnd();
+    }
+    protected override void EntityDie()
+    {
+        gameOver.SetActive(true);
+        base.EntityDie();
     }
     void LookAt()
     {
