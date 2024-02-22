@@ -20,6 +20,7 @@ public class HomePortal : MonoBehaviour
     public GameObject NPC_Convience;
     public GameObject Computer;
     public GameObject Storage;
+    public GameObject EnchantTable;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class HomePortal : MonoBehaviour
             Grid_Home.SetActive(true);
             Computer.SetActive(true);
             Storage.SetActive(true);
+            EnchantTable.SetActive(true);
             thePlayer.transform.position = VillagePortal.transform.position + new Vector3(0, 3, 0);
             Grid_Village.SetActive(false);
             Grid_Coffee.SetActive(false);

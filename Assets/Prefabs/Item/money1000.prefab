@@ -133,12 +133,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3956f9e80c44ea891019c760aa958c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
-  itemName: 
+  itemCode: 0
+  itemName: Money
+  itemCategory: 4
   itemType: 0
   itemImage: {fileID: 0}
   itemDesc: 
-  itemValue: 0
+  itemValue: 1000
   itemAcquire: 0
+  isPickedUp: 0
+  healAmount: 0
