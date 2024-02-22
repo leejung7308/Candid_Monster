@@ -599,12 +599,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564420594277469185}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 1.7090879e-11, y: -0.0000000011072192, z: 9.3132246e-10, w: 1}
+  m_LocalPosition: {x: 0, y: 0.015625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2970996471835724123}
+  m_Father: {fileID: 8427833969831792598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4830052249399873611
 SpriteRenderer:
@@ -1124,8 +1124,7 @@ Transform:
   m_LocalPosition: {x: 0.015625, y: 0.03125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 457074115342887402}
+  m_Children: []
   m_Father: {fileID: 8427833969831792598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7791356955522720334
@@ -3066,7 +3065,8 @@ MonoBehaviour:
   room: {fileID: 0}
   monsterType: 0
   auraObject: {fileID: 7818288501962923193}
-  Berserk: 0
+  isBerserk: 0
+  isWeakness: 0
 --- !u!114 &310479672240429187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4106,6 +4106,7 @@ Transform:
   m_Children:
   - {fileID: 5118040418187258989}
   - {fileID: 2970996471835724123}
+  - {fileID: 457074115342887402}
   m_Father: {fileID: 497634051956723831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8597051024361821473
