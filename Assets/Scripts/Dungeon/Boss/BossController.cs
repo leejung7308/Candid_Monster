@@ -17,6 +17,9 @@ public class BossController : EntityStatus
     //보스 공격패턴 실행을 위한 쿨타임
     private float coolTime;
 
+    //보스 이동시 딜레이
+    private float moveDelay;
+
     //플레이어와의 거리
     private float distance;
 
@@ -25,8 +28,9 @@ public class BossController : EntityStatus
 
     public float invincibleTime;
 
-    //3 or 5회 공격시 피해증가 카운트
+    //5회 공격시 피해증가 카운트
     public int enhancedBossAttack;
+    public bool isEnhanced;
 
 
     public BossController(float fatigue, float moveSpeed, float attackSpeed, float maxFatigue) 
@@ -36,38 +40,58 @@ public class BossController : EntityStatus
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
         enhancedBossAttack = 0;
-        coolTime = 10;
-
-
-
-
+        coolTime = Time.time + 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (fatigue >= maxFatigue)
+        {
+            fatigue = -1;
+            EntityDie();
+        }
+
         //보스와 플레이어 사이의 거리
         distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
         BossMovement();
+        LookAt(player);
 
         if (Time.time > coolTime)
         {
-            ExcuteBossPattern((distance / 20) * 2);
+            ExcuteBossPattern(distance);
+            coolTime = coolTime + 10f;
         }
+
+        if(enhancedBossAttack > 3)
+        {
+            enhancedBossAttack = 0;
+        }
+    }
+
+    protected override void EntityDie()
+    {
+        gameObject.GetComponent<DropTable>().ItemDrop(transform.position);
+        base.EntityDie();
     }
 
     public void BossMovement()
     {
         //조건에 따라 보스방 내부 임의 위치로 순간이동
-        if( /*avoidMoveCount >= 3 &&*/ distance < 0.5 )
+        if( avoidMoveCount >= 3 && distance < 2.3 )
         {
-            float randPosX = Random.Range(-8.5f, 8.5f);
-            float randPosY = Random.Range(-9f, 1f);
-
+            float randPosX = Random.Range(-94f, -78f);
+            float randPosY = Random.Range(75f, 85f);
+            while ( Vector3.Distance( player.transform.position, new Vector3(randPosX,randPosY,0) ) < 5 )
+            {
+                randPosX = Random.Range(-94f, -78f);
+                randPosY = Random.Range(75f, 85f);
+            }
             gameObject.transform.position = new Vector3(randPosX, randPosY, 0);
+            avoidMoveCount = 0;
+            Debug.Log("보스가 이동");
         }
     }
 
@@ -85,22 +109,27 @@ public class BossController : EntityStatus
 
     private void ExcuteBossPattern(float num)
     {
-        if(num > 1.3)
+        bossAttacks[2].GetComponent<BossAttackPointingFlame>().Attack();
+        Debug.Log("AttackPointingFlame");
+        /*f (num > 4)
         {
             //Pointing Flame 공격
-            //bossAttacks[2];
+            bossAttacks[2].GetComponent<BossAttackPointingFlame>().Attack();
+            Debug.Log("AttackPointingFlame");
             
         }
-        else if(num > 0.3)
+        else if(num > 2.5)
         {
             //BladeAura 공격
-            //bossAttatcks[1];
+            bossAttacks[1].GetComponent<BossAttackBladeAura>().Attack();
+            Debug.Log("AttackBladeAura");
         }
         else
         {
             //Pierce 공격
-            //bossAttacks[0];
-        }
+            bossAttacks[0].GetComponent<BossAttackPierce>().Attack();
+            Debug.Log("AttackPierce");
+        }*/
         enhancedBossAttack++;
     }
 
@@ -108,11 +137,8 @@ public class BossController : EntityStatus
     {
         if (collision.CompareTag("Weapon(Player)"))
         {
-
-        }
-        else 
-        {
-            
+            HandleBossHit(collision.GetComponentInParent<Player>().GetDamageHolder(), 1f);
+            avoidMoveCount++;
         }
     }
 

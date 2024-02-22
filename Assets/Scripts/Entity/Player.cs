@@ -205,6 +205,14 @@ public class Player : EntityStatus
             Debug.Log("플레이어 피격");
             HandleEntityDamage(collision.GetComponentInParent<Monster>().GetDamageHolder());
         }
+        if(!isInvincible && collision.CompareTag("BossAttack"))
+        {
+            Debug.Log("플레이어가 보스한테 공격당함");
+            fatigue += collision.GetComponent<BossAttackPointingFlame>().GetDamage();
+            fatigue += collision.GetComponent<BossAttackBladeAura>().GetDamage();
+            fatigue += collision.GetComponent<BossAttackPierce>().GetDamage();
+        }
+
     }
     
     /**
