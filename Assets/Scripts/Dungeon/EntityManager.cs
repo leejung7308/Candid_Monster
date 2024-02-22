@@ -12,7 +12,7 @@ public class EntityManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(monsterCount == 0)
+        if(monsterCount <= 0)
         {
             for(int i = 0; i < doors.Count; i++)
             {
