@@ -77,6 +77,7 @@ namespace Item
      */
     public abstract class Item: MonoBehaviour
     {
+        public int itemCode;
         public string itemName;
         public ItemCategory itemCategory;
         public ItemType itemType;

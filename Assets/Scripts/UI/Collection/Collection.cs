@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -31,13 +32,12 @@ public class Collection : MonoBehaviour
     void Update()
     {
         TryCloseCollection();
-        UnlockCollection();
     }
 
     public void AcquireItem()
     {
         int j = 0;
-        for (int i = 0; i < items.Length; i++)
+        for (int i = 0; i < items.Length; i++)  
         {
             if (items[i].itemCategory == Item.ItemCategory.Equipment)
             {
@@ -50,12 +50,7 @@ public class Collection : MonoBehaviour
             }
         }
     }
-
     public Item.Item[] GetItems() { return items; }
-    public void SetItems()
-    {
-        items = theInventory.GetItems();
-    }
 
     public CollectionSlot[] GetEquipmentSlots() { return equipmentslots; }
 
@@ -70,9 +65,12 @@ public class Collection : MonoBehaviour
         }
     }
 
-    public void UnlockCollection()
+    public void UnlockCollection(int itemCode)
     {
-        SetItems();
+        for(int i = 0; i < items.Length; i++)
+        {
+            if(itemCode == items[i].itemCode) items[i].itemAcquire = 1; 
+        }
         AcquireItem();
     }
 

@@ -8,7 +8,7 @@ public class ExitTutorial : MonoBehaviour
     [SerializeField]
     private SaveAndLoad theSaveAndLoad;
 
-    void start()
+    void Start()
     {
         theSaveAndLoad = FindObjectOfType<SaveAndLoad>();
     }

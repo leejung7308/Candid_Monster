@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3034855680302089579}
-  - component: {fileID: 8904826004741710508}
+  - component: {fileID: -58199752819871398}
   - component: {fileID: 7604803209655224737}
   - component: {fileID: 2832053878536515744}
   m_Layer: 5
-  m_Name: FirstAidKit
+  m_Name: 3103_Vodka
   m_TagString: CanBePickedUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8904826004741710508
+--- !u!114 &-58199752819871398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,18 +43,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2279428083488642998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3956f9e80c44ea891019c760aa958c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e70757bca0124444b09b579614b0c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caffeine: 0
-  alcohol: 0
-  nicotine: 0
-  itemName: 
-  itemType: 0
-  itemImage: {fileID: 0}
+  itemCode: 3103
+  itemName: Vodka
+  itemCategory: 5
+  itemType: 1
+  itemImage: {fileID: 21300000, guid: e836592cd449800418a9a30547f555cc, type: 3}
   itemDesc: 
-  itemValue: 0
+  itemValue: 20000
   itemAcquire: 0
+  isPickedUp: 0
+  additionalDamage: 30
 --- !u!58 &7604803209655224737
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ SpriteRenderer:
   m_SortingLayerID: 1574347813
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0dd9a3eb10c806f4c8351074060bcbfb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e836592cd449800418a9a30547f555cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

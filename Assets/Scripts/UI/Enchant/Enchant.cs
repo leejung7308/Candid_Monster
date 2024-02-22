@@ -7,6 +7,7 @@ public class Enchant : MonoBehaviour
     [SerializeField] private GameObject interfaces;
     [SerializeField] private Button enchantButton;
     Inventory inventory;
+    Collection collection;
     public Slot weaponSlot;
     public Slot enchantItemSlot;
     public Slot resultSlot;
@@ -19,6 +20,7 @@ public class Enchant : MonoBehaviour
         enchantItemSlot.tag = "Enchant(Item)";
         resultSlot.tag = "Enchant(Result)";
         inventory = FindObjectOfType<Inventory>();
+        collection = FindObjectOfType<Collection>();
     }
     void Update()
     {
@@ -50,7 +52,14 @@ public class Enchant : MonoBehaviour
     }
     public void EnchantWeapon()
     {
-        weaponSlot.item.itemType = enchantItemSlot.item.itemType;
+        for(int i = 0; i < collection.items.Length; i++)
+        {
+            if (weaponSlot.item.itemCode + enchantItemSlot.item.itemCode % 1000 == collection.items[i].itemCode)
+            {
+                resultSlot.AddItem(collection.items[i]);
+            }
+        }
+        /*weaponSlot.item.itemType = enchantItemSlot.item.itemType;
         weaponSlot.item.AddData(enchantItemSlot.item.GetData());
         switch (enchantItemSlot.item.itemType)
         {
@@ -69,9 +78,9 @@ public class Enchant : MonoBehaviour
             default:
                 break;
         }
-        weaponSlot.item.itemName += " +1";
-        weaponSlot.item.Enchant();
-        resultSlot.AddItem(weaponSlot.item);
+        weaponSlot.item.itemName += " +1";*/
+        resultSlot.item.Enchant();
+        //resultSlot.AddItem(weaponSlot.item);
         weaponSlot.ClearSlot();
         enchantItemSlot.ClearSlot();
     }

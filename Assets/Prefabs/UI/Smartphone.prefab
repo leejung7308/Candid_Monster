@@ -1962,7 +1962,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4773160075558271693}
-  - component: {fileID: 406999547801509562}
   m_Layer: 5
   m_Name: Collection
   m_TagString: Untagged
@@ -1990,34 +1989,6 @@ RectTransform:
   m_AnchoredPosition: {x: 33, y: 93}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &406999547801509562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145981631633302341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f970064df1b6694e86e3bba3be5e9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_CollectionBase: {fileID: 1636143703660474592}
-  descHideImage: {fileID: 2051716894721974109}
-  IconOnlineMarket: {fileID: 5111104781256546192}
-  IconSetting: {fileID: 7657190004799780956}
-  go_equipmentSlot: {fileID: 2180699518006186262}
-  go_ConsumableSlot: {fileID: 5705728383358999990}
-  theInventory: {fileID: 0}
-  items:
-  - {fileID: -6509684315354624700, guid: 089aaac161ffc1643bee6c6a9328d6b3, type: 3}
-  - {fileID: -7577701013950056935, guid: b3c91b506d8f6cb47870d8cbeca9576e, type: 3}
-  - {fileID: -5266418841441478017, guid: 959bb43966c3c2942a10a12f54f10cd6, type: 3}
-  - {fileID: 3413521495653402111, guid: 7d51f1b840c514748a6cb539514baa9c, type: 3}
-  - {fileID: 8975120072385801761, guid: 92847e18ec028474ca18d606e965e5f7, type: 3}
-  - {fileID: 9108856288992730772, guid: abf80cbeee23ad74a90ce32ae93b9729, type: 3}
-  - {fileID: 9108856288992730772, guid: a0fa4aeb1c62d954eb5b8809f1143a90, type: 3}
-  - {fileID: 9108856288992730772, guid: fddb9cac5dd70b047aa8352014b406ed, type: 3}
 --- !u!1 &1162531935301641217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7160,6 +7131,7 @@ GameObject:
   - component: {fileID: 5965894913468764084}
   - component: {fileID: 7909955371967665680}
   - component: {fileID: 3294855940689918711}
+  - component: {fileID: 2371906462188647411}
   m_Layer: 5
   m_Name: UI_Smartphone
   m_TagString: Untagged
@@ -7238,11 +7210,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SmartphoneBase: {fileID: 5382071496340322137}
-  theCollection: {fileID: 406999547801509562}
+  theCollection: {fileID: 0}
   theInternetMarket: {fileID: 7401884612736282720}
   IconCollection: {fileID: 6673210643766729647}
   IconOnlineStore: {fileID: 5111104781256546192}
   IconSetting: {fileID: 7657190004799780956}
+--- !u!114 &2371906462188647411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3851973202198593595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f970064df1b6694e86e3bba3be5e9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_CollectionBase: {fileID: 1636143703660474592}
+  descHideImage: {fileID: 2051716894721974109}
+  IconOnlineMarket: {fileID: 5111104781256546192}
+  IconSetting: {fileID: 7657190004799780956}
+  go_equipmentSlot: {fileID: 2180699518006186262}
+  go_ConsumableSlot: {fileID: 5705728383358999990}
+  theInventory: {fileID: 0}
+  items: []
 --- !u!1 &3944432686663059740
 GameObject:
   m_ObjectHideFlags: 0

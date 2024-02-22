@@ -27,6 +27,7 @@ namespace Item
         }
         public void CopyData(Item item)
         {
+            this.itemCode = item.itemCode;
             this.itemCategory = item.itemCategory;
             this.itemValue = item.itemValue;
             this.itemDesc = item.itemDesc;
@@ -38,6 +39,7 @@ namespace Item
         }
         public void Reset()
         {
+            this.itemCode = 0;
             this.itemCategory = 0;
             this.itemValue = 0;
             this.itemDesc = "";

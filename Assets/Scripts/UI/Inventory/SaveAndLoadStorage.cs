@@ -6,7 +6,7 @@ using System.IO;
 public class SaveStorage
 {
     public List<int> storageArrayNumber = new List<int>();
-    public List<string> storageItemName = new List<string>();
+    public List<int> storageItemCode = new List<int>();
     public List<int> storageItemNumber = new List<int>();
 }
 
@@ -37,7 +37,7 @@ public class SaveAndLoadStorage : MonoBehaviour
             if (theSlot[i].item != null)
             {
                 saveData.storageArrayNumber.Add(i);
-                saveData.storageItemName.Add(theSlot[i].item.itemName);
+                saveData.storageItemCode.Add(theSlot[i].item.itemCode);
                 saveData.storageItemNumber.Add(theSlot[i].itemCount);
             }
         }
@@ -58,8 +58,8 @@ public class SaveAndLoadStorage : MonoBehaviour
 
             theStorage = FindObjectOfType<Storage>();
 
-            for (int i = 0; i < saveData.storageItemName.Count; i++)
-                theStorage.LoadToStorage(saveData.storageArrayNumber[i], saveData.storageItemName[i], saveData.storageItemNumber[i]);
+            for (int i = 0; i < saveData.storageItemCode.Count; i++)
+                theStorage.LoadToStorage(saveData.storageArrayNumber[i], saveData.storageItemCode[i], saveData.storageItemNumber[i]);
         }
         else
             Debug.Log("none save file");
@@ -68,7 +68,7 @@ public class SaveAndLoadStorage : MonoBehaviour
     public void ResetSaveStorage()
     {
         saveData.storageArrayNumber.Clear();
-        saveData.storageItemName.Clear();
+        saveData.storageItemCode.Clear();
         saveData.storageItemNumber.Clear();
     }
 }
