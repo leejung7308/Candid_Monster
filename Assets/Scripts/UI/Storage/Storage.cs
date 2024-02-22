@@ -14,22 +14,22 @@ public class Storage : MonoBehaviour
     private StorageSlot[] theSlot;
     private ItemInfo theItemInfo;
     private Inventory theInventory;
+    public Item.Item[] items;
 
     void Start()
     {
         theSlot = go_SlotsParent.GetComponentsInChildren<StorageSlot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
         theInventory = FindObjectOfType<Inventory>();
+        items = FindObjectOfType<Collection>().GetItems();
     }
 
     public StorageSlot[] GetStorageSlots() { return theSlot; }
 
-    public void LoadToStorage(int _arrayNum, string _itemName, int _itemNum)
+    public void LoadToStorage(int _arrayNum, int _itemCode, int _itemNum)
     {
-        Item.Item[] items = theInventory.GetItems();
-
         for (int i = 0; i < items.Length; i++)
-            if (items[i].itemName == _itemName)
+            if (items[i].itemCode == _itemCode)
                 theSlot[_arrayNum].AddItem(items[i], _itemNum);
     }
 

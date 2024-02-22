@@ -40,10 +40,10 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
+        items = theCollection.GetItems();
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
         equipmentSlots = go_EquipmentSlotsParent.GetComponentsInChildren<Slot>();
         theItemInfo = FindObjectOfType<ItemInfo>();
-        items = theCollection.GetItems();
         player = FindObjectOfType<Player>();
     }
 
@@ -55,10 +55,10 @@ public class Inventory : MonoBehaviour
 
     public Slot[] GetSlots() { return slots; }
 
-    public void LoadToInven(int _arrayNum, string _itemName, int _itemNum)
+    public void LoadToInven(int _arrayNum, int _itemCode, int _itemNum)
     {
         for (int i = 0; i < items.Length; i++)
-            if (items[i].itemName == _itemName)
+            if (items[i].itemCode == _itemCode)
                 slots[_arrayNum].AddItem(items[i], _itemNum);
     }
 
@@ -128,21 +128,16 @@ public class Inventory : MonoBehaviour
                 if (slots[i].item == null)
                 {
                     slots[i].AddItem(_item, _count);
-                    UnlockCollection(_item);
+                    Debug.Log(_item.itemCode);
+                    UnlockCollection(_item.itemCode);
                     return;
                 }
             }
         }
     }
-    public void UnlockCollection(Item.Item _item)
+    public void UnlockCollection(int itemCode)
     {
-        for(int i = 0; i < items.Length; i++)
-        {
-            if(items[i].itemName == _item.itemName)
-            {
-                items[i].itemAcquire = 1;
-            }
-        }
+        theCollection.UnlockCollection(itemCode);
     }
 
     public Item.Item[] GetItems() { return items; }
@@ -215,5 +210,9 @@ public class Inventory : MonoBehaviour
             return true;
         }
         else return false;
+    }
+    public void UpdateItemList()
+    {
+        items = theCollection.GetItems();
     }
 }

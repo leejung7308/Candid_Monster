@@ -25,6 +25,7 @@ public class VillagePortal : MonoBehaviour
     public GameObject NPC_Convience;
     public GameObject Computer;
     public GameObject Storage;
+    public GameObject EnchantTable;
 
     void Start()
     {
@@ -68,6 +69,7 @@ public class VillagePortal : MonoBehaviour
             NPC_Convience.SetActive(false);
             Computer.SetActive(false);
             Storage.SetActive(false);
+            EnchantTable.SetActive(false);
         }
     }
 }

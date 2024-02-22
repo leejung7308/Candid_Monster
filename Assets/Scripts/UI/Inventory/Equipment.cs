@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.X86.Avx;
+using static UnityEditor.Progress;
 
 public class Equipment : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class Equipment : MonoBehaviour
     Inventory inventory;
     Slot[] slots;
     GameObject weaponSpawnPoint;
+    Item.Item[] items;
     void Start()
     {
+        items = FindObjectOfType<Collection>().GetItems();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         weaponSpawnPoint = GameObject.FindGameObjectWithTag("WeaponSpawnPoint");
         inventory = FindObjectOfType<Inventory>();
@@ -23,10 +26,6 @@ public class Equipment : MonoBehaviour
         for(int  i = 0; i<4; i++)
         {
             slots[i].tag = "EquipmentSlot";
-            if (player.weapons[i].GetComponent<SpriteRenderer>().sprite != null)
-            {
-                slots[i].AddItem(player.weapons[i].GetComponent<Item.Item>());
-            }
         }
     }
     public void SetPlayerWeapon()
@@ -62,5 +61,13 @@ public class Equipment : MonoBehaviour
         slots[0].AddItem(item);
         inventory.AcquireItem(tmp);
         SetPlayerWeapon();
+    }
+    public Slot[] GetSlots() { return slots; }
+
+    public void LoadToEquipment(int _arrayNum, int _itemCode)
+    {
+        for (int i = 0; i < items.Length; i++)
+            if (items[i].itemCode == _itemCode)
+                slots[_arrayNum].AddItem(items[i]);
     }
 }

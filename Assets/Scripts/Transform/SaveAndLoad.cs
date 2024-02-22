@@ -6,8 +6,10 @@ using System.IO;
 public class SaveData
 {
     public List<int> invenArrayNumber = new List<int>();
-    public List<string> invenItemName = new List<string>();
+    public List<int> invenItemCode = new List<int>();
     public List<int> invenItemNumber = new List<int>();
+    public List<int> equipArrayNumber = new List<int>();
+    public List<int> equipItemCode = new List<int>();
 
     public string Coin;
 }
@@ -20,6 +22,7 @@ public class SaveAndLoad : MonoBehaviour
     private string SAVE_FILENAME = "/SaveFile.txt";
 
     private Inventory theInventory;
+    private Equipment theEquipment;
 
     void Start()
     {
@@ -32,17 +35,27 @@ public class SaveAndLoad : MonoBehaviour
     public void SaveData()
     {
         theInventory = FindObjectOfType<Inventory>();
-
+        theEquipment = FindObjectOfType<Equipment>();
         saveData.Coin = theInventory.GetCoinText();
 
         Slot[] slots = theInventory.GetSlots();
+        Slot[] equipSlots = theEquipment.GetSlots();
+
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item != null)
             {
                 saveData.invenArrayNumber.Add(i);
-                saveData.invenItemName.Add(slots[i].item.itemName);
+                saveData.invenItemCode.Add(slots[i].item.itemCode);
                 saveData.invenItemNumber.Add(slots[i].itemCount);
+            }
+        }
+        for(int i = 0;i < equipSlots.Length; i++)
+        {
+            if (equipSlots[i].item != null)
+            {
+                saveData.equipArrayNumber.Add(i);
+                saveData.equipItemCode.Add(equipSlots[i].item.itemCode);
             }
         }
 
@@ -61,11 +74,16 @@ public class SaveAndLoad : MonoBehaviour
             saveData = JsonUtility.FromJson<SaveData>(loadJson);
 
             theInventory = FindObjectOfType<Inventory>();
+            theEquipment = FindObjectOfType<Equipment>();
 
             theInventory.SetCoinText(-int.Parse(saveData.Coin));
 
-            for (int i = 0; i < saveData.invenItemName.Count; i++)
-                theInventory.LoadToInven(saveData.invenArrayNumber[i], saveData.invenItemName[i], saveData.invenItemNumber[i]);
+            for (int i = 0; i < saveData.invenItemCode.Count; i++)
+                theInventory.LoadToInven(saveData.invenArrayNumber[i], saveData.invenItemCode[i], saveData.invenItemNumber[i]);
+            for(int i = 0; i < saveData.equipItemCode.Count; i++)
+            {
+                theEquipment.LoadToEquipment(saveData.equipArrayNumber[i], saveData.equipItemCode[i]);
+            }
         }
         else
             Debug.Log("none save file");
@@ -74,7 +92,7 @@ public class SaveAndLoad : MonoBehaviour
     public void ResetSaveData()
     {
         saveData.invenArrayNumber.Clear();
-        saveData.invenItemName.Clear();
+        saveData.invenItemCode.Clear();
         saveData.invenItemNumber.Clear();
     }
 }
