@@ -13,6 +13,7 @@ public class BossController : EntityStatus
     public GameObject BossField;
     private GameObject player;
     private NavMeshAgent agent;
+    public bool isDetected;
 
     //보스 공격패턴 실행을 위한 쿨타임
     private float coolTime;
@@ -42,6 +43,7 @@ public class BossController : EntityStatus
         player = GameObject.FindGameObjectWithTag("Player");
         enhancedBossAttack = 0;
         coolTime = Time.time + 10f;
+        isDetected = false;
     }
 
     // Update is called once per frame
@@ -59,7 +61,7 @@ public class BossController : EntityStatus
         BossMovement();
         LookAt(player);
 
-        if (Time.time > coolTime)
+        if (Time.time > coolTime && isDetected)
         {
             ExcuteBossPattern(distance);
             coolTime = coolTime + 10f;

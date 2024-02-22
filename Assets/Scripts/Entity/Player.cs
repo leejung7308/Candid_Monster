@@ -205,7 +205,7 @@ public class Player : EntityStatus
             Debug.Log("플레이어 피격");
             HandleEntityDamage(collision.GetComponentInParent<Monster>().GetDamageHolder());
         }
-        if(!isInvincible && collision.CompareTag("BossAttack"))
+        if (!isInvincible && collision.CompareTag("BossAttack"))
         {
             Debug.Log("플레이어가 보스한테 공격당함");
             fatigue += collision.GetComponent<BossAttackPointingFlame>().GetDamage();
@@ -214,7 +214,7 @@ public class Player : EntityStatus
         }
 
     }
-    
+
     /**
      * 플레이어의 현제 공격으로 인한 DamageHolder 객체를 생성한다.
      * 무기의 DamageHolder를 기본으로 하고, 여러 DamagePassive들로 인한 데미지 변화를 반영한 최종 결과를 반환한다.
